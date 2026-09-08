@@ -11,7 +11,8 @@
     "check": "astro check",
     "validate": "tsx scripts/validate-content.ts",
     "slop-lint": "tsx scripts/slop-lint.ts",
-    "verify": "npm run check && npm run validate && npm run slop-lint && npm run build"
+    "verify": "npm run check && npm run validate && npm run slop-lint && npm run build && npm run assert-no-demo",
+    "assert-no-demo": "tsx scripts/assert-no-demo.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

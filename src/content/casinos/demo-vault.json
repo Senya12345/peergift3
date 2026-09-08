@@ -11,17 +11,47 @@
   },
   "ratings": {
     "sources": [
-      { "id": "askgamblers", "score": 8.4, "scale": 10, "url": "https://example.com/ag/demo-vault", "verifiedAt": "2026-09-08" },
-      { "id": "casinoguru", "score": 7.9, "scale": 10, "url": "https://example.com/cg/demo-vault", "verifiedAt": "2026-09-08" },
-      { "id": "trustpilot", "score": 4.2, "scale": 5, "url": "https://example.com/tp/demo-vault", "verifiedAt": "2026-09-08" }
+      {
+        "id": "askgamblers",
+        "score": 8.4,
+        "scale": 10,
+        "url": "https://example.com/ag/demo-vault",
+        "verifiedAt": "2026-09-08"
+      },
+      {
+        "id": "casinoguru",
+        "score": 7.9,
+        "scale": 10,
+        "url": "https://example.com/cg/demo-vault",
+        "verifiedAt": "2026-09-08"
+      },
+      {
+        "id": "trustpilot",
+        "score": 4.2,
+        "scale": 5,
+        "url": "https://example.com/tp/demo-vault",
+        "verifiedAt": "2026-09-08"
+      }
     ]
   },
-  "factors": ["no-kyc", "instant-withdrawal"],
-  "currencies": ["BTC", "ETH"],
+  "factors": [
+    "no-kyc",
+    "instant-withdrawal"
+  ],
+  "currencies": [
+    "BTC"
+  ],
   "editorial": {
     "summary": "Placeholder record used to build and review the site before real casinos are added. Every figure here is invented and none of it should ever reach production.",
-    "pros": ["Placeholder pro one", "Placeholder pro two", "Placeholder pro three"],
-    "cons": ["Placeholder con one", "Placeholder con two"]
+    "pros": [
+      "Placeholder pro one",
+      "Placeholder pro two",
+      "Placeholder pro three"
+    ],
+    "cons": [
+      "Placeholder con one",
+      "Placeholder con two"
+    ]
   },
   "license": null,
   "demo": true

@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      # CI builds the site as it would ship: no placeholder records, no indexing.
+      INCLUDE_DEMO: 'false'
+      SITE_INDEXABLE: 'false'
+      SITE_URL: https://casilla.example
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npx astro check
+
+      - name: Validate content
+        run: npx tsx scripts/validate-content.ts
+
+      - name: Lint prose for templated content
+        run: npx tsx scripts/slop-lint.ts
+
+      - name: Build
+        run: npm run build
+
+      - name: Assert no placeholder data reached the build
+        run: npx tsx scripts/assert-no-demo.ts
+
+      - name: Assert indexing gate is respected
+        run: |
+          # With SITE_INDEXABLE=false every page must be noindex and no sitemap emitted.
+          if ls dist/sitemap*.xml >/dev/null 2>&1; then
+            echo "::error::A sitemap was emitted while SITE_INDEXABLE is false."
+            exit 1
+          fi
+          missing=0
+          while IFS= read -r page; do
+            grep -q 'name="robots" content="noindex' "$page" || { echo "Missing noindex: $page"; missing=1; }
+          done < <(find dist -name '*.html')
+          [ "$missing" -eq 0 ] || { echo "::error::Pages missing noindex while the site is gated."; exit 1; }
+          echo "Indexing gate respected."
