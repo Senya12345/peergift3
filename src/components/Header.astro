@@ -1,0 +1,35 @@
+---
+// The mark is a filled grid — casilla means a cell, a square on a board. Inline SVG so
+// it costs no request and inherits currentColor.
+---
+
+<header class="border-b border-ink-600 bg-ink-800">
+  <div class="max-w-[1120px] mx-auto px-4 h-16 flex items-center gap-3">
+    <a href="/" class="flex items-center gap-2.5 no-underline group">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 26 26"
+        aria-hidden="true"
+        class="text-amber-500 shrink-0"
+      >
+        <rect x="1" y="1" width="10" height="10" fill="currentColor"></rect>
+        <rect x="15" y="1" width="10" height="10" fill="currentColor" opacity="0.45"></rect>
+        <rect x="1" y="15" width="10" height="10" fill="currentColor" opacity="0.45"></rect>
+        <rect x="15" y="15" width="10" height="10" fill="currentColor" opacity="0.18"></rect>
+      </svg>
+      <span
+        class="font-display font-bold text-[19px] tracking-tight text-ink-050 group-hover:text-amber-400"
+        >Casilla</span
+      >
+    </a>
+
+    <nav class="ml-auto">
+      <a
+        href="/articles/"
+        class="text-ink-300 hover:text-ink-050 no-underline text-[15px] px-2 py-1"
+        >Articles</a
+      >
+    </nav>
+  </div>
+</header>

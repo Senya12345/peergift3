@@ -1,0 +1,27 @@
+{
+  "slug": "demo-ledger",
+  "name": "Demo Ledger (placeholder)",
+  "logo": null,
+  "url": "https://example.com/demo-ledger",
+  "affiliateUrl": null,
+  "signupBonus": {
+    "headline": "PLACEHOLDER 50 free spins, no deposit",
+    "verifiedAt": "2026-09-08"
+  },
+  "ratings": {
+    "sources": [
+      { "id": "askgamblers", "score": 7.1, "scale": 10, "url": "https://example.com/ag/demo-ledger", "verifiedAt": "2026-09-08" },
+      { "id": "casinoguru", "score": 6.8, "scale": 10, "url": "https://example.com/cg/demo-ledger", "verifiedAt": "2026-09-08" },
+      { "id": "lcb", "score": 3.4, "scale": 5, "url": "https://example.com/lcb/demo-ledger", "verifiedAt": "2026-09-08" }
+    ]
+  },
+  "factors": ["instant-withdrawal"],
+  "currencies": ["BTC"],
+  "editorial": {
+    "summary": "Placeholder record. Invented figures, present only so templates can be reviewed.",
+    "pros": ["Placeholder pro one", "Placeholder pro two", "Placeholder pro three"],
+    "cons": ["Placeholder con one", "Placeholder con two"]
+  },
+  "license": null,
+  "demo": true
+}

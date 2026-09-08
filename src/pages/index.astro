@@ -1,0 +1,175 @@
+---
+import CasinoCard from '../components/CasinoCard.astro';
+import Base from '../layouts/Base.astro';
+import { loadCasinos, loadCurrencies, loadFactors } from '../lib/content';
+import { byScoreDesc, lastVerified } from '../lib/ratings';
+
+const casinos = [...loadCasinos()].sort(byScoreDesc);
+const factors = loadFactors();
+const currencies = loadCurrencies();
+
+const dataModified = casinos
+  .map((c) => lastVerified(c))
+  .filter((d): d is string => d !== null)
+  .sort()
+  .at(-1) ?? null;
+---
+
+<Base
+  title="Casilla — Crypto Casino Ratings From Every Major Review Site"
+  description="One combined score per crypto casino, built from the published ratings of AskGamblers, Casino Guru, Trustpilot and others. Every figure is linked back to its source."
+  dataModified={dataModified}
+>
+  <h1 class="text-[34px] sm:text-[40px] max-w-[20ch]">Crypto casino ratings, with the sources shown</h1>
+
+  <p class="mt-4 max-w-[62ch] text-ink-300">
+    Every score below is the average of what several independent review platforms
+    published about that casino, rebased onto one scale. We show the individual figures
+    and link to each one, so you can check the number rather than trust it.
+  </p>
+
+  <!-- Search and filters -->
+  <section class="mt-8" aria-label="Search and filter">
+    <label class="block">
+      <span class="sr-only">Search casinos by name</span>
+      <input
+        type="search"
+        id="q"
+        placeholder="Search casinos"
+        autocomplete="off"
+        class="w-full max-w-md rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
+      />
+    </label>
+
+    <div class="mt-4 grid gap-4 sm:grid-cols-[minmax(0,240px)_1fr]">
+      <label class="block">
+        <span class="mb-1.5 block text-[14px] text-ink-300">Deposit and withdrawal coin</span>
+        <select
+          id="currency"
+          class="w-full rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050"
+        >
+          <option value="">Any coin</option>
+          {currencies.map((c) => <option value={c.code}>{c.name} ({c.code})</option>)}
+        </select>
+      </label>
+
+      {
+        factors.length > 0 && (
+          <fieldset class="min-w-0">
+            <legend class="mb-1.5 text-[14px] text-ink-300">Features</legend>
+            <div class="flex flex-wrap gap-x-4 gap-y-2">
+              {factors.map((f) => (
+                <label class="flex items-center gap-2 text-[15px]">
+                  <input
+                    type="checkbox"
+                    class="accent-amber-500"
+                    data-factor
+                    value={f.slug}
+                  />
+                  {f.name}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+        )
+      }
+    </div>
+  </section>
+
+  <!-- Ranking -->
+  <section class="mt-8" aria-label="Casino ranking">
+    <p class="mb-3 text-[14px] text-ink-400" id="count" aria-live="polite">
+      {casinos.length}{casinos.length === 1 ? ' casino' : ' casinos'}
+    </p>
+
+    {
+      casinos.length === 0 ? (
+        <p class="surface p-6 text-ink-300">
+          No casinos have been published yet. The ranking appears here as they are added.
+        </p>
+      ) : (
+        <ol class="space-y-2.5" id="list">
+          {casinos.map((casino, i) => (
+            <li>
+              <CasinoCard casino={casino} rank={i + 1} />
+            </li>
+          ))}
+        </ol>
+      )
+    }
+
+    <p id="empty" hidden class="surface p-6 text-ink-300">
+      No casino matches those filters. Try clearing the coin or a feature.
+    </p>
+  </section>
+</Base>
+
+<script>
+  // Filtering is client-side over markup that already contains every casino, so the
+  // crawler sees the full list and the interaction costs no request. The URL is kept in
+  // sync for shareability, but combinations are deliberately not indexable — the
+  // canonical home for a single feature is its own facet page.
+  const list = document.getElementById('list');
+  if (list) {
+    const cards = [...list.querySelectorAll<HTMLElement>('[data-casino]')];
+    const items = cards.map((card) => ({
+      card,
+      li: card.closest('li') as HTMLElement,
+      name: card.dataset.name ?? '',
+      factors: (card.dataset.factors ?? '').split(',').filter(Boolean),
+      currencies: (card.dataset.currencies ?? '').split(',').filter(Boolean),
+    }));
+
+    const q = document.getElementById('q') as HTMLInputElement;
+    const currency = document.getElementById('currency') as HTMLSelectElement;
+    const boxes = [...document.querySelectorAll<HTMLInputElement>('[data-factor]')];
+    const count = document.getElementById('count')!;
+    const empty = document.getElementById('empty')!;
+
+    function apply() {
+      const term = q.value.trim().toLowerCase();
+      const coin = currency.value;
+      const wanted = boxes.filter((b) => b.checked).map((b) => b.value);
+
+      let shown = 0;
+      for (const item of items) {
+        const ok =
+          (!term || item.name.includes(term)) &&
+          (!coin || item.currencies.includes(coin)) &&
+          wanted.every((f) => item.factors.includes(f));
+        item.li.hidden = !ok;
+        if (ok) shown++;
+      }
+
+      // Ranks reflect what is on screen, so the numbering never skips.
+      let rank = 0;
+      for (const item of items) {
+        if (item.li.hidden) continue;
+        rank++;
+        const cell = item.card.firstElementChild;
+        if (cell) cell.textContent = String(rank);
+      }
+
+      count.textContent = `${shown}${shown === 1 ? ' casino' : ' casinos'}`;
+      empty.hidden = shown > 0;
+
+      const params = new URLSearchParams();
+      if (coin) params.set('coin', coin);
+      if (wanted.length) params.set('f', wanted.join(','));
+      const qs = params.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+    }
+
+    // Restore state from a shared URL.
+    const initial = new URLSearchParams(location.search);
+    const coin0 = initial.get('coin');
+    if (coin0) currency.value = coin0;
+    const f0 = (initial.get('f') ?? '').split(',').filter(Boolean);
+    for (const b of boxes) b.checked = f0.includes(b.value);
+    if (coin0 || f0.length) apply();
+
+    q.addEventListener('input', apply);
+    currency.addEventListener('change', apply);
+    for (const b of boxes) b.addEventListener('change', apply);
+  }
+</script>

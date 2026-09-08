@@ -1,0 +1,30 @@
+{
+  "name": "casilla",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SEO-first aggregator of online crypto casino ratings",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validate": "tsx scripts/validate-content.ts",
+    "slop-lint": "tsx scripts/slop-lint.ts",
+    "verify": "npm run check && npm run validate && npm run slop-lint && npm run build"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/sitemap": "^3.6.0",
+    "@fontsource-variable/archivo": "^5.2.5",
+    "@fontsource-variable/source-sans-3": "^5.2.5",
+    "astro": "^5.14.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

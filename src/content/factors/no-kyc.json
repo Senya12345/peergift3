@@ -1,0 +1,27 @@
+{
+  "slug": "no-kyc",
+  "name": "No KYC",
+  "facetSlug": "no-kyc-crypto-casinos",
+  "h1": "Crypto casinos that let you play without KYC",
+  "metaTitle": "No KYC Crypto Casinos: What They Actually Verify",
+  "metaDescription": "Which crypto casinos let you deposit, play and withdraw without identity documents, where the limits sit, and what still triggers a verification request.",
+  "intro": "\"No KYC\" is one of the most oversold phrases in crypto gambling, so it is worth being precise about what it buys you. On the casinos listed here, you can register with an email address, deposit, play and withdraw without uploading a passport or a utility bill. That is the practical definition, and it is genuinely different from a licensed operator where verification is mandatory before the first cashout.\n\nWhat it does not mean is that identity checks are gone forever.\n\nAlmost every operator in this category keeps a threshold in its terms, usually expressed as a rolling withdrawal limit — commonly somewhere between 1 and 5 BTC in a 24-hour window, though the exact figure varies and some sites do not publish it at all. Cross it, and the account moves into review. The same happens if the site's anti-fraud system flags a pattern it does not like: multiple accounts from one address, deposits arriving from a mixer, or a bonus played in a way the terms prohibit. So the honest description is not \"no verification ever\" but \"no verification unless you win large or look unusual.\"\n\nThe second thing worth understanding is why these operators can do this at all. Sites requiring no identity documents are almost always licensed offshore — Curaçao is the usual answer — or running with no licence whatsoever. That is the trade. You gain privacy and a signup that takes under a minute. You give up the complaints process that a stricter regulator would give you, which matters precisely on the day a withdrawal stalls and support stops replying.\n\nA few practical notes from checking these sites. Anonymity ends at the blockchain: a withdrawal to an address you have used on a KYC'd exchange links the two, whatever the casino stores. Bonus terms are where no-KYC operators are strictest, because it is the only lever they have left against abuse — read the wagering requirement before opting in, not after. And support quality varies more here than anywhere else in the market, which is why the ratings below are worth reading alongside the complaint volumes on each source.",
+  "faq": [
+    {
+      "q": "Can a no-KYC casino still ask for documents?",
+      "a": "Yes. Nearly all of them reserve the right to request verification above a withdrawal threshold or when their anti-fraud system flags an account. The difference from a licensed operator is that the check is conditional rather than mandatory."
+    },
+    {
+      "q": "Is playing at a no-KYC casino anonymous?",
+      "a": "Only from the casino's side. On-chain, a withdrawal to an address you have previously used on a verified exchange connects the two. The casino not knowing your name is not the same as nobody being able to work it out."
+    },
+    {
+      "q": "Are no-KYC casinos licensed?",
+      "a": "Usually offshore, most often Curacao, and sometimes not at all. Skipping identity checks is incompatible with the requirements of stricter regulators, so this is a structural trade rather than a marketing choice."
+    },
+    {
+      "q": "What usually triggers a verification request?",
+      "a": "Large or rapid withdrawals, deposits arriving from a mixing service, several accounts sharing an IP or device, and bonus play that breaches the terms. Ordinary play at ordinary stakes rarely does."
+    }
+  ]
+}

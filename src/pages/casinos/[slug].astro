@@ -1,0 +1,190 @@
+---
+import RatingTable from '../../components/RatingTable.astro';
+import Base from '../../layouts/Base.astro';
+import { loadCasinos } from '../../lib/content';
+import { facetsForCasino } from '../../lib/facets';
+import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
+import { MIN_RATING_SOURCES, type Casino } from '../../lib/schemas';
+
+export function getStaticPaths() {
+  return loadCasinos().map((casino) => ({
+    params: { slug: casino.slug },
+    props: { casino },
+  }));
+}
+
+interface Props {
+  casino: Casino;
+}
+
+const { casino } = Astro.props;
+
+const score = aggregateScore(casino);
+const sources = normaliseSources(casino);
+const verified = lastVerified(casino);
+const facets = facetsForCasino(casino);
+const factorFacets = facets.filter((f) => f.kind === 'factor');
+const currencyFacets = facets.filter((f) => f.kind === 'currency');
+
+const bandClass = {
+  high: 'text-score-high',
+  mid: 'text-score-mid',
+  low: 'text-score-low',
+} as const;
+const scoreClass = score === null ? 'text-ink-400' : bandClass[scoreBand(score)];
+
+const description =
+  score === null
+    ? `${casino.name}: what we could and could not verify, the bonus terms, and where to read player reviews.`
+    : `${casino.name} scores ${score.toFixed(1)}/10 across ${sources.length} review platforms. Bonus terms, payout behaviour and what players complain about.`;
+---
+
+<Base
+  title={`${casino.name} Review: Ratings, Bonus and Payouts — Casilla`}
+  description={description}
+  dataModified={verified}
+>
+  <nav aria-label="Breadcrumb" class="text-[14px] text-ink-400">
+    <a href="/" class="hover:text-ink-100">Ranking</a>
+    <span aria-hidden="true"> / </span>
+    <span class="text-ink-300">{casino.name}</span>
+  </nav>
+
+  <div class="mt-5 flex flex-wrap items-start gap-5">
+    <div
+      class="grid size-16 shrink-0 place-items-center rounded-[4px] border border-ink-600 bg-ink-800 font-display text-[24px] font-bold text-ink-300"
+      aria-hidden="true"
+    >
+      {casino.name.charAt(0)}
+    </div>
+
+    <div class="min-w-0 flex-1">
+      <h1 class="text-[32px] sm:text-[38px]">{casino.name}</h1>
+      {
+        verified && (
+          <p class="mt-1 text-[14px] text-ink-400">
+            Last verified <time datetime={verified}>{verified}</time>
+          </p>
+        )
+      }
+    </div>
+
+    <div class="flex flex-col items-end gap-2">
+      {
+        score === null ? (
+          <span class="text-[15px] text-ink-400">
+            Not rated — fewer than {MIN_RATING_SOURCES} sources
+          </span>
+        ) : (
+          <span class={`tabular font-display text-[44px] font-bold leading-none ${scoreClass}`}>
+            {score.toFixed(1)}
+          </span>
+        )
+      }
+      <a
+        href={`/go/${casino.slug}`}
+        rel="sponsored nofollow noopener"
+        target="_blank"
+        data-outbound={casino.slug}
+        class="rounded-[4px] bg-amber-500 px-4 py-2.5 font-semibold text-ink-900 no-underline hover:bg-amber-400"
+        >Visit site</a
+      >
+    </div>
+  </div>
+
+  {
+    casino.signupBonus && (
+      <div class="surface mt-6 p-4">
+        <p class="text-[17px]">
+          <span class="text-ink-400">Sign-up bonus:</span>{' '}
+          <span class="text-ink-050">{casino.signupBonus.headline}</span>
+        </p>
+        {casino.signupBonus.detail && (
+          <p class="mt-1.5 text-[15px] text-ink-300">{casino.signupBonus.detail}</p>
+        )}
+      </div>
+    )
+  }
+
+  {
+    sources.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-[24px]">Where the score comes from</h2>
+        <div class="mt-4">
+          <RatingTable sources={sources} />
+        </div>
+        {score !== null && (
+          <p class="mt-3 text-[14px] text-ink-400">
+            Our figure is the mean of the {sources.length} normalised scores above. Nothing
+            is weighted and nothing is adjusted — see{' '}
+            <a href="/methodology/">how we rate</a>.
+          </p>
+        )}
+      </section>
+    )
+  }
+
+  <section class="mt-10">
+    <h2 class="text-[24px]">Our take</h2>
+    <div class="mt-3 max-w-[68ch] space-y-4 text-ink-100">
+      {casino.editorial.summary.split('\n\n').map((p) => <p>{p}</p>)}
+    </div>
+
+    <div class="mt-6 grid gap-5 sm:grid-cols-2">
+      <div>
+        <h3 class="text-[18px]">What works</h3>
+        <ul class="mt-2 space-y-1.5 text-ink-100">
+          {casino.editorial.pros.map((p) => <li class="pl-4 -indent-4">— {p}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-[18px]">What to watch</h3>
+        <ul class="mt-2 space-y-1.5 text-ink-100">
+          {casino.editorial.cons.map((c) => <li class="pl-4 -indent-4">— {c}</li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {
+    (factorFacets.length > 0 || currencyFacets.length > 0) && (
+      <section class="mt-10">
+        <h2 class="text-[24px]">Features and coins</h2>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {[...factorFacets, ...currencyFacets].map((f) => (
+            <li>
+              <a
+                href={`/${f.slug}/`}
+                class="inline-block rounded-[3px] border border-ink-600 bg-ink-800 px-2.5 py-1 text-[14px] text-ink-100 no-underline hover:border-ink-400 hover:text-amber-400"
+              >
+                {f.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    (casino.license || casino.founded) && (
+      <section class="mt-10">
+        <h2 class="text-[24px]">Operator details</h2>
+        <dl class="mt-3 grid max-w-md grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[15px]">
+          {casino.license && (
+            <>
+              <dt class="text-ink-400">Licence</dt>
+              <dd class="text-ink-100">{casino.license}</dd>
+            </>
+          )}
+          {casino.founded && (
+            <>
+              <dt class="text-ink-400">Founded</dt>
+              <dd class="tabular text-ink-100">{casino.founded}</dd>
+            </>
+          )}
+        </dl>
+      </section>
+    )
+  }
+</Base>

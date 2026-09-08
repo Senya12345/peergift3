@@ -1,0 +1,64 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+  { href: '/methodology/', label: 'How we rate' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+  { href: '/affiliate-disclosure/', label: 'Affiliate disclosure' },
+  { href: '/responsible-gambling/', label: 'Responsible gambling' },
+  { href: '/privacy/', label: 'Privacy' },
+  { href: '/terms/', label: 'Terms' },
+];
+---
+
+<footer class="border-t border-ink-600 bg-ink-800 mt-16">
+  <div class="max-w-[1120px] mx-auto px-4 py-10 text-[15px] text-ink-300 space-y-6">
+    <nav class="flex flex-wrap gap-x-5 gap-y-2">
+      {
+        links.map((l) => (
+          <a href={l.href} class="hover:text-ink-050 no-underline">
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <p>
+      Contact: <a href="mailto:pencasino@gmail.com" class="text-amber-500"
+        >pencasino@gmail.com</a
+      >
+    </p>
+
+    <div class="border border-ink-600 rounded-[4px] p-4 space-y-2 bg-ink-700">
+      <p class="text-ink-100">
+        <span class="font-display font-bold text-ink-050">18+ only.</span> Gambling involves
+        risk and you should never stake money you cannot afford to lose. If it has stopped
+        being entertainment, stop and get help.
+      </p>
+      <p>
+        Free, confidential support:
+        <a href="https://www.begambleaware.org/" rel="nofollow noopener" target="_blank"
+          >BeGambleAware</a
+        >
+        ·
+        <a href="https://www.gamcare.org.uk/" rel="nofollow noopener" target="_blank"
+          >GamCare</a
+        >
+        ·
+        <a href="https://www.gamblingtherapy.org/" rel="nofollow noopener" target="_blank"
+          >Gambling Therapy</a
+        >
+      </p>
+    </div>
+
+    <p>
+      Casilla earns commission when you sign up through links on this site. It does not
+      change what you pay, and it does not decide the order of the rankings — those come
+      from the published scores of the review platforms we aggregate. Full detail in our
+      <a href="/affiliate-disclosure/">affiliate disclosure</a>.
+    </p>
+
+    <p class="text-ink-400">© {year} Casilla. All rights reserved.</p>
+  </div>
+</footer>

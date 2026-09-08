@@ -1,0 +1,104 @@
+---
+import type { NormalisedSource } from '../lib/ratings';
+
+interface Props {
+  sources: NormalisedSource[];
+}
+
+const { sources } = Astro.props;
+---
+
+<div class="overflow-x-auto">
+  <table class="w-full min-w-[560px] border-collapse text-[15px]">
+    <caption class="mb-3 text-left text-ink-300">
+      What each platform published, and the date we last checked it. Sort by any column.
+    </caption>
+    <thead>
+      <tr class="border-b border-ink-600 text-left text-[14px] text-ink-300">
+        <th scope="col" class="py-2 pr-4" aria-sort="none">
+          <button type="button" data-sort="name" class="hover:text-ink-050">Source</button>
+        </th>
+        <th scope="col" class="py-2 pr-4">Metric</th>
+        <th scope="col" class="py-2 pr-4 text-right" aria-sort="none">
+          <button type="button" data-sort="raw" class="hover:text-ink-050">Published</button>
+        </th>
+        <th scope="col" class="py-2 pr-4 text-right" aria-sort="descending">
+          <button type="button" data-sort="normalised" class="hover:text-ink-050">
+            On our scale
+          </button>
+        </th>
+        <th scope="col" class="py-2 pr-4 text-right" aria-sort="none">
+          <button type="button" data-sort="verified" class="hover:text-ink-050">Checked</button>
+        </th>
+        <th scope="col" class="py-2"><span class="sr-only">Link</span></th>
+      </tr>
+    </thead>
+    <tbody data-rating-rows>
+      {
+        sources.map((s) => (
+          <tr
+            class="border-b border-ink-600/60"
+            data-name={s.name}
+            data-raw={s.raw}
+            data-normalised={s.normalised}
+            data-verified={s.verifiedAt}
+          >
+            <th scope="row" class="py-2.5 pr-4 text-left font-normal text-ink-050">
+              {s.name}
+            </th>
+            <td class="py-2.5 pr-4 text-ink-300">{s.label}</td>
+            <td class="tabular py-2.5 pr-4 text-right">
+              {s.raw}
+              <span class="text-ink-400">/{s.scale}</span>
+            </td>
+            <td class="tabular py-2.5 pr-4 text-right text-ink-050">
+              {s.normalised.toFixed(1)}
+            </td>
+            <td class="tabular py-2.5 pr-4 text-right text-ink-400">
+              <time datetime={s.verifiedAt}>{s.verifiedAt}</time>
+            </td>
+            <td class="py-2.5 text-right">
+              <a href={s.url} rel="nofollow noopener" target="_blank" class="text-amber-500">
+                View
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // Sorting third-party scores is the honest version of "sortable reviews": we reorder
+  // other people's published figures, never their text.
+  for (const table of document.querySelectorAll<HTMLElement>('[data-rating-rows]')) {
+    const body = table as HTMLTableSectionElement;
+    const head = body.closest('table')!.tHead!;
+    let activeKey = 'normalised';
+    let descending = true;
+
+    for (const button of head.querySelectorAll<HTMLButtonElement>('[data-sort]')) {
+      button.addEventListener('click', () => {
+        const key = button.dataset.sort!;
+        descending = key === activeKey ? !descending : true;
+        activeKey = key;
+
+        const rows = [...body.rows];
+        rows.sort((a, b) => {
+          const av = a.dataset[key] ?? '';
+          const bv = b.dataset[key] ?? '';
+          const numeric = key === 'raw' || key === 'normalised';
+          const cmp = numeric ? Number(av) - Number(bv) : av.localeCompare(bv);
+          return descending ? -cmp : cmp;
+        });
+        for (const row of rows) body.appendChild(row);
+
+        for (const th of head.querySelectorAll('th')) th.removeAttribute('aria-sort');
+        button
+          .closest('th')!
+          .setAttribute('aria-sort', descending ? 'descending' : 'ascending');
+      });
+    }
+  }
+</script>
