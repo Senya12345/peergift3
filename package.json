@@ -25,6 +25,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@tailwindcss/vite": "^4.1.13",
+    "playwright": "^1.63.0",
     "tailwindcss": "^4.1.13",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0"

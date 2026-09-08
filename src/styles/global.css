@@ -47,6 +47,16 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Form controls do not inherit font by default, so without this the search box and
+     the coin selector quietly render in the browser's system stack. */
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
   h1,
   h2,
   h3,
@@ -98,6 +108,30 @@
     background-color: var(--color-ink-700);
     border: 1px solid var(--color-ink-600);
     border-radius: var(--radius-card);
+  }
+
+  /* Defined here rather than as a Tailwind arbitrary value: the tick is an inline SVG
+     data URI, and its quotes do not survive being embedded in a utility class. */
+  .checkbox {
+    appearance: none;
+    inline-size: 1rem;
+    block-size: 1rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 1px solid var(--color-ink-400);
+    border-radius: 2px;
+    background-color: var(--color-ink-800);
+    transition:
+      background-color 120ms ease-out,
+      border-color 120ms ease-out;
+  }
+
+  .checkbox:checked {
+    border-color: var(--color-amber-500);
+    background-color: var(--color-amber-500);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%230E1114' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3.5 8.5l3 3 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .surface-interactive {
