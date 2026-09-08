@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { siteIndexable } from '../lib/content';
@@ -11,9 +12,17 @@ interface Props {
   noindex?: boolean;
   /** ISO date of the underlying data, not of the build. */
   dataModified?: string | null;
+  /** Segments outbound-click events by where the click happened. */
+  pageType?: 'home' | 'casino' | 'facet' | 'article' | 'static';
 }
 
-const { title, description, noindex = false, dataModified = null } = Astro.props;
+const {
+  title,
+  description,
+  noindex = false,
+  dataModified = null,
+  pageType = 'static',
+} = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 
@@ -47,7 +56,7 @@ const robots = !siteIndexable
 
     <slot name="head" />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col" data-page-type={pageType}>
     <a
       href="#main"
       class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-ink-700 focus:px-3 focus:py-2"
@@ -58,5 +67,6 @@ const robots = !siteIndexable
       <slot />
     </main>
     <Footer />
+    <Analytics />
   </body>
 </html>

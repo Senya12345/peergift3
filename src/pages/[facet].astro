@@ -1,6 +1,8 @@
 ---
 import CasinoCard from '../components/CasinoCard.astro';
+import JsonLd from '../components/JsonLd.astro';
 import Base from '../layouts/Base.astro';
+import { breadcrumbs, casinoList, collectionPage, faqPage } from '../lib/schema';
 import { RESERVED_SLUGS } from '../lib/content';
 import { getFacets, relatedFacets, type Facet } from '../lib/facets';
 import { lastVerified } from '../lib/ratings';
@@ -44,7 +46,27 @@ const dataModified = facet.casinos
   description={facet.metaDescription}
   noindex={!facet.indexable}
   dataModified={dataModified}
+  pageType="facet"
 >
+  {/* A noindexed facet gets no structured data: describing a page we are asking
+      Google to ignore is noise at best and a mixed signal at worst. */}
+  {
+    facet.indexable && (
+      <JsonLd
+        slot="head"
+        data={[
+          collectionPage(facet),
+          casinoList(facet.casinos),
+          faqPage(facet.faq),
+          breadcrumbs([
+            { name: 'Ranking', path: '/' },
+            { name: facet.name, path: `/${facet.slug}/` },
+          ]),
+        ]}
+      />
+    )
+  }
+
   <nav aria-label="Breadcrumb" class="text-[14px] text-ink-400">
     <a href="/" class="hover:text-ink-100">Ranking</a>
     <span aria-hidden="true"> / </span>

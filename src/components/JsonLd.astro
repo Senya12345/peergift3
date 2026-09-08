@@ -1,0 +1,17 @@
+---
+interface Props {
+  /** Nulls are accepted and skipped, so callers can pass conditional blocks inline. */
+  data: (Record<string, unknown> | null)[] | Record<string, unknown> | null;
+}
+
+const { data } = Astro.props;
+const blocks = (Array.isArray(data) ? data : [data]).filter(
+  (d): d is Record<string, unknown> => d !== null,
+);
+---
+
+{
+  blocks.map((block) => (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(block)} />
+  ))
+}

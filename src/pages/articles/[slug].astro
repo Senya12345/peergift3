@@ -1,0 +1,83 @@
+---
+import { getCollection, render } from 'astro:content';
+import JsonLd from '../../components/JsonLd.astro';
+import Prose from '../../components/Prose.astro';
+import Base from '../../layouts/Base.astro';
+import { authorSchema, getAuthor } from '../../lib/authors';
+import { breadcrumbs, organizationId } from '../../lib/schema';
+import { absolute } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const author = getAuthor(article.data.author);
+const path = `/articles/${article.id}/`;
+---
+
+<Base
+  title={`${article.data.title} — Casilla`}
+  description={article.data.description}
+  dataModified={article.data.updatedAt ?? article.data.publishedAt}
+  pageType="article"
+>
+  <JsonLd
+    slot="head"
+    data={[
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: article.data.title,
+        description: article.data.description,
+        url: absolute(path),
+        datePublished: article.data.publishedAt,
+        dateModified: article.data.updatedAt ?? article.data.publishedAt,
+        author: authorSchema(author),
+        publisher: { '@id': organizationId },
+        mainEntityOfPage: absolute(path),
+      },
+      breadcrumbs([
+        { name: 'Ranking', path: '/' },
+        { name: 'Articles', path: '/articles/' },
+        { name: article.data.title, path },
+      ]),
+    ]}
+  />
+
+  <nav aria-label="Breadcrumb" class="text-[14px] text-ink-400">
+    <a href="/" class="hover:text-ink-100">Ranking</a>
+    <span aria-hidden="true"> / </span>
+    <a href="/articles/" class="hover:text-ink-100">Articles</a>
+  </nav>
+
+  <h1 class="mt-4 max-w-[26ch] text-[32px] sm:text-[38px]">{article.data.title}</h1>
+
+  <p class="tabular mt-3 text-[14px] text-ink-400">
+    {author.name} · {author.role} ·{' '}
+    <time datetime={article.data.publishedAt}>{article.data.publishedAt}</time>
+    {
+      article.data.updatedAt && (
+        <>
+          {' '}· updated <time datetime={article.data.updatedAt}>{article.data.updatedAt}</time>
+        </>
+      )
+    }
+  </p>
+
+  <div class="mt-6">
+    <Prose>
+      <Content />
+    </Prose>
+  </div>
+
+  <aside class="surface mt-12 p-4 text-[15px] text-ink-300">
+    <p><span class="font-display font-bold text-ink-050">{author.name}</span> — {author.role}</p>
+    <p class="mt-1.5">{author.bio}</p>
+  </aside>
+</Base>

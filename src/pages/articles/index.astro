@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { getAuthor } from '../../lib/authors';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt),
+);
+---
+
+<Base
+  title="Articles — Casilla"
+  description="How crypto casinos actually work: KYC thresholds, withdrawal behaviour, bonus terms and the things worth checking before you deposit."
+  pageType="article"
+>
+  <h1 class="text-[32px] sm:text-[38px]">Articles</h1>
+
+  <p class="mt-4 max-w-[62ch] text-ink-300">
+    Explanations of the things that decide whether a crypto casino is worth your time —
+    written when we keep running into the same question, not on a publishing schedule.
+  </p>
+
+  {
+    articles.length === 0 ? (
+      <p class="surface mt-8 p-6 text-ink-300">Nothing published yet.</p>
+    ) : (
+      <ul class="mt-8 space-y-2.5">
+        {articles.map((article) => {
+          const author = getAuthor(article.data.author);
+          return (
+            <li>
+              <article class="surface surface-interactive relative p-4">
+                <h2 class="text-[20px]">
+                  <a
+                    href={`/articles/${article.id}/`}
+                    class="no-underline after:absolute after:inset-0 hover:text-amber-400"
+                  >
+                    {article.data.title}
+                  </a>
+                </h2>
+                <p class="mt-1.5 text-ink-300">{article.data.description}</p>
+                <p class="tabular mt-2 text-[13px] text-ink-400">
+                  {author.name} ·{' '}
+                  <time datetime={article.data.updatedAt ?? article.data.publishedAt}>
+                    {article.data.updatedAt ?? article.data.publishedAt}
+                  </time>
+                </p>
+              </article>
+            </li>
+          );
+        })}
+      </ul>
+    )
+  }
+</Base>

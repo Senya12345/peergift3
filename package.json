@@ -6,7 +6,7 @@
   "description": "SEO-first aggregator of online crypto casino ratings",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && tsx scripts/build-redirects.ts",
     "preview": "astro preview",
     "check": "astro check",
     "validate": "tsx scripts/validate-content.ts",
@@ -22,9 +22,13 @@
     "zod": "^4.5.4"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "vite": "^6.4.1"
   }
 }

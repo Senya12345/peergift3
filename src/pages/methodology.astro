@@ -1,0 +1,87 @@
+---
+import Prose from '../components/Prose.astro';
+import Base from '../layouts/Base.astro';
+import { MIN_RATING_SOURCES } from '../lib/schemas';
+import { SOURCE_PLATFORMS } from '../lib/site';
+---
+
+<Base
+  title="How We Rate Crypto Casinos — Casilla"
+  description="The exact formula behind every score on Casilla: which platforms we read, how different scales are reconciled, what we deliberately exclude, and where the method is weak."
+>
+  <h1 class="text-[32px] sm:text-[38px]">How we rate</h1>
+
+  <Prose>
+    <p class="mt-5">
+      Casilla does not invent scores. Every number on this site is arithmetic performed on
+      figures other people published, and this page describes the arithmetic completely
+      enough that you could reproduce it yourself.
+    </p>
+
+    <h2>The formula</h2>
+    <p>
+      For each casino we record the rating currently published by each of these platforms:
+      {SOURCE_PLATFORMS.join(', ')}. Each figure is stored with a link to the exact page it
+      came from and the date we read it.
+    </p>
+    <p>
+      Platforms use different scales. Trustpilot and LCB publish out of five; the others
+      out of ten. Every figure is rebased onto ten by doubling the five-point ones. The
+      score we display is the plain, unweighted mean of those rebased numbers, rounded to
+      one decimal place.
+    </p>
+    <p>
+      No platform counts for more than any other. We considered weighting — a case can be
+      made that a site resolving player complaints deserves more say than one aggregating
+      star ratings — and rejected it, because any weighting we chose would be our opinion
+      dressed up as a calculation. A plain mean is the one operation nobody has to take on
+      trust.
+    </p>
+    <p>
+      A casino found on fewer than {MIN_RATING_SOURCES} platforms is shown as unrated. Averaging
+      one or two numbers produces something that looks like a rating and is not one.
+    </p>
+
+    <h2>What is not in the score</h2>
+    <p>
+      Commission is not in the score. Casilla earns money when readers sign up through our
+      links, and the ranking order is a direct function of the aggregated figures — there is
+      no manual placement, no paid position, and no tie-break we control.
+    </p>
+    <p>
+      Our own editorial opinion is also not in the score. The written verdict on each casino
+      page is ours; the number is not. When we think a casino is worse than its aggregate
+      suggests, we say so in the text and leave the arithmetic alone.
+    </p>
+
+    <h2>Where this method is weak</h2>
+    <p>
+      Three limitations are worth stating plainly rather than hiding.
+    </p>
+    <p>
+      <strong>It inherits other people's blind spots.</strong> If every platform we read
+      rates a casino generously, so do we. The aggregate reduces the effect of one
+      platform's bias; it cannot detect a bias they share.
+    </p>
+    <p>
+      <strong>Metrics are not identical.</strong> Casino Guru publishes a Safety Index, which
+      weighs complaint history and terms rather than player enjoyment. Trustpilot aggregates
+      customer sentiment. Averaging them treats different questions as one, which is a real
+      compromise. We label every metric by its actual name in the source table so you can see
+      what went into the mean and discount it if you disagree.
+    </p>
+    <p>
+      <strong>It is a snapshot.</strong> Every figure carries the date it was checked. We
+      re-verify the leading casinos monthly and update the date only when we have actually
+      looked again — a refreshed timestamp on unchanged data would be the easiest lie on this
+      site to tell and the least excusable.
+    </p>
+
+    <h2>Corrections</h2>
+    <p>
+      If a figure here does not match what the source currently shows, tell us and we will
+      check it. Getting a number wrong is the only failure that matters on a site whose whole
+      claim is that the numbers are checkable.
+    </p>
+  </Prose>
+</Base>

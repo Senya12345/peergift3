@@ -1,0 +1,64 @@
+---
+import Prose from '../components/Prose.astro';
+import Base from '../layouts/Base.astro';
+import { MIN_RATING_SOURCES, FACET_MIN_CASINOS } from '../lib/schemas';
+import { SITE } from '../lib/site';
+---
+
+<Base
+  title="About Casilla"
+  description="What Casilla is, who runs it, and the rules it holds itself to when publishing numbers about gambling operators."
+>
+  <h1 class="text-[32px] sm:text-[38px]">About Casilla</h1>
+
+  <Prose>
+    <p class="mt-5">
+      Casilla answers one question: what do the established casino review platforms
+      collectively think of a given crypto casino? Rather than adding a tenth opinion to a
+      crowded market, it gathers the opinions that already exist, puts them on one scale, and
+      shows the workings.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      Each casino page lists the rating published by every platform we could find it on, the
+      date we checked, and a link to that exact page. The headline score is the plain mean of
+      those figures — see <a href="/methodology/">how we rate</a> for the full formula and its
+      weaknesses. A casino found on fewer than {MIN_RATING_SOURCES} platforms carries no score at all.
+    </p>
+
+    <h2>Rules we hold ourselves to</h2>
+    <ul>
+      <li>
+        No invented figures. If a rating, bonus amount or licence number could not be verified,
+        it is left out and the omission is visible rather than filled with a plausible guess.
+      </li>
+      <li>
+        No paid placement. Position follows the arithmetic. Commission is disclosed on
+        <a href="/affiliate-disclosure/">its own page</a> and changes nothing about the order.
+      </li>
+      <li>
+        Real drawbacks. Every casino page carries genuine criticism drawn from player
+        complaints and bonus terms, not manufactured balance.
+      </li>
+      <li>
+        Lists earn their place. A feature page stays out of search results until it holds at
+        least {FACET_MIN_CASINOS} casinos, because a list of two is not a comparison.
+      </li>
+    </ul>
+
+    <h2>Who runs it</h2>
+    <p>
+      Casilla is a small independent project, not a media group and not part of any casino
+      operator. It has no licence and takes no bets — it is a comparison site, and the only
+      thing it sells is a referral.
+    </p>
+
+    <h2>Corrections and contact</h2>
+    <p>
+      If a number here is wrong, or a casino's terms have changed since we checked, write to
+      <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. Corrections take priority over
+      everything else on the roadmap.
+    </p>
+  </Prose>
+</Base>

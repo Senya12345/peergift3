@@ -8,3 +8,4 @@ dist/
 .DS_Store
 *.log
 .lighthouseci/
+functions/go/redirect-map.json

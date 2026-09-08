@@ -1,0 +1,67 @@
+---
+import Prose from '../components/Prose.astro';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base
+  title="Terms of Use — Casilla"
+  description="The terms that apply to using Casilla, including what the ratings are and are not, and the limits of what we can be responsible for."
+>
+  <h1 class="text-[32px] sm:text-[38px]">Terms of use</h1>
+
+  <Prose>
+    <p class="mt-5 text-ink-300">Last updated: 8 September 2026</p>
+
+    <h2>What this site is</h2>
+    <p>
+      Casilla is an information and comparison site. It is not a gambling operator, holds no
+      gaming licence, accepts no bets and processes no wagers. Everything here is published
+      for information; none of it is advice about whether you should gamble or where.
+    </p>
+
+    <h2>Age and legality</h2>
+    <p>
+      You must be at least 18, and older where your jurisdiction requires it. Online gambling
+      is restricted or prohibited in many places, and the legality of using any operator
+      listed here is yours to determine before you do. A casino appearing on this site is not
+      a statement that it is lawful for you to use.
+    </p>
+
+    <h2>Accuracy</h2>
+    <p>
+      Ratings are aggregated from third-party platforms and each carries the date it was
+      checked. Bonus terms, supported coins, licensing and withdrawal policies change without
+      notice, and a figure that was right when we checked it may be wrong by the time you read
+      it. Always confirm the current terms on the operator's own site before depositing.
+      Report anything wrong to <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+    </p>
+
+    <h2>Third-party sites</h2>
+    <p>
+      Outbound links lead to operators we neither own nor control. We are not responsible for
+      their content, their terms, their handling of your money or your data, or any dispute
+      between you and them. Listing an operator is not an endorsement or a guarantee of
+      anything about it.
+    </p>
+
+    <h2>Liability</h2>
+    <p>
+      This site is provided as is. To the extent the law allows, we accept no liability for
+      losses arising from using it or from acting on anything published here — gambling losses
+      very much included.
+    </p>
+
+    <h2>Content</h2>
+    <p>
+      The written material, scoring method and design on this site belong to Casilla. Ratings
+      are attributed to the platforms that published them and remain theirs. You are welcome
+      to quote us with a link.
+    </p>
+
+    <h2>Changes</h2>
+    <p>
+      These terms may change; the date above tracks the last revision.
+    </p>
+  </Prose>
+</Base>

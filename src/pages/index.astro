@@ -1,8 +1,10 @@
 ---
 import CasinoCard from '../components/CasinoCard.astro';
+import JsonLd from '../components/JsonLd.astro';
 import Base from '../layouts/Base.astro';
 import { loadCasinos, loadCurrencies, loadFactors } from '../lib/content';
 import { byScoreDesc, lastVerified } from '../lib/ratings';
+import { casinoList, organization, website } from '../lib/schema';
 
 const casinos = [...loadCasinos()].sort(byScoreDesc);
 const factors = loadFactors();
@@ -19,7 +21,17 @@ const dataModified = casinos
   title="Casilla — Crypto Casino Ratings From Every Major Review Site"
   description="One combined score per crypto casino, built from the published ratings of AskGamblers, Casino Guru, Trustpilot and others. Every figure is linked back to its source."
   dataModified={dataModified}
+  pageType="home"
 >
+  <JsonLd
+    slot="head"
+    data={[
+      { '@context': 'https://schema.org', ...organization() },
+      website(),
+      casinos.length > 0 ? casinoList(casinos) : null,
+    ]}
+  />
+
   <h1 class="text-[34px] sm:text-[40px] max-w-[20ch]">Crypto casino ratings, with the sources shown</h1>
 
   <p class="mt-4 max-w-[62ch] text-ink-300">

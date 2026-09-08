@@ -1,0 +1,48 @@
+---
+import Prose from '../components/Prose.astro';
+import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
+---
+
+<Base
+  title="Contact Casilla"
+  description="How to reach Casilla about a wrong figure, a casino worth adding, or a partnership enquiry."
+>
+  <h1 class="text-[32px] sm:text-[38px]">Contact</h1>
+
+  <Prose>
+    <p class="mt-5">
+      One address for everything:
+      <a href={`mailto:${SITE.email}`} class="font-display font-bold">{SITE.email}</a>
+    </p>
+
+    <h2>Corrections</h2>
+    <p>
+      These get answered first. If a score, bonus or licence detail does not match what the
+      source shows, send the casino name and a link to what you are seeing. We will re-check
+      and update the figure and its verification date, or explain why we read it differently.
+    </p>
+
+    <h2>Suggesting a casino</h2>
+    <p>
+      Tell us the name and the site. We add operators that appear on at least three of the
+      review platforms we track — below that there is nothing to aggregate.
+    </p>
+
+    <h2>Operators and affiliate managers</h2>
+    <p>
+      You are welcome to get in touch, and it is worth knowing what will not work: we do not
+      sell placement, we do not remove criticism on request, and commission has no effect on
+      ranking position. Factual corrections about your own site are always welcome.
+    </p>
+
+    <h2>Player disputes</h2>
+    <p>
+      We cannot help with a withheld withdrawal or a closed account. Casilla holds no licence
+      and has no relationship with these operators beyond referral links, so we have no
+      leverage. Take the complaint to the platform that handles them — AskGamblers and Casino
+      Guru both run complaint services with a real record of recovering player funds — and to
+      the licensing body named in the casino's footer.
+    </p>
+  </Prose>
+</Base>

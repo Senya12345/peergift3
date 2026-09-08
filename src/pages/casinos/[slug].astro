@@ -1,6 +1,8 @@
 ---
+import JsonLd from '../../components/JsonLd.astro';
 import RatingTable from '../../components/RatingTable.astro';
 import Base from '../../layouts/Base.astro';
+import { breadcrumbs, casinoReview } from '../../lib/schema';
 import { loadCasinos } from '../../lib/content';
 import { facetsForCasino } from '../../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
@@ -43,7 +45,19 @@ const description =
   title={`${casino.name} Review: Ratings, Bonus and Payouts — Casilla`}
   description={description}
   dataModified={verified}
+  pageType="casino"
 >
+  <JsonLd
+    slot="head"
+    data={[
+      casinoReview(casino),
+      breadcrumbs([
+        { name: 'Ranking', path: '/' },
+        { name: casino.name, path: `/casinos/${casino.slug}/` },
+      ]),
+    ]}
+  />
+
   <nav aria-label="Breadcrumb" class="text-[14px] text-ink-400">
     <a href="/" class="hover:text-ink-100">Ranking</a>
     <span aria-hidden="true"> / </span>
