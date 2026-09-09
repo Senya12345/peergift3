@@ -47,9 +47,10 @@ casino scored 2.8 CasinoRank against 9.6 Player Rating on the same page. Grabbin
 whichever number appears first in a search result silently changes the methodology
 casino to casino, and the aggregate stops meaning anything comparable.
 
-Fewer than three platforms found? The record is still valid, but it will render as
-unrated. Report that explicitly, because it is usually a signal in itself: a casino no
-major platform has reviewed is either very new or deliberately obscure.
+Fewer than two platforms found (`MIN_RATING_SOURCES` in `src/lib/schemas.ts`)? The
+record is still valid, but it will render as unrated. Report that explicitly, because
+it is usually a signal in itself: a casino no major platform has reviewed is either
+very new or deliberately obscure.
 
 ## Step 2 — read the player reviews
 

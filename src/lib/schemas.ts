@@ -2,9 +2,13 @@ import { z } from 'zod';
 
 /**
  * A casino with fewer than this many rating sources gets no aggregate score.
- * Averaging one or two numbers is not an aggregate, it is a quote.
+ * Averaging a single number is not an aggregate, it is a quote. Two is the floor the
+ * site owner chose to ship with — young casinos (Duel, Shuffle) often aren't reviewed
+ * yet by all six platforms this site tracks, and holding every new casino to three
+ * sources meant most of them sat unrated indefinitely. Two independent figures is
+ * still meaningfully more than trusting one platform's opinion.
  */
-export const MIN_RATING_SOURCES = 3;
+export const MIN_RATING_SOURCES = 2;
 
 /** A facet page stays out of the index until it holds at least this many casinos. */
 export const FACET_MIN_CASINOS = 5;

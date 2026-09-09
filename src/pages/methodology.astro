@@ -38,8 +38,13 @@ import { SOURCE_PLATFORMS } from '../lib/site';
       trust.
     </p>
     <p>
-      A casino found on fewer than {MIN_RATING_SOURCES} platforms is shown as unrated. Averaging
-      one or two numbers produces something that looks like a rating and is not one.
+      A casino found on fewer than {MIN_RATING_SOURCES} platforms is shown as unrated —
+      averaging a single figure produces something that looks like a rating and is not
+      one. {MIN_RATING_SOURCES} is a lower floor than we started with. Newer casinos are
+      often not yet reviewed by every platform we track, and holding them to a stricter
+      minimum meant most of them sat unrated indefinitely with no path to a score. Two
+      independent figures is still a real average of two different platforms' opinions,
+      not one platform's opinion dressed up as a consensus.
     </p>
 
     <h2>What is not in the score</h2>

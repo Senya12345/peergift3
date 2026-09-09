@@ -1,0 +1,137 @@
+{
+  "slug": "roobet",
+  "name": "Roobet",
+  "logo": null,
+  "url": "https://roobet.com",
+  "affiliateUrl": "https://roobet.com/?ref=senkapenka",
+  "signupBonus": {
+    "headline": "Rakeback-based rewards across a 25-tier VIP ladder (Beginner through Immortal) rather than a fixed deposit-match bonus",
+    "detail": "Roobet's main ongoing reward is continuous rakeback paid instantly, daily, weekly and monthly depending on tier, scaling with wagered volume rather than deposit size. We could not confirm a single flat welcome-bonus percentage that applies to every new signup; check the offer attached to your own registration link.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "askgamblers",
+        "score": 5.3,
+        "scale": 10,
+        "url": "https://www.askgamblers.com/online-casinos/reviews/roobet-casino-casino",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "casinoguru",
+        "score": 7.9,
+        "scale": 10,
+        "url": "https://casino.guru/roobet-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "lcb",
+        "score": 2.7,
+        "scale": 5,
+        "url": "https://lcb.org/casinos/roobet",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20",
+        "TRX"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDC",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "XRP",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BCH",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "Roobet is one of the longer-running crypto casinos on this site, live since 2019 under a Curacao licence (OGL/2024/687/0427). It runs a large catalogue — 6,000+ slots, 500+ live tables, a sportsbook and esports markets — and in May 2026 became one of the first major crypto casinos to launch an integrated prediction-markets product alongside the usual games, a genuine and fairly recent differentiator rather than a marketing rebrand of something everyone already has.\n\nCompared with several other casinos on this site, Roobet's problems read as more ordinary. There is no bankruptcy ruling, no confirmed data breach and no criminal investigation attached to it as of this check. AskGamblers records a real but comparatively modest complaint pattern: an average disputed withdrawal around $11,669 taking about 9 days to resolve, with the platform describing complaint volume as low relative to a reported 118,000 monthly players. Most of that appears tied to routine KYC checks on larger cashouts rather than anything more unusual.\n\nTwo specific mechanics are worth knowing before you sign up. First, KYC is mandatory before any withdrawal — not the conditional, threshold-based pattern several other casinos here use — and verification on withdrawals above roughly $1,000 to $2,000 commonly moves into a manual review that can take hours to days, while smaller cashouts are usually fast. Second, Roobet blocks over 50 countries including the US, UK, Australia and Canada's Ontario, and its terms prohibit VPN use to get around that. The part worth flagging specifically: community reports consistently describe restricted-region accounts getting locked at the withdrawal stage rather than at registration or deposit, meaning a player can build a real balance before discovering the account is unusable — a materially worse outcome than being blocked up front.\n\nRoobet's Trustpilot profile currently carries the same guideline-breach suspension notice we've now seen on more than one casino in this space, following removal of manipulated reviews; we are not displaying a Trustpilot figure as a result, consistent with how we handle that situation elsewhere on this site.",
+    "pros": [
+      "No bankruptcy, confirmed breach or criminal investigation attached to it as of this check — a cleaner recent history than several other casinos on this site",
+      "Large, established catalogue (6,000+ slots, 500+ live tables) plus a genuinely novel addition: an integrated prediction-markets product launched May 2026, ahead of most competitors",
+      "Provably fair Originals with per-round server/client seed verification",
+      "AskGamblers' own complaint data describes volume as low relative to a reported 118,000 monthly players, and most disputes trace to routine large-withdrawal KYC rather than something more unusual"
+    ],
+    "cons": [
+      "KYC is mandatory before any withdrawal, with amounts above roughly $1,000-$2,000 commonly moving into manual review lasting hours to days — not the low-verification model some competitors offer",
+      "Blocks 50+ countries and prohibits VPN use, and community reports consistently describe restricted-region accounts being locked specifically at the withdrawal stage rather than at signup — meaning a real balance can build before the account becomes unusable",
+      "Trustpilot currently carries a guideline-breach suspension notice following removal of manipulated reviews, the same pattern now seen at several large crypto casinos, so no Trustpilot figure is shown here",
+      "AskGamblers' complaint record shows disputed withdrawals averaging roughly $11,669 and about 9 days to resolve — real, if more moderate than some other casinos on this site",
+      "AskGamblers' algorithmic score and player rating sit close together here (5.1 vs 5.3) rather than diverging sharply — itself informative, since on other casinos a wide gap has flagged a deeper problem; here it doesn't, but the absolute level on both is middling rather than strong"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "KYC is required before any withdrawal, with no conditional low-verification tier. Reports describe withdrawals under roughly $1,000-$2,000 processing quickly, often within minutes, while larger amounts enter manual review that can take hours to several days. AskGamblers' complaint record shows an average disputed withdrawal of about $11,669 taking roughly 9 days to resolve — a real but comparatively moderate pattern next to some other casinos we track.",
+    "deposits": "Roobet supports around a dozen cryptocurrencies (BTC, ETH, LTC, DOGE, SOL, USDT, USDC, XRP, TRX, BCH among them) with deposits reported to credit quickly. We found no independently confirmed minimum deposit figures specific to Roobet to cite with confidence.",
+    "commonProblems": "The most distinct issue isn't a payments complaint but a geo-restriction one: Roobet blocks 50+ countries and prohibits VPN use in its terms, and community reports describe restricted-region accounts being locked specifically at the withdrawal stage rather than at signup, letting a balance build before the account becomes unusable. Beyond that, AskGamblers records a real but moderate complaint pattern concentrated on larger withdrawals moving into manual review, and Trustpilot currently shows a guideline-breach suspension notice following removal of manipulated reviews, the same pattern seen at other large crypto casinos.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Curacao, licence OGL/2024/687/0427.",
+  "founded": 2019,
+  "demo": false
+}

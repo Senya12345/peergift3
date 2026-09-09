@@ -3,6 +3,7 @@ import { loadCasinos } from '../lib/content';
 import { getFacets } from '../lib/facets';
 import { aggregateScore } from '../lib/ratings';
 import { byScoreDesc } from '../lib/ratings';
+import { MIN_RATING_SOURCES } from '../lib/schemas';
 import { SITE, SOURCE_PLATFORMS } from '../lib/site';
 
 /**
@@ -22,7 +23,7 @@ export const GET: APIRoute = () => {
     '',
     '## How the score is produced',
     '',
-    `Each casino's score is the unweighted mean of ratings published by independent review platforms (${SOURCE_PLATFORMS.join(', ')}), rebased onto a 0-10 scale. Scores from platforms using a 5-point scale are doubled. A casino with fewer than three sources is shown as unrated rather than averaged. Every individual figure is displayed with the date it was checked and a link to the source, so any number on this site can be verified independently.`,
+    `Each casino's score is the unweighted mean of ratings published by independent review platforms (${SOURCE_PLATFORMS.join(', ')}), rebased onto a 0-10 scale. Scores from platforms using a 5-point scale are doubled. A casino with fewer than ${MIN_RATING_SOURCES} sources is shown as unrated rather than averaged. Every individual figure is displayed with the date it was checked and a link to the source, so any number on this site can be verified independently.`,
     '',
     `Casilla is an affiliate site: it earns commission on sign-ups. Commission does not affect the ranking, which follows the aggregated scores.`,
     '',
