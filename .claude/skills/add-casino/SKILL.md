@@ -129,6 +129,25 @@ plainly ("reported minimums vary by source"), and it renders on the page under a
 Ground every sentence in what you actually found; this block is not exempt from the
 never-invent-a-number rule just because it is labelled.
 
+## Step 4.6 — logo
+
+Leave `logo: null` and don't spend time chasing one. Two separate reasons, not one:
+
+1. **Technical.** This environment's egress allowlist reaches almost nothing —
+   `raw.githubusercontent.com` works, jsDelivr/unpkg/githack/Wikimedia/Clearbit/
+   Brandfetch and every casino's own domain do not. No casino brand mark lives on the
+   one host that's reachable.
+2. **Even where reachable, a brand mark isn't the same category as the coin icons.**
+   The crypto icon set in `src/assets/coins/` is CC0 — explicitly public domain,
+   checked before use. An operator's logo is a trademark. Pulling one from Wikimedia
+   Commons or a logo-aggregator site without checking its actual licence is a real risk,
+   not a formality, and more so for an operator already under legal or regulatory
+   scrutiny.
+
+If the user wants a real logo, the fix is asking them to supply the file — they can
+reach the operator's own site or press kit; this environment cannot. Report the gap,
+don't silently work around it, and don't re-litigate this per casino.
+
 ## Step 5 — write the file and verify
 
 Create `src/content/casinos/{slug}.json` matching the schema in `src/lib/schemas.ts`.
