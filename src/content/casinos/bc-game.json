@@ -38,7 +38,8 @@
     "provably-fair",
     "live-dealer",
     "sports-betting",
-    "vip-program"
+    "vip-program",
+    "no-kyc"
   ],
   "currencies": [
     {
@@ -178,7 +179,8 @@
       "A genuinely large game library — 8,000 to 10,000+ titles including 70+ in-house BC Originals that are provably fair and independently verifiable per bet",
       "Full sportsbook and live dealer tables (blackjack, roulette, baccarat, poker, game shows) alongside the slot catalogue, all on one balance",
       "Very low deposit minimums across most coins, and a 69-level VIP/SVIP ladder with cashback that starts rewarding volume relatively early",
-      "Wide currency support with cheap-network options for USDT (TRC-20 or Solana instead of ERC-20 saves real money on fees)"
+      "Wide currency support with cheap-network options for USDT (TRC-20 or Solana instead of ERC-20 saves real money on fees)",
+      "No identity verification required below a €10,000 monthly withdrawal threshold per the operator's own terms — high enough that the large majority of players never trigger it"
     ],
     "cons": [
       "A Curacao court declared the then-operator, Small House B.V., bankrupt in November 2024 over more than $2 million in documented unpaid player winnings — this is a court finding, not a forum rumour, and BC.Game's response was to dispute it and leave the Curacao market rather than resolve it there",

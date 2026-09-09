@@ -1,0 +1,92 @@
+{
+  "slug": "rainbet",
+  "name": "Rainbet",
+  "logo": null,
+  "url": "https://rainbet.com",
+  "affiliateUrl": "https://rainbet.com?r=casilla",
+  "signupBonus": {
+    "headline": "250% match up to $2,100 plus 60 free spins on first deposit, or a permanent 20% rakeback boost via a referral code instead",
+    "detail": "The deposit-match route needs a minimum $30 deposit and carries a 40x wagering requirement on deposit plus bonus combined, a 2% max-bet cap while clearing it, and excludes Hacksaw Gaming, Nolimit City and any title with an RTP above 97.4%. The alternative — activating a referral code for a flat rakeback percentage instead of the match — pays out with zero wagering requirement, claimable every ten minutes based on wager volume; several independent reviews describe this as the better value path for anyone planning to play a meaningful volume rather than chase a single large multiplier.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "casinoguru",
+        "score": 6.5,
+        "scale": 10,
+        "url": "https://casino.guru/rainbet-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "trustpilot",
+        "score": 2.3,
+        "scale": 5,
+        "url": "https://www.trustpilot.com/review/rainbet.com",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "lcb",
+        "score": 3,
+        "scale": 5,
+        "url": "https://lcb.org/casinos/rainbet-casino",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program"
+  ],
+  "currencies": [
+    { "code": "BTC", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "ETH", "networks": ["ERC20"], "minDeposit": null, "minWithdrawal": null },
+    { "code": "LTC", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "SOL", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "TRX", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "DOGE", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "ADA", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "XRP", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    { "code": "BNB", "networks": ["BSC"], "minDeposit": null, "minWithdrawal": null },
+    { "code": "TON", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    {
+      "code": "USDT",
+      "networks": ["ERC20", "TRX", "SOL", "BSC"],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDC",
+      "networks": ["ERC20", "SOL", "BSC"],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "Rainbet is the casino behind the single largest streamer sponsorship deal in the crypto-gambling space so far: in September 2025 it signed Adin Ross away from Stake for a reported $100 million upfront plus $50 million a year, and pulled his SSB streaming group — including cuffem and konvy — into its affiliate ecosystem along with him. That deal, not the game library, is why the site is suddenly everywhere, and it is worth understanding before the rest of the review, because it frames most of the controversy attached to this operator.\n\nOperationally, Rainbet is a crypto-only casino and full sportsbook launched in 2023 and run by RBGAMING N.V., a company registered in Curaçao (registration 163051) holding an Anjouan Gaming Authority B2C licence, ALSI-152406029-FI2, issued 14 June 2024 and running to June 2027. The in-house Originals — Dice, Crash, Plinko, Mines, Limbo, Chicken Cross, Hilo, Tower, Blackjack and several more — run on a published provably fair system alongside third-party slots, live dealer tables (roulette, baccarat, blackjack, craps, Sic Bo and others), and a genuinely broad sportsbook covering mainstream and niche sports plus esports.\n\nThe named-CEO situation is unusual enough to flag on its own. FinTelegram, an investigative outlet covering offshore gambling and fintech, has published a series of pieces questioning whether \"John Evans,\" presented publicly as Rainbet's CEO and co-founder, is a real, identifiable person at all, and describing Rainbet's corporate structure — split across a Curaçao registration and an Anjouan licence — as regulatory arbitrage designed to limit accountability. A separate, independent investigation by the football-focused outlet Attacking Football into Rainbet's sports-betting marketing was followed by a large-scale DDoS attack on that outlet's website starting in late September 2025, which FinTelegram covered as retaliation, though direct attribution to Rainbet itself was not established. We are reporting these as documented claims from named outlets, not as facts we independently verified — but the pattern (an opaque leadership identity, an investigative piece followed by an attack on the investigator's site) is the kind of thing worth knowing before you deposit, not after.\n\nThe streamer marketing itself draws its own scrutiny. Rainbet has run large sponsorship deals with streamers on platforms with substantial teenage viewerships, and has been the subject of specific claims — including a widely circulated video essay — alleging its marketing reaches and appeals to underage viewers, a live risk category for every gambling-adjacent streaming sponsorship, not unique to Rainbet but sharper here given the scale of its Kick and Twitch presence. Separately, Rainbet is not licensed to operate in Australia and has been named by Australian commentators as an illegal offshore operator actively promoted to Australian audiences despite the Interactive Gambling Act 2001 prohibiting exactly that.\n\nOn the numbers: Casino Guru's Safety Index sits at 6.5 (Above Average), with three recorded complaints in its database and — separately from the complaint count — Casino Guru's own review flags some Rainbet terms and conditions as containing clauses it considers unfair to players, worth reading before you opt into any bonus. Trustpilot shows 2.3 out of 5 across 586 reviews, weighted heavily toward one-star ratings, though Trustpilot's own systems have also flagged Rainbet's profile for a guideline breach tied to fake reviews — so treat the exact figure as directionally negative rather than a precise consensus. LCB records a player rating of 3 out of 5 from 21 votes. We could not confirm an AskGamblers numeric Player Rating figure with enough confidence to publish it, so it is not included in the aggregate below; AskGamblers' own written review describes the casino's complaint resolution as spotty, with 2 of 3 recorded complaints unresolved at last check.",
+    "pros": [
+      "A genuinely broad platform in one place: provably fair in-house Originals, live dealer tables, third-party slots and a comprehensive sportsbook covering mainstream and niche sports plus esports",
+      "A referral-code rakeback path (20% via code) that pays out with zero wagering requirement every ten minutes, a materially better deal for high-volume players than the deposit-match bonus",
+      "Low deposit and withdrawal minimums (reported at $5–15 depending on the coin) and no platform fee on crypto withdrawals beyond the network's own cost",
+      "Broad crypto support across roughly a dozen coins with multiple network options for USDT and USDC, keeping fees down on stablecoin moves"
+    ],
+    "cons": [
+      "FinTelegram, an investigative outlet covering offshore gambling, has published pieces questioning the identity of Rainbet's named CEO and describing its Curaçao/Anjouan corporate structure as designed to limit regulatory accountability — a claim we could not independently verify but consider worth disclosing given the source",
+      "An independent investigation into Rainbet's marketing by the outlet Attacking Football was followed by a large-scale DDoS attack on that outlet in late September 2025; FinTelegram reported this as retaliation, though we found no independent confirmation of who was responsible",
+      "Rainbet's aggressive streamer sponsorship strategy, including a nine-figure Adin Ross deal, has drawn specific allegations that its marketing reaches and appeals to underage viewers on platforms like Kick and Twitch — a real brand-safety and social-harm concern, not just a competitor complaint",
+      "Casino Guru's review flags specific Rainbet terms and conditions as containing player-unfair clauses, separate from and in addition to its three recorded complaints",
+      "Trustpilot's 2.3/5 score comes with a guideline-breach flag for fake reviews on the same profile, and the site is actively promoted to Australian players despite being unlicensed and illegal to operate there under the Interactive Gambling Act 2001"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "No fixed public KYC threshold is stated in Rainbet's own terms. Third-party guides describe a tiered, four-level verification system where most players stay at Level 1 (basic details, no ID) and can withdraw without documents at ordinary stakes, but sources disagree sharply on where scrutiny starts in practice — estimates range from roughly $2,500 to no fixed figure at all, with the operator reserving the right to request verification at any point based on withdrawal size or suspicious activity patterns. Because we could not confirm one consistent, sourced number, we are not treating this as a clearly stated numeric threshold the way we do for some other casinos on this site. Reported minimum withdrawal is $15 across supported coins with no platform fee beyond network cost.",
+    "deposits": "Reported minimum deposits are $5 for SOL, LTC, XRP, DOGE and TRX, and $15 for BTC, ETH, USDT, USDC and BNB, across roughly a dozen supported cryptocurrencies. Small verified withdrawals are reported by third-party reviewers to clear in under 15 minutes under normal conditions; we did not independently test this.",
+    "commonProblems": "The complaint pattern that shows up across sources splits into two categories. Player-facing complaints on Trustpilot and forums cluster around disputed game fairness (particularly blackjack and Originals), withdrawal friction, and unresponsive support on disputed cases — a pattern broadly similar to other large crypto casinos on this site. Separately, and more unusual for this site's coverage so far, Rainbet is the subject of investigative reporting (FinTelegram) questioning its corporate transparency and the identity of its named CEO, and of specific public allegations that its streamer-driven marketing reaches underage viewers. Neither of those is a withdrawal or deposit mechanics issue, but both bear directly on how much trust to extend the operator, which is why we are surfacing them here rather than only in the pros/cons list.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Anjouan Gaming Authority, licence ALSI-152406029-FI2 (issued 14 June 2024, valid to 13 June 2027). Operated by RBGAMING N.V., registered in Curaçao (registration 163051).",
+  "founded": 2023,
+  "demo": false
+}
