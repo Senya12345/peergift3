@@ -1,0 +1,111 @@
+{
+  "slug": "1win",
+  "name": "1win",
+  "logo": null,
+  "url": "https://1win.com",
+  "affiliateUrl": "https://one-vv6905.com/?open=register",
+  "signupBonus": {
+    "headline": "Up to 500% across the first four deposits (exact cap varies by region and source, commonly cited between $1,025 and $2,000)",
+    "detail": "Like most of 1win's terms, the headline figure shifts by which regional site or affiliate link you land on. Reported wagering requirements also vary by product — figures from 5x on sports bonus funds up to 30x-40x on casino bonus funds appear across sources. We are not stating one figure as definitive; read the terms attached to your specific signup link before opting in.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "askgamblers",
+        "score": 9.6,
+        "scale": 10,
+        "url": "https://www.askgamblers.com/online-casinos/reviews/1win-casino",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "casinoguru",
+        "score": 8.7,
+        "scale": 10,
+        "url": "https://casino.guru/1win-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "lcb",
+        "score": 3.8,
+        "scale": 5,
+        "url": "https://lcb.org/casinos/1win-casino",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "sports-betting",
+    "live-dealer",
+    "vip-program"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20",
+        "BSC",
+        "TRX"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "1win is a large multi-market sportsbook and casino — over 11,000 games, 600+ live dealer tables from Evolution, Pragmatic Play and Ezugi among others, and a five-tier VIP cashback program — that has built much of its visibility through aggressive celebrity sponsorship: Canelo Alvarez, Jon Jones, David Warner and a rotating cast of athletes and influencers front its marketing. It is licensed out of Curacao and was founded in 2016.\n\nWe want to lead with something that split us on whether to list this casino at all. Starting in 2023, Kazakhstan's Financial Monitoring Agency investigated 1win's operations in the country as an unlicensed gambling network. That investigation escalated: Kazakh authorities placed four individuals connected to organizing 1win's Kazakhstan operations on an international wanted list, alleging roughly $8 million in criminal proceeds, and seized assets reported at around 1.5 billion tenge, including luxury vehicles and cash across several currencies. The individuals are also accused of unlawful detention and violence in connection with the operation. This is a live criminal matter concerning the people running 1win's business in at least one country, not a player forum complaint, and we think it belongs at the top of this page rather than the bottom.\n\nSeparately, and worth reading alongside that: AskGamblers itself shows a striking split on 1win. Its algorithmic CasinoRank — which factors in exactly the kind of complaint-handling and business-conduct signals relevant here — sits at a cautious 2.8 out of 10. Its raw player rating, the number we actually use in the breakdown below for consistency with every other casino on this site, is 9.6 out of 10 from 66 reviews. A near seven-point gap between a platform's own risk algorithm and its players' star ratings on the same casino is unusual, and we read it as the algorithm picking up on something the average five-star review does not.\n\n1win is also blocked or restricted in a long list of jurisdictions — Russia (where it runs via mirror domains, the same mechanism as the link that likely brought you to this page), most of Western Europe, and it holds no licence in India despite marketing heavily there. None of this means every 1win user has a bad experience; it is an enormous platform processing routine bets and casino play at scale without incident for most of them. It does mean the legal and regulatory picture around who runs it and where it is allowed to operate is considerably messier than the polished sponsorship roster suggests.",
+    "pros": [
+      "A genuinely large product: 11,000+ games, 600+ live dealer tables from major studios (Evolution, Pragmatic Play, Ezugi), and a full sportsbook in one account",
+      "Five-tier VIP program with disclosed cashback percentages (0.5% up to 15%) and a weekly cashback payment on net losses — more transparent about the mechanics than most VIP schemes on this site",
+      "Broad payment flexibility: cards, e-wallets and regional methods alongside crypto, useful if you don't want to be crypto-only",
+      "High marks from both AskGamblers player rating (9.6/10) and Casino Guru's Safety Index (8.7/10)"
+    ],
+    "cons": [
+      "Kazakhstan's Financial Monitoring Agency has run an active investigation into 1win's operations there since 2023, resulting in an international wanted list for individuals connected to running it, roughly $8M in alleged criminal proceeds, and asset seizures — a live legal matter about the operator, not a player dispute",
+      "AskGamblers' own algorithmic CasinoRank scores 1win at just 2.8/10, sharply diverging from the 9.6/10 player rating we use in the breakdown below — worth reading as a signal in itself",
+      "Blocked or unlicensed in a long list of major markets: Russia, Kazakhstan, most of Western Europe, and India, despite marketing heavily in several of them",
+      "No single canonical Trustpilot rating exists — reviews are fragmented across at least four separate domain-specific profiles, making it hard to see the full picture in one place",
+      "Bonus terms (headline percentage, cap, wagering requirement) vary meaningfully by region and which link you register through, and the exact current licence number is inconsistently reported across sources"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "Third-party guides report crypto withdrawals (USDT TRC-20, BTC, ETH) clearing in roughly 8 to 90 minutes under normal conditions. KYC verification is commonly reported as required before a first withdrawal, or once cumulative withdrawals cross a regional threshold (figures around $500 appear in multiple sources) — reported verification turnaround is around 72 hours. Exact triggers and limits vary noticeably by region and by which mirror or regional site you registered on.",
+    "deposits": "1win accepts a wide range of payment methods beyond crypto — cards, e-wallets and regional bank methods — with crypto (BTC, ETH, USDT, LTC, TRX, DOGE) offered as one option among many rather than the primary rail the way it is at Stake or BC.Game. Deposits are reported to credit quickly across methods.",
+    "commonProblems": "The dominant issue is not a player-support complaint but a regulatory and legal one: Kazakhstan's Financial Monitoring Agency investigation into 1win's operations there, which led to an international wanted list for individuals connected to running the platform in that market, alongside asset seizures. Beyond that, Trustpilot reviews across 1win's several regional-domain profiles describe withdrawal delays and cases of a withdrawal showing as successful without funds arriving, along with complaints about transparency on odds and RTP. We could not identify a single canonical Trustpilot rating for 1win because the reviews are split across multiple domain-specific profiles (1win.pro, 1win.top, 1win.bid, 1win.in) rather than consolidated on one, which is itself worth knowing before treating any single Trustpilot score you find as the whole picture.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Curacao (1Win N.V.), licence number reported inconsistently across sources (OGL/2024/587/0621 per one source, 8048/JAZ2018-040 per another — we could not resolve which is current). Blocked or operating without a licence in Russia, Kazakhstan, most of Western Europe and India; under active criminal investigation in Kazakhstan since 2023 over unlicensed operations there.",
+  "founded": 2016,
+  "demo": false
+}

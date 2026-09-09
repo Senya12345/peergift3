@@ -26,7 +26,7 @@ Search each platform for the casino and record what it currently publishes:
 
 | Platform | `id` | Scale | Metric it publishes |
 |---|---|---|---|
-| AskGamblers | `askgamblers` | 10 | Editorial + player rating |
+| AskGamblers | `askgamblers` | 10 | **Player rating only** — not CasinoRank |
 | Casino Guru | `casinoguru` | 10 | **Safety Index** — not a satisfaction score |
 | Trustpilot | `trustpilot` | 5 | Customer sentiment |
 | Casinomeister | `casinomeister` | 10 | Editorial rating |
@@ -37,6 +37,15 @@ For each hit, capture the score, the **deep link to that casino's page** on the 
 and today's date as `verifiedAt`. Confirm the scale from the page rather than assuming it
 — a platform that shows 4.2 out of 5 and one that shows 4.2 out of 10 are very different
 casinos.
+
+**AskGamblers shows two different numbers and they can diverge sharply** — CasinoRank
+(its own algorithmic score, blending business factors it doesn't fully disclose) and
+Player Rating (the plain average of submitted reviews, with a review count attached).
+This site records Player Rating, consistently, for every casino — not whichever one a
+search snippet happens to surface first. A real case that shows why this matters: one
+casino scored 2.8 CasinoRank against 9.6 Player Rating on the same page. Grabbing
+whichever number appears first in a search result silently changes the methodology
+casino to casino, and the aggregate stops meaning anything comparable.
 
 Fewer than three platforms found? The record is still valid, but it will render as
 unrated. Report that explicitly, because it is usually a signal in itself: a casino no

@@ -32,7 +32,11 @@ export const RATING_SOURCES: Record<
   RatingSourceId,
   { name: string; label: string; abbr: string }
 > = {
-  askgamblers: { name: 'AskGamblers', label: 'AskGamblers rating', abbr: 'AG' },
+  // Specifically the player-submitted score, not AskGamblers' own proprietary
+  // "CasinoRank" algorithm — the two can diverge sharply (a real case: 2.8 vs 9.6 on
+  // the same casino) and only one of them is a plain, checkable number rather than an
+  // undisclosed blend of business factors.
+  askgamblers: { name: 'AskGamblers', label: 'AskGamblers player rating', abbr: 'AG' },
   casinoguru: { name: 'Casino Guru', label: 'Casino Guru Safety Index', abbr: 'CG' },
   trustpilot: { name: 'Trustpilot', label: 'Trustpilot score', abbr: 'TP' },
   casinomeister: { name: 'Casinomeister', label: 'Casinomeister rating', abbr: 'CM' },
