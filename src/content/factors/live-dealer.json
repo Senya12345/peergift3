@@ -1,0 +1,19 @@
+{
+  "slug": "live-dealer",
+  "name": "Live dealer",
+  "facetSlug": "live-dealer-casinos",
+  "h1": "Casinos with live dealer tables",
+  "metaTitle": "Live Dealer Crypto Casinos: Real Tables, Streamed",
+  "metaDescription": "Crypto casinos offering live dealer roulette, blackjack and baccarat with a real human dealer over video, and how crypto deposits fit into that experience.",
+  "intro": "Live dealer games stream a real table — a human dealer, physical cards or a physical wheel — to your screen in real time, with betting handled through the software layer on top. It is the closest a crypto casino gets to a physical table without leaving your browser.\n\nThe games themselves are typically licensed from a small number of specialist studios that supply the entire industry, live-streaming from purpose-built sets. What differs between casinos is less the underlying game and more the selection and table limits on offer — how many roulette or blackjack tables are running, whether higher-stakes tables exist for larger bettors, and how the casino's own interface layers chat and side bets on top of the feed.\n\nFor a crypto casino specifically, the interesting part is how the two systems connect: your crypto balance funds live-dealer bets the same way it funds slots, converted internally so the table itself never has to deal with blockchain settlement mid-hand. Withdrawal mechanics after a live-dealer session are identical to withdrawal mechanics after any other kind of play at the same casino — nothing about live dealer changes the cashout process.\n\nBecause these games run on a real-time video feed rather than a random number generator, the \"provably fair\" verification some crypto casinos apply to their own slot-style Originals does not apply here — fairness at a live table rests on the licensing and auditing of the studio supplying the stream, not on a cryptographic proof you can check yourself.",
+  "faq": [
+    {
+      "q": "Does provably fair verification apply to live dealer games?",
+      "a": "No. Live dealer games run on a real video feed from a licensed studio, so fairness rests on that studio's licensing and auditing rather than a cryptographic proof."
+    },
+    {
+      "q": "Can I fund live dealer tables directly with crypto?",
+      "a": "Yes — your crypto balance is converted internally to fund any game at the casino, live dealer included, and withdrawals work the same as after any other session."
+    }
+  ]
+}

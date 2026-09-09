@@ -1,0 +1,29 @@
+{
+  "code": "ETH",
+  "name": "Ethereum",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    }
+  ],
+  "facetSlug": "ethereum-casinos",
+  "h1": "Casinos that accept Ethereum, on-chain or via BSC",
+  "metaTitle": "Ethereum Casinos: ERC20 vs BEP20 Gas Costs Compared",
+  "metaDescription": "Casinos accepting Ethereum for deposits and withdrawals, and why mainnet ERC20 gas can cost an order of magnitude more than wrapped ETH on BNB Smart Chain.",
+  "intro": "Ethereum is a two-network coin in practice, and which one a casino offers changes the economics of playing there more than almost any other setting on this list.\n\nNative ETH on its own chain, the ERC20 rail, is secure and universally recognised, but gas costs on Ethereum mainnet are volatile and can spike into double-digit dollars during busy periods — on a modest deposit that fee is not trivial. The alternative some casinos offer is wrapped ETH moved over BNB Smart Chain (BEP20), which settles in a few seconds for a fraction of a cent. It is the same underlying asset value-wise, but it is not the same token technically: sending BEP20 ETH to an address that only understands ERC20 loses the funds, no exceptions and no support ticket fixes it.\n\nThat single fact is the whole reason this page separates networks rather than just listing \"ETH accepted.\" If a casino offers both, check which one your withdrawal came from before you send a deposit back in, and match the network on both sides every time.\n\nDeposit crediting is usually fast regardless of network — one to a handful of confirmations. Withdrawal cost is where mainnet ETH becomes the expensive option: a casino that only supports ERC20 is not doing anything wrong, but it means eating Ethereum's gas market on every cashout, which adds up over a lot of small ones.\n\nMinimum deposits and withdrawals on this page are denominated in ETH itself. Because gas eats a variable share of a small transaction, a casino with a low stated minimum on mainnet can still be uneconomical to actually use at that minimum — worth doing the arithmetic before assuming the smallest allowed deposit is the smallest sensible one.",
+  "faq": [
+    {
+      "q": "Is BEP20 ETH the same as real Ethereum?",
+      "a": "It represents the same value but is a different token on a different chain. Sending it to an ERC20-only address does not convert — it fails or is lost."
+    },
+    {
+      "q": "Why is my ETH withdrawal fee so high?",
+      "a": "Ethereum mainnet gas prices are demand-driven and can spike sharply. If the casino only supports ERC20, that cost is unavoidable on that network regardless of the operator."
+    }
+  ]
+}

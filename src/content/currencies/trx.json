@@ -1,0 +1,20 @@
+{
+  "code": "TRX",
+  "name": "Tron",
+  "networks": [],
+  "facetSlug": "tron-casinos",
+  "h1": "Casinos that accept Tron (TRX)",
+  "metaTitle": "Tron Casinos: Near-Zero Fees on Native TRX",
+  "metaDescription": "Casinos accepting native TRX, and why the Tron network's minimal fees have made it one of the default rails for stablecoin transfers as well.",
+  "intro": "Tron's native coin, TRX, settles quickly and cheaply, but Tron's bigger role in the casino payments world is as the network of choice for USDT — a large share of stablecoin deposits across the crypto casino industry move over Tron specifically because its fees are a small fraction of Ethereum's for the same transfer. That reputation extends to how TRX itself is treated: it is generally fast, low-cost, and reliable to move.\n\nFor a casino player depositing TRX directly, the experience is straightforward — confirmations are quick, fees are minor, and congestion is rare compared with Ethereum. Where things get more interesting is if you also hold USDT: knowing that \"Tron\" and \"TRC20\" refer to the same network is useful, because casino interfaces sometimes label the option one way and sometimes the other, and picking the matching option on both the sending and receiving side is what actually matters, not the label.\n\nTron has no secondary network of its own the way USDT does — TRX itself moves on the Tron chain, full stop. The risk to manage is the opposite direction: if a casino also lets you deposit USDT over Tron, do not confuse a TRX deposit address with a TRC20 USDT deposit address if the interface shows them separately, since sending the wrong asset to the wrong address type is not always recoverable.",
+  "faq": [
+    {
+      "q": "Is Tron the same as TRC20?",
+      "a": "TRC20 is the token standard used on the Tron network, so a TRC20 asset like USDT is moving over the Tron chain. Native TRX and TRC20 tokens share the same underlying network."
+    },
+    {
+      "q": "Why do so many stablecoin deposits go through Tron?",
+      "a": "Fees on Tron are a small fraction of Ethereum's for a comparable transfer, which is why TRC20 USDT became a common default for casino deposits industry-wide."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "provably-fair",
+  "name": "Provably fair",
+  "facetSlug": "provably-fair-casinos",
+  "h1": "Casinos offering provably fair games",
+  "metaTitle": "Provably Fair Casinos: Verify Every Result Yourself",
+  "metaDescription": "Casinos whose games use provably fair proofs, letting you verify a result wasn't altered after you bet — what it actually checks, and what it doesn't.",
+  "intro": "Provably fair is a specific cryptographic technique, not a marketing phrase, though plenty of sites use the words loosely. Done properly, it lets a player verify after the fact that a game's outcome was generated from a seed committed to before the bet was placed — meaning the operator could not have altered the result once they saw your wager.\n\nThe mechanism generally works by combining a server seed, hashed and shown to you before you bet, with a client seed you can set yourself, plus a nonce that increments with each bet. After the round, the server seed is revealed, and you can independently recompute the outcome using publicly available tools to confirm it matches what you were shown. If it does not match, the operator manipulated the result — provably, not just allegedly.\n\nWhat this verifies is narrower than \"the game is fair\" in a general sense. It confirms the specific outcome you were shown was not altered after your bet was placed. It does not verify the underlying odds, house edge, or RTP are what the casino claims, and it does not apply to third-party game providers' titles the way it does to a casino's own in-house \"Originals,\" which are the games this mechanism is really built for.\n\nFor anyone who wants to actually use this feature rather than just see the phrase on a landing page, look for a visible seed-verification tool in the casino's interface — usually under account settings or directly on the game screen — and check that changing your client seed is actually possible, since a casino that shows the concept but locks the client seed to a fixed value is not offering the real thing.",
+  "faq": [
+    {
+      "q": "What does provably fair actually verify?",
+      "a": "That the specific outcome of a bet was generated from a seed committed to before you placed it, and was not altered afterward. It does not verify the house edge or RTP independently."
+    },
+    {
+      "q": "Does provably fair apply to every game at these casinos?",
+      "a": "Usually only to the casino's own in-house games, often branded \"Originals.\" Licensed third-party slots and live tables typically use separate certification instead."
+    }
+  ]
+}

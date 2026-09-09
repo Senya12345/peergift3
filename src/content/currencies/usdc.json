@@ -1,0 +1,37 @@
+{
+  "code": "USDC",
+  "name": "USD Coin",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    },
+    {
+      "code": "POL",
+      "name": "Polygon"
+    },
+    {
+      "code": "SOL",
+      "name": "Solana"
+    }
+  ],
+  "facetSlug": "usdc-casinos",
+  "h1": "Casinos that accept USDC across four networks",
+  "metaTitle": "USDC Casinos: Same Dollar, Four Different Fee Structures",
+  "metaDescription": "Casinos accepting USDC over Ethereum, BNB Smart Chain, Polygon or Solana, and how the network you pick changes the fee for the same dollar value.",
+  "intro": "USDC is a dollar-pegged stablecoin, which removes the price-volatility question that applies to Bitcoin or Ethereum entirely — a USDC balance is worth the same in dollars when you withdraw it as when you deposited it, network fees aside. What is left to think about is purely which network to move it on.\n\nThe same USDC exists on at least four chains a casino might support: Ethereum (ERC20), BNB Smart Chain (BEP20), Polygon and Solana. They are not interchangeable — sending ERC20 USDC to a Polygon-only deposit address does not work — but where a casino offers a choice, the decision is straightforward: Ethereum mainnet gas is the most expensive of the four by a wide margin, often tens of times the cost of the same transfer over Polygon or Solana, both of which typically cost a fraction of a cent.\n\nBecause there is no price movement to worry about, USDC is one of the more forgiving coins on this list for someone who wants a casino balance to sit for a while between sessions without exposure to a market swing. The trade-off some players weigh against that stability is the loss of any upside a volatile coin might offer — a purely personal preference, not a technical one.\n\nMinimum deposits and withdrawals for USDC are usually stated in dollars directly, since the peg makes that the natural unit, but always confirm which network a stated minimum applies to — a casino may set a lower floor on its cheapest network and a higher one on Ethereum mainnet to offset the gas cost of processing it.",
+  "faq": [
+    {
+      "q": "Which USDC network has the lowest fees?",
+      "a": "Polygon and Solana are typically the cheapest, often a fraction of a cent, versus Ethereum mainnet which can run into several dollars during busy periods for the same transfer."
+    },
+    {
+      "q": "Does USDC lose value sitting in a casino account?",
+      "a": "No — it is pegged to the US dollar, so unlike Bitcoin or Ethereum there is no market-driven price movement to worry about while the balance sits idle."
+    }
+  ]
+}

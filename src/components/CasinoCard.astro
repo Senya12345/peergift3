@@ -1,4 +1,5 @@
 ---
+import CoinIcon from './CoinIcon.astro';
 import { facetsForCasino } from '../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../lib/ratings';
 import { MIN_RATING_SOURCES, type Casino } from '../lib/schemas';
@@ -14,6 +15,22 @@ const score = aggregateScore(casino);
 const sources = normaliseSources(casino);
 const verified = lastVerified(casino);
 const factorChips = facetsForCasino(casino).filter((f) => f.kind === 'factor');
+
+// "CODE:NETWORK" tokens so the network sub-filter can match a specific chain, not just
+// the coin — e.g. "only casinos offering USDT on Tron," not any USDT support at all.
+const networkTokens = casino.currencies.flatMap((c) =>
+  c.networks.map((n) => `${c.code}:${n}`),
+);
+const shownCoins = casino.currencies.slice(0, 8);
+const hiddenCoinCount = casino.currencies.length - shownCoins.length;
+
+// Per-coin minimum withdrawal in that coin's own units, read by the homepage limits
+// slider. Only coins with a sourced figure appear — never a filled-in guess.
+const minWithdrawals = Object.fromEntries(
+  casino.currencies
+    .filter((c) => c.minWithdrawal)
+    .map((c) => [c.code, c.minWithdrawal!.amount]),
+);
 
 // Full class strings, because Tailwind cannot see dynamically assembled ones.
 const bandClass = {
@@ -38,7 +55,9 @@ const verifiedLabel = verified
   data-casino
   data-name={casino.name.toLowerCase()}
   data-factors={casino.factors.join(',')}
-  data-currencies={casino.currencies.join(',')}
+  data-currencies={casino.currencies.map((c) => c.code).join(',')}
+  data-networks={networkTokens.join(',')}
+  data-min-withdrawals={JSON.stringify(minWithdrawals)}
 >
   <div class="tabular w-10 shrink-0 pt-1 text-right font-display text-[22px] font-bold text-ink-400">
     {rank}
@@ -79,8 +98,23 @@ const verifiedLabel = verified
     }
 
     {
+      shownCoins.length > 0 && (
+        <ul class="mt-2 flex flex-wrap items-center gap-1" aria-label="Supported coins">
+          {shownCoins.map((c) => (
+            <li title={c.code}>
+              <CoinIcon code={c.code} size={18} />
+            </li>
+          ))}
+          {hiddenCoinCount > 0 && (
+            <li class="text-[12px] text-ink-400">+{hiddenCoinCount}</li>
+          )}
+        </ul>
+      )
+    }
+
+    {
       factorChips.length > 0 && (
-        <ul class="mt-2.5 flex flex-wrap gap-1.5">
+        <ul class="mt-2 flex flex-wrap gap-1.5">
           {factorChips.map((f) => (
             <li class="rounded-[3px] border border-ink-600 bg-ink-800 px-2 py-0.5 text-[13px] text-ink-300">
               {f.name}

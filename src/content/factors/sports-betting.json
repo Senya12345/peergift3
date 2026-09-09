@@ -1,0 +1,19 @@
+{
+  "slug": "sports-betting",
+  "name": "Sports betting",
+  "facetSlug": "crypto-sports-betting",
+  "h1": "Crypto casinos with a full sportsbook",
+  "metaTitle": "Crypto Sportsbooks: Casino and Sports Betting, One Balance",
+  "metaDescription": "Crypto casinos that also run a full sportsbook alongside the casino games, sharing one balance and one crypto wallet across both.",
+  "intro": "Some crypto casinos are casinos with a sportsbook bolted on for variety. Others run sports betting as a genuinely full product — deep markets across dozens of sports, live in-play betting, and odds that compete with dedicated sportsbooks rather than an afterthought squeezed into a casino's menu bar. This page tracks the latter kind.\n\nThe practical advantage of a combined platform is a single balance. Deposit crypto once, and the same funds cover a slot spin, a blackjack hand, and a same-game parlay without moving money between separate accounts or separate wallets. Withdrawals work identically regardless of which side of the platform generated the winnings — the casino's payout processing does not distinguish between casino and sportsbook balance.\n\nWhat varies most between operators is depth: how many sports and leagues are actually covered beyond the handful of major ones every sportsbook lists, whether live in-play markets update fast enough to be usable, and how competitive the odds are compared with a dedicated sports betting platform. A casino that lists \"sports betting\" as a feature is not necessarily offering the same market depth as one that built its sportsbook as a primary product rather than a secondary one.\n\nRegulatory treatment of sports betting sometimes differs from casino games even within the same jurisdiction and even at the same operator, so a licence that covers casino games does not automatically mean the sportsbook side carries identical legal standing everywhere the casino is accessible — worth checking separately if that distinction matters to you.",
+  "faq": [
+    {
+      "q": "Do casino and sportsbook balances stay separate?",
+      "a": "No, typically not — most crypto casinos with a sportsbook use one shared balance across both, funded and withdrawn the same way regardless of where it was won."
+    },
+    {
+      "q": "Is the sportsbook covered by the same licence as the casino?",
+      "a": "Not always. Regulatory treatment can differ even at the same operator, so it is worth checking if that distinction matters in your situation."
+    }
+  ]
+}

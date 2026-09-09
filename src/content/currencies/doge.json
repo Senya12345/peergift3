@@ -1,0 +1,20 @@
+{
+  "code": "DOGE",
+  "name": "Dogecoin",
+  "networks": [],
+  "facetSlug": "dogecoin-casinos",
+  "h1": "Casinos that accept Dogecoin",
+  "metaTitle": "Dogecoin Casinos: Low-Value Deposits Without the Fuss",
+  "metaDescription": "Casinos accepting Dogecoin, and why its low per-coin value makes it a practical choice for small, casual deposits rather than a technical differentiator.",
+  "intro": "Dogecoin's relevance to online casinos has little to do with its technology and everything to do with its price. A single DOGE is worth a small fraction of a dollar, which makes coin-denominated minimum deposits and bet sizes feel granular and approachable in a way that a 0.0001 BTC minimum does not, even when the dollar value is identical.\n\nUnder the hood it is a Litecoin-derived chain with roughly a one-minute block time, so confirmations are reasonably quick and fees are low relative to Bitcoin. It is not the fastest or cheapest coin on this list, but it is comfortably in the practical range for casual, frequent, low-value play rather than large single transactions.\n\nBecause Dogecoin's price can move sharply in short periods, a casino balance held in DOGE between a deposit and a withdrawal carries real volatility risk that a stablecoin does not. That is not a criticism of the coin, just an operational fact worth being aware of if you are not converting in and out quickly.\n\nDogecoin has no secondary network the way USDT or ETH do. What you send is what arrives, on the Dogecoin chain, with no network selection to get wrong.",
+  "faq": [
+    {
+      "q": "Why do some casinos favour Dogecoin for small bets?",
+      "a": "Its low per-coin value makes small deposit and bet minimums easy to express in round DOGE numbers, which reads more approachably than a tiny fraction of a Bitcoin."
+    },
+    {
+      "q": "Does a Dogecoin balance lose value while sitting in a casino account?",
+      "a": "It can — Dogecoin's price is more volatile than a stablecoin's, so a balance held between a deposit and a withdrawal is exposed to that movement."
+    }
+  ]
+}

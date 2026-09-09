@@ -1,0 +1,25 @@
+{
+  "code": "SAND",
+  "name": "The Sandbox",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    }
+  ],
+  "facetSlug": "sandbox-casinos",
+  "h1": "Casinos that accept SAND",
+  "metaTitle": "SAND Casinos: The Sandbox Token, ERC20 Only",
+  "metaDescription": "Casinos accepting SAND, the metaverse platform token from The Sandbox, moved as a single ERC20 asset with Ethereum's standard gas costs attached.",
+  "intro": "SAND is the token of The Sandbox, a virtual-world platform, and at the casinos that accept it, it moves as a single ERC20 asset — there is no alternative network here, so deposits and withdrawals carry Ethereum mainnet's standard gas costs regardless of which casino you use.\n\nSupport for SAND is narrower than for the majors on this list. Where it is accepted, it is worth confirming the casino's specific minimum deposit and withdrawal figures rather than assuming they mirror a more widely supported coin on the same platform, since smaller-token liquidity and processing can differ meaningfully between operators.\n\nLike most non-stablecoin tokens here, SAND's price is driven by the broader market rather than pegged to anything, so a balance held in it between a deposit and a later withdrawal is exposed to real price movement independent of anything happening at the casino.",
+  "faq": [
+    {
+      "q": "Does SAND have more than one network option?",
+      "a": "No — it moves as a single ERC20 token on Ethereum, so there is no network choice to make and no risk of a mismatch."
+    },
+    {
+      "q": "Is SAND widely accepted at crypto casinos?",
+      "a": "Less so than the major coins on this list. Confirm a specific operator's minimums before relying on it."
+    }
+  ]
+}

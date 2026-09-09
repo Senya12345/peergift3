@@ -1,0 +1,25 @@
+{
+  "code": "BNB",
+  "name": "BNB",
+  "networks": [
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    }
+  ],
+  "facetSlug": "bnb-casinos",
+  "h1": "Casinos that accept BNB",
+  "metaTitle": "BNB Casinos: Fast, Cheap Deposits on BNB Smart Chain",
+  "metaDescription": "Casinos accepting BNB over BNB Smart Chain (BEP20), and why it has become one of the cheapest rails for both the coin itself and other BEP20 tokens.",
+  "intro": "BNB moves over BNB Smart Chain, known by its token standard BEP20, and the chain's main selling point for a casino player is cost: fees are typically a fraction of a cent and confirmations land in a few seconds, well below what Ethereum charges for a comparable transfer.\n\nBecause BEP20 is also used to move wrapped versions of other assets — wrapped ETH, various stablecoins — a casino that supports BNB deposits is very often the same casino offering a BEP20 option for those other coins too. That is convenient, but it also means the network-mismatch risk that applies to any multi-chain token applies here as well: a BEP20 address is not interchangeable with an ERC20 or native-chain address for the same asset, and sending to the wrong one does not convert, it fails or is lost.\n\nBNB Smart Chain is generally reliable and rarely congested compared with Ethereum mainnet, which is part of why it has become a common secondary network for casinos wanting to offer a cheap option alongside a coin's native chain. It is not the only such network — Polygon and Tron serve a similar role for some tokens on this list — so where multiple cheap options exist, the practical choice usually comes down to which one your sending wallet or exchange also supports.",
+  "faq": [
+    {
+      "q": "Is BNB the same as BEP20?",
+      "a": "BEP20 is the token standard on BNB Smart Chain, the network BNB itself runs on. Other assets can also move as BEP20 tokens over the same chain."
+    },
+    {
+      "q": "Are BNB Smart Chain fees always low?",
+      "a": "Generally yes, and the chain is rarely congested compared with Ethereum, but always confirm the current fee in the casino's interface before withdrawing rather than assuming a fixed number."
+    }
+  ]
+}

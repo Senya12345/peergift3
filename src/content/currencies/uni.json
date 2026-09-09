@@ -1,0 +1,29 @@
+{
+  "code": "UNI",
+  "name": "Uniswap",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    }
+  ],
+  "facetSlug": "uniswap-casinos",
+  "h1": "Casinos that accept Uniswap (UNI)",
+  "metaTitle": "Uniswap Casinos: The DEX Token, Two Networks Where Supported",
+  "metaDescription": "Casinos accepting UNI, the governance token of the Uniswap decentralised exchange, over Ethereum or BNB Smart Chain where a casino offers both.",
+  "intro": "UNI is the governance token of Uniswap, one of the largest decentralised exchanges, and a number of crypto casinos accept it directly as a deposit option. Where support exists, it is generally over Ethereum (ERC20) as the native chain, with BNB Smart Chain (BEP20) offered by some operators as a cheaper alternative for the wrapped version.\n\nThe same network-matching discipline applies here as with any bridged token: an ERC20 UNI address will not correctly receive a BEP20 deposit, and confirming which network a specific casino has issued before sending is the only reliable way to avoid a lost transfer.\n\nUNI's price tracks the broader crypto and DeFi market rather than the dollar, so it carries the same kind of volatility as Bitcoin or Ethereum for anyone holding a casino balance in it rather than moving funds straight through. Support for UNI is narrower than for the major coins on this list, so confirming a specific casino's current minimums is worth doing rather than assuming.",
+  "faq": [
+    {
+      "q": "What is UNI used for outside of casinos?",
+      "a": "It is the governance token of Uniswap, a major decentralised cryptocurrency exchange, used to vote on protocol decisions rather than as a payment-specific coin."
+    },
+    {
+      "q": "Should I check the network before sending UNI to a casino?",
+      "a": "Yes — where both ERC20 and BEP20 are offered, they are not interchangeable, and sending to the wrong network's address does not convert."
+    }
+  ]
+}

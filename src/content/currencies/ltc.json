@@ -1,0 +1,20 @@
+{
+  "code": "LTC",
+  "name": "Litecoin",
+  "networks": [],
+  "facetSlug": "litecoin-casinos",
+  "h1": "Casinos that accept Litecoin",
+  "metaTitle": "Litecoin Casinos: Faster and Cheaper Than Bitcoin",
+  "metaDescription": "Casinos accepting Litecoin, and why its four-times-faster block time makes it one of the more practical coins for frequent small withdrawals.",
+  "intro": "Litecoin exists on this list mostly because of one number: a roughly two-and-a-half minute block time, about a quarter of Bitcoin's. For someone who plays regularly and cashes out often, that difference compounds into noticeably less time watching a pending transaction.\n\nFees follow the same pattern. Litecoin's network is rarely congested the way Bitcoin's can be during peak periods, so withdrawal costs tend to be small and predictable rather than spiking with demand. It is not free — nothing on-chain is — but it is one of the more forgiving coins to withdraw in small, frequent amounts without the fee eating a meaningful share of the payout.\n\nNone of that makes Litecoin better than Bitcoin as an asset; that argument is outside what this page is about. What matters here is operational: fewer casinos support it than support Bitcoin, and liquidity at some smaller operators can be thinner, occasionally showing up as a slightly longer queue on a large withdrawal even though the chain itself confirmed quickly. Check the casino's own withdrawal notes rather than assuming chain speed alone tells the whole story.\n\nLitecoin has no widely supported secondary network in the way ETH or USDT do — what you deposit is what you withdraw, on the Litecoin chain itself. That simplicity is worth something: there is no network-mismatch risk to manage, which is not true of several other coins on this list.",
+  "faq": [
+    {
+      "q": "Is Litecoin faster than Bitcoin at casinos?",
+      "a": "The chain itself confirms roughly four times faster. Whether that translates to a faster payout also depends on the casino's own processing, which varies by operator."
+    },
+    {
+      "q": "Does Litecoin have network options like USDT?",
+      "a": "No. Litecoin exists on one chain, so there is nothing to select and no risk of sending funds to the wrong network."
+    }
+  ]
+}

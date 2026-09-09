@@ -1,0 +1,269 @@
+{
+  "slug": "stake",
+  "name": "Stake",
+  "logo": null,
+  "url": "https://stake.com",
+  "affiliateUrl": "https://stake3030.com/?c=kZGqs3a8",
+  "signupBonus": {
+    "headline": "200% first deposit match up to $2,000",
+    "detail": "40x wagering requirement, 30-day deadline. Enter or apply the code within 24 hours of signing up if you forget it at registration. Stake does not run a no-deposit bonus — its main ongoing rewards are rakeback and a VIP program rather than repeat deposit bonuses.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "askgamblers",
+        "score": 9.2,
+        "scale": 10,
+        "url": "https://www.askgamblers.com/online-casinos/reviews/stake-casino",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "casinoguru",
+        "score": 7.9,
+        "scale": 10,
+        "url": "https://casino.guru/stake-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "trustpilot",
+        "score": 3.9,
+        "scale": 5,
+        "url": "https://www.trustpilot.com/review/stake.com",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "lcb",
+        "score": 3.9,
+        "scale": 5,
+        "url": "https://lcb.org/casinos/stake-casino",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "crypto-only",
+    "instant-withdrawal",
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program",
+    "high-roller",
+    "no-deposit-fee"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": {
+        "amount": 0.001,
+        "source": "thespike.gg Stake withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": {
+        "amount": 0.01,
+        "source": "thespike.gg Stake withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": {
+        "amount": 0.1,
+        "source": "thespike.gg Stake withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BCH",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "XRP",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "EOS",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BNB",
+      "networks": [
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDC",
+      "networks": [
+        "ERC20",
+        "BSC",
+        "POL",
+        "SOL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": {
+        "amount": 20,
+        "source": "thespike.gg Stake withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20",
+        "BSC",
+        "POL",
+        "TRX",
+        "SOL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": {
+        "amount": 20,
+        "source": "thespike.gg Stake withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "APE",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BUSD",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "CRO",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DAI",
+      "networks": [
+        "ERC20",
+        "BSC",
+        "POL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LINK",
+      "networks": [
+        "ERC20",
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SAND",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SHIB",
+      "networks": [
+        "ERC20",
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "UNI",
+      "networks": [
+        "ERC20",
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "POL",
+      "networks": [
+        "ERC20",
+        "POL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRUMP",
+      "networks": [
+        "SOL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "Stake is a crypto-first casino and sportsbook that has grown into one of the largest brands in the space since launching in 2017, and the scale shows: over 3,000 slot titles from roughly 40 studios, a full sportsbook covering 30-plus sports, live dealer tables, and a set of in-house \"Originals\" that Stake built its early reputation on. It runs under a Curacao licence (OGL/2024/1451/0918, operated by Medium Rare N.V.), and this page tracks the flagship stake.com brand rather than one of the many unofficial clones and lookalikes that borrow its name.\n\nThe access route we were given for this listing is a mirror URL carrying a referral code, which is common for Stake specifically because the primary domain is blocked in a number of jurisdictions and mirrors are how a lot of players reach it. We rate the casino itself — the brand and the operator behind it — not the specific mirror domain, since mirrors rotate and the underlying platform is the same.\n\nOne claim we want to correct rather than repeat: Stake is sometimes described as a no-verification casino, and we are not tagging it that way. Curacao tightened its AML and KYC requirements in late 2024, and Stake's own policies do not promise an unverified experience — documents can be requested, and Casinomeister's community listing specifically flags KYC and responsible-gaming practices as a weak point. What we can confirm is that account creation and initial play do not require upfront verification the way a UK-licensed operator would demand, which is a real and useful distinction from a fully KYC'd casino, just not the same thing as a guarantee.\n\nThe other point worth flagging plainly: Casinomeister, one of the longest-running casino watchdog communities, has placed Stake in its Warning section over how the operator handles player complaints. That sits alongside genuinely strong scores from AskGamblers and Casino Guru below, and a Trustpilot record that is heavily polarised — the large majority of reviewers are enthusiastic, and a substantial minority report serious problems, with little middle ground. Both things are true about the same casino, and we would rather show you that split than smooth it into one clean number.\n\nWhere Stake is on firmer ground is the crypto mechanics: withdrawals are released immediately on Stake's side, with the wait after that determined by the blockchain you withdraw on — fast chains like Tron or Solana in seconds, Bitcoin in ten minutes to an hour depending on congestion. Stake does not charge its own withdrawal fee on top of the network cost. First withdrawals can be held for 24 to 72 hours for additional checks, which is worth expecting rather than being surprised by.",
+    "pros": [
+      "AskGamblers gives it a 9.2 CasinoRank and an 8.9 player rating from 283 reviews, among the stronger scores on this site",
+      "Withdrawals on fast chains — Tron, XRP, Solana — typically clear in seconds once Stake releases the funds, with no withdrawal fee added on top of the network's own cost",
+      "Genuinely large game catalogue: 3,000+ titles from around 40 studios, plus in-house provably fair Originals and a full sportsbook covering 30-plus sports, all on one balance",
+      "Supports 20+ cryptocurrencies across multiple networks, so switching coins to cut a fee is usually an option rather than a workaround"
+    ],
+    "cons": [
+      "Casinomeister, a long-running watchdog community, has placed Stake in its Warning section specifically over how it handles player complaints — not a game-fairness issue, but a support one",
+      "Trustpilot is heavily polarised: roughly two-thirds five-star reviews against about one-fifth one-star, with little middle ground, rather than a consistent moderate experience",
+      "Despite the crypto-casual reputation, Curacao's 2024 AML/KYC tightening means documents can be requested — this is not a guaranteed no-verification casino, whatever the marketing implies",
+      "No classic no-deposit bonus; rewards run through a rakeback/VIP structure that favours frequent, high-volume players over occasional ones",
+      "First withdrawals are commonly held 24-72 hours for additional checks, and the site is blocked outright in a number of jurisdictions including the US and UK"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "Public reviews and Stake's own documented policy describe withdrawals as released immediately on Stake's side, with total time then depending on which chain you use — Tron, XRP and Solana typically clear in seconds, Bitcoin and Ethereum mainnet take longer during busy periods. A first withdrawal is commonly held 24 to 72 hours for additional checks, which recurs often enough across sources to treat as standard rather than exceptional.",
+    "deposits": "Deposits are described as crediting instantly across sources, with no deposit fee charged by Stake itself — only the sending network's own fee applies. Reported minimums vary by coin and by source, from roughly $5 in BTC terms up to $20 for stablecoins like USDT and USDC; treat the exact figure on Stake's own deposit page as the source of truth over any third-party estimate, ours included.",
+    "commonProblems": "The recurring themes across AskGamblers, Trustpilot and Casinomeister are: account verification and compliance friction despite the crypto-casual framing, slow or contested customer support responses on disputed cases, and occasional bonus-term disagreements. Casinomeister's Warning-section listing is specifically about complaint handling rather than game fairness. None of this is unique to Stake among large crypto casinos, but the volume of both praise and complaint here is higher than average simply because of how large the player base is.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Curacao OGL/2024/1451/0918 (Medium Rare N.V.)",
+  "founded": 2017,
+  "demo": false
+}

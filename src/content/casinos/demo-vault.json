@@ -39,7 +39,12 @@
     "instant-withdrawal"
   ],
   "currencies": [
-    "BTC"
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
   ],
   "editorial": {
     "summary": "Placeholder record used to build and review the site before real casinos are added. Every figure here is invented and none of it should ever reach production.",

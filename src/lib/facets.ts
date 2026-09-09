@@ -70,7 +70,7 @@ export function getFacets(): Facet[] {
       c.facetSlug,
       c.name,
       c,
-      casinos.filter((casino) => casino.currencies.includes(c.code)),
+      casinos.filter((casino) => casino.currencies.some((support) => support.code === c.code)),
     ),
   );
 
@@ -86,7 +86,7 @@ export function facetsForCasino(casino: Casino): Facet[] {
   return getFacets().filter((f) =>
     f.kind === 'factor'
       ? casino.factors.includes(f.key)
-      : casino.currencies.includes(f.key),
+      : casino.currencies.some((support) => support.code === f.key),
   );
 }
 

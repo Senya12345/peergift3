@@ -1,0 +1,19 @@
+{
+  "slug": "crypto-only",
+  "name": "Crypto-only",
+  "facetSlug": "crypto-only-casinos",
+  "h1": "Crypto-only casinos, with no fiat option at all",
+  "metaTitle": "Crypto-Only Casinos: No Card, No Bank, No Fiat Option",
+  "metaDescription": "Casinos that run entirely on cryptocurrency, with no card or bank option at all — what that means for onboarding, refunds, and who these sites aren't built for.",
+  "intro": "A crypto-only casino has no card deposit button, no bank transfer option, and often no way to even display balances in a fiat currency. Crypto is not an add-on payment method here — it is the entire rail the platform runs on.\n\nThat has real consequences beyond the payment screen. Onboarding tends to be lighter, since there is no card-issuer verification step baked into the deposit flow the way there is at a traditional online casino. It also means there is no chargeback mechanism: a crypto deposit is not reversible the way a card payment is, so disputes that a card network would arbitrate on your behalf simply do not exist here. Whatever recourse you have runs through the casino's own support and, if that fails, a third-party complaints service like AskGamblers or Casino Guru.\n\nVolatility is the other structural fact worth sitting with. A balance held in a non-stablecoin currency moves in dollar value while it sits in your account, independent of anything you do at the tables. Some crypto-only casinos let you hold a stablecoin like USDT or USDC specifically to sidestep this; others price everything in the volatile coin itself. Check which model a given site uses before assuming your balance is stable just because the games are.\n\nCrypto-only casinos are also usually the ones offering the widest coin selection and the fastest withdrawal mechanics on this whole site, because their entire payments infrastructure is built around blockchain rails rather than bolted onto a legacy card processor. The trade-off is that if you do not already hold crypto, or are not comfortable managing a wallet, there is no easier on-ramp built into the casino itself — you arrive with crypto or you do not play.",
+  "faq": [
+    {
+      "q": "Can I deposit with a card at a crypto-only casino?",
+      "a": "No. These platforms accept cryptocurrency exclusively — there is no card, bank transfer, or e-wallet option at all."
+    },
+    {
+      "q": "Is there a chargeback option if something goes wrong?",
+      "a": "No. Crypto deposits are not reversible the way card payments are, so disputes go through the casino's support or a third-party complaints service instead."
+    }
+  ]
+}

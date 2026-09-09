@@ -1,0 +1,25 @@
+{
+  "code": "APE",
+  "name": "ApeCoin",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    }
+  ],
+  "facetSlug": "apecoin-casinos",
+  "h1": "Casinos that accept ApeCoin",
+  "metaTitle": "ApeCoin Casinos: A Volatile Token With One Network",
+  "metaDescription": "Casinos accepting ApeCoin over Ethereum (ERC20), and the price volatility worth knowing about before holding a balance in it between sessions.",
+  "intro": "ApeCoin moves exclusively over Ethereum as an ERC20 token at the casinos that support it, so there is no network choice to make — deposits and withdrawals both use the same rail, with Ethereum mainnet's usual gas costs attached.\n\nThe coin itself is considerably more volatile than a major asset like Bitcoin or Ethereum, let alone a stablecoin. That matters specifically for anyone tempted to leave a casino balance sitting in APE for a while: the dollar value of that balance can move meaningfully in either direction between a deposit and a later withdrawal, independent of anything that happens at the casino itself. It is not a criticism of any operator — it is simply what holding a smaller-cap token exposes you to.\n\nSupport for ApeCoin is narrower than for the majors on this list; not every crypto casino accepts it, and where it is accepted, liquidity and withdrawal processing can be less battle-tested than for Bitcoin or the leading stablecoins. Worth confirming a casino's own minimum and any withdrawal notes for APE specifically rather than assuming it behaves identically to more established coins on the same platform.",
+  "faq": [
+    {
+      "q": "Does ApeCoin have multiple networks like USDT?",
+      "a": "No — it exists as a single ERC20 token on Ethereum, so there is one network to use and no risk of a network mismatch."
+    },
+    {
+      "q": "Is ApeCoin's price stable while held in a casino account?",
+      "a": "No — it is considerably more volatile than Bitcoin or Ethereum, let alone a stablecoin, so a balance held for a while is exposed to real price movement."
+    }
+  ]
+}

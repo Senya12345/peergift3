@@ -1,0 +1,19 @@
+{
+  "slug": "vip-program",
+  "name": "VIP program",
+  "facetSlug": "vip-crypto-casinos",
+  "h1": "Crypto casinos with a structured VIP program",
+  "metaTitle": "VIP Crypto Casinos: Rakeback Over Deposit Bonuses",
+  "metaDescription": "Crypto casinos built around rakeback, tiered rewards and a VIP program rather than repeat deposit bonuses — how the model works and who it actually benefits.",
+  "intro": "A number of larger crypto casinos have moved away from the traditional deposit-bonus model — match percentages, wagering requirements, bonus codes — toward rakeback and tiered VIP programs instead. The pitch is straightforward: rather than a one-time bonus with strings attached, you earn a small percentage of what you wager back continuously, with better rates unlocked as your volume grows.\n\nTiers are usually based on lifetime wagered volume rather than deposit size, which means the program rewards how much you actually play rather than how much you put in up front. Entry thresholds vary widely between operators — some start rewarding meaningfully early, others require substantial cumulative wagering before the program becomes worth much at all. That threshold is worth checking against your actual play volume before treating a VIP program as a reason to choose one casino over another.\n\nThe honest way to think about this model: it suits frequent, high-volume players far better than occasional ones. A rakeback percentage on modest, infrequent play amounts to very little in absolute terms, whereas a traditional deposit bonus at least delivers a fixed, known amount up front regardless of how much you subsequently wager. Neither model is objectively better — they reward different playing patterns.\n\nRewards under these programs typically include cash rakeback, but often extend to weekly and monthly prize draws, personal account management at higher tiers, and sometimes physical or experiential perks. Read what a specific tier actually unlocks rather than assuming \"VIP program\" means the same benefits everywhere it appears.",
+  "faq": [
+    {
+      "q": "Is rakeback better than a deposit bonus?",
+      "a": "It depends on how much you play. Rakeback rewards volume over time and suits frequent players; a deposit bonus delivers a fixed amount up front regardless of later wagering, which can suit occasional players more."
+    },
+    {
+      "q": "How do VIP tiers get calculated?",
+      "a": "Usually by lifetime wagered volume rather than deposit size, so the program rewards how much you actually bet over time rather than how much you funded your account with."
+    }
+  ]
+}

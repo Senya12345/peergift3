@@ -1,0 +1,25 @@
+{
+  "code": "CRO",
+  "name": "Cronos",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    }
+  ],
+  "facetSlug": "cronos-casinos",
+  "h1": "Casinos that accept CRO",
+  "metaTitle": "CRO Casinos: Cronos Chain's Native Token",
+  "metaDescription": "Casinos accepting CRO as an ERC20 token, a less common option than the majors on this list, tied to the Cronos ecosystem built by Crypto.com.",
+  "intro": "CRO is the native token of the Cronos chain, an ecosystem built by Crypto.com, and at the casinos on this list it moves as an ERC20 token, carrying Ethereum's standard gas costs on deposit and withdrawal since no alternative network is offered here.\n\nIt is a narrower-support coin than Bitcoin, Ethereum or the major stablecoins — fewer crypto casinos list it, and where they do, liquidity and withdrawal processing tend to be less thoroughly tested by volume than for the coins everyone accepts. That is not a red flag on its own, just a reason to check a given operator's specific minimums and any withdrawal notes for CRO rather than assuming it behaves identically to more established options on the same site.\n\nCRO's price, like most non-stablecoin tokens on this list, is meaningfully more volatile than Bitcoin's, so a balance held in it between a deposit and a later withdrawal carries real exposure to price movement independent of anything happening at the casino itself.",
+  "faq": [
+    {
+      "q": "What is CRO used for beyond casinos?",
+      "a": "It is the native token of Cronos, a blockchain ecosystem built by Crypto.com, used across that platform's exchange and DeFi products as well as at the casinos that accept it."
+    },
+    {
+      "q": "Is CRO support common at crypto casinos?",
+      "a": "Less so than the major coins on this list. Confirm a specific casino's minimums and processing notes before relying on it."
+    }
+  ]
+}

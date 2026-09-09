@@ -1,0 +1,20 @@
+{
+  "code": "BCH",
+  "name": "Bitcoin Cash",
+  "networks": [],
+  "facetSlug": "bitcoin-cash-casinos",
+  "h1": "Casinos that accept Bitcoin Cash",
+  "metaTitle": "Bitcoin Cash Casinos: Bitcoin's Larger-Block Fork",
+  "metaDescription": "Casinos accepting Bitcoin Cash, and how its larger block size keeps fees consistently low even when the original Bitcoin chain is congested.",
+  "intro": "Bitcoin Cash split from Bitcoin in 2017 specifically over block size, and that difference is still the main reason it appears on casino payment pages today: larger blocks mean the network rarely gets congested the way Bitcoin's can, so fees stay low and predictable rather than spiking during busy periods.\n\nFor a casino player the practical effect is a more consistent withdrawal cost. It will not be dramatically faster than Bitcoin in normal conditions, but it is less likely to become expensive at the exact moment a lot of other people are also trying to move funds.\n\nFewer operators support BCH than support Bitcoin itself, and liquidity depth varies more between casinos as a result — worth checking a given site's own withdrawal notes rather than assuming BCH support means identical service to BTC support at the same operator.\n\nBitcoin Cash has its own address format, distinct from Bitcoin's despite the shared history, and sending to the wrong format is a common and irreversible mistake — always copy the deposit address directly from the casino rather than reusing an old one.",
+  "faq": [
+    {
+      "q": "Is Bitcoin Cash the same network as Bitcoin?",
+      "a": "No — it is a separate chain that split from Bitcoin in 2017. Addresses and transactions are not interchangeable between the two."
+    },
+    {
+      "q": "Why do casinos list Bitcoin Cash fees as more predictable?",
+      "a": "Its larger block size means the network is rarely congested, so fees stay consistently low rather than spiking under demand the way Bitcoin's occasionally do."
+    }
+  ]
+}

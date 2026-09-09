@@ -1,0 +1,33 @@
+{
+  "code": "DAI",
+  "name": "Dai",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    },
+    {
+      "code": "POL",
+      "name": "Polygon"
+    }
+  ],
+  "facetSlug": "dai-casinos",
+  "h1": "Casinos that accept Dai across three networks",
+  "metaTitle": "Dai Casinos: A Decentralised Stablecoin, Three Networks to Pick From",
+  "metaDescription": "Casinos accepting Dai over Ethereum, BNB Smart Chain or Polygon, and what sets it apart from USDT and USDC: on-chain collateral instead of a company's reserves.",
+  "intro": "Dai is a dollar-pegged stablecoin with one structural difference from USDT and USDC that is worth knowing even if it rarely changes how you use it at a casino: it is generated through over-collateralised crypto deposits managed by a decentralised protocol, rather than issued by a single company holding dollar reserves. For everyday use — depositing, playing, withdrawing — it behaves the same as any other stablecoin on this list, with the same dollar-value stability.\n\nWhere a casino offers Dai, it typically supports it over the same networks as its other stablecoins: Ethereum (ERC20) as the original and most expensive option, and BNB Smart Chain or Polygon where offered as cheaper alternatives. The fee gap between Ethereum mainnet and either alternative can be large — often tens of times the cost for an identical transfer — so it is worth checking which networks a specific casino actually lists rather than defaulting to Ethereum out of habit.\n\nDai's peg has occasionally shown more short-term wobble than USDT's or USDC's during periods of stress in the broader crypto-collateral market, though it has consistently returned to parity. That history is worth knowing if you are choosing between stablecoins on stability grounds specifically, though for a short hold between a deposit and a withdrawal the practical difference is usually negligible.",
+  "faq": [
+    {
+      "q": "How is Dai different from USDT or USDC?",
+      "a": "It is backed by over-collateralised crypto deposits managed by a decentralised protocol, rather than issued by a company holding dollar reserves directly. Day-to-day use at a casino is otherwise the same."
+    },
+    {
+      "q": "Which Dai network has the lowest fees?",
+      "a": "Polygon or BNB Smart Chain, where a casino offers them, are typically far cheaper than Ethereum mainnet for the same transfer."
+    }
+  ]
+}

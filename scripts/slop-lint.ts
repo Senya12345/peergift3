@@ -69,11 +69,17 @@ for (const currency of loadCurrencies()) {
 }
 
 for (const casino of loadCasinos()) {
+  const aiSummaryText = casino.aiSummary
+    ? [casino.aiSummary.withdrawals, casino.aiSummary.deposits, casino.aiSummary.commonProblems]
+    : [];
   docs.push({
     label: `casino/${casino.slug}`,
-    text: [casino.editorial.summary, ...casino.editorial.pros, ...casino.editorial.cons].join(
-      '\n\n',
-    ),
+    text: [
+      casino.editorial.summary,
+      ...casino.editorial.pros,
+      ...casino.editorial.cons,
+      ...aiSummaryText,
+    ].join('\n\n'),
     programmatic: true,
     // Placeholder records exist to exercise templates, not to be read.
     enforceLength: !casino.demo,

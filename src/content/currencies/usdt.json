@@ -1,0 +1,41 @@
+{
+  "code": "USDT",
+  "name": "Tether",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    },
+    {
+      "code": "POL",
+      "name": "Polygon"
+    },
+    {
+      "code": "TRX",
+      "name": "Tron"
+    },
+    {
+      "code": "SOL",
+      "name": "Solana"
+    }
+  ],
+  "facetSlug": "usdt-casinos",
+  "h1": "Casinos that accept USDT across five networks",
+  "metaTitle": "USDT Casinos: Picking the Right Network Matters More Than the Casino",
+  "metaDescription": "Casinos accepting Tether over Ethereum, BNB Smart Chain, Polygon, Tron or Solana — the network you choose affects your fee more than which casino you pick.",
+  "intro": "Tether is the most widely accepted stablecoin in online gambling, and it is also the clearest example on this whole site of why the network matters as much as the coin. The same dollar-pegged USDT exists on at least five chains casinos commonly support: Ethereum (ERC20), BNB Smart Chain (BEP20), Polygon, Tron (TRC20) and Solana. Picking between them is not a matter of taste.\n\nTron is the network the crypto casino industry has largely settled on as a default for USDT specifically, because its fees are a small fraction of Ethereum's for an identical transfer — often under a dollar against Ethereum mainnet's several dollars or more during busy periods. Polygon and Solana are similarly cheap where supported. BNB Smart Chain sits in between. Ethereum mainnet is, almost without exception, the most expensive way to move USDT, and choosing it out of habit rather than checking the alternatives is the single most common way players overpay on fees at a crypto casino.\n\nThe catch is compatibility, not cost: these five versions of USDT are not interchangeable at the address level. An address for TRC20 USDT will not correctly receive ERC20 USDT, and vice versa. Casino interfaces vary in how clearly they surface this — some make you pick a network explicitly before showing a deposit address, others bury it in a dropdown — so the discipline that matters is checking the network on both ends, every time, not just the first time.\n\nBecause the dollar peg removes price risk, USDT withdrawal minimums are usually stated in dollars and tend to be consistent across networks even when the fee to reach that minimum is not — worth reading the specific figure for the network you intend to use.",
+  "faq": [
+    {
+      "q": "Why is Tron the default network for USDT at casinos?",
+      "a": "Its fees are a small fraction of Ethereum's for the same transfer, which made TRC20 USDT the de facto industry standard for low-cost stablecoin deposits."
+    },
+    {
+      "q": "What happens if I send USDT on the wrong network?",
+      "a": "It typically does not arrive and is not automatically recoverable — the receiving address only understands its own network's version of the token. Always match the network on both ends."
+    }
+  ]
+}

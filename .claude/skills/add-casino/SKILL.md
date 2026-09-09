@@ -67,8 +67,37 @@ Determine the factors from the casino's own site and terms, not from its marketi
   the factor's name before creating it; a near-duplicate factor ("no KYC" alongside "no
   verification") splits the facet and weakens both pages.
 
-Same for currencies in `src/content/currencies/`. Every coin listed on a casino must have
-a currency file, or `validate-content` fails the build.
+**Never take the user's word for a factor that carries a compliance claim.** "No KYC,"
+"instant withdrawal," "no verification" — these are exactly the claims worth checking
+independently before tagging them, because they are also exactly the claims a casino's
+own marketing overstates. If research contradicts what the user told you (a jurisdiction
+tightened AML rules, a watchdog flags weak KYC practice), do not tag the factor — say so
+in the report instead. Getting this wrong is worse than an ordinary factual error: it is
+the kind of claim a reader might act on financially.
+
+## Step 3.5 — currencies, networks and limits
+
+Currencies are richer than a bare list now. Each entry on a casino record is:
+
+```json
+{ "code": "USDT", "networks": ["ERC20", "BSC", "POL", "TRX", "SOL"], "minDeposit": null, "minWithdrawal": { "amount": 20, "source": "…" } }
+```
+
+- `code` must match a file in `src/content/currencies/`. If the coin has no file yet,
+  create one — `name`, `networks` (the coin's full site-wide network list, an array of
+  `{code, name}`; empty for single-chain coins like BTC or XRP), `facetSlug`, `h1`,
+  `metaTitle`, `metaDescription`, and a **300+ word, genuinely distinct `intro`**. Twenty
+  near-identical altcoin pages is exactly the scaled-content pattern this site exists to
+  avoid — each intro needs a real angle (fee structure, speed, volatility, a network
+  quirk), not the same paragraph with the ticker swapped. `slop-lint`'s uniqueness check
+  will catch a lazy one, but do not rely on the linter to do the thinking.
+- `networks` on the *casino* record is the subset of that coin's global networks this
+  specific casino actually offers — never the full list by default. Every network code
+  used here must appear in the coin's own file, or `validate-content` fails the build.
+- `minDeposit` / `minWithdrawal` are **native-unit only** — `0.001` BTC, `20` USDT — never
+  a USD conversion you compute yourself. A crypto price is stale within hours; a coin
+  amount from a cited source is not. Only set these when you have an actual figure with
+  a `source` note. Leave both `null` rather than guess.
 
 ## Step 4 — write the editorial
 
@@ -80,6 +109,16 @@ Read `docs/voice.md` first and follow it exactly. In short:
 - `cons`: at least 2, each traceable to evidence. Manufactured balance is worse than none.
 - Every paragraph carries a checkable fact: an amount, a percentage, a duration, a licence
   identifier, a date.
+
+## Step 4.5 — the AI summary
+
+`aiSummary` is a separate, explicitly-labelled block — three short paragraphs
+(`withdrawals`, `deposits`, `commonProblems`) synthesised from what the sources in Step 1
+and 2 actually said, dated `generatedAt`. It is not the editorial voice: it can hedge
+plainly ("reported minimums vary by source"), and it renders on the page under a visible
+"AI-generated" badge, on purpose — the transparency is the point, not a formality.
+Ground every sentence in what you actually found; this block is not exempt from the
+never-invent-a-number rule just because it is labelled.
 
 ## Step 5 — write the file and verify
 
@@ -104,6 +143,10 @@ Tell the user:
 3. Any factor or currency file you created
 4. **Everything you could not verify** — an unconfirmed licence number, a bonus term that
    is not stated anywhere, a coin listed on the payments page but missing from the terms
-5. Anything that made you uneasy, whether or not it is in the file
+5. **Any factor the user asked for that you did not tag**, and why — especially a
+   compliance claim like no-KYC that research contradicted. Do not silently drop it;
+   say it plainly, the same way you'd flag a number you couldn't confirm
+6. Anything that made you uneasy, whether or not it is in the file
 
-Point 4 is the one people skip. It is the most useful part of the report.
+Point 4 and point 5 are the ones people skip. Between them, they are the most useful part
+of the report.

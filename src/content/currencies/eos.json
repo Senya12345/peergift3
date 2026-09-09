@@ -1,0 +1,20 @@
+{
+  "code": "EOS",
+  "name": "EOS",
+  "networks": [],
+  "facetSlug": "eos-casinos",
+  "h1": "Casinos that accept EOS",
+  "metaTitle": "EOS Casinos: A Smaller, Feeless Option",
+  "metaDescription": "Casinos accepting EOS, a less common option than the majors on this list, with the resource-staking model that makes its transfers fee-free in the traditional sense.",
+  "intro": "EOS is one of the less common coins on this list, and that scarcity is itself worth flagging before the technical detail: fewer casinos support it than support Bitcoin or Ethereum, and liquidity at the ones that do can be noticeably thinner, which occasionally shows up as a longer wait on a larger withdrawal even when the chain itself is fast.\n\nTechnically, EOS uses a resource model rather than per-transaction fees the way Bitcoin or Ethereum do — accounts stake EOS to earn bandwidth and CPU capacity, and ordinary transfers do not cost a separate fee on top of that. In practice this means moving EOS can feel free once an account is set up, which is a different economics to nearly everything else on this page.\n\nConfirmation times are quick, generally seconds, which suits it to casino play when it is supported at all. The catch is availability: EOS is not on every payments page, and its user base and exchange support have both shrunk since the coin's peak popularity, so double-check that your sending wallet or exchange still lists EOS withdrawals before assuming it is an option.\n\nEOS has no secondary network. What is sent on the EOS chain is what arrives — there is no network selection step to get wrong.",
+  "faq": [
+    {
+      "q": "Why doesn't EOS charge per-transaction fees like Bitcoin?",
+      "a": "EOS uses a resource-staking model where accounts stake EOS for bandwidth and CPU capacity, rather than paying a fee on each individual transfer."
+    },
+    {
+      "q": "Is EOS widely supported at crypto casinos?",
+      "a": "Less so than the major coins on this list. Availability and liquidity vary more by operator, so it is worth confirming support before relying on it."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "code": "BUSD",
+  "name": "Binance USD",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    }
+  ],
+  "facetSlug": "busd-casinos",
+  "h1": "Casinos that accept BUSD",
+  "metaTitle": "BUSD Casinos: A Wind-Down Stablecoin, Still In Circulation",
+  "metaDescription": "Casinos accepting Binance USD as an ERC20 token — and the note that Paxos stopped minting new BUSD in 2024, though existing supply still settles normally.",
+  "intro": "Binance USD is a dollar-pegged stablecoin that moves as an ERC20 token at the casinos on this list, carrying Ethereum's usual gas costs for deposits and withdrawals since there is no alternative network on offer here.\n\nThe detail worth knowing before using it: Paxos, BUSD's issuer, stopped minting new supply in February 2024 following a regulatory order, and Binance has wound down active promotion of the token since. Existing BUSD in circulation still redeems and transacts normally, and casinos that list it will process deposits and withdrawals the same as any other stablecoin, but the token's long-term liquidity is shrinking rather than growing, which is worth factoring in if you are choosing a stablecoin to hold for any length of time rather than move straight through.\n\nFor a one-off deposit and withdrawal at a casino that still supports it, none of that changes the mechanics — it behaves like any dollar-pegged ERC20 token, with the price stability that implies and Ethereum mainnet's fee structure attached. It is simply not a coin to expect wide, growing support for elsewhere going forward.",
+  "faq": [
+    {
+      "q": "Is BUSD still being created?",
+      "a": "No — Paxos stopped minting new BUSD in February 2024. Existing supply still circulates and settles normally, but the token is not being actively grown."
+    },
+    {
+      "q": "Does BUSD hold its dollar peg?",
+      "a": "It is designed to and has generally maintained it, but its shrinking circulation and reduced institutional support are worth knowing if you plan to hold a balance rather than move it through quickly."
+    }
+  ]
+}

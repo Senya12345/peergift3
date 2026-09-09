@@ -44,6 +44,27 @@ const isoDate = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, 'must be an ISO date, e.g. 2026-09-08');
 
+/**
+ * A minimum expressed in the coin's own units, never converted to USD. A crypto price
+ * moves daily; a USD figure we computed ourselves would be stale before the page is
+ * read. The native amount ("0.001 BTC") doesn't decay the same way.
+ */
+const nativeAmount = z.object({
+  amount: z.number().positive(),
+  /** Where this figure was read, so it stays checkable like everything else. */
+  source: z.string().optional(),
+});
+
+/** One casino's support for one coin. */
+export const currencySupportSchema = z.object({
+  /** Matches a currency file's `code`. */
+  code: z.string().regex(/^[A-Z0-9]{2,10}$/),
+  /** Network codes this casino actually offers for the coin, e.g. ["ERC20","BEP20"]. */
+  networks: z.array(z.string()).default([]),
+  minDeposit: nativeAmount.nullable().default(null),
+  minWithdrawal: nativeAmount.nullable().default(null),
+});
+
 export const ratingSourceSchema = z.object({
   id: z.enum(RATING_SOURCE_IDS),
   score: z.number().positive(),
@@ -80,8 +101,12 @@ export const casinoSchema = z.object({
 
   /** Factor slugs. Every one must resolve to a factor file. */
   factors: z.array(z.string()).default([]),
-  /** Currency codes, e.g. BTC, ETH, USDT. */
-  currencies: z.array(z.string()).default([]),
+  /**
+   * Per-coin support. Richer than a bare code list because minimums and available
+   * chains are a property of THIS casino, not of the coin itself — two casinos
+   * supporting USDT can offer different networks and different withdrawal floors.
+   */
+  currencies: z.array(currencySupportSchema).default([]),
 
   editorial: z.object({
     summary: z.string().min(1),
@@ -91,6 +116,22 @@ export const casinoSchema = z.object({
 
   license: z.string().nullable().default(null),
   founded: z.number().int().optional(),
+
+  /**
+   * A synthesis of what public reviews say about withdrawals, deposits and recurring
+   * complaints, clearly labelled as AI-generated rather than folded into the editorial
+   * voice above. Transparency about authorship is the point — an unlabelled synthesis
+   * would blur into a claim of first-hand testing we did not do.
+   */
+  aiSummary: z
+    .object({
+      withdrawals: z.string().min(1),
+      deposits: z.string().min(1),
+      commonProblems: z.string().min(1),
+      generatedAt: isoDate,
+    })
+    .nullable()
+    .default(null),
 
   /** Demo records exist so the site can be built before real data lands. */
   demo: z.boolean().default(false),
@@ -120,10 +161,23 @@ export const factorSchema = z.object({
  * is a money page in its own right and a list with no prose is a thin page whatever
  * generated it.
  */
+export const networkSchema = z.object({
+  /** Short code used in casino records and filter state, e.g. "ERC20". */
+  code: z.string().min(1),
+  /** Full name shown in the network picker, e.g. "Ethereum (ERC20)". */
+  name: z.string().min(1),
+});
+
 export const currencySchema = z.object({
   /** Ticker as written in casino records, e.g. BTC. */
   code: z.string().regex(/^[A-Z0-9]{2,10}$/),
   name: z.string().min(1),
+  /**
+   * Chains this coin can move on, site-wide. A casino's own `currencies[].networks`
+   * must be a subset of these codes — validated in scripts/validate-content.ts. Empty
+   * for coins that only exist on their own chain (BTC, LTC, DOGE, XRP, BCH, EOS).
+   */
+  networks: z.array(networkSchema).default([]),
   facetSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   h1: z.string().min(1),
   metaTitle: z.string().min(1).max(70),
@@ -135,6 +189,8 @@ export const currencySchema = z.object({
 });
 
 export type RatingSourceInput = z.input<typeof ratingSourceSchema>;
+export type CurrencySupport = z.output<typeof currencySupportSchema>;
 export type Casino = z.output<typeof casinoSchema>;
 export type Factor = z.output<typeof factorSchema>;
+export type Network = z.output<typeof networkSchema>;
 export type Currency = z.output<typeof currencySchema>;

@@ -1,0 +1,20 @@
+{
+  "code": "XRP",
+  "name": "XRP",
+  "networks": [],
+  "facetSlug": "xrp-casinos",
+  "h1": "Casinos that accept XRP",
+  "metaTitle": "XRP Casinos: Fast Settlement, One Detail to Get Right",
+  "metaDescription": "Casinos accepting XRP, its few-second settlement time, and the destination tag requirement that causes more lost deposits than any other single mistake on this list.",
+  "intro": "XRP settles in a few seconds for a fee measured in fractions of a cent, which makes it one of the fastest and cheapest coins a casino can support. That much is straightforwardly good.\n\nThe detail that matters more than the speed is the destination tag. Many exchanges and platforms route XRP deposits to a shared address distinguished only by a numeric tag attached to each transaction; send XRP without the tag the casino provides, or with the wrong one, and the deposit can be effectively unrecoverable — it arrived, but nobody can attribute it to your account. This is not a theoretical risk. It is the single most common way people lose money moving XRP into any platform, casinos included, and it has nothing to do with how careful the operator is.\n\nNot every casino that accepts XRP uses tagged deposit addresses — some issue a unique address per user instead, which removes the risk entirely. Check which method a given operator uses before sending, and if a tag is shown, copy it exactly rather than reusing one from a previous deposit.\n\nBeyond that mechanical point, XRP behaves like most fast, cheap coins on this list: quick to credit, quick to withdraw, and with no secondary network to worry about — what you send is what arrives on the XRP Ledger.",
+  "faq": [
+    {
+      "q": "What happens if I forget the XRP destination tag?",
+      "a": "The funds may still reach the casino's shared address but cannot be reliably attributed to your account, which typically means they are unrecoverable. Always include the tag if one is shown."
+    },
+    {
+      "q": "Do all casinos require a destination tag for XRP?",
+      "a": "No — some issue a unique deposit address per player instead, which avoids the issue entirely. Check which method the specific casino uses."
+    }
+  ]
+}

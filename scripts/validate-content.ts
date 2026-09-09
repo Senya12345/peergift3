@@ -13,6 +13,7 @@ const facets = getFacets();
 
 const factorSlugs = new Set(factors.map((f) => f.slug));
 const currencyCodes = new Set(currencies.map((c) => c.code));
+const networksByCode = new Map(currencies.map((c) => [c.code, new Set(c.networks.map((n) => n.code))]));
 
 for (const casino of casinos) {
   // A factor or coin with no content file produces a chip pointing at a 404.
@@ -21,9 +22,22 @@ for (const casino of casinos) {
       errors.push(`${casino.slug}: unknown factor "${factor}" — create src/content/factors/${factor}.json`);
     }
   }
-  for (const code of casino.currencies) {
+  for (const support of casino.currencies) {
+    const code = support.code;
     if (!currencyCodes.has(code)) {
       errors.push(`${casino.slug}: unknown currency "${code}" — create a file in src/content/currencies/`);
+      continue;
+    }
+    // A network the coin's own registry doesn't list is either a typo or a network
+    // that needs adding to the currency file first — either way it would render a
+    // filter option that matches nothing.
+    const validNetworks = networksByCode.get(code)!;
+    for (const network of support.networks) {
+      if (!validNetworks.has(network)) {
+        errors.push(
+          `${casino.slug}: "${code}" network "${network}" is not listed in src/content/currencies/ for that coin`,
+        );
+      }
     }
   }
 
@@ -84,7 +98,7 @@ for (const casino of casinos) {
   for (const f of facets) {
     const matches = f.kind === 'factor'
       ? casino.factors.includes(f.key)
-      : casino.currencies.includes(f.key);
+      : casino.currencies.some((support) => support.code === f.key);
     if (matches) linkedFacets.add(f.slug);
   }
 }

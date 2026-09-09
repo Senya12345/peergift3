@@ -1,0 +1,29 @@
+{
+  "code": "POL",
+  "name": "Polygon",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "POL",
+      "name": "Polygon"
+    }
+  ],
+  "facetSlug": "polygon-casinos",
+  "h1": "Casinos that accept POL (Polygon)",
+  "metaTitle": "Polygon Casinos: Cheap Native Chain, or Wrapped on Ethereum",
+  "metaDescription": "Casinos accepting POL — the token formerly known as MATIC — natively on the Polygon chain or as a wrapped ERC20 asset, with a large fee gap between the two.",
+  "intro": "POL is the token that powers the Polygon network, renamed from MATIC as part of Polygon's 2024 upgrade to its token architecture — the same underlying project, a new ticker. Where a casino's interface still shows MATIC, it is referring to the same asset.\n\nWhere a casino supports POL, it usually offers a real choice: the native Polygon chain, where fees are typically a fraction of a cent and confirmations are fast, or a wrapped ERC20 version on Ethereum mainnet, which carries Ethereum's usual gas costs — often tens of times more expensive for an identical transfer. Unless there is a specific reason to hold the Ethereum-native version, the Polygon-native option is almost always the cheaper way to move this coin.\n\nPolygon itself is also one of the more common secondary networks other tokens on this list use for cheaper transfers — USDT and USDC among them — so if a casino's interface shows \"Polygon\" as a network option for a different coin, that is the same chain POL runs on natively, not a separate thing to research from scratch.",
+  "faq": [
+    {
+      "q": "Is POL the same as MATIC?",
+      "a": "Yes — POL is the renamed token from Polygon's 2024 architecture upgrade. It is the same project and asset under a new ticker."
+    },
+    {
+      "q": "Which is cheaper, native Polygon or wrapped ERC20 POL?",
+      "a": "Native Polygon, almost always by a wide margin. The ERC20 version carries Ethereum mainnet's standard gas costs."
+    }
+  ]
+}

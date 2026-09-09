@@ -1,0 +1,20 @@
+{
+  "code": "SOL",
+  "name": "Solana",
+  "networks": [],
+  "facetSlug": "solana-casinos",
+  "h1": "Casinos that accept Solana",
+  "metaTitle": "Solana Casinos: Sub-Second Deposits and Withdrawals",
+  "metaDescription": "Casinos accepting Solana directly, plus the SPL-token casinos that let you deposit stablecoins and other assets over the same fast, low-fee chain.",
+  "intro": "Solana's pitch to a casino player is speed: transactions typically finalise in a second or two, and fees are usually a fraction of a cent. For someone moving money in and out of a casino balance repeatedly in a session, that is a genuinely different experience from watching a Bitcoin confirmation counter.\n\nThe trade-off is less about Solana itself and more about how new the integration tends to be at any given operator. Support for native SOL deposits and withdrawals is less universal than Bitcoin or Ethereum, and where it exists it is worth confirming the casino's stated minimum, since Solana's low-value-per-unit compared with Bitcoin means a coin-denominated minimum can look large in SOL terms while being small in dollar terms, or the reverse — read the actual figure rather than assuming.\n\nSolana is also the chain behind SPL-token deposits at some casinos, meaning coins like USDC or USDT can move over the Solana network specifically, distinct from moving the same coin over Ethereum or Tron. Where that option exists it is usually the fastest and cheapest way to fund an account, but it requires sending from a wallet or exchange that explicitly supports Solana withdrawals for that token — not every exchange does.\n\nNetwork congestion on Solana is rarer than on Ethereum but not unheard of; when it happens, transactions can fail rather than simply slow down, which is a different failure mode to plan for than \"just wait longer.",
+  "faq": [
+    {
+      "q": "Is Solana cheaper than Ethereum for casino deposits?",
+      "a": "Typically yes, often by a wide margin — fees are usually a fraction of a cent versus Ethereum's variable gas market."
+    },
+    {
+      "q": "Can I deposit USDT over Solana?",
+      "a": "At casinos that support it, yes — check whether the operator lists Solana as a network option specifically for that token, since it is not universal."
+    }
+  ]
+}

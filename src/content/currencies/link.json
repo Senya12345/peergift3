@@ -1,0 +1,29 @@
+{
+  "code": "LINK",
+  "name": "Chainlink",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    }
+  ],
+  "facetSlug": "chainlink-casinos",
+  "h1": "Casinos that accept Chainlink (LINK)",
+  "metaTitle": "Chainlink Casinos: ERC20 or BEP20, Same Volatility Either Way",
+  "metaDescription": "Casinos accepting LINK over Ethereum or BNB Smart Chain, with the usual network-matching caution and a reminder that it is a market-priced token, not a stablecoin.",
+  "intro": "Chainlink's token, LINK, is best known for a role that has nothing to do with gambling — it powers price-feed infrastructure used across decentralised finance — but a number of crypto casinos accept it directly as a deposit and withdrawal option alongside the majors on this list.\n\nWhere a casino supports LINK, it is typically over Ethereum (ERC20) as the native option, with BNB Smart Chain (BEP20) offered by some operators as a cheaper alternative. As with every multi-network token here, the two are not interchangeable at the address level, and picking the cheaper network when it is available can meaningfully reduce a withdrawal's cost versus defaulting to Ethereum mainnet.\n\nLINK is a market-priced token, not a stablecoin, and its price moves with the broader crypto market rather than tracking the dollar. A casino balance held in LINK between a deposit and a withdrawal is exposed to that movement the same way a Bitcoin or Ethereum balance would be — worth factoring in if you plan to hold rather than move funds straight through.",
+  "faq": [
+    {
+      "q": "Is LINK a stablecoin?",
+      "a": "No — its price moves with the broader crypto market. A balance held in LINK carries the same kind of price exposure as Bitcoin or Ethereum, not the stability of USDT or USDC."
+    },
+    {
+      "q": "Which network is cheaper for LINK, ERC20 or BEP20?",
+      "a": "BNB Smart Chain is typically the cheaper option where a casino offers it, versus Ethereum mainnet's usual gas costs for the ERC20 version."
+    }
+  ]
+}

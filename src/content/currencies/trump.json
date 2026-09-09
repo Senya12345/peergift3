@@ -1,0 +1,25 @@
+{
+  "code": "TRUMP",
+  "name": "Official Trump",
+  "networks": [
+    {
+      "code": "SOL",
+      "name": "Solana"
+    }
+  ],
+  "facetSlug": "trump-coin-casinos",
+  "h1": "Casinos that accept TRUMP",
+  "metaTitle": "TRUMP Casinos: A Solana Meme Coin With Extreme Volatility",
+  "metaDescription": "Casinos accepting the Official Trump token over Solana, and the volatility warning that matters more here than for almost any other coin on this list.",
+  "intro": "TRUMP is a Solana-based token launched in January 2025, and at the handful of casinos that accept it, it moves exclusively over the Solana network — fast, cheap transfers, but a single network with no alternative to fall back on if Solana is having a bad day.\n\nThe point that matters more than the mechanics is volatility. This is a meme-adjacent, politically-branded token with a trading history of sharp, rapid price swings driven heavily by sentiment and news cycles rather than any underlying protocol activity. A casino balance held in TRUMP between a deposit and a withdrawal can gain or lose a meaningful share of its dollar value in a short window — this is true of several tokens on this list, but it is more pronounced here than for almost any other coin we track.\n\nSupport for TRUMP is narrow — most crypto casinos do not list it at all, and where it is accepted, treat any stated minimum or processing note as specific to that one operator rather than a general standard, since there is little industry-wide precedent to compare it against yet.",
+  "faq": [
+    {
+      "q": "Is TRUMP a stablecoin?",
+      "a": "No — it is a highly volatile token whose dollar value can move sharply and quickly. A casino balance held in it carries real price risk."
+    },
+    {
+      "q": "What network does TRUMP use?",
+      "a": "Solana exclusively at the casinos that support it, meaning fast, low-cost transfers but no alternative network if Solana is congested or unavailable."
+    }
+  ]
+}

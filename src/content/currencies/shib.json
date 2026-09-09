@@ -1,0 +1,29 @@
+{
+  "code": "SHIB",
+  "name": "Shiba Inu",
+  "networks": [
+    {
+      "code": "ERC20",
+      "name": "Ethereum (ERC20)"
+    },
+    {
+      "code": "BSC",
+      "name": "BNB Smart Chain (BEP20)"
+    }
+  ],
+  "facetSlug": "shiba-inu-casinos",
+  "h1": "Casinos that accept Shiba Inu (SHIB)",
+  "metaTitle": "Shiba Inu Casinos: Low Per-Coin Value, Real Price Volatility",
+  "metaDescription": "Casinos accepting SHIB over Ethereum or BNB Smart Chain — and why its tiny per-coin value doesn't mean the deposit is low-risk, the dollar value still moves.",
+  "intro": "Shiba Inu's defining trait is its per-coin value: SHIB trades at a tiny fraction of a cent, so casino minimums and bet sizes expressed in SHIB look like enormous numbers that represent a perfectly ordinary dollar amount. That is a presentation quirk, not a sign of anything unusual about the coin.\n\nWhere a casino supports SHIB, it is typically over Ethereum (ERC20) natively, with BNB Smart Chain (BEP20) offered by some operators as a lower-fee alternative — the usual trade-off that applies to any token bridged across both chains, and the usual caution that the two versions are not interchangeable at the address level.\n\nWhat the low per-coin price does not change is volatility: SHIB's dollar value moves with sentiment and broader market conditions, often sharply, and a casino balance held in it between a deposit and a withdrawal carries that exposure regardless of how many zeroes the coin count shows.",
+  "faq": [
+    {
+      "q": "Why are SHIB casino minimums such large numbers?",
+      "a": "Because a single SHIB is worth a tiny fraction of a cent, an ordinary dollar minimum translates into a large coin count. The dollar value itself is unremarkable."
+    },
+    {
+      "q": "Is SHIB less volatile because it's cheap per coin?",
+      "a": "No — per-coin price and volatility are unrelated. SHIB's dollar value can move sharply with market sentiment, the same as any other non-stablecoin token on this list."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "no-deposit-fee",
+  "name": "No deposit fee",
+  "facetSlug": "no-deposit-fee-casinos",
+  "h1": "Crypto casinos that charge no fee on top of the network fee",
+  "metaTitle": "No Deposit Fee Crypto Casinos: Network Cost Only",
+  "metaDescription": "Crypto casinos that add no fee of their own on deposits or withdrawals beyond the blockchain's own network fee — where the real cost actually comes from.",
+  "intro": "A casino tagged with this factor does not add its own fee on top of what the blockchain itself charges to move a transaction. That distinction matters because the two are easy to conflate: a withdrawal that costs money is not necessarily the casino charging you — it might simply be the network fee for that coin at that moment, which the casino is passing through rather than profiting from.\n\nThe way to tell the difference is to compare the fee you are charged against the current going rate for that network — a block explorer for the relevant chain will show typical fees at that moment. If the casino's charge tracks the network fee reasonably closely, they are passing costs through. If it is a flat charge well above what the network actually costs, or a percentage of the withdrawal amount, that is the casino adding its own margin on top.\n\nThis factor does not mean withdrawals are free — a Bitcoin withdrawal during network congestion still costs whatever Bitcoin's mempool is charging that day, and there is nothing a casino can do about that short of subsidising it outright, which effectively none do at scale. What it means is that the operator is not layering an additional charge on top of a cost you are already paying the network.\n\nChoosing a cheaper network where the casino offers a choice — Tron or Solana over Ethereum mainnet, for instance — remains the single biggest lever you control over total transaction cost, more than which no-deposit-fee casino you pick.",
+  "faq": [
+    {
+      "q": "If there's no deposit fee, is a withdrawal completely free?",
+      "a": "No — the blockchain's own network fee still applies. \"No deposit fee\" means the casino isn't adding its own charge on top, not that the transaction costs nothing."
+    },
+    {
+      "q": "How can I tell if a fee is the network's or the casino's?",
+      "a": "Compare what you were charged against the current typical fee for that network on a block explorer. A charge well above that, or a flat percentage, is the casino's own margin rather than a pass-through cost."
+    }
+  ]
+}
