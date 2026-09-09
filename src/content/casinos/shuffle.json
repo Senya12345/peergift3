@@ -1,0 +1,111 @@
+{
+  "slug": "shuffle",
+  "name": "Shuffle",
+  "logo": null,
+  "url": "https://shuffle.com",
+  "affiliateUrl": "https://shuffle.com?r=lJdKcuuN5L",
+  "signupBonus": {
+    "headline": "100% first-deposit match up to $1,000",
+    "detail": "35x wagering requirement on deposit plus bonus combined, $20 minimum deposit, $10 maximum bet during rollover. Separately, Shuffle runs an SHFL-token weekly lottery (reported prize pools over $1.8M in SHFL) that requires staking tokens to enter — a different mechanic from the deposit bonus, not free money.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "askgamblers",
+        "score": 6.9,
+        "scale": 10,
+        "url": "https://www.askgamblers.com/online-casinos/reviews/shuffle-casino",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "casinoguru",
+        "score": 4.8,
+        "scale": 10,
+        "url": "https://casino.guru/shuffle-casino-review",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDC",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "Shuffle is a large crypto casino and sportsbook, live since February 2023 under a Curacao licence (OGL/2024/1337/0628, Natural Nine B.V.), built around a claimed 10,000+ games and a native token, SHFL, tied to a weekly staking lottery with reported prize pools over $1.8 million. It is also, as of this check, the most cautioned-against casino on this site by one of our own rating sources, and we want to say that plainly before anything else.\n\nCasino Guru's own Safety Index rates Shuffle 4.8 out of 10 — Low — and Casino Guru's stated guidance at that level is to advise players to consider alternatives. We display Casino Guru's score for every casino on this site as a matter of methodology; here, the platform behind that score is actively telling players to be cautious, and we think you should read that as a real signal rather than one input we happened to average in.\n\nSeparately, and independently confirmed by Shuffle itself: on 10 October 2025, Fast Track, the third-party customer-data platform Shuffle used, suffered a breach that exposed user information — full names, home addresses, phone numbers, complete transaction and support-message histories, and for many users, uploaded identity documents including passport and driver's licence scans. Shuffle stated that passwords and player funds were not affected, and urged users to enable two-factor authentication and watch for phishing. This is a confirmed incident, not a rumour, and it means anyone who completed KYC at Shuffle before that date should assume their identity documents may have been exposed.\n\nOn top of that: AskGamblers records a recurring complaint pattern of withdrawals held \"under review\" for one to two weeks after a win, with one documented case involving roughly $20,000 stuck for around 14 days against repeated identical compliance-review responses. Shuffle's Trustpilot standing is genuinely hard to pin down — different checks at different times showed a suspended rating notice, a heavily one-star-skewed distribution, and a moderate 3-point-something score, inconsistently enough that we are not confident enough in any single figure to display it here.\n\nKYC at Shuffle is mandatory before a first deposit (not the conditional, threshold-based pattern most other casinos on this site use), which in principle should make an unverified-account dispute impossible — the complaint pattern above describes verified accounts still waiting weeks after a win, which is a different and arguably more concerning problem than the KYC-avoidance issues we flag elsewhere.",
+    "pros": [
+      "A genuinely large game library (10,000+ titles) spanning slots, live dealer tables and a full sportsbook on one balance, plus provably fair in-house Originals with independently verifiable outcomes",
+      "AskGamblers player rating of 6.9/10 from 24 reviews is respectable even though the platform's own algorithmic CasinoRank (5.6/10) and Casino Guru's Safety Index both sit lower",
+      "Shuffle states 90% of crypto withdrawals clear in under a minute — real for the majority, though weigh it against the documented pattern of specific withdrawals getting stuck for weeks (see What to watch)",
+      "Mandatory KYC before deposit removes the specific no-KYC-account-dispute problem that complicates several other casinos on this site — whatever else is going on here, an unverified account isn't the mechanism"
+    ],
+    "cons": [
+      "Casino Guru's own Safety Index rates Shuffle 4.8/10 — Low — and Casino Guru's own guidance at that level is to recommend players consider alternatives. This is the most cautioned-against casino we've listed by that measure",
+      "A confirmed data breach on 10 October 2025, via third-party provider Fast Track, exposed user names, addresses, phone numbers, transaction histories and — for many verified users — uploaded identity documents including passport and driver's licence scans",
+      "A recurring, independently documented complaint pattern: withdrawals held under compliance review for one to two weeks after a win, including a specific ~$20,000 case stuck around 14 days against repeated generic responses",
+      "Trustpilot's actual current standing could not be pinned down with confidence — checks turned up a suspended-rating notice, a heavily one-star-skewed review distribution, and a moderate score, inconsistently enough that we're not displaying a figure",
+      "AskGamblers' own CasinoRank (5.6/10) diverges from its player rating (6.9/10) in the same cautious-algorithm-vs-upbeat-reviews pattern we've now seen on more than one casino on this site"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "Shuffle states that 90% of crypto withdrawals complete in under a minute, which multiple independent reviews repeat. Set against that: AskGamblers' complaint record and player forum threads describe a recurring pattern where a withdrawal following a meaningful win gets held 'under review' for one to two weeks, sometimes longer, with generic compliance-review responses repeated on follow-up. Both things can be true simultaneously — most withdrawals may process quickly while a specific subset, generally larger or bonus-linked ones, get stuck. We could not determine what share of withdrawals fall into the second category.",
+    "deposits": "KYC (name, date of birth, country of residence at minimum) is required before a first deposit — Shuffle does not offer the low-KYC-by-default model several other casinos on this site use. Roughly 18 cryptocurrencies are supported including BTC, ETH, USDT, USDC, LTC, SOL and DOGE, alongside Shuffle's own SHFL token used for its staking lottery. We found no independently confirmed minimum deposit figures specific to Shuffle to cite with confidence.",
+    "commonProblems": "Three distinct issues recur across sources rather than one: withdrawals held under compliance review for extended periods after a win, sometimes weeks, on verified accounts; a confirmed October 2025 data breach at a third-party CRM provider that exposed user identity documents and personal information; and Casino Guru's own Low Safety Index rating, which is itself the platform advising caution rather than a player complaint. Player forum threads (BitcoinTalk) contain further, more serious unverified allegations we are not repeating as fact, but their volume is itself part of the pattern worth knowing about.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Curacao Gaming Control Board, licence OGL/2024/1337/0628 (Natural Nine B.V.).",
+  "founded": 2023,
+  "demo": false
+}
