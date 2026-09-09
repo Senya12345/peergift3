@@ -12,7 +12,15 @@
   --color-ink-800: #161a1f;
   --color-ink-700: #1e242b;
   --color-ink-600: #2a323b;
-  --color-ink-400: #5c6873;
+  /*
+   * Originally #5c6873. That value read fine in isolation but failed WCAG AA (4.5:1)
+   * against every surface it actually sits on — source labels, timestamps, the footer
+   * copyright line, rank numbers on a card — landing between 2.7:1 and 3.3:1, which is
+   * exactly the "blends in, unreadable" complaint. #82909c clears 4.5:1+ against
+   * ink-900/800/700 (its three real resting-state backgrounds) and meaningfully
+   * improves, though doesn't fully clear, the rarer ink-600 hover-state case.
+   */
+  --color-ink-400: #82909c;
   --color-ink-300: #8b959f;
   --color-ink-100: #e4e8ec;
   --color-ink-050: #f5f7f9;

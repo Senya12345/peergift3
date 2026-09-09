@@ -37,7 +37,7 @@ a light variant is deferred until there is traffic to justify the second set of 
 --ink-800: #161A1F;   /* section surface */
 --ink-700: #1E242B;   /* card surface */
 --ink-600: #2A323B;   /* borders, dividers */
---ink-400: #5C6873;   /* disabled, subtle rules */
+--ink-400: #82909C;   /* muted text — timestamps, source labels, secondary UI */
 --ink-300: #8B959F;   /* muted text, labels */
 --ink-100: #E4E8EC;   /* body text */
 --ink-050: #F5F7F9;   /* headings */
@@ -137,3 +137,11 @@ Not optional, and it overlaps with SEO more than people expect.
   figure itself.
 - Sortable table headers are real `<button>` elements inside `<th>` with
   `aria-sort` reflecting state.
+- **Every text colour token gets checked against every surface it actually renders on
+  before it ships, not just the one it was picked against.** The original `--ink-400`
+  looked fine against `--ink-900` in isolation and was failing WCAG AA (down to 2.7:1)
+  everywhere it was actually used — card surfaces, the footer, badges — because nobody
+  checked it against `--ink-700` or `--ink-800`. A token used as text needs 4.5:1 against
+  every background it sits on (3:1 at ≥18.66px bold or ≥24px); a token used as a border or
+  other non-text UI boundary needs 3:1. When adding or changing a token, check all of its
+  real call sites, not the token in the abstract.

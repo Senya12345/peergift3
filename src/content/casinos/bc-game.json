@@ -1,0 +1,200 @@
+{
+  "slug": "bc-game",
+  "name": "BC.Game",
+  "logo": null,
+  "url": "https://bc.game",
+  "affiliateUrl": "https://bcgame53.com/i-98ny76v8qh-n/",
+  "signupBonus": {
+    "headline": "Deposit bonus up to $4,000 across the first several deposits (varies by promo code)",
+    "detail": "BC.Game runs many parallel affiliate-specific promo codes rather than one fixed offer — reported structures range from a 120% first-deposit match to a four-deposit package advertised as 1080% plus rakeback, with wagering requirements cited anywhere from 20x to 45x depending on the code and region. We are not picking one figure as definitive because the sources genuinely disagree; check the exact terms attached to whichever code you use before opting in.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "askgamblers",
+        "score": 6.3,
+        "scale": 10,
+        "url": "https://www.askgamblers.com/online-casinos/reviews/bc-game-casino",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "casinoguru",
+        "score": 7.8,
+        "scale": 10,
+        "url": "https://casino.guru/bc-game-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "lcb",
+        "score": 3.4,
+        "scale": 5,
+        "url": "https://lcb.org/casinos/bcgame-casino",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": {
+        "amount": 1e-05,
+        "source": "third-party deposit guide, checked 2026-09-09; casino cashier is the live source of truth"
+      },
+      "minWithdrawal": {
+        "amount": 0.000874,
+        "source": "third-party withdrawal guide, checked 2026-09-09 — explicitly noted to fluctuate with network conditions"
+      }
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": {
+        "amount": 0.0002,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 0.0201,
+        "source": "third-party withdrawal guide, checked 2026-09-09 — fluctuates with network conditions"
+      }
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": {
+        "amount": 0.009,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 0.105,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": {
+        "amount": 0.005,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 0.101,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": {
+        "amount": 1,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 96,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "XRP",
+      "networks": [],
+      "minDeposit": {
+        "amount": 0.5,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 22.25,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": {
+        "amount": 2,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 21,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "BNB",
+      "networks": [
+        "BSC"
+      ],
+      "minDeposit": {
+        "amount": 0.0002,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 0.0501,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "USDC",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": {
+        "amount": 1,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 5.1,
+        "source": "third-party withdrawal guide, checked 2026-09-09"
+      }
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20",
+        "TRX",
+        "SOL"
+      ],
+      "minDeposit": {
+        "amount": 1,
+        "source": "third-party deposit guide, checked 2026-09-09"
+      },
+      "minWithdrawal": {
+        "amount": 21,
+        "source": "third-party withdrawal guide, checked 2026-09-09 — 21 USDT on TRC-20, 22.58 on ERC-20"
+      }
+    }
+  ],
+  "editorial": {
+    "summary": "BC.Game is a large, high-volume crypto casino — sportsbook, live dealer tables, and a claimed 8,000 to 10,000+ games including its own provably fair \"BC Originals\" — but the single fact that matters most about it happened off the platform, in a Curacao courtroom, and we are leading with it rather than burying it below the game count.\n\nOn 31 October 2024 the Curacao Court of Appeal declared Small House B.V., the company operating BC.Game at the time, bankrupt, following a claim brought by a group of players represented by a Curacao gambling-victims advocacy foundation over more than $2 million in documented unpaid winnings, including one individual claim of roughly $1.48 million. BC.Game publicly rejected the ruling, called it erroneous, and said it would appeal; it also announced in December 2024 that it was withdrawing its licence from Curacao entirely, citing what it called an increasingly hostile regulatory environment. The brand now operates under Twocent Technology Limited, licensed in Anjouan, a jurisdiction with a markedly lighter compliance regime than Curacao's post-2024 rules. We link the primary reporting on this below rather than asking you to take our summary of it on faith.\n\nSeparately, and we think not coincidentally, BC.Game's Trustpilot profile currently carries a notice that its rating is unavailable following a guidelines breach and the removal of a batch of fake reviews — Trustpilot's own action, not ours. We are not showing a Trustpilot score in the breakdown below because there currently isn't a live one to show.\n\nNone of this means every player has a bad experience — BC.Game processes an enormous volume of ordinary play without incident, and the scores below from AskGamblers, Casino Guru and LCB are middling rather than damning. What it does mean is that the recurring complaint pattern across independent sources — a large win triggers an account review, a bonus-abuse clause, or a frozen balance — has a documented legal case behind it rather than being only anecdotal, and that is a materially different risk profile from most other casinos on this site. Weigh it accordingly, especially if you play for stakes large enough that a frozen withdrawal would actually hurt.",
+    "pros": [
+      "A genuinely large game library — 8,000 to 10,000+ titles including 70+ in-house BC Originals that are provably fair and independently verifiable per bet",
+      "Full sportsbook and live dealer tables (blackjack, roulette, baccarat, poker, game shows) alongside the slot catalogue, all on one balance",
+      "Very low deposit minimums across most coins, and a 69-level VIP/SVIP ladder with cashback that starts rewarding volume relatively early",
+      "Wide currency support with cheap-network options for USDT (TRC-20 or Solana instead of ERC-20 saves real money on fees)"
+    ],
+    "cons": [
+      "A Curacao court declared the then-operator, Small House B.V., bankrupt in November 2024 over more than $2 million in documented unpaid player winnings — this is a court finding, not a forum rumour, and BC.Game's response was to dispute it and leave the Curacao market rather than resolve it there",
+      "Now licensed in Anjouan, a jurisdiction with substantially lighter oversight than the Curacao regime BC.Game exited",
+      "Trustpilot has suspended BC.Game's rating following a guidelines breach and the removal of a batch of fake reviews — we cannot show a current Trustpilot score because there isn't a live one",
+      "A recurring, multi-source complaint pattern: large wins triggering account reviews, bonus-abuse determinations, or frozen balances — the exact scenario the bankruptcy case was about",
+      "A 0.1% platform fee is added on top of the blockchain's own network fee on withdrawals, unlike some competitors that only pass through network cost"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "Third-party guides report most crypto withdrawals processing within 24 hours under normal conditions, with a platform fee of roughly 0.1% charged on top of the blockchain's own network fee — BC.Game does add its own margin here, unlike some competitors. Independently of routine processing speed, multiple sources — court documents, forum complaints, and Trustpilot reviews before its suspension — describe a recurring pattern where large wins trigger an account review, a bonus-abuse determination, or a frozen balance rather than a normal payout. This is the single most important withdrawal-related fact about this operator and it is well corroborated rather than a one-off complaint.",
+    "deposits": "Deposits are reported to credit within seconds to a few minutes for most cryptocurrencies, with very low minimums (for example roughly 0.00001 BTC or 1 USDT per third-party guides). BC.Game also offers fiat on-ramps through MoonPay, Banxa and TransFi for card or bank-funded crypto purchases, though all withdrawals are crypto-only regardless of how you deposited.",
+    "commonProblems": "The dominant and best-documented problem is the bankruptcy ruling itself: a Curacao court found the then-operator, Small House B.V., failed to meet payment obligations to players and declared it bankrupt in late 2024, after which BC.Game relicensed in Anjouan. Beyond that, recurring player complaints across AskGamblers, Casino Guru's complaint database and community forums describe accounts being frozen or winnings withheld after a large win, citing bonus-abuse or account-review clauses, along with slower-than-expected customer support on disputed cases. Ordinary, modest-stakes play is reported to work as expected far more often than not.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Anjouan, Comoros (Twocent Technology Limited). Previously Curacao via Small House B.V., which a Curacao court declared bankrupt in November 2024 over unpaid player winnings; BC.Game disputed the ruling, appealed, and withdrew from the Curacao market in December 2024.",
+  "founded": 2017,
+  "demo": false
+}
