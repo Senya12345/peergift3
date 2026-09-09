@@ -1,0 +1,20 @@
+{
+  "code": "TON",
+  "name": "Toncoin",
+  "networks": [],
+  "facetSlug": "toncoin-casinos",
+  "h1": "Casinos that accept Toncoin (TON)",
+  "metaTitle": "Toncoin Casinos: Telegram-Native, Fast and Cheap",
+  "metaDescription": "Casinos accepting TON, Telegram's native token, and why its built-in wallet distribution makes it an increasingly common option at Telegram-linked casinos.",
+  "intro": "Toncoin's relevance to online casinos owes a lot to where it lives: TON is built into Telegram's own wallet, which means hundreds of millions of Telegram users already have a functioning TON wallet without installing anything extra. Casinos that support it are often the same ones that run a Telegram-based mini-app or community, and TON deposits fit that flow naturally.\n\nTechnically, TON settles quickly — typically a few seconds — and fees are a small fraction of a cent, comparable to Solana or Tron rather than to Ethereum mainnet. For a casino player, that means fast crediting and fast cashouts where TON is supported.\n\nSupport for TON at crypto casinos is newer than for the established majors, tracking the coin's own rise in visibility rather than a long history of integration. Where it is offered, confirm the specific casino's minimums and any TON-specific processing notes, since accumulated volume and track record are thinner than for Bitcoin or Ethereum.\n\nTON has no widely used secondary network among the casinos on this site — what is sent on the TON chain is what arrives, with no wrapped-version mismatch to worry about.",
+  "faq": [
+    {
+      "q": "Why do some casinos support Toncoin specifically?",
+      "a": "TON is built into Telegram's wallet, giving it a very large existing user base. Casinos with a Telegram-based presence often add TON support to match how their players already hold funds."
+    },
+    {
+      "q": "Is TON fast to withdraw?",
+      "a": "Yes — typically a few seconds per transaction with minimal fees, comparable to Solana or Tron rather than slower chains like Bitcoin."
+    }
+  ]
+}

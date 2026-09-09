@@ -1,0 +1,172 @@
+{
+  "slug": "duel",
+  "name": "Duel",
+  "logo": null,
+  "url": "https://duel.com",
+  "affiliateUrl": "https://duel.com/r/penkaa",
+  "signupBonus": {
+    "headline": "Rakeback offered through the DUEL5 promo code (up to 50% cited across affiliate listings, tier-dependent)",
+    "detail": "Duel runs a rakeback-based rewards structure rather than a classic deposit-match bonus, marketed heavily around a specific referral/promo code. We could not confirm a single definitive percentage that applies uniformly — affiliate pages cite figures up to 50%, but the actual rate you get is likely tied to volume, VIP tier or the specific code used. Check the terms attached to your own signup before assuming a flat 50%.",
+    "verifiedAt": "2026-09-09"
+  },
+  "ratings": {
+    "sources": [
+      {
+        "id": "casinoguru",
+        "score": 7.6,
+        "scale": 10,
+        "url": "https://casino.guru/duel-com-casino-review",
+        "verifiedAt": "2026-09-09"
+      },
+      {
+        "id": "trustpilot",
+        "score": 3.4,
+        "scale": 5,
+        "url": "https://www.trustpilot.com/review/duel.com",
+        "verifiedAt": "2026-09-09"
+      }
+    ]
+  },
+  "factors": [
+    "provably-fair",
+    "live-dealer",
+    "sports-betting",
+    "vip-program"
+  ],
+  "currencies": [
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BCH",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDT",
+      "networks": [
+        "ERC20",
+        "TRX",
+        "SOL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "USDC",
+      "networks": [
+        "ERC20",
+        "SOL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BNB",
+      "networks": [
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "XRP",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ADA",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LINK",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "AVAX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TON",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "HBAR",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
+  ],
+  "editorial": {
+    "summary": "Duel is a very young crypto casino and sportsbook — the current site launched in July 2025, licensed out of Anjouan and operated by Immortal Snail LLC, a Nevis-registered company. Its pitch is genuine: five in-house Originals (Dice, Crash, Plinko, Blackjack, Mines) run at a 0% house edge, meaning Duel takes no cut of those specific games and earns instead from its slots, live tables and sportsbook margin elsewhere on the platform. Blackjack's 0% figure assumes perfect basic strategy, which most players don't play, so the practical edge on that one game is a little softer than the headline suggests — but the mechanism is real, not a marketing fiction, and it's a genuinely uncommon structure among the casinos on this site.\n\nWe need to address directly why you likely searched for this casino by name alongside \"SpongeBob.\" In May and June 2026, Duel ran a series of live blackjack broadcasts featuring a performer in a SpongeBob SquarePants costume engaging in simulated sexual acts during play, including one session alongside an adult performer. A separate broadcast showed a female dealer who appeared visibly uncomfortable and repeatedly tried to push the costumed performer away while the hand continued on stream. Industry commentators also documented a further Duel broadcast featuring a dealer in Nazi military uniform beside a performer in an antisemitic caricature, with content reported to reference sexual assault and genocide. We are not going to write this up as clever viral marketing. Whatever the intent, broadcasting content that reads as an employee being harassed on camera for entertainment, and imagery referencing genocide, for a gambling platform's promotional stream, is something we think you should know before you sign up, not a footnote.\n\nSet that against a young operating history that is otherwise unremarkable so far: Casino Guru's Safety Index sits at a respectable 7.6, with only two recorded unresolved complaints as of our check — a delayed $250 withdrawal and, notably, a $152 case involving an alleged self-exclusion bypass, which is its own separate concern given the platform's no-KYC-by-default design. KYC is not required below $2,000 in daily withdrawals; above that, or on automated risk signals, verification kicks in, the same conditional pattern as every other casino on this site, not the unconditional anonymity some marketing implies.\n\nWe list Duel because it is real, licensed, processes ordinary play without widespread complaint so far, and the 0% Originals mechanic is worth knowing about regardless of how you feel about the marketing. But this is a casino where the marketing conduct itself belongs in your decision, not just the payout mechanics.",
+    "pros": [
+      "A real, unusual mechanic: five in-house Originals run at a genuine 0% house edge, with Duel's revenue coming from slots, live tables and the sportsbook instead — worth understanding on its own terms rather than dismissing as a gimmick",
+      "A relatively high $2,000-per-day threshold before KYC kicks in, and a stated $250,000 daily withdrawal ceiling overall — generous limits if the platform's youth doesn't concern you",
+      "Broad currency support (16 coins) including newer chains like Solana, TON and Avalanche not every casino on this site offers yet",
+      "Casino Guru's Safety Index (7.6, Above Average) with only two recorded unresolved complaints so far, reasonable for how young the operator is"
+    ],
+    "cons": [
+      "In 2026, Duel broadcast live blackjack content featuring a performer in a SpongeBob costume simulating sexual acts, including a session where a female dealer appeared to visibly resist on camera while play continued — reported as marketing content, not an isolated accident",
+      "A separate Duel broadcast reportedly featured Nazi-uniform and antisemitic imagery referencing genocide, per industry commentary — we were not able to independently verify every detail beyond what's publicly reported, but the pattern across multiple documented incidents is consistent",
+      "Very young: the current site has operated only since mid-2025, so there is materially less complaint history and track record to judge it against than any other casino on this site",
+      "One of Casino Guru's two recorded complaints alleges a self-exclusion bypass — a genuine responsible-gambling concern given the platform's low-KYC-by-default design",
+      "Fewer than three rating sources could be confirmed (only Casino Guru and Trustpilot), so no AskGamblers or LCB figure is included and this casino's aggregate rests on two sources rather than the three-plus most others on this site have"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "No KYC is required for withdrawals up to $2,000 per rolling 24-hour window; above that, or when an automated risk flag trips (mismatched IPs, VPN patterns, on-chain links to mixers), identity verification is required before funds release. The stated overall daily cap is $250,000 per account, with larger amounts routed through manual review reported to complete within 24 hours. We could not independently verify typical processing times beyond what the operator and affiliate guides state.",
+    "deposits": "Deposits are crypto-based across 16 supported coins, with a fiat-to-crypto on-ramp (Visa, Apple Pay, Pix and similar) for players who want to buy crypto on-site rather than bring their own. Reported crediting is fast, consistent with other crypto-native casinos on this site, though we found no independently sourced minimum deposit figures specific to Duel to cite with confidence.",
+    "commonProblems": "The most consequential issue is not a payments complaint but a marketing-conduct one: documented live-stream content in 2026 involving simulated sexual acts directed at a dealer who appeared to resist on camera, and separately, imagery referencing Nazi themes and genocide, both used as promotional content. On the operational side, Casino Guru records a small number of unresolved complaints for a casino this young, including one alleging a bypass of self-exclusion — worth weighing given the platform's low-KYC default. The casino's short operating history (current site live since mid-2025) means less accumulated complaint data exists either way compared with older operators on this site.",
+    "generatedAt": "2026-09-09"
+  },
+  "license": "Anjouan Gaming Authority, licence ALSI-202411026-FI1. Operated by Immortal Snail LLC (Nevis, St Kitts and Nevis).",
+  "founded": 2025,
+  "demo": false
+}

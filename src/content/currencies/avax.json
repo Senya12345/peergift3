@@ -1,0 +1,20 @@
+{
+  "code": "AVAX",
+  "name": "Avalanche",
+  "networks": [],
+  "facetSlug": "avalanche-casinos",
+  "h1": "Casinos that accept Avalanche (AVAX)",
+  "metaTitle": "Avalanche Casinos: Sub-Second Settlement, Newer Support",
+  "metaDescription": "Casinos accepting AVAX, a fast, low-fee chain increasingly used for casino deposits, and what its more recent adoption means for liquidity and support depth.",
+  "intro": "Avalanche settles transactions in roughly one to two seconds for a fraction of a cent in fees, putting it in the same practical speed tier as Solana rather than the ten-to-thirty-minute range of on-chain Bitcoin. For a casino player who wants a deposit to credit and a withdrawal to clear within the same sitting, that responsiveness is the whole appeal.\n\nThe trade-off is not technical so much as historical: AVAX has been integrated into casino payment systems more recently than Bitcoin, Ethereum or Litecoin, so fewer operators support it and the ones that do have less of a track record processing it at volume. That does not make it unreliable, but it does mean less accumulated evidence — worth checking a specific casino's AVAX-specific withdrawal notes rather than assuming parity with a coin they have supported for years.\n\nAvalanche does not commonly appear as a secondary network for other tokens the way Ethereum, BNB Smart Chain or Polygon do on this site, so if a casino lists AVAX support, it is almost always the native asset on its own chain rather than a wrapped version — one less thing to get wrong at the address level.\n\nAs with any non-stablecoin, a balance held in AVAX between a deposit and a later withdrawal is exposed to ordinary crypto market volatility, on top of whatever the casino itself does.",
+  "faq": [
+    {
+      "q": "How fast are Avalanche withdrawals?",
+      "a": "Typically one to two seconds for the chain itself to finalise, putting AVAX among the fastest coins on this list rather than the slowest."
+    },
+    {
+      "q": "Is AVAX support common at crypto casinos?",
+      "a": "Less than Bitcoin or Ethereum — it has been added to casino payment systems more recently, so fewer operators list it and support is less proven by volume."
+    }
+  ]
+}

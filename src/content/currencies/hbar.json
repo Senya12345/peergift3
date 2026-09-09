@@ -1,0 +1,20 @@
+{
+  "code": "HBAR",
+  "name": "Hedera",
+  "networks": [],
+  "facetSlug": "hedera-casinos",
+  "h1": "Casinos that accept Hedera (HBAR)",
+  "metaTitle": "Hedera Casinos: Enterprise-Backed, Fast and Low-Fee",
+  "metaDescription": "Casinos accepting HBAR, the token behind Hedera's hashgraph network, governed by a council of large companies rather than open validators.",
+  "intro": "Hedera runs on hashgraph consensus rather than the blockchain model most coins on this list use, governed by a council of large companies rather than a fully decentralised validator set. For a casino player none of that architecture matters directly, but it does explain why HBAR transactions are fast and fee-predictable: confirmations typically finalise in a few seconds for a fraction of a cent, with fees fixed in USD terms rather than fluctuating with network demand the way Ethereum's gas market does.\n\nThat fee predictability is a genuine, distinct advantage — a HBAR withdrawal costs roughly the same regardless of how busy the network is, which is not true of Bitcoin or Ethereum during congestion.\n\nSupport for HBAR among crypto casinos is limited compared with the majors on this list, and where it exists it is a relatively recent addition, so treat the depth of support and liquidity as less proven than a coin an operator has processed for years. Confirm a specific casino's HBAR minimums directly rather than assuming they mirror its Bitcoin or Ethereum terms.\n\nHBAR has no widely used secondary network among the casinos tracked here — what is sent on the Hedera network is what arrives.",
+  "faq": [
+    {
+      "q": "Why are Hedera fees more predictable than Ethereum's?",
+      "a": "Hedera fixes transaction fees in USD terms rather than letting them float with network demand, so a withdrawal costs roughly the same whether the network is busy or quiet."
+    },
+    {
+      "q": "Is Hedera decentralised the same way Bitcoin is?",
+      "a": "No — Hedera is governed by a council of large organisations rather than an open validator set, a different trust model worth knowing even though it doesn't change how a deposit or withdrawal works."
+    }
+  ]
+}
