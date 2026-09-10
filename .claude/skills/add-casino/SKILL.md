@@ -1,9 +1,9 @@
 ---
 name: add-casino
-description: Add a casino to Casilla from a link, name, bonus and description supplied by the operator of the site. Researches the casino's ratings across the review platforms, reads player reviews to ground the editorial verdict, assigns factors, and writes the content file. Use whenever a new casino is being added or an existing record is being re-verified.
+description: Add a casino to Gamble Atlas from a link, name, bonus and description supplied by the operator of the site. Researches the casino's ratings across the review platforms, reads player reviews to ground the editorial verdict, assigns factors, and writes the content file. Use whenever a new casino is being added or an existing record is being re-verified.
 ---
 
-# Adding a casino to Casilla
+# Adding a casino to Gamble Atlas
 
 The user supplies: **link, name, sign-up bonus, description**. Everything else — the
 ratings, the player sentiment, the factors — you research.
@@ -15,7 +15,7 @@ ratings, the player sentiment, the factors — you research.
 Not an estimate, not a plausible figure, not a value inferred from similar casinos. If a
 platform does not list this casino, it does not go in the file. If a bonus term cannot be
 confirmed on the operator's own site, it is left out. A wrong figure here is not a small
-error: the entire premise of Casilla is that every number is checkable, and one invented
+error: the entire premise of Gamble Atlas is that every number is checkable, and one invented
 score makes the rest worthless.
 
 When something cannot be found, say so in your report. Silence looks like completeness.

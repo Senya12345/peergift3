@@ -1,4 +1,6 @@
 ---
+import { SITE } from '../lib/site';
+
 const year = new Date().getFullYear();
 
 const links = [
@@ -25,8 +27,8 @@ const links = [
     </nav>
 
     <p>
-      Contact: <a href="mailto:pencasino@gmail.com" class="text-amber-500"
-        >pencasino@gmail.com</a
+      Contact: <a href={`mailto:${SITE.email}`} class="text-amber-500"
+        >{SITE.email}</a
       >
     </p>
 
@@ -53,12 +55,12 @@ const links = [
     </div>
 
     <p>
-      Casilla earns commission when you sign up through links on this site. It does not
+      {SITE.name} earns commission when you sign up through links on this site. It does not
       change what you pay, and it does not decide the order of the rankings — those come
       from the published scores of the review platforms we aggregate. Full detail in our
       <a href="/affiliate-disclosure/">affiliate disclosure</a>.
     </p>
 
-    <p class="text-ink-400">© {year} Casilla. All rights reserved.</p>
+    <p class="text-ink-400">© {year} {SITE.name}. All rights reserved.</p>
   </div>
 </footer>

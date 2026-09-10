@@ -12,7 +12,7 @@ jobs:
       # CI builds the site as it would ship: no placeholder records, no indexing.
       INCLUDE_DEMO: 'false'
       SITE_INDEXABLE: 'false'
-      SITE_URL: https://casilla.example
+      SITE_URL: https://gambleatlas.example
 
     steps:
       - uses: actions/checkout@v4

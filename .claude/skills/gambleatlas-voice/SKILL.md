@@ -1,9 +1,9 @@
 ---
-name: casilla-voice
-description: The editorial rules for any prose published on the Casilla site — casino verdicts, facet page intros, articles, and the written pages. Use before writing or editing any user-facing copy in this repository, including meta titles and descriptions.
+name: gambleatlas-voice
+description: The editorial rules for any prose published on the Gamble Atlas site — casino verdicts, facet page intros, articles, and the written pages. Use before writing or editing any user-facing copy in this repository, including meta titles and descriptions.
 ---
 
-# Writing for Casilla
+# Writing for Gamble Atlas
 
 Full rules live in `docs/voice.md`. Read it before writing anything substantial. This is
 the working summary.
@@ -12,7 +12,7 @@ the working summary.
 
 Google has no AI-detector and never has; authorship is not a ranking signal. What the
 March 2026 core update punished was **scaled content abuse** — templated pages produced at
-volume, recognisable by coordinated sameness. Casilla generates pages from data, which is
+volume, recognisable by coordinated sameness. Gamble Atlas generates pages from data, which is
 that exact shape. The prose is what separates us from a penalised content farm, so it
 carries the whole load.
 

@@ -1,4 +1,4 @@
-# Casilla design system
+# Gamble Atlas design system
 
 ## Why this file exists
 
@@ -17,7 +17,7 @@ write them down**, so nothing is left to averaging. That is what this file is.
 The entire crypto casino niche looks the same: neon purple, dark glass, glowing dice,
 animated gradients. Competing on that axis means being the tenth-best version of it.
 
-**Casilla is an analytical reference, not a casino landing page.** The nearest reference
+**Gamble Atlas is an analytical reference, not a casino landing page.** The nearest reference
 points are a market data terminal or a well-made league table — dense, aligned, numerate,
 calm. The product is a ranked comparison of numbers from named sources. The design should
 make a reader trust the numbers, which means it should look like it was built by people
@@ -120,9 +120,9 @@ Failing any of these means the design has drifted back to the statistical averag
 
 ## Identity
 
-The logo is drawn for this project — a mark built from the *casilla* idea (a cell, a
-square on a board) rendered as a small filled grid. Monochrome, works at 24px, ships as
-inline SVG so it costs no request and inherits `currentColor`.
+The logo is drawn for this project — a small filled grid, read as a set of coordinates
+the way an atlas locates anything on a map. Monochrome, works at 24px, ships as inline
+SVG so it costs no request and inherits `currentColor`.
 
 ## Accessibility
 

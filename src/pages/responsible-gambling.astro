@@ -1,10 +1,11 @@
 ---
 import Prose from '../components/Prose.astro';
 import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
 ---
 
 <Base
-  title="Responsible Gambling — Casilla"
+  title={`Responsible Gambling — ${SITE.name}`}
   description="Practical limits worth setting before you deposit, the warning signs that matter, and where to get free confidential help."
 >
   <h1 class="text-[32px] sm:text-[38px]">Responsible gambling</h1>
@@ -74,7 +75,7 @@ import Base from '../layouts/Base.astro';
 
     <p>
       <strong>You must be 18 or older</strong> to gamble, and older in some jurisdictions.
-      Casilla is not a gambling operator, holds no licence, and takes no bets.
+      {SITE.name} is not a gambling operator, holds no licence, and takes no bets.
     </p>
   </Prose>
 </Base>

@@ -5,7 +5,7 @@ import Prose from '../../components/Prose.astro';
 import Base from '../../layouts/Base.astro';
 import { authorSchema, getAuthor } from '../../lib/authors';
 import { breadcrumbs, organizationId } from '../../lib/schema';
-import { absolute } from '../../lib/site';
+import { absolute, SITE } from '../../lib/site';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) => !data.draft);
@@ -22,7 +22,7 @@ const path = `/articles/${article.id}/`;
 ---
 
 <Base
-  title={`${article.data.title} — Casilla`}
+  title={`${article.data.title} — ${SITE.name}`}
   description={article.data.description}
   dataModified={article.data.updatedAt ?? article.data.publishedAt}
   pageType="article"

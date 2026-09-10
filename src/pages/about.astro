@@ -6,14 +6,14 @@ import { SITE } from '../lib/site';
 ---
 
 <Base
-  title="About Casilla"
-  description="What Casilla is, who runs it, and the rules it holds itself to when publishing numbers about gambling operators."
+  title={`About ${SITE.name}`}
+  description={`What ${SITE.name} is, who runs it, and the rules it holds itself to when publishing numbers about gambling operators.`}
 >
-  <h1 class="text-[32px] sm:text-[38px]">About Casilla</h1>
+  <h1 class="text-[32px] sm:text-[38px]">About {SITE.name}</h1>
 
   <Prose>
     <p class="mt-5">
-      Casilla answers one question: what do the established casino review platforms
+      {SITE.name} answers one question: what do the established casino review platforms
       collectively think of a given crypto casino? Rather than adding a tenth opinion to a
       crowded market, it gathers the opinions that already exist, puts them on one scale, and
       shows the workings.
@@ -49,7 +49,7 @@ import { SITE } from '../lib/site';
 
     <h2>Who runs it</h2>
     <p>
-      Casilla is a small independent project, not a media group and not part of any casino
+      {SITE.name} is a small independent project, not a media group and not part of any casino
       operator. It has no licence and takes no bets — it is a comparison site, and the only
       thing it sells is a referral.
     </p>

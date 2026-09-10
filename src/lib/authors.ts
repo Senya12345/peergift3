@@ -22,7 +22,7 @@ export interface Author {
 export const AUTHORS: Record<string, Author> = {
   editorial: {
     key: 'editorial',
-    name: 'Casilla editorial',
+    name: 'Gamble Atlas editorial',
     role: 'Editorial team',
     bio: 'The people who check the figures on this site. Every rating is read from the source platform and dated, every casino page carries genuine criticism, and no operator can pay for placement.',
   },

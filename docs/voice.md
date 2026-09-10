@@ -1,4 +1,4 @@
-# Casilla editorial voice
+# Gamble Atlas editorial voice
 
 Every word of prose on this site is written against this file. It is not a style
 preference — it is the main defence against the one thing that can kill this project.
@@ -11,7 +11,7 @@ templated mass production. Sites publishing generated pages at volume lost 50–
 organic traffic in two weeks. The trigger is coordinated sameness — identical structure,
 recycled phrasing, template boilerplate wearing different keywords.
 
-Casilla generates pages from data. That is exactly the shape Google's enforcement is
+Gamble Atlas generates pages from data. That is exactly the shape Google's enforcement is
 tuned to catch. The only thing separating us from a penalised content farm is that
 **every page carries prose a person actually wrote, about that specific subject, with
 facts a reader could go and check.**

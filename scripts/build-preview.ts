@@ -45,7 +45,7 @@ const between = (html: string, open: RegExp, close: string): string => {
 };
 
 const titleOf = (html: string): string =>
-  (html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '').replace(/\s*[—-]\s*Casilla\s*$/, '').trim();
+  (html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '').replace(/\s*[—-]\s*Gamble Atlas\s*$/, '').trim();
 
 // Header and footer are identical on every page; taking them once also removes the
 // duplicate id="main" that concatenating whole documents would produce.
@@ -146,7 +146,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Casilla</title>
+<title>Gamble Atlas</title>
 <style>${css}</style>
 <style>
 #preview-bar{position:sticky;top:0;z-index:50;display:flex;gap:2px;overflow-x:auto;

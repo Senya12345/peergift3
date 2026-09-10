@@ -1,4 +1,4 @@
-# Casilla
+# Gamble Atlas
 
 An aggregator of crypto casino ratings. Each casino's score is the plain mean of what
 independent review platforms published about it, rebased onto one scale, with every
@@ -11,8 +11,7 @@ factor we can win outright.
 
 ```bash
 npm install
-npm run dev                    # localhost:4321, no casinos unless INCLUDE_DEMO=true
-INCLUDE_DEMO=true npm run dev  # with the three placeholder records, for layout work
+npm run dev   # localhost:4321
 ```
 
 Copy `.env.example` to `.env` and fill in what you need. Every variable has a safe
@@ -41,8 +40,9 @@ placeholder-leak assertion. This is what CI runs.
 to be worth crawling — an empty aggregator that gets indexed earns a thin-content
 reputation that takes months to shed.
 
-**`INCLUDE_DEMO`** includes the placeholder casino records. Never true in a build that
-ships; CI asserts it.
+**`INCLUDE_DEMO`** includes placeholder casino records for layout work, if any exist
+under `src/content/casinos/` with `"demo": true`. Never true in a build that ships; CI
+asserts it.
 
 ## How the pieces fit
 
@@ -53,7 +53,7 @@ scripts need the same data, and neither can use that API.
 
 The aggregate score is computed at build time in `src/lib/ratings.ts` and never stored,
 so the headline number cannot drift from the breakdown printed beneath it. Fewer than
-three sources yields no score at all.
+`MIN_RATING_SOURCES` (currently two) sources yields no score at all.
 
 Facet pages (`/no-kyc-crypto-casinos/`, `/bitcoin-casinos/`) are generated for every
 factor and currency so the filters always work, but stay `noindex` and out of the sitemap
@@ -74,7 +74,7 @@ hard rule is that no number gets written that was not read from a source.
 
 ## Writing anything
 
-Read `docs/voice.md` first, or invoke the `casilla-voice` skill. `docs/design-system.md`
+Read `docs/voice.md` first, or invoke the `gambleatlas-voice` skill. `docs/design-system.md`
 covers the visual side. Both exist for the same reason: this site generates pages from
 data, which is the exact shape Google's scaled-content enforcement targets, and
 hand-written specific prose is what separates it from a content farm.

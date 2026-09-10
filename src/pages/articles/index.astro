@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { getAuthor } from '../../lib/authors';
+import { SITE } from '../../lib/site';
 
 const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt),
@@ -9,7 +10,7 @@ const articles = (await getCollection('articles', ({ data }) => !data.draft)).so
 ---
 
 <Base
-  title="Articles — Casilla"
+  title={`Articles — ${SITE.name}`}
   description="How crypto casinos actually work: KYC thresholds, withdrawal behaviour, bonus terms and the things worth checking before you deposit."
   pageType="article"
 >

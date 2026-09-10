@@ -5,8 +5,8 @@ import { SITE } from '../lib/site';
 ---
 
 <Base
-  title="Terms of Use — Casilla"
-  description="The terms that apply to using Casilla, including what the ratings are and are not, and the limits of what we can be responsible for."
+  title={`Terms of Use — ${SITE.name}`}
+  description={`The terms that apply to using ${SITE.name}, including what the ratings are and are not, and the limits of what we can be responsible for.`}
 >
   <h1 class="text-[32px] sm:text-[38px]">Terms of use</h1>
 
@@ -15,7 +15,7 @@ import { SITE } from '../lib/site';
 
     <h2>What this site is</h2>
     <p>
-      Casilla is an information and comparison site. It is not a gambling operator, holds no
+      {SITE.name} is an information and comparison site. It is not a gambling operator, holds no
       gaming licence, accepts no bets and processes no wagers. Everything here is published
       for information; none of it is advice about whether you should gamble or where.
     </p>
@@ -54,7 +54,7 @@ import { SITE } from '../lib/site';
 
     <h2>Content</h2>
     <p>
-      The written material, scoring method and design on this site belong to Casilla. Ratings
+      The written material, scoring method and design on this site belong to {SITE.name}. Ratings
       are attributed to the platforms that published them and remain theirs. You are welcome
       to quote us with a link.
     </p>

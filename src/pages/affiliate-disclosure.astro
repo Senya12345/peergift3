@@ -1,17 +1,18 @@
 ---
 import Prose from '../components/Prose.astro';
 import Base from '../layouts/Base.astro';
+import { SITE } from '../lib/site';
 ---
 
 <Base
-  title="Affiliate Disclosure — Casilla"
-  description="How Casilla makes money, what that does and does not influence, and how to use the site if you would rather not send us any commission at all."
+  title={`Affiliate Disclosure — ${SITE.name}`}
+  description={`How ${SITE.name} makes money, what that does and does not influence, and how to use the site if you would rather not send us any commission at all.`}
 >
   <h1 class="text-[32px] sm:text-[38px]">Affiliate disclosure</h1>
 
   <Prose>
     <p class="mt-5">
-      Casilla earns commission. When you follow a <strong>Visit site</strong> link and go on
+      {SITE.name} earns commission. When you follow a <strong>Visit site</strong> link and go on
       to register or deposit, the casino may pay us a share of what it earns from you, or a
       one-off fee for the referral. It costs you nothing extra and it does not change the
       terms you are offered.

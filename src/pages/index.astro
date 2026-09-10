@@ -6,6 +6,7 @@ import Base from '../layouts/Base.astro';
 import { loadCasinos, loadCurrencies, loadFactors } from '../lib/content';
 import { byScoreDesc, lastVerified } from '../lib/ratings';
 import { casinoList, organization, website } from '../lib/schema';
+import { SITE } from '../lib/site';
 
 const casinos = [...loadCasinos()].sort(byScoreDesc);
 const factors = loadFactors();
@@ -46,7 +47,7 @@ const supportedCoins = byPopularity(
 ---
 
 <Base
-  title="Casilla — Crypto Casino Ratings From Every Major Review Site"
+  title={`${SITE.name} — Crypto Casino Ratings From Every Major Review Site`}
   description="One combined score per crypto casino, built from the published ratings of AskGamblers, Casino Guru, Trustpilot and others. Every figure is linked back to its source."
   dataModified={dataModified}
   pageType="home"

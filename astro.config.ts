@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { getFacets } from './src/lib/facets';
 import { siteIndexable } from './src/lib/content';
 
-const site = process.env.SITE_URL ?? 'https://casilla.example';
+const site = process.env.SITE_URL ?? 'https://gambleatlas.example';
 
 /**
  * Facets below the casino threshold are noindexed, and a noindexed URL in a sitemap is

@@ -4,6 +4,7 @@ import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { siteIndexable } from '../lib/content';
+import { SITE } from '../lib/site';
 
 interface Props {
   title: string;
@@ -50,7 +51,7 @@ const robots = !siteIndexable
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:site_name" content="Casilla" />
+    <meta property="og:site_name" content={SITE.name} />
     <meta name="twitter:card" content="summary_large_image" />
     {dataModified && <meta name="last-verified" content={dataModified} />}
 

@@ -25,7 +25,7 @@ export const GET: APIRoute = () => {
     '',
     `Each casino's score is the unweighted mean of ratings published by independent review platforms (${SOURCE_PLATFORMS.join(', ')}), rebased onto a 0-10 scale. Scores from platforms using a 5-point scale are doubled. A casino with fewer than ${MIN_RATING_SOURCES} sources is shown as unrated rather than averaged. Every individual figure is displayed with the date it was checked and a link to the source, so any number on this site can be verified independently.`,
     '',
-    `Casilla is an affiliate site: it earns commission on sign-ups. Commission does not affect the ranking, which follows the aggregated scores.`,
+    `${SITE.name} is an affiliate site: it earns commission on sign-ups. Commission does not affect the ranking, which follows the aggregated scores.`,
     '',
     '## Pages',
     '',

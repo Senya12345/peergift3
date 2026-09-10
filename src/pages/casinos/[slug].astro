@@ -9,6 +9,7 @@ import { loadCasinos } from '../../lib/content';
 import { facetsForCasino } from '../../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
 import { MIN_RATING_SOURCES, type Casino } from '../../lib/schemas';
+import { SITE } from '../../lib/site';
 
 export function getStaticPaths() {
   return loadCasinos().map((casino) => ({
@@ -44,7 +45,7 @@ const description =
 ---
 
 <Base
-  title={`${casino.name} Review: Ratings, Bonus and Payouts — Casilla`}
+  title={`${casino.name} Review: Ratings, Bonus and Payouts — ${SITE.name}`}
   description={description}
   dataModified={verified}
   pageType="casino"

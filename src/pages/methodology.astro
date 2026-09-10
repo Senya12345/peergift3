@@ -2,18 +2,18 @@
 import Prose from '../components/Prose.astro';
 import Base from '../layouts/Base.astro';
 import { MIN_RATING_SOURCES } from '../lib/schemas';
-import { SOURCE_PLATFORMS } from '../lib/site';
+import { SITE, SOURCE_PLATFORMS } from '../lib/site';
 ---
 
 <Base
-  title="How We Rate Crypto Casinos — Casilla"
-  description="The exact formula behind every score on Casilla: which platforms we read, how different scales are reconciled, what we deliberately exclude, and where the method is weak."
+  title={`How We Rate Crypto Casinos — ${SITE.name}`}
+  description={`The exact formula behind every score on ${SITE.name}: which platforms we read, how different scales are reconciled, what we deliberately exclude, and where the method is weak.`}
 >
   <h1 class="text-[32px] sm:text-[38px]">How we rate</h1>
 
   <Prose>
     <p class="mt-5">
-      Casilla does not invent scores. Every number on this site is arithmetic performed on
+      {SITE.name} does not invent scores. Every number on this site is arithmetic performed on
       figures other people published, and this page describes the arithmetic completely
       enough that you could reproduce it yourself.
     </p>
@@ -49,7 +49,7 @@ import { SOURCE_PLATFORMS } from '../lib/site';
 
     <h2>What is not in the score</h2>
     <p>
-      Commission is not in the score. Casilla earns money when readers sign up through our
+      Commission is not in the score. {SITE.name} earns money when readers sign up through our
       links, and the ranking order is a direct function of the aggregated figures — there is
       no manual placement, no paid position, and no tie-break we control.
     </p>

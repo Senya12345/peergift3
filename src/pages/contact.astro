@@ -5,8 +5,8 @@ import { SITE } from '../lib/site';
 ---
 
 <Base
-  title="Contact Casilla"
-  description="How to reach Casilla about a wrong figure, a casino worth adding, or a partnership enquiry."
+  title={`Contact ${SITE.name}`}
+  description={`How to reach ${SITE.name} about a wrong figure, a casino worth adding, or a partnership enquiry.`}
 >
   <h1 class="text-[32px] sm:text-[38px]">Contact</h1>
 
@@ -38,7 +38,7 @@ import { SITE } from '../lib/site';
 
     <h2>Player disputes</h2>
     <p>
-      We cannot help with a withheld withdrawal or a closed account. Casilla holds no licence
+      We cannot help with a withheld withdrawal or a closed account. {SITE.name} holds no licence
       and has no relationship with these operators beyond referral links, so we have no
       leverage. Take the complaint to the platform that handles them — AskGamblers and Casino
       Guru both run complaint services with a real record of recovering player funds — and to
