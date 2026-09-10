@@ -38,7 +38,8 @@
     "sports-betting",
     "live-dealer",
     "vip-program",
-    "no-kyc"
+    "no-kyc",
+    "prediction-markets"
   ],
   "currencies": [
     {
@@ -91,6 +92,7 @@
       "Five-tier VIP program with disclosed cashback percentages (0.5% up to 15%) and a weekly cashback payment on net losses — more transparent about the mechanics than most VIP schemes on this site",
       "Broad payment flexibility: cards, e-wallets and regional methods alongside crypto, useful if you don't want to be crypto-only",
       "High marks from both AskGamblers player rating (9.6/10) and Casino Guru's Safety Index (8.7/10)",
+      "A dedicated \"1win Markets\" product for yes/no predictions on politics, crypto, tech and culture events, separate from the traditional sportsbook",
       "Reported crypto withdrawal experience varies sharply by region — some players report sustained, high-volume play over years with no verification request at all, though written guides for other regions describe a much lower trigger point (see the con below)"
     ],
     "cons": [

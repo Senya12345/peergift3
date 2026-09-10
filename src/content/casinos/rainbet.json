@@ -38,7 +38,8 @@
     "provably-fair",
     "live-dealer",
     "sports-betting",
-    "vip-program"
+    "vip-program",
+    "prediction-markets"
   ],
   "currencies": [
     { "code": "BTC", "networks": [], "minDeposit": null, "minWithdrawal": null },
@@ -70,7 +71,8 @@
       "A genuinely broad platform in one place: provably fair in-house Originals, live dealer tables, third-party slots and a comprehensive sportsbook covering mainstream and niche sports plus esports",
       "A referral-code rakeback path (20% via code) that pays out with zero wagering requirement every ten minutes, a materially better deal for high-volume players than the deposit-match bonus",
       "Low deposit and withdrawal minimums (reported at $5–15 depending on the coin) and no platform fee on crypto withdrawals beyond the network's own cost",
-      "Broad crypto support across roughly a dozen coins with multiple network options for USDT and USDC, keeping fees down on stablecoin moves"
+      "Broad crypto support across roughly a dozen coins with multiple network options for USDT and USDC, keeping fees down on stablecoin moves",
+      "A Predictions market covering real-world events — politics, business, weather, entertainment — alongside the traditional sportsbook, each with published settlement rules"
     ],
     "cons": [
       "FinTelegram, an investigative outlet covering offshore gambling, has published pieces questioning the identity of Rainbet's named CEO and describing its Curaçao/Anjouan corporate structure as designed to limit regulatory accountability — a claim we could not independently verify but consider worth disclosing given the source",

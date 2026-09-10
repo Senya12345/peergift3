@@ -1,0 +1,23 @@
+{
+  "slug": "prediction-markets",
+  "name": "Prediction markets",
+  "facetSlug": "prediction-market-crypto-casinos",
+  "h1": "Crypto casinos and platforms with prediction markets",
+  "metaTitle": "Prediction Market Crypto Casinos: Betting on Real Events",
+  "metaDescription": "Which crypto casinos and platforms let you trade on the outcome of real-world events — elections, corporate moves, awards — rather than casino games or sports.",
+  "intro": "A prediction market is a bet dressed up as a trade, or a trade dressed up as a bet, depending on which regulator you ask. The mechanism is the same everywhere it shows up: a market opens on a real-world event with a defined resolution date — who wins an election, whether a company hits an earnings target, who wins an award — and you buy a share representing one outcome. That share settles at a fixed value if you're right and at zero if you're wrong, and its price between now and resolution moves with the crowd's changing odds, so you can also sell out of a position early rather than holding to the end.\n\nThat is structurally different from a sportsbook bet, even though the everyday experience of clicking a price and putting money behind it feels almost identical. A sportsbook sets odds and takes the other side of your bet, adjusting its own lines to manage risk. A prediction market is usually a matching engine: it pairs buyers and sellers of opposing shares and takes a fee for doing so, without an operator betting against you directly. That distinction is also why prediction markets have found a regulatory lane sportsbooks in the same jurisdictions often haven't — some operate as licensed derivatives exchanges rather than as gambling operators, a framing that has let a few platforms offer event contracts in places where sports betting is otherwise restricted or banned outright. That framing is also actively contested — more than one regulator has argued a prediction market on a sports outcome is simply sports betting under a different name, and the legal fights over that question are ongoing rather than settled.\n\nOn the casinos and platforms we track, the markets on offer go well beyond sports scores: elections, central bank rate decisions, corporate leadership changes, box office numbers, awards results and macroeconomic data prints all show up as tradeable contracts alongside the more familiar game-outcome markets. The appeal is obvious if you follow current events closely and think you have a real edge on a specific question — you're not limited to the handful of markets a sportsbook chooses to price.\n\nThe risk profile is also genuinely different from casino games. There is no house edge built into the game mechanics the way there is on a roulette wheel; your cost is the spread between buy and sell prices plus any platform fee, and your risk is entirely about whether your read on the event is better than the market's. That can make prediction markets feel more like trading than gambling — right up until you remember that, like any leveraged bet on an uncertain outcome, a wrong read still costs you the full stake.",
+  "faq": [
+    {
+      "q": "How is a prediction market different from a sportsbook?",
+      "a": "A sportsbook sets odds and takes the other side of your bet. A prediction market is typically a matching engine pairing opposing traders and charging a fee, without the operator betting against you directly — which is also the basis some platforms use to argue they aren't gambling operators at all."
+    },
+    {
+      "q": "Are prediction markets legal where sports betting isn't?",
+      "a": "Sometimes, because a few platforms operate as licensed derivatives exchanges rather than gambling operators. That framing is actively disputed by some regulators, particularly for markets on sports outcomes, so the legal picture varies by platform and jurisdiction and is still moving."
+    },
+    {
+      "q": "What kinds of events can I trade on?",
+      "a": "Beyond sports, commonly elections, central bank decisions, corporate and leadership news, awards, box office results and economic data releases — anything with a clear, verifiable resolution."
+    }
+  ]
+}

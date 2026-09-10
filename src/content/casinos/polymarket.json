@@ -1,0 +1,51 @@
+{
+  "slug": "polymarket",
+  "name": "Polymarket",
+  "logo": null,
+  "url": "https://polymarket.com",
+  "affiliateUrl": "https://polymarket.com/?r=casilla11",
+  "signupBonus": null,
+  "ratings": {
+    "sources": [
+      {
+        "id": "trustpilot",
+        "score": 1.4,
+        "scale": 5,
+        "url": "https://www.trustpilot.com/review/polymarket.com",
+        "verifiedAt": "2026-09-10"
+      }
+    ]
+  },
+  "factors": [
+    "prediction-markets",
+    "no-kyc"
+  ],
+  "currencies": [
+    { "code": "USDC", "networks": ["POL"], "minDeposit": null, "minWithdrawal": null }
+  ],
+  "editorial": {
+    "summary": "Polymarket isn't a casino and we want to be upfront about that before anything else on this page: there are no slots, no live dealer tables, no sportsbook in the traditional sense. It is a prediction-market exchange — you buy and sell shares in the outcome of real-world events (elections, Fed decisions, corporate news, entertainment, and yes, sports results framed as yes/no contracts) and the platform takes a small trading fee rather than betting against you the way a casino's house edge does. We're listing it because our own users asked for it specifically and because it's the single largest platform in this now genuinely popular category — but judge it by different criteria than the rest of this site, because it is a genuinely different product.\n\nThe regulatory history is unusually eventful even by crypto standards. Polymarket launched in 2020 and was barred from serving US users in January 2022, when it settled CFTC charges over operating unregistered event-contract markets for a $1.4 million penalty. That ban held for nearly four years. In July 2025, Polymarket acquired QCEX, a CFTC-licensed derivatives exchange and clearinghouse, for $112 million, and in November 2025 the CFTC granted an Amended Order of Designation letting Polymarket operate as a federally regulated US platform through that entity — a legal US return that took real regulatory work rather than a jurisdictional workaround. As of this check, US access still isn't universal: eight states (Arizona, Illinois, Massachusetts, Maryland, Michigan, Montana, Nevada and Ohio) block it outright. In between the ban and the comeback, FBI agents searched founder Shayne Coplan's home in November 2024 over an investigation into whether the platform was illegally serving US bettors during the 2024 presidential election, and in October 2025 Intercontinental Exchange — the NYSE's parent company — invested $2 billion for a stake in Polymarket, a scale of institutional validation no casino on this site has anywhere near. France's gambling regulator, ANJ, ordered a nationwide block of the site in 2026 over unresolved questions about loss risk, identity checks and market-manipulation exposure; Polymarket is contesting it and says trading access for French users was already disabled since November 2024.\n\nTwo structural risks are worth naming plainly rather than treating as generic fine print. First, a Columbia University study published in November 2025, analysing over two years of on-chain data, estimated that roughly 25% of Polymarket's historical trading volume was wash trading — accounts rapidly trading against themselves or coordinated wallets to inflate volume without changing net positions — peaking at nearly 60% of weekly volume in December 2024, with sports and election markets hit hardest and some individual weeks over 90% inflated. Earlier, independent research firms flagged similar wash-trading patterns around the 2024 presidential election market specifically. Second, and separately: market resolution runs through a capital-weighted dispute-voting mechanism (built on the UMA oracle) that a 2026 investigation found concentrated among a small number of large wallets with disclosed conflicts of interest, and multiple documented 2026 disputes describe markets resolving in ways that contradicted their own published settlement rules — a ceasefire market, a specific-wording market, and a military-action market are all cited examples with no appeal once the two-hour dispute window closes. Both issues go to the core promise of a prediction market — that the number reflects genuine collective judgment and that resolution follows the stated rules — more than they resemble a typical casino complaint about a slow withdrawal.\n\nOn the numbers we can actually show: no established casino-review platform (AskGamblers, Casino Guru, Casinomeister, LCB) publishes a review of Polymarket as a gambling operator, because it isn't marketed or licensed as one — so this page carries no aggregate score, not because we couldn't find one but because the comparison doesn't exist in the way it does for a casino. Trustpilot, which does track it, shows a consistently poor 1.4 out of 5, with recurring complaints centred on exactly the resolution-dispute pattern described above rather than on payment processing.",
+    "pros": [
+      "A genuinely different, well-capitalised product: markets on real-world events (elections, macro data, corporate and entertainment news) beyond what any sportsbook prices, now operating under direct CFTC oversight in the US via its QCEX acquisition rather than offshore only",
+      "No house edge in the casino sense — Polymarket takes a small taker-side trading fee and matches opposing traders rather than betting against you, with a dynamic fee that shrinks toward zero as a market's price approaches its extremes",
+      "Outside the US and restricted jurisdictions, genuinely no-KYC: deposit USDC, trade and withdraw without submitting ID, unlike the conditional-threshold no-KYC pattern common elsewhere on this site",
+      "Institutional backing at a scale unique on this site — a $2 billion investment from Intercontinental Exchange, the New York Stock Exchange's parent company, in October 2025"
+    ],
+    "cons": [
+      "A Columbia University study (November 2025) estimated roughly 25% of Polymarket's historical trading volume was wash trading, peaking near 60% of weekly volume in December 2024, with election and sports markets affected worst — a direct threat to whether displayed prices reflect genuine market sentiment",
+      "Market resolution runs through a capital-weighted dispute-voting system that a 2026 investigation found concentrated among a small number of large wallets with conflicts of interest, and multiple documented 2026 disputes describe outcomes resolving in ways that contradicted the market's own published rules, with no appeal after a two-hour window",
+      "A genuinely turbulent regulatory history: a $1.4M CFTC settlement and a roughly four-year US ban (2022-2025), an FBI search of the founder's home in November 2024, and an active nationwide block in France as of 2026 that Polymarket is contesting",
+      "Trustpilot shows a consistently poor 1.4/5, and no traditional casino-review platform (AskGamblers, Casino Guru, Casinomeister, LCB) covers Polymarket at all, so this page cannot show the multi-source aggregate every other casino here gets — judge it on different evidence than the rest of this site",
+      "US access remains blocked outright in eight states (Arizona, Illinois, Massachusetts, Maryland, Michigan, Montana, Nevada, Ohio) even after the federal CFTC approval, and the fully-KYC'd US legal product is a materially different experience from the no-KYC version available elsewhere"
+    ]
+  },
+  "aiSummary": {
+    "withdrawals": "Outside the US and restricted jurisdictions, withdrawals go directly to a connected crypto wallet as USDC on Polygon, handled on-chain without an additional KYC step in most cases, though large or unusual amounts can still trigger a request. Third-party testing reported median withdrawal times in the range of a few hours. On the CFTC-regulated US product (via the QCEX acquisition), full identity verification — government ID, SSN, address and a liveness selfie — is required regardless of withdrawal size.",
+    "deposits": "Deposits are made in USDC, primarily on the Polygon network. Card-based fiat on-ramps to buy USDC require KYC with the payment provider on first use, and above roughly $50-100 depending on the provider. Direct USDC wallet deposits do not require ID outside the US and restricted jurisdictions.",
+    "commonProblems": "The dominant documented problems are structural rather than payment-related: a large, independently studied share of trading volume (an estimated 25% historically, per a November 2025 Columbia study) appears to be wash trading rather than genuine positions, and market resolutions are decided by a capital-weighted dispute process that a 2026 investigation found concentrated among a small number of large, conflicted wallets. Multiple 2026 disputes are documented where a market resolved in a way that contradicted its own published rules, with no appeal available after the two-hour dispute window closes. Trustpilot reviewers recurrently describe this resolution unpredictability as the core complaint, more than slow payments or account access.",
+    "generatedAt": "2026-09-10"
+  },
+  "license": "CFTC-regulated in the US as of November 2025 via Polymarket's acquisition of QCEX, a licensed derivatives exchange and clearinghouse; operates outside the US under its original offshore structure. Blocked outright in eight US states (AZ, IL, MA, MD, MI, MT, NV, OH) and, as of 2026, nationally in France pending a legal challenge.",
+  "founded": 2020,
+  "demo": false
+}

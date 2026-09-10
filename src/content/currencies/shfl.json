@@ -1,0 +1,20 @@
+{
+  "code": "SHFL",
+  "name": "Shuffle",
+  "networks": [],
+  "facetSlug": "shfl-casinos",
+  "h1": "Casinos that accept SHFL",
+  "metaTitle": "SHFL Casinos: Shuffle's Own Wagering Token",
+  "metaDescription": "Where SHFL, Shuffle.com's native token, can be wagered, what its buyback-and-burn mechanism does, and why it differs from a general-purpose coin.",
+  "intro": "SHFL is not a general-purpose cryptocurrency the way the other tickers on this site are. It is the native token of a single platform, Shuffle.com, and understanding it means understanding that it was built to be wagered on that platform specifically, not to function as money anywhere a wallet happens to support it.\n\nThe mechanics are platform tokenomics, not currency mechanics. Betting with SHFL rather than BTC or USDT typically unlocks better rakeback and faster progress through VIP tiers on the casino that issued it — an incentive to hold and wager the token rather than simply pass through it. A portion of platform revenue is used to buy back SHFL from the open market and burn it, a supply-reduction mechanism meant to link the token's value to the platform's trading volume. There is also a staking lottery, where holding and locking SHFL enters you into recurring prize draws funded by the platform.\n\nWhat this means practically: SHFL's price is tied far more tightly to one operator's health and volume than a coin like Bitcoin or even a major stablecoin. If you are holding SHFL only because a casino pays you in it, that concentration risk is worth naming plainly — a general market downturn and a single platform's bad month can hit this token at the same time, for related reasons, in a way it cannot hit BTC.\n\nIf you already wager on the platform that issued it, using SHFL where offered is usually the better-value choice given the loyalty mechanics built around it. If you are choosing a coin to hold independently of any one casino, it is a materially different kind of asset than the rest of this list, and worth treating that way.",
+  "faq": [
+    {
+      "q": "Can I use SHFL at other crypto casinos?",
+      "a": "It appears primarily where it was issued or where a casino has specifically chosen to support it as a payment option — it is not a coin with the broad, casino-agnostic support that BTC, ETH or USDT have."
+    },
+    {
+      "q": "Why would a casino's own token be worth holding?",
+      "a": "Mainly for the loyalty mechanics attached to it — better rakeback, faster VIP progress, and access to token-specific promotions like staking lotteries — rather than for its behaviour as a general store of value."
+    }
+  ]
+}
