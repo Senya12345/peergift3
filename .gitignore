@@ -10,5 +10,5 @@ preview.html
 *.log
 .lighthouseci/
 functions/go/redirect-map.json
-deploy/go-redirects.caddy
+deploy/gambleatlas-site.caddy
 deploy/go-redirects.conf
