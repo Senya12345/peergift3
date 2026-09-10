@@ -10,3 +10,4 @@ preview.html
 *.log
 .lighthouseci/
 functions/go/redirect-map.json
+deploy/go-redirects.conf
