@@ -73,10 +73,35 @@ function rewriteLinks(html: string): string {
   });
 }
 
+const MIME: Record<string, string> = {
+  webp: 'image/webp',
+  png: 'image/png',
+  jpg: 'image/jpeg',
+  jpeg: 'image/jpeg',
+  svg: 'image/svg+xml',
+  avif: 'image/avif',
+};
+
+// Astro's <Image> component (casino logos) emits plain <img src="/_astro/...">
+// references that only resolve against a real dist/ server. The artifact is one static
+// file with no server behind it, so each one is swapped for its own bytes.
+let imagesInlined = 0;
+function inlineImages(html: string): string {
+  return html.replace(/src="\/_astro\/([^"]+)"/g, (whole, file: string) => {
+    const ext = file.split('.').pop()?.toLowerCase() ?? '';
+    const mime = MIME[ext];
+    const full = path.join(dist, '_astro', file);
+    if (!mime || !fs.existsSync(full)) return whole;
+    imagesInlined++;
+    const data = fs.readFileSync(full).toString('base64');
+    return `src="data:${mime};base64,${data}"`;
+  });
+}
+
 const routes = pages.map((page) => ({
   route: page.route,
   title: titleOf(page.html) || page.route,
-  body: rewriteLinks(between(page.html, /<main[\s>]/, '</main>')),
+  body: inlineImages(rewriteLinks(between(page.html, /<main[\s>]/, '</main>'))),
 }));
 
 // ---------------------------------------------------------------- scripts
@@ -176,5 +201,5 @@ fs.writeFileSync(outFile, html);
 const kb = (Buffer.byteLength(html) / 1024).toFixed(0);
 console.log(
   `build-preview: ${routes.length} routes, ${scripts.size} script block(s), ` +
-    `${kept} embedded font face(s) -> ${outFile} (${kb} KB)`,
+    `${kept} embedded font face(s), ${imagesInlined} embedded image(s) -> ${outFile} (${kb} KB)`,
 );
