@@ -3,7 +3,7 @@ export const SITE = {
   name: 'Casilla',
   /** Overridden per environment; the placeholder makes an unset SITE_URL obvious. */
   url: process.env.SITE_URL ?? 'https://casilla.example',
-  tagline: 'Crypto casino ratings, with the sources shown',
+  tagline: 'Crypto gambling ratings aggregator',
   description:
     'Casilla combines the published ratings of several independent casino review platforms into one score per crypto casino, and links back to every figure so it can be checked.',
   email: 'pencasino@gmail.com',

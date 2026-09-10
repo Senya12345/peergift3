@@ -9,7 +9,6 @@ import { casinoList, organization, website } from '../lib/schema';
 
 const casinos = [...loadCasinos()].sort(byScoreDesc);
 const factors = loadFactors();
-const currencies = loadCurrencies();
 
 const dataModified = casinos
   .map((c) => lastVerified(c))
@@ -17,29 +16,32 @@ const dataModified = casinos
   .sort()
   .at(-1) ?? null;
 
+// Rough descending order by real-world usage in crypto casinos, so the most-reached-for
+// coins sit first wherever coins are listed — not the alphabetical order loadCurrencies()
+// returns, which floats whichever ticker starts with "A" to the top regardless of whether
+// anyone has heard of it.
+const POPULARITY: readonly string[] = [
+  'BTC', 'ETH', 'USDT', 'USDC', 'BNB', 'SOL', 'XRP', 'TRX', 'LTC', 'DOGE',
+  'ADA', 'TON', 'BCH', 'LINK', 'AVAX', 'DAI', 'SHIB', 'UNI', 'EOS', 'HBAR',
+  'CRO', 'POL', 'BUSD', 'SAND', 'APE', 'TRUMP',
+];
+const byPopularity = <T extends { code: string }>(list: T[]): T[] =>
+  [...list].sort((a, b) => {
+    const ia = POPULARITY.indexOf(a.code);
+    const ib = POPULARITY.indexOf(b.code);
+    return (ia === -1 ? POPULARITY.length : ia) - (ib === -1 ? POPULARITY.length : ib);
+  });
+
+const currencies = byPopularity(loadCurrencies());
+
 // Coins actually offered by at least one listed casino, for the "supported coins"
 // strip beneath the intro. Shown even before any coin is indexable on its own facet
 // page — the union itself is useful information regardless of individual page status.
 const supportedCoinCodes = [
   ...new Set(casinos.flatMap((c) => c.currencies.map((s) => s.code))),
 ];
-const supportedCoins = currencies.filter((c) => supportedCoinCodes.includes(c.code));
-
-// Per-coin minimum withdrawal, in the coin's own units, for the limits slider. Only
-// coins where at least one casino has a sourced figure get an entry — never invented.
-const withdrawalLimits: Record<string, number[]> = {};
-for (const casino of casinos) {
-  for (const support of casino.currencies) {
-    if (support.minWithdrawal) {
-      (withdrawalLimits[support.code] ??= []).push(support.minWithdrawal.amount);
-    }
-  }
-}
-const limitsData = Object.fromEntries(
-  Object.entries(withdrawalLimits).map(([code, values]) => [
-    code,
-    { min: Math.min(...values), max: Math.max(...values) },
-  ]),
+const supportedCoins = byPopularity(
+  currencies.filter((c) => supportedCoinCodes.includes(c.code)),
 );
 ---
 
@@ -58,7 +60,7 @@ const limitsData = Object.fromEntries(
     ]}
   />
 
-  <h1 class="text-[34px] sm:text-[40px] max-w-[20ch]">Crypto casino ratings, with the sources shown</h1>
+  <h1 class="text-[34px] sm:text-[40px] max-w-[20ch]">Crypto gambling ratings aggregator</h1>
 
   <p class="mt-4 max-w-[62ch] text-ink-300">
     Every score below is the average of what several independent review platforms
@@ -85,129 +87,137 @@ const limitsData = Object.fromEntries(
     )
   }
 
-  <!-- Search and filters -->
-  <section class="mt-8" aria-label="Search and filter">
-    <label class="block">
-      <span class="sr-only">Search casinos by name</span>
-      <input
-        type="search"
-        id="q"
-        placeholder="Search casinos"
-        autocomplete="off"
-        class="w-full max-w-md rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
-      />
-    </label>
+  <div class="mt-8 grid gap-8 lg:grid-cols-[268px_1fr] lg:items-start">
+    <!-- Search and filters -->
+    <aside aria-label="Search and filter" class="lg:sticky lg:top-6">
+      <label class="block">
+        <span class="sr-only">Search casinos by name</span>
+        <input
+          type="search"
+          id="q"
+          placeholder="Search casinos"
+          autocomplete="off"
+          class="w-full rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
+        />
+      </label>
 
-    <div class="mt-4 grid gap-6 sm:grid-cols-[minmax(0,300px)_1fr]">
-      <fieldset class="min-w-0">
-        <legend class="mb-1.5 text-[14px] text-ink-300">
-          Deposit and withdrawal coin — select any number
-        </legend>
-        <div class="max-h-64 space-y-0.5 overflow-y-auto rounded-[4px] border border-ink-600 bg-ink-800 p-2">
-          {
-            currencies.map((c) => (
-              <div data-coin-row={c.code}>
-                <div class="flex items-center gap-1.5">
-                  <label class="flex flex-1 cursor-pointer items-center gap-2 py-1 text-[14px] hover:text-ink-050">
-                    <input type="checkbox" class="checkbox" data-coin value={c.code} />
-                    <CoinIcon code={c.code} size={16} />
-                    {c.name}
-                    <span class="text-ink-400">{c.code}</span>
-                  </label>
-                  {c.networks.length > 0 && (
-                    <button
-                      type="button"
-                      data-expand={c.code}
-                      aria-expanded="false"
-                      class="shrink-0 rounded-[3px] px-1.5 py-1 text-ink-400 hover:bg-ink-700 hover:text-ink-050"
-                      title="Choose a network"
-                    >
-                      <svg
-                        width="11"
-                        height="11"
-                        viewBox="0 0 12 12"
-                        class="transition-transform duration-150 data-[open=true]:rotate-90"
-                        data-chevron
+      <button
+        type="button"
+        id="filters-toggle"
+        aria-expanded="false"
+        aria-controls="filters-panel"
+        class="mt-3 flex w-full items-center justify-between rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-[14px] text-ink-100 lg:hidden"
+      >
+        Filters
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 12 12"
+          class="shrink-0 transition-transform duration-150"
+          data-toggle-chevron
+        >
+          <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <div id="filters-panel" class="hidden space-y-6 lg:mt-4 lg:block" data-filters-panel>
+        <fieldset class="mt-4 min-w-0 lg:mt-0">
+          <legend class="mb-1.5 text-[14px] text-ink-300">
+            Deposit and withdrawal coin — select any number
+          </legend>
+          <div class="max-h-64 space-y-0.5 overflow-y-auto rounded-[4px] border border-ink-600 bg-ink-800 p-2">
+            {
+              currencies.map((c) => (
+                <div data-coin-row={c.code}>
+                  <div class="flex items-center gap-1.5">
+                    <label class="flex flex-1 cursor-pointer items-center gap-2 py-1 text-[14px] hover:text-ink-050">
+                      <input type="checkbox" class="checkbox" data-coin value={c.code} />
+                      <CoinIcon code={c.code} size={16} />
+                      {c.name}
+                      <span class="text-ink-400">{c.code}</span>
+                    </label>
+                    {c.networks.length > 0 && (
+                      <button
+                        type="button"
+                        data-expand={c.code}
+                        aria-expanded="false"
+                        class="shrink-0 rounded-[3px] px-1.5 py-1 text-ink-400 hover:bg-ink-700 hover:text-ink-050"
+                        title="Choose a network"
                       >
-                        <path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
+                        <svg
+                          width="11"
+                          height="11"
+                          viewBox="0 0 12 12"
+                          class="transition-transform duration-150 data-[open=true]:rotate-90"
+                          data-chevron
+                        >
+                          <path d="M4 2l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  {c.networks.length > 0 && (
+                    <div data-networks-for={c.code} hidden class="ml-7 mb-1 flex flex-wrap gap-x-3 gap-y-1 border-l border-ink-600 pl-3">
+                      {c.networks.map((n) => (
+                        <label class="flex cursor-pointer items-center gap-1.5 py-0.5 text-[13px] text-ink-300 hover:text-ink-050">
+                          <input type="checkbox" class="checkbox" data-network value={`${c.code}:${n.code}`} />
+                          {n.name}
+                        </label>
+                      ))}
+                    </div>
                   )}
                 </div>
-                {c.networks.length > 0 && (
-                  <div data-networks-for={c.code} hidden class="ml-7 mb-1 flex flex-wrap gap-x-3 gap-y-1 border-l border-ink-600 pl-3">
-                    {c.networks.map((n) => (
-                      <label class="flex cursor-pointer items-center gap-1.5 py-0.5 text-[13px] text-ink-300 hover:text-ink-050">
-                        <input type="checkbox" class="checkbox" data-network value={`${c.code}:${n.code}`} />
-                        {n.name}
-                      </label>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
+        </fieldset>
 
-        <div class="mt-3" data-limit-panel hidden>
-          <label class="mb-1.5 flex items-baseline justify-between text-[14px] text-ink-300">
-            <span>Max minimum withdrawal</span>
-            <span class="tabular text-ink-100" data-limit-readout></span>
-          </label>
-          <input type="range" id="limit-slider" class="w-full accent-amber-500" />
-          <p class="mt-1 text-[12px] text-ink-400" data-limit-hint>
-            Select exactly one coin with known withdrawal-limit data to filter by it.
-          </p>
-        </div>
-      </fieldset>
+        {
+          factors.length > 0 && (
+            <fieldset class="min-w-0">
+              <legend class="mb-1.5 text-[14px] text-ink-300">Features — select any number</legend>
+              <div class="flex flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-y-1.5">
+                {factors.map((f) => (
+                  <label class="flex cursor-pointer items-center gap-2 text-[15px] hover:text-ink-050">
+                    <input type="checkbox" class="checkbox" data-factor value={f.slug} />
+                    {f.name}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+          )
+        }
+      </div>
+    </aside>
+
+    <!-- Ranking -->
+    <section aria-label="Casino ranking">
+      <p class="mb-3 text-[14px] text-ink-400" id="count" aria-live="polite">
+        {casinos.length}{casinos.length === 1 ? ' casino' : ' casinos'}
+      </p>
 
       {
-        factors.length > 0 && (
-          <fieldset class="min-w-0">
-            <legend class="mb-1.5 text-[14px] text-ink-300">Features — select any number</legend>
-            <div class="flex flex-wrap gap-x-4 gap-y-2">
-              {factors.map((f) => (
-                <label class="flex cursor-pointer items-center gap-2 text-[15px] hover:text-ink-050">
-                  <input type="checkbox" class="checkbox" data-factor value={f.slug} />
-                  {f.name}
-                </label>
-              ))}
-            </div>
-          </fieldset>
+        casinos.length === 0 ? (
+          <p class="surface p-6 text-ink-300">
+            No casinos have been published yet. The ranking appears here as they are added.
+          </p>
+        ) : (
+          <ol class="space-y-2.5" id="list">
+            {casinos.map((casino, i) => (
+              <li>
+                <CasinoCard casino={casino} rank={i + 1} />
+              </li>
+            ))}
+          </ol>
         )
       }
-    </div>
-  </section>
 
-  <!-- Ranking -->
-  <section class="mt-8" aria-label="Casino ranking">
-    <p class="mb-3 text-[14px] text-ink-400" id="count" aria-live="polite">
-      {casinos.length}{casinos.length === 1 ? ' casino' : ' casinos'}
-    </p>
-
-    {
-      casinos.length === 0 ? (
-        <p class="surface p-6 text-ink-300">
-          No casinos have been published yet. The ranking appears here as they are added.
-        </p>
-      ) : (
-        <ol class="space-y-2.5" id="list">
-          {casinos.map((casino, i) => (
-            <li>
-              <CasinoCard casino={casino} rank={i + 1} />
-            </li>
-          ))}
-        </ol>
-      )
-    }
-
-    <p id="empty" hidden class="surface p-6 text-ink-300">
-      No casino matches those filters. Try clearing a coin, network or feature.
-    </p>
-  </section>
+      <p id="empty" hidden class="surface p-6 text-ink-300">
+        No casino matches those filters. Try clearing a coin, network or feature.
+      </p>
+    </section>
+  </div>
 </Base>
-
-<script is:inline type="application/json" id="limits-data" set:html={JSON.stringify(limitsData)} />
 
 <script>
   // Filtering is client-side over markup that already contains every casino, so the
@@ -224,12 +234,7 @@ const limitsData = Object.fromEntries(
       factors: (card.dataset.factors ?? '').split(',').filter(Boolean),
       currencies: (card.dataset.currencies ?? '').split(',').filter(Boolean),
       networks: (card.dataset.networks ?? '').split(',').filter(Boolean),
-      minWithdrawals: JSON.parse(card.dataset.minWithdrawals || '{}') as Record<string, number>,
     }));
-
-    const limitsData: Record<string, { min: number; max: number }> = JSON.parse(
-      document.getElementById('limits-data')?.textContent || '{}',
-    );
 
     const q = document.getElementById('q') as HTMLInputElement;
     const coinBoxes = [...document.querySelectorAll<HTMLInputElement>('[data-coin]')];
@@ -237,6 +242,17 @@ const limitsData = Object.fromEntries(
     const factorBoxes = [...document.querySelectorAll<HTMLInputElement>('[data-factor]')];
     const count = document.getElementById('count')!;
     const empty = document.getElementById('empty')!;
+
+    // Mobile-only collapse: the panel is always visible at the lg breakpoint regardless
+    // of this toggle (see the "hidden lg:block" pairing on the panel itself).
+    const filtersToggle = document.getElementById('filters-toggle');
+    const filtersPanel = document.querySelector<HTMLElement>('[data-filters-panel]');
+    filtersToggle?.addEventListener('click', () => {
+      const open = filtersToggle.getAttribute('aria-expanded') === 'true';
+      filtersToggle.setAttribute('aria-expanded', String(!open));
+      filtersPanel?.classList.toggle('hidden', open);
+      filtersToggle.querySelector('[data-toggle-chevron]')?.setAttribute('data-open', String(!open));
+    });
 
     // Expand/collapse per-coin network lists.
     for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-expand]')) {
@@ -266,57 +282,10 @@ const limitsData = Object.fromEntries(
       return { coins, networks };
     }
 
-    // Limits slider: only meaningful once exactly one coin is the active criterion
-    // (mixing 0.001 BTC and 20 USDT on one numeric scale would be nonsense), and only
-    // for a coin where at least one casino has a sourced minimum.
-    const limitPanel = document.querySelector<HTMLElement>('[data-limit-panel]');
-    const limitSlider = document.getElementById('limit-slider') as HTMLInputElement;
-    const limitReadout = document.querySelector<HTMLElement>('[data-limit-readout]');
-    const limitHint = document.querySelector<HTMLElement>('[data-limit-hint]');
-    let activeLimitCoin: string | null = null;
-
-    function syncLimitPanel() {
-      const { coins, networks } = selectedCriteria();
-      const activeCoins = new Set([...coins, ...[...networks].map((n) => n.split(':')[0])]);
-      limitPanel!.hidden = false;
-
-      if (activeCoins.size !== 1) {
-        activeLimitCoin = null;
-        limitSlider.disabled = true;
-        limitReadout!.textContent = '';
-        limitHint!.textContent = 'Select exactly one coin with known withdrawal-limit data to filter by it.';
-        return;
-      }
-
-      const coin = [...activeCoins][0]!;
-      const range = limitsData[coin];
-      if (!range) {
-        activeLimitCoin = null;
-        limitSlider.disabled = true;
-        limitReadout!.textContent = '';
-        limitHint!.textContent = `No withdrawal-limit data yet for ${coin}.`;
-        return;
-      }
-
-      activeLimitCoin = coin;
-      limitSlider.disabled = false;
-      limitSlider.min = String(range.min);
-      limitSlider.max = String(range.max);
-      limitSlider.step = String(Math.max(range.max / 200, 0.0000001));
-      if (Number(limitSlider.value) < range.min || !limitSlider.dataset.touched) {
-        limitSlider.value = String(range.max);
-      }
-      limitReadout!.textContent = `≤ ${Number(limitSlider.value)} ${coin}`;
-      limitHint!.textContent = `Casinos with an unknown ${coin} minimum are shown regardless.`;
-    }
-
     function apply() {
       const term = q.value.trim().toLowerCase();
       const { coins, networks } = selectedCriteria();
       const wantedFactors = factorBoxes.filter((b) => b.checked).map((b) => b.value);
-
-      syncLimitPanel();
-      const limitValue = activeLimitCoin && !limitSlider.disabled ? Number(limitSlider.value) : null;
 
       let shown = 0;
       for (const item of items) {
@@ -326,16 +295,9 @@ const limitsData = Object.fromEntries(
             : [...coins].some((c) => item.currencies.includes(c)) ||
               [...networks].some((n) => item.networks.includes(n));
 
-        const matchesLimit =
-          limitValue === null || activeLimitCoin === null
-            ? true
-            : !(activeLimitCoin in item.minWithdrawals) ||
-              item.minWithdrawals[activeLimitCoin]! <= limitValue;
-
         const ok =
           (!term || item.name.includes(term)) &&
           matchesCoin &&
-          matchesLimit &&
           wantedFactors.every((f) => item.factors.includes(f));
         item.li.hidden = !ok;
         if (ok) shown++;
@@ -378,17 +340,16 @@ const limitsData = Object.fromEntries(
     }
     const f0 = (initial.get('f') ?? '').split(',').filter(Boolean);
     for (const b of factorBoxes) b.checked = f0.includes(b.value);
+    if (coins0.length || nets0.length || f0.length) {
+      filtersToggle?.setAttribute('aria-expanded', 'true');
+      filtersPanel?.classList.remove('hidden');
+    }
 
-    syncLimitPanel();
     apply();
 
     q.addEventListener('input', apply);
     for (const b of coinBoxes) b.addEventListener('change', apply);
     for (const b of networkBoxes) b.addEventListener('change', apply);
     for (const b of factorBoxes) b.addEventListener('change', apply);
-    limitSlider.addEventListener('input', () => {
-      limitSlider.dataset.touched = 'true';
-      apply();
-    });
   }
 </script>

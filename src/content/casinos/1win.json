@@ -37,7 +37,8 @@
   "factors": [
     "sports-betting",
     "live-dealer",
-    "vip-program"
+    "vip-program",
+    "no-kyc"
   ],
   "currencies": [
     {
@@ -89,18 +90,20 @@
       "A genuinely large product: 11,000+ games, 600+ live dealer tables from major studios (Evolution, Pragmatic Play, Ezugi), and a full sportsbook in one account",
       "Five-tier VIP program with disclosed cashback percentages (0.5% up to 15%) and a weekly cashback payment on net losses — more transparent about the mechanics than most VIP schemes on this site",
       "Broad payment flexibility: cards, e-wallets and regional methods alongside crypto, useful if you don't want to be crypto-only",
-      "High marks from both AskGamblers player rating (9.6/10) and Casino Guru's Safety Index (8.7/10)"
+      "High marks from both AskGamblers player rating (9.6/10) and Casino Guru's Safety Index (8.7/10)",
+      "Reported crypto withdrawal experience varies sharply by region — some players report sustained, high-volume play over years with no verification request at all, though written guides for other regions describe a much lower trigger point (see the con below)"
     ],
     "cons": [
       "Kazakhstan's Financial Monitoring Agency has run an active investigation into 1win's operations there since 2023, resulting in an international wanted list for individuals connected to running it, roughly $8M in alleged criminal proceeds, and asset seizures — a live legal matter about the operator, not a player dispute",
       "AskGamblers' own algorithmic CasinoRank scores 1win at just 2.8/10, sharply diverging from the 9.6/10 player rating we use in the breakdown below — worth reading as a signal in itself",
       "Blocked or unlicensed in a long list of major markets: Russia, Kazakhstan, most of Western Europe, and India, despite marketing heavily in several of them",
       "No single canonical Trustpilot rating exists — reviews are fragmented across at least four separate domain-specific profiles, making it hard to see the full picture in one place",
+      "Written guides for several regions describe KYC as required before a first withdrawal or once cumulative withdrawals cross roughly $500-1,000 — a materially lower bar than the no-verification experience some long-term crypto players report, so treat 1win's no-KYC status as regionally inconsistent rather than a guarantee",
       "Bonus terms (headline percentage, cap, wagering requirement) vary meaningfully by region and which link you register through, and the exact current licence number is inconsistently reported across sources"
     ]
   },
   "aiSummary": {
-    "withdrawals": "Third-party guides report crypto withdrawals (USDT TRC-20, BTC, ETH) clearing in roughly 8 to 90 minutes under normal conditions. KYC verification is commonly reported as required before a first withdrawal, or once cumulative withdrawals cross a regional threshold (figures around $500 appear in multiple sources) — reported verification turnaround is around 72 hours. Exact triggers and limits vary noticeably by region and by which mirror or regional site you registered on.",
+    "withdrawals": "Third-party guides report crypto withdrawals (USDT TRC-20, BTC, ETH) clearing in roughly 8 to 90 minutes under normal conditions. Written guidance on KYC is genuinely inconsistent: several sources describe verification as required before a first withdrawal or once cumulative withdrawals cross a regional threshold (figures around $500-1,000 appear repeatedly), while other reported experiences — including sustained crypto play over years at meaningful volume — describe no verification request at all. Exact triggers and limits vary noticeably by region and by which mirror or regional site you registered on, more so than for any other casino on this site.",
     "deposits": "1win accepts a wide range of payment methods beyond crypto — cards, e-wallets and regional bank methods — with crypto (BTC, ETH, USDT, LTC, TRX, DOGE) offered as one option among many rather than the primary rail the way it is at Stake or BC.Game. Deposits are reported to credit quickly across methods.",
     "commonProblems": "The dominant issue is not a player-support complaint but a regulatory and legal one: Kazakhstan's Financial Monitoring Agency investigation into 1win's operations there, which led to an international wanted list for individuals connected to running the platform in that market, alongside asset seizures. Beyond that, Trustpilot reviews across 1win's several regional-domain profiles describe withdrawal delays and cases of a withdrawal showing as successful without funds arriving, along with complaints about transparency on odds and RTP. We could not identify a single canonical Trustpilot rating for 1win because the reviews are split across multiple domain-specific profiles (1win.pro, 1win.top, 1win.bid, 1win.in) rather than consolidated on one, which is itself worth knowing before treating any single Trustpilot score you find as the whole picture.",
     "generatedAt": "2026-09-09"

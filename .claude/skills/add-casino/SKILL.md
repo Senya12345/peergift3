@@ -85,12 +85,12 @@ tightened AML rules, a watchdog flags weak KYC practice), do not tag the factor 
 in the report instead. Getting this wrong is worse than an ordinary factual error: it is
 the kind of claim a reader might act on financially.
 
-## Step 3.5 — currencies, networks and limits
+## Step 3.5 — currencies and networks
 
-Currencies are richer than a bare list now. Each entry on a casino record is:
+Currencies are richer than a bare list. Each entry on a casino record is:
 
 ```json
-{ "code": "USDT", "networks": ["ERC20", "BSC", "POL", "TRX", "SOL"], "minDeposit": null, "minWithdrawal": { "amount": 20, "source": "…" } }
+{ "code": "USDT", "networks": ["ERC20", "BSC", "POL", "TRX", "SOL"], "minDeposit": null, "minWithdrawal": null }
 ```
 
 - `code` must match a file in `src/content/currencies/`. If the coin has no file yet,
@@ -104,10 +104,10 @@ Currencies are richer than a bare list now. Each entry on a casino record is:
 - `networks` on the *casino* record is the subset of that coin's global networks this
   specific casino actually offers — never the full list by default. Every network code
   used here must appear in the coin's own file, or `validate-content` fails the build.
-- `minDeposit` / `minWithdrawal` are **native-unit only** — `0.001` BTC, `20` USDT — never
-  a USD conversion you compute yourself. A crypto price is stale within hours; a coin
-  amount from a cited source is not. Only set these when you have an actual figure with
-  a `source` note. Leave both `null` rather than guess.
+- Leave `minDeposit` / `minWithdrawal` `null`. The schema still carries them, but across
+  every casino added so far real sourced figures existed for at most two of seven, which
+  wasn't enough coverage to be useful — the site no longer displays them, so don't spend
+  research time chasing one.
 
 ## Step 4 — write the editorial
 
