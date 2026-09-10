@@ -1,7 +1,7 @@
 {
   "slug": "rainbet",
   "name": "Rainbet",
-  "logo": null,
+  "logo": "rainbet.png",
   "url": "https://rainbet.com",
   "affiliateUrl": "https://rainbet.com?r=casilla",
   "signupBonus": {
@@ -42,25 +42,88 @@
     "prediction-markets"
   ],
   "currencies": [
-    { "code": "BTC", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "ETH", "networks": ["ERC20"], "minDeposit": null, "minWithdrawal": null },
-    { "code": "LTC", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "SOL", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "TRX", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "DOGE", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "ADA", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "XRP", "networks": [], "minDeposit": null, "minWithdrawal": null },
-    { "code": "BNB", "networks": ["BSC"], "minDeposit": null, "minWithdrawal": null },
-    { "code": "TON", "networks": [], "minDeposit": null, "minWithdrawal": null },
+    {
+      "code": "BTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ETH",
+      "networks": [
+        "ERC20"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "LTC",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "SOL",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TRX",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "DOGE",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "ADA",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "XRP",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "BNB",
+      "networks": [
+        "BSC"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
+    {
+      "code": "TON",
+      "networks": [],
+      "minDeposit": null,
+      "minWithdrawal": null
+    },
     {
       "code": "USDT",
-      "networks": ["ERC20", "TRX", "SOL", "BSC"],
+      "networks": [
+        "ERC20",
+        "TRX",
+        "SOL",
+        "BSC"
+      ],
       "minDeposit": null,
       "minWithdrawal": null
     },
     {
       "code": "USDC",
-      "networks": ["ERC20", "SOL", "BSC"],
+      "networks": [
+        "ERC20",
+        "SOL",
+        "BSC"
+      ],
       "minDeposit": null,
       "minWithdrawal": null
     }

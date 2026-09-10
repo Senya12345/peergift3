@@ -1,7 +1,7 @@
 {
   "slug": "polymarket",
   "name": "Polymarket",
-  "logo": null,
+  "logo": "polymarket.webp",
   "url": "https://polymarket.com",
   "affiliateUrl": "https://polymarket.com/?r=casilla11",
   "signupBonus": null,
@@ -21,7 +21,14 @@
     "no-kyc"
   ],
   "currencies": [
-    { "code": "USDC", "networks": ["POL"], "minDeposit": null, "minWithdrawal": null }
+    {
+      "code": "USDC",
+      "networks": [
+        "POL"
+      ],
+      "minDeposit": null,
+      "minWithdrawal": null
+    }
   ],
   "editorial": {
     "summary": "Polymarket isn't a casino and we want to be upfront about that before anything else on this page: there are no slots, no live dealer tables, no sportsbook in the traditional sense. It is a prediction-market exchange — you buy and sell shares in the outcome of real-world events (elections, Fed decisions, corporate news, entertainment, and yes, sports results framed as yes/no contracts) and the platform takes a small trading fee rather than betting against you the way a casino's house edge does. We're listing it because our own users asked for it specifically and because it's the single largest platform in this now genuinely popular category — but judge it by different criteria than the rest of this site, because it is a genuinely different product.\n\nThe regulatory history is unusually eventful even by crypto standards. Polymarket launched in 2020 and was barred from serving US users in January 2022, when it settled CFTC charges over operating unregistered event-contract markets for a $1.4 million penalty. That ban held for nearly four years. In July 2025, Polymarket acquired QCEX, a CFTC-licensed derivatives exchange and clearinghouse, for $112 million, and in November 2025 the CFTC granted an Amended Order of Designation letting Polymarket operate as a federally regulated US platform through that entity — a legal US return that took real regulatory work rather than a jurisdictional workaround. As of this check, US access still isn't universal: eight states (Arizona, Illinois, Massachusetts, Maryland, Michigan, Montana, Nevada and Ohio) block it outright. In between the ban and the comeback, FBI agents searched founder Shayne Coplan's home in November 2024 over an investigation into whether the platform was illegally serving US bettors during the 2024 presidential election, and in October 2025 Intercontinental Exchange — the NYSE's parent company — invested $2 billion for a stake in Polymarket, a scale of institutional validation no casino on this site has anywhere near. France's gambling regulator, ANJ, ordered a nationwide block of the site in 2026 over unresolved questions about loss risk, identity checks and market-manipulation exposure; Polymarket is contesting it and says trading access for French users was already disabled since November 2024.\n\nTwo structural risks are worth naming plainly rather than treating as generic fine print. First, a Columbia University study published in November 2025, analysing over two years of on-chain data, estimated that roughly 25% of Polymarket's historical trading volume was wash trading — accounts rapidly trading against themselves or coordinated wallets to inflate volume without changing net positions — peaking at nearly 60% of weekly volume in December 2024, with sports and election markets hit hardest and some individual weeks over 90% inflated. Earlier, independent research firms flagged similar wash-trading patterns around the 2024 presidential election market specifically. Second, and separately: market resolution runs through a capital-weighted dispute-voting mechanism (built on the UMA oracle) that a 2026 investigation found concentrated among a small number of large wallets with disclosed conflicts of interest, and multiple documented 2026 disputes describe markets resolving in ways that contradicted their own published settlement rules — a ceasefire market, a specific-wording market, and a military-action market are all cited examples with no appeal once the two-hour dispute window closes. Both issues go to the core promise of a prediction market — that the number reflects genuine collective judgment and that resolution follows the stated rules — more than they resemble a typical casino complaint about a slow withdrawal.\n\nOn the numbers we can actually show: no established casino-review platform (AskGamblers, Casino Guru, Casinomeister, LCB) publishes a review of Polymarket as a gambling operator, because it isn't marketed or licensed as one — so this page carries no aggregate score, not because we couldn't find one but because the comparison doesn't exist in the way it does for a casino. Trustpilot, which does track it, shows a consistently poor 1.4 out of 5, with recurring complaints centred on exactly the resolution-dispute pattern described above rather than on payment processing.",

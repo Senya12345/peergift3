@@ -1,4 +1,5 @@
 ---
+import CasinoLogo from './CasinoLogo.astro';
 import CoinIcon from './CoinIcon.astro';
 import { facetsForCasino } from '../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../lib/ratings';
@@ -54,12 +55,7 @@ const verifiedLabel = verified
     {rank}
   </div>
 
-  <div
-    class="grid size-12 shrink-0 place-items-center rounded-[4px] border border-ink-600 bg-ink-800 font-display text-[17px] font-bold text-ink-300"
-    aria-hidden="true"
-  >
-    {casino.name.charAt(0)}
-  </div>
+  <CasinoLogo slug={casino.slug} name={casino.name} size={48} />
 
   <div class="min-w-0 flex-1">
     <h3 class="text-[19px]">

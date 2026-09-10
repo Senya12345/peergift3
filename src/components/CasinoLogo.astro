@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import { casinoLogo } from '../lib/casino-logos';
+
+interface Props {
+  slug: string;
+  name: string;
+  /** Pixel size, square box. */
+  size?: number;
+}
+
+const { slug, name, size = 48 } = Astro.props;
+const logo = casinoLogo(slug);
+---
+
+{
+  logo ? (
+    // Operator marks arrive in every colour a source site happened to export —
+    // several are solid black on a transparent background. A white tile is the only
+    // background that reads all of them correctly regardless of the source's own
+    // palette, rather than special-casing each logo's colour.
+    <span
+      class="grid shrink-0 place-items-center overflow-hidden rounded-[4px] border border-ink-600 bg-white p-1.5"
+      style={`width:${size}px;height:${size}px`}
+    >
+      <Image
+        src={logo}
+        alt={`${name} logo`}
+        width={size * 2}
+        height={size * 2}
+        class="max-h-full max-w-full object-contain"
+      />
+    </span>
+  ) : (
+    <span
+      class="grid shrink-0 place-items-center rounded-[4px] border border-ink-600 bg-ink-800 font-display font-bold text-ink-300"
+      style={`width:${size}px;height:${size}px;font-size:${Math.max(12, size * 0.35)}px`}
+      aria-hidden="true"
+    >
+      {name.charAt(0)}
+    </span>
+  )
+}

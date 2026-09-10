@@ -1,4 +1,5 @@
 ---
+import CasinoLogo from '../../components/CasinoLogo.astro';
 import CoinIcon from '../../components/CoinIcon.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import RatingTable from '../../components/RatingTable.astro';
@@ -66,12 +67,7 @@ const description =
   </nav>
 
   <div class="mt-5 flex flex-wrap items-start gap-5">
-    <div
-      class="grid size-16 shrink-0 place-items-center rounded-[4px] border border-ink-600 bg-ink-800 font-display text-[24px] font-bold text-ink-300"
-      aria-hidden="true"
-    >
-      {casino.name.charAt(0)}
-    </div>
+    <CasinoLogo slug={casino.slug} name={casino.name} size={64} />
 
     <div class="min-w-0 flex-1">
       <h1 class="text-[32px] sm:text-[38px]">{casino.name}</h1>
