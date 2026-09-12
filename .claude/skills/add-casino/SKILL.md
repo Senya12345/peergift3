@@ -109,6 +109,20 @@ Currencies are richer than a bare list. Each entry on a casino record is:
   wasn't enough coverage to be useful — the site no longer displays them, so don't spend
   research time chasing one.
 
+## Step 3.6 — software providers
+
+Search for the casino's own providers page (many run one, e.g. `bc.game/providers`,
+`shuffle.com/casino/providers`, `roobet.com/provider/{slug}`) or a review that lists
+confirmed studios by name. Write `providers` as a plain array of studio names, e.g.
+`["Pragmatic Play", "Evolution", "Hacksaw Gaming"]` — no game counts, no exclusivity
+claims, nothing beyond the name unless a source states it. A generic "best providers
+of 2026" listicle is not a source for *this* casino; only include a studio you found
+confirmed specifically for the casino you're adding. If you can only confirm one or
+two providers, write those two rather than padding the list, and say so in the report
+— thin provider data is exactly the kind of gap Step 6 exists to surface, not to
+quietly fill with plausible names. Leave `providers: []` rather than guessing if
+nothing checkable turns up.
+
 ## Step 4 — write the editorial
 
 Read `docs/voice.md` first and follow it exactly. In short:
@@ -170,6 +184,7 @@ Tell the user:
 1. Which platforms had the casino and which did not
 2. The computed aggregate (or that it is unrated, and why)
 3. Any factor or currency file you created
+3.5. How many providers you could confirm, and whether the list is thin
 4. **Everything you could not verify** — an unconfirmed licence number, a bonus term that
    is not stated anywhere, a coin listed on the payments page but missing from the terms
 5. **Any factor the user asked for that you did not tag**, and why — especially a

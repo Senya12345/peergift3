@@ -109,13 +109,20 @@ const CF_BEACON = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
     });
   }
 
-  for (const control of document.querySelectorAll('[data-factor], #currency')) {
+  for (const control of document.querySelectorAll('[data-factor], [data-provider], #currency')) {
     control.addEventListener('change', () => {
       const factors = [...document.querySelectorAll<HTMLInputElement>('[data-factor]')]
         .filter((b) => b.checked)
         .map((b) => b.value);
+      const providers = [...document.querySelectorAll<HTMLInputElement>('[data-provider]')]
+        .filter((b) => b.checked)
+        .map((b) => b.value);
       const coin = (document.getElementById('currency') as HTMLSelectElement | null)?.value;
-      track('filter_apply', { factors: factors.join(',') || null, coin: coin || null });
+      track('filter_apply', {
+        factors: factors.join(',') || null,
+        providers: providers.join(',') || null,
+        coin: coin || null,
+      });
     });
   }
 </script>

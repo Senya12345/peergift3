@@ -115,6 +115,8 @@ export const casinoSchema = z.object({
    * supporting USDT can offer different networks and different withdrawal floors.
    */
   currencies: z.array(currencySupportSchema).default([]),
+  /** Software/game providers this casino runs, e.g. "Pragmatic Play". Names only — no per-provider game counts or exclusivity claims unless a source confirms them. */
+  providers: z.array(z.string()).default([]),
 
   editorial: z.object({
     summary: z.string().min(1),
