@@ -21,6 +21,19 @@ export function organization(): Json {
   };
 }
 
+/**
+ * A same-document stand-in for `{ '@id': organizationId }`. Each JSON-LD block on this
+ * site is emitted as its own standalone `<script>` tag rather than one shared `@graph`
+ * (see JsonLd.astro), so a bare `@id` reference to the Organization node defined on the
+ * homepage resolves to nothing on every other page — Google's Rich Results parser
+ * validates each script independently and flagged exactly this: author/publisher with
+ * no `name` and no `@type`. Repeating `name` and `url` inline costs a few bytes and
+ * keeps every page's structured data self-contained.
+ */
+function organizationRef(): Json {
+  return { '@type': 'Organization', '@id': organizationId, name: SITE.name, url: SITE.url };
+}
+
 export function website(): Json {
   return withContext({
     '@type': 'WebSite',
@@ -28,7 +41,7 @@ export function website(): Json {
     url: SITE.url,
     name: SITE.name,
     description: SITE.description,
-    publisher: { '@id': organizationId },
+    publisher: organizationRef(),
     inLanguage: SITE.locale,
     potentialAction: {
       '@type': 'SearchAction',
@@ -93,8 +106,8 @@ export function casinoReview(casino: Casino): Json | null {
       bestRating: 10,
       worstRating: 0,
     },
-    author: { '@id': organizationId },
-    publisher: { '@id': organizationId },
+    author: organizationRef(),
+    publisher: organizationRef(),
     dateModified: lastVerified(casino),
   });
 }
@@ -106,8 +119,8 @@ export function collectionPage(facet: Facet): Json {
     url: absolute(`/${facet.slug}/`),
     name: facet.h1,
     description: facet.metaDescription,
-    isPartOf: { '@id': websiteId },
-    publisher: { '@id': organizationId },
+    isPartOf: { '@type': 'WebSite', '@id': websiteId, name: SITE.name, url: SITE.url },
+    publisher: organizationRef(),
   });
 }
 
