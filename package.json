@@ -13,7 +13,8 @@
     "slop-lint": "tsx scripts/slop-lint.ts",
     "verify": "npm run check && npm run validate && npm run slop-lint && npm run build && npm run assert-no-demo",
     "assert-no-demo": "tsx scripts/assert-no-demo.ts",
-    "build-caddy-site": "tsx scripts/build-caddy-site.ts"
+    "build-caddy-site": "tsx scripts/build-caddy-site.ts",
+    "submit-indexnow": "tsx scripts/submit-indexnow.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

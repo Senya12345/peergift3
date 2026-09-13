@@ -100,6 +100,35 @@ shows exactly what's different. Replace that block in `/etc/caddy/Caddyfile` by 
 with the new `deploy/gambleatlas-site.caddy` contents, then `caddy validate` and
 `systemctl reload caddy` again.
 
+## Pushing new URLs to Bing (IndexNow)
+
+Google has no push protocol — new pages wait for a crawl. Bing, Yandex, Seznam and Naver
+share one that does, and Bing has a far lower trust barrier for a young domain, so this
+is the fastest route to a first real audience while Google warms up.
+
+One-time setup:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"
+```
+
+Put that value in `INDEXNOW_KEY` and keep it — rotating it means re-verifying with the
+endpoint. Then every deploy that should be announced:
+
+```bash
+cd /var/www/gambleatlas
+INDEXNOW_KEY=<key> SITE_URL=https://gambleatlas.com SITE_INDEXABLE=true npm run build
+INDEXNOW_KEY=<key> SITE_URL=https://gambleatlas.com npm run submit-indexnow
+```
+
+The build publishes `/{key}.txt` (the ownership proof the endpoint fetches), and the
+submit step sends every URL in the generated sitemap — so pages deliberately kept out of
+the sitemap, `/go/` redirects and under-threshold facets included, are never pushed.
+
+`202 Accepted` on the first run is normal: it means the key file has not been fetched and
+verified yet, not that anything failed. Submit only when something actually changed;
+re-announcing an unchanged site repeatedly is how a host gets rate-limited.
+
 ## Reading click counts without Cloudflare Analytics Engine
 
 Caddy's default access log (JSON lines) records every request, `/go/{slug}` hits
