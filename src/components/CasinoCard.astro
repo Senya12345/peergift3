@@ -43,8 +43,16 @@ const verifiedLabel = verified
   : null;
 ---
 
+{/*
+  Two layouts from one set of markup. On a phone the score, the visit button and the
+  verified date sit in a bar across the bottom instead of a third column, because that
+  column was taking about 110px of a 390px screen and squeezing the bonus text down to
+  roughly two words a line — the card became a tower of wrapped fragments. Dropping it
+  below gives the content the full width back. From `sm` up the original three-column
+  arrangement is unchanged.
+*/}
 <article
-  class="surface surface-interactive relative flex items-start gap-4 p-4"
+  class="surface surface-interactive relative flex flex-col gap-3 p-3 sm:flex-row sm:items-start sm:gap-4 sm:p-4"
   data-casino
   data-name={casino.name.toLowerCase()}
   data-factors={casino.factors.join(',')}
@@ -52,84 +60,122 @@ const verifiedLabel = verified
   data-networks={networkTokens.join(',')}
   data-providers={casino.providers.join(',')}
 >
-  <div class="tabular w-10 shrink-0 pt-1 text-right font-display text-[22px] font-bold text-ink-400">
-    {rank}
+  <div class="flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
+    <div
+      data-rank
+      class="tabular w-5 shrink-0 pt-0.5 text-right font-display text-[19px] font-bold text-ink-400 sm:w-10 sm:pt-1 sm:text-[22px]"
+    >
+      {rank}
+    </div>
+
+    <CasinoLogo slug={casino.slug} name={casino.name} size={48} />
+
+    <div class="min-w-0 flex-1">
+      <div class="flex items-start gap-3">
+        <h3 class="min-w-0 flex-1 text-[17px] sm:text-[19px]">
+          {/* Stretched link: the whole card is clickable, but the markup stays a real
+              heading link, so screen readers and middle-click behave correctly. */}
+          <a
+            href={`/casinos/${casino.slug}/`}
+            class="no-underline after:absolute after:inset-0 hover:text-amber-400"
+            >{casino.name}</a
+          >
+        </h3>
+
+        {/* The score rides next to the name on a phone and moves to the side column at sm. */}
+        {
+          score === null ? (
+            <span class="shrink-0 text-[12px] text-ink-400 sm:hidden">Not rated</span>
+          ) : (
+            <span
+              class={`tabular shrink-0 font-display text-[22px] font-bold leading-none sm:hidden ${scoreClass}`}
+            >
+              {score.toFixed(1)}
+            </span>
+          )
+        }
+      </div>
+
+      {
+        sources.length > 0 && (
+          <ul class="tabular mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-[13px] text-ink-300">
+            {sources.map((s) => (
+              <li>
+                <abbr title={s.label} class="no-underline text-ink-400">
+                  {s.abbr}
+                </abbr>{' '}
+                <span class="text-ink-100">{s.raw}</span>
+                <span class="text-ink-400">/{s.scale}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        shownCoins.length > 0 && (
+          <ul class="mt-2 flex flex-wrap items-center gap-1" aria-label="Supported coins">
+            {shownCoins.map((c) => (
+              <li title={c.code}>
+                <CoinIcon code={c.code} size={18} />
+              </li>
+            ))}
+            {hiddenCoinCount > 0 && (
+              <li class="text-[12px] text-ink-400">+{hiddenCoinCount}</li>
+            )}
+          </ul>
+        )
+      }
+
+      {
+        factorChips.length > 0 && (
+          <ul class="mt-2 flex flex-wrap gap-1 sm:gap-1.5">
+            {factorChips.map((f) => (
+              <li class="rounded-[3px] border border-ink-600 bg-ink-800 px-1.5 py-0.5 text-[12px] text-ink-300 sm:px-2 sm:text-[13px]">
+                {f.name}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        casino.signupBonus && (
+          <p class="mt-2.5 text-[14px] leading-snug text-ink-100 sm:text-[15px]">
+            <span class="text-ink-400">Sign-up bonus:</span> {casino.signupBonus.headline}
+          </p>
+        )
+      }
+    </div>
   </div>
 
-  <CasinoLogo slug={casino.slug} name={casino.name} size={48} />
-
-  <div class="min-w-0 flex-1">
-    <h3 class="text-[19px]">
-      {/* Stretched link: the whole card is clickable, but the markup stays a real
-          heading link, so screen readers and middle-click behave correctly. */}
-      <a
-        href={`/casinos/${casino.slug}/`}
-        class="no-underline after:absolute after:inset-0 hover:text-amber-400"
-        >{casino.name}</a
-      >
-    </h3>
-
-    {
-      sources.length > 0 && (
-        <ul class="tabular mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-[13px] text-ink-300">
-          {sources.map((s) => (
-            <li>
-              <abbr title={s.label} class="no-underline text-ink-400">
-                {s.abbr}
-              </abbr>{' '}
-              <span class="text-ink-100">{s.raw}</span>
-              <span class="text-ink-400">/{s.scale}</span>
-            </li>
-          ))}
-        </ul>
-      )
-    }
-
-    {
-      shownCoins.length > 0 && (
-        <ul class="mt-2 flex flex-wrap items-center gap-1" aria-label="Supported coins">
-          {shownCoins.map((c) => (
-            <li title={c.code}>
-              <CoinIcon code={c.code} size={18} />
-            </li>
-          ))}
-          {hiddenCoinCount > 0 && (
-            <li class="text-[12px] text-ink-400">+{hiddenCoinCount}</li>
-          )}
-        </ul>
-      )
-    }
-
-    {
-      factorChips.length > 0 && (
-        <ul class="mt-2 flex flex-wrap gap-1.5">
-          {factorChips.map((f) => (
-            <li class="rounded-[3px] border border-ink-600 bg-ink-800 px-2 py-0.5 text-[13px] text-ink-300">
-              {f.name}
-            </li>
-          ))}
-        </ul>
-      )
-    }
-
-    {
-      casino.signupBonus && (
-        <p class="mt-2.5 text-[15px] text-ink-100">
-          <span class="text-ink-400">Sign-up bonus:</span> {casino.signupBonus.headline}
-        </p>
-      )
-    }
-  </div>
-
-  <div class="flex shrink-0 flex-col items-end gap-2 pl-2">
+  <div
+    class="flex shrink-0 items-center justify-between gap-3 border-t border-ink-700 pt-2.5 sm:flex-col sm:items-end sm:gap-2 sm:border-0 sm:pl-2 sm:pt-0"
+  >
     {
       score === null ? (
-        <span class="text-[13px] text-ink-400" title={`Fewer than ${MIN_RATING_SOURCES} sources`}>
+        <span
+          class="hidden text-[13px] text-ink-400 sm:block"
+          title={`Fewer than ${MIN_RATING_SOURCES} sources`}
+        >
           Not rated
         </span>
       ) : (
-        <span class={`tabular font-display text-[28px] font-bold leading-none ${scoreClass}`} data-score>
+        <span
+          class={`tabular hidden font-display text-[28px] font-bold leading-none sm:block ${scoreClass}`}
+          data-score
+        >
           {score.toFixed(1)}
+        </span>
+      )
+    }
+
+    {
+      /* Order is reversed on a phone so the date reads first and the button anchors the
+         right edge, where a thumb reaches it. */
+      verifiedLabel && (
+        <span class="order-1 text-[12px] text-ink-400 sm:order-3">
+          Verified {verifiedLabel}
         </span>
       )
     }
@@ -139,10 +185,8 @@ const verifiedLabel = verified
       rel="sponsored nofollow noopener"
       target="_blank"
       data-outbound={casino.slug}
-      class="relative z-10 rounded-[4px] bg-amber-500 px-3.5 py-2 text-[15px] font-semibold text-ink-900 no-underline hover:bg-amber-400"
+      class="relative z-10 order-2 rounded-[4px] bg-amber-500 px-3.5 py-2 text-[15px] font-semibold text-ink-900 no-underline hover:bg-amber-400 sm:order-2"
       >Visit site</a
     >
-
-    {verifiedLabel && <span class="text-[12px] text-ink-400">Verified {verifiedLabel}</span>}
   </div>
 </article>

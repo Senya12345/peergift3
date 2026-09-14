@@ -335,7 +335,10 @@ const supportedCoins = byPopularity(
       for (const item of items) {
         if (item.li.hidden) continue;
         rank++;
-        const cell = item.card.firstElementChild;
+        // Addressed by attribute rather than by position: the card's first child is a
+        // layout wrapper, and a structural tweak there used to silently stop the ranks
+        // renumbering.
+        const cell = item.card.querySelector('[data-rank]');
         if (cell) cell.textContent = String(rank);
       }
 
