@@ -110,6 +110,28 @@
       "AskGamblers' own CasinoRank (5.6/10) diverges from its player rating (6.9/10) in the same cautious-algorithm-vs-upbeat-reviews pattern we've now seen on more than one casino on this site"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Shuffle legit?",
+      "a": "It holds Curaçao Gaming Control Board licence OGL/2024/1337/0628 through Natural Nine B.V. But Casino Guru rates its Safety Index 4.8/10 — Low — and Casino Guru's own published guidance at that level is that players should consider alternatives. That is the most negative assessment any casino on this site carries from a major platform, and we are not going to soften it."
+    },
+    {
+      "q": "Was there a Shuffle data breach?",
+      "a": "Yes, confirmed, on 10 October 2025 through third-party provider Fast Track. It exposed user names, addresses, phone numbers and transaction histories, and for many verified users the identity documents submitted during KYC. Anyone who verified an account with Shuffle before that date should treat those documents as compromised."
+    },
+    {
+      "q": "How fast are Shuffle withdrawals?",
+      "a": "Shuffle states that 90% of crypto withdrawals complete in under a minute, and several independent reviews repeat that figure. Set against it is a documented complaint pattern in which a withdrawal following a meaningful win is held \"under review\" for one to two weeks, including a case study involving roughly $20,000. Both descriptions are accurate about different players."
+    },
+    {
+      "q": "What are the Shuffle bonus terms?",
+      "a": "A 100% first-deposit match up to $1,000, carrying a 35x wagering requirement on deposit plus bonus combined, a $20 minimum deposit and a $10 maximum bet while clearing it."
+    },
+    {
+      "q": "What is the Shuffle Trustpilot score?",
+      "a": "We could not pin it down with confidence. Checks turned up a suspended-rating notice and a heavily one-star-skewed distribution, so rather than publish a number we are not sure of, we have left Trustpilot out of the aggregate for this casino entirely."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Shuffle states that 90% of crypto withdrawals complete in under a minute, which multiple independent reviews repeat. Set against that: AskGamblers' complaint record and player forum threads describe a recurring pattern where a withdrawal following a meaningful win gets held 'under review' for one to two weeks, sometimes longer, with generic compliance-review responses repeated on follow-up. Both things can be true simultaneously — most withdrawals may process quickly while a specific subset, generally larger or bonus-linked ones, get stuck. We could not determine what share of withdrawals fall into the second category.",
     "deposits": "KYC (name, date of birth, country of residence at minimum) is required before a first deposit — Shuffle does not offer the low-KYC-by-default model several other casinos on this site use. Roughly 18 cryptocurrencies are supported including BTC, ETH, USDT, USDC, LTC, SOL and DOGE, alongside Shuffle's own SHFL token used for its staking lottery. We found no independently confirmed minimum deposit figures specific to Shuffle to cite with confidence.",

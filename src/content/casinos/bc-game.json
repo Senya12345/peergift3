@@ -46,7 +46,7 @@
       "code": "BTC",
       "networks": [],
       "minDeposit": {
-        "amount": 1e-05,
+        "amount": 0.00001,
         "source": "third-party deposit guide, checked 2026-09-09; casino cashier is the live source of truth"
       },
       "minWithdrawal": {
@@ -200,6 +200,28 @@
       "A 0.1% platform fee is added on top of the blockchain's own network fee on withdrawals, unlike some competitors that only pass through network cost"
     ]
   },
+  "faq": [
+    {
+      "q": "Is BC.Game legit?",
+      "a": "This one has a court ruling attached rather than a rumour. In November 2024 a Curaçao court declared the then-operator, Small House B.V., bankrupt over more than $2 million in documented unpaid player winnings. BC.Game subsequently relicensed in Anjouan, Comoros, under Twocent Technology Limited — a jurisdiction with substantially lighter oversight than the Curaçao regime it left. The casino is running and paying players today, but that history is the single most important thing to know before depositing."
+    },
+    {
+      "q": "Why is there no Trustpilot score for BC.Game?",
+      "a": "Trustpilot suspended the rating following a guidelines breach and the removal of a batch of fake reviews. We cannot show a current figure because Trustpilot itself is not showing one."
+    },
+    {
+      "q": "What happens if I win big at BC.Game?",
+      "a": "A recurring, multi-source complaint pattern describes large wins triggering account reviews, bonus-abuse determinations or frozen balances. That is the same scenario the bankruptcy case was built on, which is why we weight it more heavily here than we would at a casino with no such history."
+    },
+    {
+      "q": "Does BC.Game charge withdrawal fees?",
+      "a": "Yes — roughly 0.1% of the amount, added on top of the blockchain's own network fee. Several competitors pass through only the network cost, so this is BC.Game's own margin."
+    },
+    {
+      "q": "How fast are BC.Game withdrawals?",
+      "a": "Third-party guides report most crypto withdrawals processing within 24 hours under normal conditions. \"Normal\" is doing real work in that sentence, given the review pattern above."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Third-party guides report most crypto withdrawals processing within 24 hours under normal conditions, with a platform fee of roughly 0.1% charged on top of the blockchain's own network fee — BC.Game does add its own margin here, unlike some competitors. Independently of routine processing speed, multiple sources — court documents, forum complaints, and Trustpilot reviews before its suspension — describe a recurring pattern where large wins trigger an account review, a bonus-abuse determination, or a frozen balance rather than a normal payout. This is the single most important withdrawal-related fact about this operator and it is well corroborated rather than a one-off complaint.",
     "deposits": "Deposits are reported to credit within seconds to a few minutes for most cryptocurrencies, with very low minimums (for example roughly 0.00001 BTC or 1 USDT per third-party guides). BC.Game also offers fiat on-ramps through MoonPay, Banxa and TransFi for card or bank-funded crypto purchases, though all withdrawals are crypto-only regardless of how you deposited.",

@@ -174,6 +174,28 @@
       "Only two rating sources could be confirmed (Casino Guru and Trustpilot) — no AskGamblers or LCB page exists for duel.com specifically yet, likely because the casino is too young for those platforms to have reviewed it. The aggregate below rests on two figures rather than the three-plus most other casinos on this site have"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Duel legit?",
+      "a": "It holds Anjouan Gaming Authority licence ALSI-202411026-FI1, operated by Immortal Snail LLC out of Nevis. The bigger caveat is age rather than licensing: the current site has only run since mid-2025, so there is far less complaint history to judge it on than any other casino we cover. Two rating platforms list it at all."
+    },
+    {
+      "q": "Does Duel require KYC?",
+      "a": "No verification is needed for withdrawals up to $2,000 in a rolling 24-hour window. Above that, or when an automated risk flag trips — mismatched IPs, VPN patterns, on-chain links to mixers — identity verification is required before funds are released. The stated overall daily cap is $250,000 per account."
+    },
+    {
+      "q": "What is the controversy around Duel?",
+      "a": "In 2026 Duel broadcast live blackjack content featuring a performer in a SpongeBob costume simulating sexual acts, including a session where a female dealer appeared to resist on camera. Industry commentary separately reported a broadcast using Nazi-uniform and genocide imagery as promotional material; we were not able to independently verify that second one. Neither is a payments issue, and both are the kind of thing worth knowing about an operator before you give it money."
+    },
+    {
+      "q": "Does Duel have a welcome bonus?",
+      "a": "No deposit match. Instead it pays 50% instant rakeback on slots and 80% on Duel's own Blackjack, credited immediately with no wagering requirement — real withdrawable money rather than a locked bonus balance. Duel publishes its own reasoning for not running a deposit bonus at all."
+    },
+    {
+      "q": "Why are there only two ratings for Duel?",
+      "a": "Casino Guru and Trustpilot cover it; AskGamblers and LCB have no page for duel.com yet, most likely because the casino is too new. Two sources is our floor for showing an aggregate at all, so the score you see rests on a thinner base here than elsewhere."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "No KYC is required for withdrawals up to $2,000 per rolling 24-hour window; above that, or when an automated risk flag trips (mismatched IPs, VPN patterns, on-chain links to mixers), identity verification is required before funds release. The stated overall daily cap is $250,000 per account, with larger amounts routed through manual review reported to complete within 24 hours. We could not independently verify typical processing times beyond what the operator and affiliate guides state.",
     "deposits": "Deposits are crypto-based across 16 supported coins, with a fiat-to-crypto on-ramp (Visa, Apple Pay, Pix and similar) for players who want to buy crypto on-site rather than bring their own. Reported crediting is fast, consistent with other crypto-native casinos on this site, though we found no independently sourced minimum deposit figures specific to Duel to cite with confidence.",

@@ -2,9 +2,10 @@
 import CasinoLogo from '../../components/CasinoLogo.astro';
 import CoinIcon from '../../components/CoinIcon.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import PageNav from '../../components/PageNav.astro';
 import RatingTable from '../../components/RatingTable.astro';
 import Base from '../../layouts/Base.astro';
-import { breadcrumbs, casinoReview } from '../../lib/schema';
+import { breadcrumbs, casinoReview, faqPage } from '../../lib/schema';
 import { loadCasinos } from '../../lib/content';
 import { facetsForCasino } from '../../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
@@ -42,6 +43,46 @@ const description =
   score === null
     ? `${casino.name}: what we could and could not verify, the bonus terms, and where to read player reviews.`
     : `${casino.name} scores ${score.toFixed(1)}/10 across ${sources.length} review platforms. Bonus terms, payout behaviour and what players complain about.`;
+
+/**
+ * The page's own table of contents, and the source of every section's id and heading.
+ *
+ * Not every casino has every section — a record with one rating source shows no breakdown,
+ * Polymarket has no coins table — so the list is assembled from what this record actually
+ * carries. Deriving the jump links and the headings from the same array is what stops a
+ * link pointing at a section that was not rendered.
+ */
+const sections = [
+  sources.length > 0 && {
+    id: 'ratings',
+    label: 'Ratings',
+    heading: 'Where the score comes from',
+  },
+  { id: 'verdict', label: 'Our take', heading: 'Our take' },
+  casino.faq.length > 0 && {
+    id: 'faq',
+    label: 'FAQ',
+    heading: `${casino.name} questions, answered`,
+  },
+  casino.currencies.length > 0 && {
+    id: 'coins',
+    label: 'Coins',
+    heading: 'Supported coins',
+  },
+  (factorFacets.length > 0 || currencyFacets.length > 0) && {
+    id: 'features',
+    label: 'Features',
+    heading: 'Features and coins',
+  },
+  casino.aiSummary && { id: 'ai-summary', label: 'AI summary', heading: 'AI summary' },
+  (casino.license || casino.founded) && {
+    id: 'operator',
+    label: 'Operator',
+    heading: 'Operator details',
+  },
+].filter((s): s is { id: string; label: string; heading: string } => Boolean(s));
+
+const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
 ---
 
 <Base
@@ -54,6 +95,7 @@ const description =
     slot="head"
     data={[
       casinoReview(casino),
+      faqPage(casino.faq),
       breadcrumbs([
         { name: 'Ranking', path: '/' },
         { name: casino.name, path: `/casinos/${casino.slug}/` },
@@ -104,6 +146,11 @@ const description =
     </div>
   </div>
 
+  {/* Above the bonus block on purpose: the bonus detail runs long, and a reader who
+      arrived from "is X legit" should not have to scroll past the terms and conditions to
+      find the jump link that answers them. */}
+  <PageNav sections={sections} />
+
   {
     casino.signupBonus && (
       <div class="surface mt-6 p-4">
@@ -121,7 +168,7 @@ const description =
   {
     sources.length > 0 && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Where the score comes from</h2>
+        <h2 id="ratings" class="text-[24px]">{heading('ratings')}</h2>
         <div class="mt-4">
           <RatingTable sources={sources} />
         </div>
@@ -137,7 +184,7 @@ const description =
   }
 
   <section class="mt-10">
-    <h2 class="text-[24px]">Our take</h2>
+    <h2 id="verdict" class="text-[24px]">{heading('verdict')}</h2>
     <div class="mt-3 max-w-[68ch] space-y-4 text-ink-100">
       {casino.editorial.summary.split('\n\n').map((p) => <p>{p}</p>)}
     </div>
@@ -159,9 +206,46 @@ const description =
   </section>
 
   {
+    casino.faq.length > 0 && (
+      <section class="mt-10">
+        <h2 id="faq" class="text-[24px]">{heading('faq')}</h2>
+        <p class="mt-2 max-w-[68ch] text-[14px] text-ink-400">
+          Short answers to what people search for about this casino. Each one restates what
+          is documented elsewhere on this page rather than adding anything new.
+        </p>
+        <div class="mt-5 max-w-[72ch] space-y-4">
+          {casino.faq.map((item) => (
+            <details class="surface group p-4 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex cursor-pointer items-start justify-between gap-4 font-display text-[17px] font-bold text-ink-050">
+                {item.q}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  class="mt-1 shrink-0 text-ink-400 transition-transform group-open:rotate-45"
+                >
+                  <path
+                    d="M10 4v12M4 10h12"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </summary>
+              <p class="mt-3 text-ink-100">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
     casino.currencies.length > 0 && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Supported coins</h2>
+        <h2 id="coins" class="text-[24px]">{heading('coins')}</h2>
         <div class="mt-4 overflow-x-auto">
           <table class="w-full min-w-[360px] border-collapse text-[15px]">
             <thead>
@@ -192,7 +276,7 @@ const description =
   {
     (factorFacets.length > 0 || currencyFacets.length > 0) && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Features and coins</h2>
+        <h2 id="features" class="text-[24px]">{heading('features')}</h2>
         <ul class="mt-3 flex flex-wrap gap-2">
           {[...factorFacets, ...currencyFacets].map((f) => (
             <li>
@@ -213,7 +297,7 @@ const description =
     casino.aiSummary && (
       <section class="mt-10">
         <div class="mb-3 flex items-center gap-2">
-          <h2 class="text-[24px]">AI summary</h2>
+          <h2 id="ai-summary" class="text-[24px]">{heading('ai-summary')}</h2>
           <span class="rounded-[3px] border border-amber-500/40 bg-amber-950 px-1.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-amber-400">
             AI-generated
           </span>
@@ -247,7 +331,7 @@ const description =
   {
     (casino.license || casino.founded) && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Operator details</h2>
+        <h2 id="operator" class="text-[24px]">{heading('operator')}</h2>
         <dl class="mt-3 grid max-w-md grid-cols-[auto_1fr] gap-x-6 gap-y-2 text-[15px]">
           {casino.license && (
             <>

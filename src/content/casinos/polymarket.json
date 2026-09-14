@@ -46,6 +46,28 @@
       "US access remains blocked outright in eight states (Arizona, Illinois, Massachusetts, Maryland, Michigan, Montana, Nevada, Ohio) even after the federal CFTC approval, and the fully-KYC'd US legal product is a materially different experience from the no-KYC version available elsewhere"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Polymarket legit?",
+      "a": "Since November 2025 it has been CFTC-regulated in the US, through Polymarket's acquisition of QCEX, a licensed derivatives exchange and clearinghouse. That followed a genuinely turbulent history: a $1.4M CFTC settlement, a roughly four-year US ban from 2022 to 2025, and an FBI search of the founder's home in November 2024."
+    },
+    {
+      "q": "Is Polymarket rigged?",
+      "a": "Not in the sense of a fixed game, but two independent findings complicate the picture. A Columbia University study in November 2025 estimated that roughly 25% of historical trading volume was wash trading rather than genuine positions, peaking near 60% of weekly volume in December 2024. Separately, a 2026 investigation found that market resolution — the capital-weighted dispute vote that decides which outcome pays — is concentrated among a small number of large wallets with conflicts of interest. Both are structural rather than accidental."
+    },
+    {
+      "q": "Can I use Polymarket in the US?",
+      "a": "Partly. Federal CFTC approval did not open every state: access remains blocked outright in Arizona, Illinois, Massachusetts, Maryland, Michigan, Montana, Nevada and Ohio."
+    },
+    {
+      "q": "How do Polymarket withdrawals work?",
+      "a": "Outside the US and restricted jurisdictions, funds go straight to a connected crypto wallet as USDC on Polygon, handled on-chain without an extra KYC step in most cases, though large or unusual amounts can still prompt a request. Third-party testing reported median withdrawal times in the minutes range."
+    },
+    {
+      "q": "Why does no casino review site cover Polymarket?",
+      "a": "Because it is a prediction market, not a casino — AskGamblers, Casino Guru, Casinomeister and LCB have no page for it at all. The only external number we can show is a Trustpilot score of 1.4/5, which is why this page leans on documented regulatory and academic findings instead of an aggregate."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Outside the US and restricted jurisdictions, withdrawals go directly to a connected crypto wallet as USDC on Polygon, handled on-chain without an additional KYC step in most cases, though large or unusual amounts can still trigger a request. Third-party testing reported median withdrawal times in the range of a few hours. On the CFTC-regulated US product (via the QCEX acquisition), full identity verification — government ID, SSN, address and a liveness selfie — is required regardless of withdrawal size.",
     "deposits": "Deposits are made in USDC, primarily on the Polygon network. Card-based fiat on-ramps to buy USDC require KYC with the payment provider on first use, and above roughly $50-100 depending on the provider. Direct USDC wallet deposits do not require ID outside the US and restricted jurisdictions.",

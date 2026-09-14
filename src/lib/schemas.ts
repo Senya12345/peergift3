@@ -136,6 +136,19 @@ export const casinoSchema = z.object({
     cons: z.array(z.string()).min(2),
   }),
 
+  /**
+   * Questions readers actually type, answered from what the record already establishes.
+   *
+   * Search Console shows the traffic arriving as questions — "is winna legit", "rainbet
+   * rigged", "rainbet test" — rather than as a request for a review, and the honest
+   * answers to those are the part of this site nobody else writes. Answers restate what
+   * the editorial and aiSummary already document; an answer that needs a fact not
+   * established elsewhere in the record does not belong here.
+   */
+  faq: z
+    .array(z.object({ q: z.string().min(1), a: z.string().min(1) }))
+    .default([]),
+
   license: z.string().nullable().default(null),
   founded: z.number().int().optional(),
 

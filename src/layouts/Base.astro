@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Analytics from '../components/Analytics.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { siteIndexable } from '../lib/content';
 import { SITE } from '../lib/site';
 
@@ -68,6 +69,7 @@ const robots = !siteIndexable
       <slot />
     </main>
     <Footer />
+    <BackToTop />
     <Analytics />
   </body>
 </html>

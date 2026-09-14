@@ -1,0 +1,52 @@
+---
+/**
+ * Phone-only return to the top, revealed once the reader is far enough down that
+ * scrolling back by hand is a chore. Hidden on desktop, where the jump links at the top
+ * of the page stay within easy reach and a floating button would just cover content.
+ */
+---
+
+<button
+  type="button"
+  id="back-to-top"
+  hidden
+  class="fixed bottom-4 right-4 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-ink-600 bg-ink-800/95 text-ink-100 shadow-lg backdrop-blur transition-opacity hover:text-amber-400 sm:hidden"
+>
+  <span class="sr-only">Back to top</span>
+  <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true">
+    <path
+      d="M10 16V5M5 10l5-5 5 5"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </svg>
+</button>
+
+<script>
+  const button = document.getElementById('back-to-top');
+  if (button) {
+    const THRESHOLD = 700;
+    // Passive listener and a rAF gate: scroll handlers that do layout work on every event
+    // are the classic way to make a long page feel sticky on a mid-range phone.
+    let ticking = false;
+    const update = () => {
+      button.hidden = window.scrollY < THRESHOLD;
+      ticking = false;
+    };
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      },
+      { passive: true },
+    );
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    update();
+  }
+</script>

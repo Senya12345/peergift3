@@ -112,6 +112,28 @@
       "Bonus terms (headline percentage, cap, wagering requirement) vary meaningfully by region and which link you register through, and the exact current licence number is inconsistently reported across sources"
     ]
   },
+  "faq": [
+    {
+      "q": "Is 1win legit?",
+      "a": "It has operated since 2016 and holds a Curaçao licence through 1Win N.V., but we could not pin down which licence number is current: one source gives OGL/2024/587/0621 and another 8048/JAZ2018-040. The heavier issue is regulatory rather than commercial — Kazakhstan's Financial Monitoring Agency has run an active investigation into 1win's operations there since 2023, which resulted in an international wanted list for individuals connected to running the platform in that market, plus asset seizures. That is a matter of public record, not a player complaint."
+    },
+    {
+      "q": "Does 1win require KYC?",
+      "a": "Not to open an account or play. Written guides for several regions describe verification as required before a first withdrawal, or once cumulative withdrawals cross roughly $500 to $1,000 — a materially lower bar than the no-verification framing suggests. Guidance is genuinely inconsistent between sources, so treat the threshold as unpredictable rather than as a number you can plan around."
+    },
+    {
+      "q": "How long do 1win withdrawals take?",
+      "a": "Third-party guides report crypto withdrawals in USDT TRC-20, BTC and ETH clearing in roughly 8 to 90 minutes under normal conditions. We have not tested this ourselves."
+    },
+    {
+      "q": "Why do the two AskGamblers scores for 1win disagree?",
+      "a": "AskGamblers publishes a player rating of 9.6/10 and its own algorithmic CasinoRank of 2.8/10 for the same casino. We use the player rating across every casino on this site for consistency, but a gap that wide is worth reading as a signal in itself: the algorithm weighs business factors AskGamblers does not fully disclose, and it is far more cautious here than the people leaving reviews."
+    },
+    {
+      "q": "Where is 1win blocked?",
+      "a": "It is blocked or unlicensed in a long list of major markets, including Russia, Kazakhstan, most of Western Europe and India, while still marketing heavily in several of them."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Third-party guides report crypto withdrawals (USDT TRC-20, BTC, ETH) clearing in roughly 8 to 90 minutes under normal conditions. Written guidance on KYC is genuinely inconsistent: several sources describe verification as required before a first withdrawal or once cumulative withdrawals cross a regional threshold (figures around $500-1,000 appear repeatedly), while other reported experiences — including sustained crypto play over years at meaningful volume — describe no verification request at all. Exact triggers and limits vary noticeably by region and by which mirror or regional site you registered on, more so than for any other casino on this site.",
     "deposits": "1win accepts a wide range of payment methods beyond crypto — cards, e-wallets and regional bank methods — with crypto (BTC, ETH, USDT, LTC, TRX, DOGE) offered as one option among many rather than the primary rail the way it is at Stake or BC.Game. Deposits are reported to credit quickly across methods.",

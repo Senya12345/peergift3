@@ -88,6 +88,21 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* Jump links land a little below the top edge rather than flush against it. */
+  [id] {
+    scroll-margin-top: 1.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   a {
     color: inherit;
     text-decoration-color: var(--color-ink-400);

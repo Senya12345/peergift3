@@ -155,6 +155,32 @@
       "Trustpilot's 2.3/5 score comes with a guideline-breach flag for fake reviews on the same profile, and the site is actively promoted to Australian players despite being unlicensed and illegal to operate there under the Interactive Gambling Act 2001"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Rainbet legit?",
+      "a": "It holds Anjouan Gaming Authority licence ALSI-152406029-FI2, issued 14 June 2024 and valid to June 2027, operated by RBGAMING N.V., registered in Curaçao under number 163051. The paperwork checks out. What does not sit comfortably alongside it is the reporting from FinTelegram, an investigative outlet covering offshore gambling, questioning whether \"John Evans\" — presented publicly as Rainbet's CEO and co-founder — is a real, identifiable person, and describing the split Curaçao/Anjouan structure as regulatory arbitrage. We could not independently verify that claim, and we think you should weigh it anyway."
+    },
+    {
+      "q": "Is Rainbet rigged?",
+      "a": "We have no evidence that it is, and we cannot prove that it is not. The in-house Originals run on a published provably fair system that anyone can check per bet. Against that: player complaints on Trustpilot and forums cluster around disputed fairness in blackjack and the Originals specifically, and Casino Guru's review separately flags clauses in Rainbet's terms it considers unfair to players. Those are two different problems — the complaints are about outcomes, the Casino Guru finding is about the contract you agree to."
+    },
+    {
+      "q": "Does Rainbet require KYC?",
+      "a": "Rainbet publishes no fixed threshold in its own terms. Third-party guides describe a tiered four-level system where most players stay at Level 1 — basic details, no ID — and withdraw without documents at ordinary stakes. Estimates of where scrutiny actually starts range from about $2,500 to no fixed figure at all, and the operator reserves the right to ask at any point. We are not treating that as a stated numeric threshold, because the sources do not agree on one."
+    },
+    {
+      "q": "Is Rainbet legal in Australia?",
+      "a": "No. Rainbet is not licensed to operate in Australia, and the Interactive Gambling Act 2001 prohibits offering these services to Australian residents. It is nonetheless actively promoted to Australian audiences, which Australian commentators have named it for specifically."
+    },
+    {
+      "q": "How fast are Rainbet withdrawals?",
+      "a": "Reported minimum withdrawal is $15 across supported coins, with no platform fee beyond the network cost. Third-party reviewers describe small verified withdrawals clearing in under 15 minutes under normal conditions; we did not test this."
+    },
+    {
+      "q": "What is the Adin Ross deal?",
+      "a": "In September 2025 Rainbet signed the streamer Adin Ross away from Stake for a reported $100 million upfront plus $50 million a year, pulling his SSB streaming group into its affiliate ecosystem. That deal, rather than the game library, is why the brand is suddenly everywhere — and it is also the reason Rainbet draws specific allegations that its marketing reaches underage viewers on Kick and Twitch."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "No fixed public KYC threshold is stated in Rainbet's own terms. Third-party guides describe a tiered, four-level verification system where most players stay at Level 1 (basic details, no ID) and can withdraw without documents at ordinary stakes, but sources disagree sharply on where scrutiny starts in practice — estimates range from roughly $2,500 to no fixed figure at all, with the operator reserving the right to request verification at any point based on withdrawal size or suspicious activity patterns. Because we could not confirm one consistent, sourced number, we are not treating this as a clearly stated numeric threshold the way we do for some other casinos on this site. Reported minimum withdrawal is $15 across supported coins with no platform fee beyond network cost.",
     "deposits": "Reported minimum deposits are $5 for SOL, LTC, XRP, DOGE and TRX, and $15 for BTC, ETH, USDT, USDC and BNB, across roughly a dozen supported cryptocurrencies. Small verified withdrawals are reported by third-party reviewers to clear in under 15 minutes under normal conditions; we did not independently test this.",

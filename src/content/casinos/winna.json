@@ -158,6 +158,28 @@
       "Very young operator (live since mid-2024) with less accumulated track record than most other casinos on this site, and licensed through a lighter-touch Tobique First Nation framework alongside its Costa Rica registration"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Winna legit?",
+      "a": "It has been live since mid-2024, operated by GG Gaming S.R.L. out of Costa Rica under a supplementary Tobique Gaming Commission licence issued through the Tobique First Nation in New Brunswick, Canada — a lighter-touch framework than a Curaçao or Anjouan licence. It raised $15 million in seed funding within months of launch. The track record is short and the allegations below are serious."
+    },
+    {
+      "q": "Is Winna rigged?",
+      "a": "This is the central question about this casino and we cannot settle it. Multiple independent reviewers and a recurring complaint pattern allege that Winna adjusted the outcomes of its own in-house Originals — specifically, that it lowered the probability of large multipliers and reduced the payout value on hits that did land, with one commonly cited example describing a win cut from roughly 1000x to about 130x. We have no access to Winna's game code or RNG audit logs, so we could not verify the mechanism. What we can say is that the allegation is specific, appears across unconnected sources rather than one aggrieved poster, and describes exactly the harm a provably fair claim is meant to make impossible."
+    },
+    {
+      "q": "Why do Winna's ratings differ so much?",
+      "a": "Casino Guru's Safety Index puts it at 9.3/10 while AskGamblers' player rating sits at 3.7/10 — a gap of nearly six points on the same casino, the widest we have recorded anywhere on this site. Rather than average that disagreement away, we show both numbers, because the two platforms are clearly measuring different things here."
+    },
+    {
+      "q": "How long do Winna withdrawals take?",
+      "a": "Reports do not converge. Some players describe payouts clearing in around ten minutes; a recurring complaint pattern describes 36 to 50 days, with fresh verification requests arriving after an account had already been approved. Reported minimum withdrawal is around $20 regardless of coin, with a default daily cap near $25,000 that rises with account tier."
+    },
+    {
+      "q": "Does Winna require KYC?",
+      "a": "Signup is advertised as no-verification. Independent guides describe verification as commonly triggered around €2,000 in withdrawals or on flagged activity — high enough that ordinary-stakes players are unlikely to hit it in normal play, which is the basis on which we tag it no-KYC."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Independent guides describe verification as commonly triggered around €2,000 in withdrawals or on flagged activity, with reported minimum withdrawal around $20 regardless of coin and a default daily cap around $25,000 that rises with account tier. Reported processing experience is inconsistent: some players describe payouts clearing in around 10 minutes, while a recurring complaint pattern describes 36-to-50-day delays and additional verification requests appearing after an account was already approved. We were unable to reconcile these into one consistent typical figure.",
     "deposits": "Deposits are reported to start from $1 in any of the 13 supported coins, crediting quickly per third-party guides. We did not find independently sourced native-unit minimum figures specific enough to cite with confidence beyond the commonly repeated $1 headline figure.",

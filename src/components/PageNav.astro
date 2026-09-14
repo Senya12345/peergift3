@@ -1,0 +1,35 @@
+---
+/**
+ * Jump links to the sections actually present on the page.
+ *
+ * These pages run long — a casino review is a few thousand words — and the reader arriving
+ * from "is X legit" wants one answer, not a document. The links are built from the same
+ * array that renders the headings, so the two cannot drift apart when a section is absent
+ * for a given record.
+ */
+interface Props {
+  sections: { id: string; label: string }[];
+}
+
+const { sections } = Astro.props;
+---
+
+{
+  sections.length > 1 && (
+    <nav aria-label="On this page" class="surface mt-6 p-3 sm:p-4">
+      <p class="text-[13px] uppercase tracking-wide text-ink-400">On this page</p>
+      <ul class="mt-2 flex flex-wrap gap-1.5">
+        {sections.map((s) => (
+          <li>
+            <a
+              href={`#${s.id}`}
+              class="inline-block rounded-[3px] border border-ink-600 bg-ink-800 px-2.5 py-1 text-[14px] text-ink-100 no-underline hover:border-ink-400 hover:text-amber-400"
+            >
+              {s.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}

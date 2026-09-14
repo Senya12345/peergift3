@@ -1,6 +1,7 @@
 ---
 import CasinoCard from '../components/CasinoCard.astro';
 import JsonLd from '../components/JsonLd.astro';
+import PageNav from '../components/PageNav.astro';
 import Base from '../layouts/Base.astro';
 import { breadcrumbs, casinoList, collectionPage, faqPage } from '../lib/schema';
 import { RESERVED_SLUGS } from '../lib/content';
@@ -33,6 +34,17 @@ interface Props {
 
 const { facet } = Astro.props;
 const related = relatedFacets(facet);
+
+/**
+ * Jump links. The intro runs 300+ words before the list a reader came for, so the first
+ * link skips straight past it — the prose is there for the page to stand on its own, not
+ * because anyone wants to read it before seeing which casinos qualify.
+ */
+const sections = [
+  { id: 'casinos', label: `${facet.casinos.length} casinos` },
+  facet.faq.length > 0 && { id: 'questions', label: 'Questions' },
+  related.length > 0 && { id: 'related', label: 'Related lists' },
+].filter((s): s is { id: string; label: string } => Boolean(s));
 
 const dataModified = facet.casinos
   .map((c) => lastVerified(c))
@@ -75,12 +87,14 @@ const dataModified = facet.casinos
 
   <h1 class="mt-4 max-w-[24ch] text-[32px] sm:text-[38px]">{facet.h1}</h1>
 
-  <div class="mt-5 max-w-[68ch] space-y-4 text-ink-100">
+  <PageNav sections={sections} />
+
+  <div class="mt-8 max-w-[68ch] space-y-4 text-ink-100">
     {facet.intro.split('\n\n').map((p) => <p>{p}</p>)}
   </div>
 
   <section class="mt-10" aria-label="Matching casinos">
-    <h2 class="text-[24px]">
+    <h2 id="casinos" class="text-[24px]">
       {facet.casinos.length}{facet.casinos.length === 1 ? ' casino' : ' casinos'} match
     </h2>
 
@@ -104,7 +118,7 @@ const dataModified = facet.casinos
   {
     facet.faq.length > 0 && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Common questions</h2>
+        <h2 id="questions" class="text-[24px]">Common questions</h2>
         <dl class="mt-4 max-w-[68ch] space-y-5">
           {facet.faq.map((item) => (
             <div>
@@ -120,7 +134,7 @@ const dataModified = facet.casinos
   {
     related.length > 0 && (
       <section class="mt-10">
-        <h2 class="text-[24px]">Related lists</h2>
+        <h2 id="related" class="text-[24px]">Related lists</h2>
         <ul class="mt-3 flex flex-wrap gap-2">
           {related.map((f) => (
             <li>

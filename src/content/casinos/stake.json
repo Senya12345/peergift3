@@ -269,6 +269,28 @@
       "First withdrawals are commonly held 24-72 hours for additional checks, and the site is blocked outright in a number of jurisdictions including the US and UK"
     ]
   },
+  "faq": [
+    {
+      "q": "Is Stake legit?",
+      "a": "It has run since 2017 on Curaçao licence OGL/2024/1451/0918 through Medium Rare N.V., and it is one of the largest brands in the space. The caveat worth carrying: Casinomeister, a long-running watchdog community, has placed Stake in its Warning section specifically over how it handles player complaints. That is a support and dispute-resolution finding, not a game-fairness one."
+    },
+    {
+      "q": "Does Stake require KYC?",
+      "a": "Not to sign up, deposit or play — an email address gets you started. Stake publishes no numeric threshold for when documents get requested, unlike some smaller operators with a stated figure, so the policy is harder to plan around. Expect a large or unusual withdrawal to prompt a request rather than treating it as hypothetical, and expect a first withdrawal to be held 24 to 72 hours for checks."
+    },
+    {
+      "q": "How fast are Stake withdrawals?",
+      "a": "Stake releases them immediately on its side; the wait after that is whichever chain you picked. Tron, XRP and Solana typically clear in seconds. Bitcoin and Ethereum mainnet take longer when the network is busy. Stake adds no withdrawal fee of its own on top of the network cost."
+    },
+    {
+      "q": "Can I use Stake in the US or UK?",
+      "a": "No — the site is blocked outright in both, along with a number of other jurisdictions. Mirror domains are how a lot of players reach it in practice, which is also why the access link on this page is a mirror rather than stake.com."
+    },
+    {
+      "q": "What is the Stake welcome bonus?",
+      "a": "A 200% first-deposit match up to $2,000, at 40x wagering with a 30-day deadline. There is no no-deposit bonus; the ongoing rewards run through rakeback and a VIP ladder, which favours frequent high-volume play over the occasional session."
+    }
+  ],
   "aiSummary": {
     "withdrawals": "Public reviews and Stake's own documented policy describe withdrawals as released immediately on Stake's side, with total time then depending on which chain you use — Tron, XRP and Solana typically clear in seconds, Bitcoin and Ethereum mainnet take longer during busy periods. A first withdrawal is commonly held 24 to 72 hours for additional checks, which recurs often enough across sources to treat as standard rather than exceptional.",
     "deposits": "Deposits are described as crediting instantly across sources, with no deposit fee charged by Stake itself — only the sending network's own fee applies. Reported minimums vary by coin and by source, from roughly $5 in BTC terms up to $20 for stablecoins like USDT and USDC; treat the exact figure on Stake's own deposit page as the source of truth over any third-party estimate, ours included.",
