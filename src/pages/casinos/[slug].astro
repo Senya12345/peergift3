@@ -1,6 +1,7 @@
 ---
 import CasinoLogo from '../../components/CasinoLogo.astro';
 import CoinIcon from '../../components/CoinIcon.astro';
+import CountryCheck from '../../components/CountryCheck.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import PageNav from '../../components/PageNav.astro';
 import RatingTable from '../../components/RatingTable.astro';
@@ -63,6 +64,11 @@ const sections = [
     id: 'faq',
     label: 'FAQ',
     heading: `${casino.name} questions, answered`,
+  },
+  {
+    id: 'where',
+    label: 'Your country',
+    heading: 'Can you use it where you live?',
   },
   casino.currencies.length > 0 && {
     id: 'coins',
@@ -241,6 +247,11 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
       </section>
     )
   }
+
+  <section class="mt-10">
+    <h2 id="where" class="text-[24px]">{heading('where')}</h2>
+    <CountryCheck casino={casino} />
+  </section>
 
   {
     casino.currencies.length > 0 && (

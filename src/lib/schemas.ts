@@ -153,6 +153,29 @@ export const casinoSchema = z.object({
   founded: z.number().int().optional(),
 
   /**
+   * The countries the operator itself refuses, read from its own terms.
+   *
+   * Deliberately not a legality verdict. An Anjouan or Curaçao licence authorises the
+   * operator to run a business from that jurisdiction; it says nothing about where a
+   * player may lawfully be, which is decided by that player's own country's law. Telling
+   * a reader their jurisdiction is "legal" would be a legal opinion across 190-odd
+   * jurisdictions that we cannot verify and have no business giving.
+   *
+   * `null` means the terms have not been read yet, which is a different answer from an
+   * empty list and must never be rendered as "you are fine" — see CountryCheck.astro.
+   */
+  restrictions: z
+    .object({
+      /** ISO 3166-1 alpha-2, validated against src/lib/countries.ts at build time. */
+      countries: z.array(z.string().regex(/^[A-Z]{2}$/)),
+      /** Where the list was read, so the claim stays checkable like every other figure. */
+      source: z.string().min(1),
+      verifiedAt: isoDate,
+    })
+    .nullable()
+    .default(null),
+
+  /**
    * A synthesis of what public reviews say about withdrawals, deposits and recurring
    * complaints, clearly labelled as AI-generated rather than folded into the editorial
    * voice above. Transparency about authorship is the point — an unlabelled synthesis

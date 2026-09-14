@@ -123,6 +123,36 @@ two providers, write those two rather than padding the list, and say so in the r
 quietly fill with plausible names. Leave `providers: []` rather than guessing if
 nothing checkable turns up.
 
+## Step 3.7 — restricted countries
+
+Open the operator's own Terms and find the section naming the territories it refuses —
+usually "Restricted Territories", "Prohibited Jurisdictions" or similar. Record it as:
+
+```json
+"restrictions": {
+  "countries": ["AU", "US", "GB"],
+  "source": "rainbet.com Terms of Service, section 4.2",
+  "verifiedAt": "2026-09-14"
+}
+```
+
+ISO 3166-1 alpha-2 only; `validate-content` fails the build on a code that isn't real,
+because an invented code silently never matches and under-reports what the operator
+refuses.
+
+**Leave it `null` if you did not read the terms.** `null` renders as "we have not checked
+this", an empty array renders as "this casino refuses nobody" — those are opposite claims
+and conflating them is the exact failure this field exists to avoid.
+
+**Record refusal, never legality.** An offshore licence authorises the operator to trade
+from its own jurisdiction; it does not make play lawful anywhere, and whether a resident of
+a given country may use an offshore casino is that country's own law. Never write, in this
+field or in an FAQ answer, that a casino is "legal" or "illegal" for a player somewhere.
+Where a real statute is worth naming — Australia's Interactive Gambling Act 2001, say — say
+precisely who it binds: those Acts almost always place the offence on the operator for
+offering the service, not on the individual for using it. Overstating a player's legal
+exposure is as much a factual error as understating it.
+
 ## Step 4 — write the editorial
 
 Read `docs/voice.md` first and follow it exactly. In short:

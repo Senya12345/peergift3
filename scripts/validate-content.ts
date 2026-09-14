@@ -8,6 +8,7 @@ import {
 } from '../src/lib/content';
 import { getFacets } from '../src/lib/facets';
 import { getProviders } from '../src/lib/providers';
+import { COUNTRY_CODES } from '../src/lib/countries';
 import { daysSince, lastVerified } from '../src/lib/ratings';
 import { MIN_RATING_SOURCES, STALE_AFTER_DAYS } from '../src/lib/schemas';
 
@@ -118,6 +119,32 @@ for (const facet of facets) {
   if (!linkedFacets.has(facet.slug)) {
     warnings.push(`facet "/${facet.slug}/" is an orphan — no casino links to it`);
   }
+}
+
+// --- restricted-country lists ---
+
+let withRestrictions = 0;
+for (const casino of casinos) {
+  if (!casino.restrictions) continue;
+  withRestrictions++;
+
+  const seen = new Set<string>();
+  for (const code of casino.restrictions.countries) {
+    // A code that is not real never matches whatever a reader picks, so the checker would
+    // quietly under-report which countries the operator refuses.
+    if (!COUNTRY_CODES.has(code)) {
+      errors.push(`${casino.slug}: "${code}" is not an ISO 3166-1 alpha-2 country code`);
+    }
+    if (seen.has(code)) {
+      warnings.push(`${casino.slug}: country "${code}" listed twice in restrictions`);
+    }
+    seen.add(code);
+  }
+}
+if (withRestrictions < casinos.length) {
+  warnings.push(
+    `${casinos.length - withRestrictions} of ${casinos.length} casinos have no restricted-country list — their country check says so rather than guessing`,
+  );
 }
 
 // --- providers and slots ---
