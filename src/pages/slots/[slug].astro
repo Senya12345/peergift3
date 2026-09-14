@@ -1,0 +1,116 @@
+---
+import JsonLd from '../../components/JsonLd.astro';
+import Base from '../../layouts/Base.astro';
+import { breadcrumbs } from '../../lib/schema';
+import { loadCasinos, loadSlots } from '../../lib/content';
+import { getProviders } from '../../lib/providers';
+import type { Slot } from '../../lib/schemas';
+
+/**
+ * Minimal on purpose. The full slot page — screenshots, mechanics, bonus behaviour — is
+ * still to be designed; this exists so the links from provider pages resolve the moment a
+ * slot record lands, and so the RTP-per-casino table (the reason for the whole exercise)
+ * has somewhere to live from day one.
+ */
+export function getStaticPaths() {
+  return loadSlots().map((slot) => ({ params: { slug: slot.slug }, props: { slot } }));
+}
+
+interface Props {
+  slot: Slot;
+}
+
+const { slot } = Astro.props;
+
+const providerName =
+  getProviders().find((p) => p.slug === slot.provider)?.name ?? slot.provider;
+const casinoName = new Map(loadCasinos().map((c) => [c.slug, c.name]));
+
+const checked = slot.rtpByCasino.filter((row) => row.rtp !== null);
+const rtpValues = checked.map((row) => row.rtp as number);
+const spread =
+  rtpValues.length > 1 && Math.min(...rtpValues) !== Math.max(...rtpValues)
+    ? { low: Math.min(...rtpValues), high: Math.max(...rtpValues) }
+    : null;
+---
+
+<Base
+  title={`${slot.name} RTP by Casino — ${providerName}`}
+  description={`Where ${slot.name} by ${providerName} is available, and the RTP each casino runs it at.`}
+  pageType="slot"
+>
+  <JsonLd
+    slot="head"
+    data={breadcrumbs([
+      { name: 'Home', path: '/' },
+      { name: 'Slots', path: '/slots/' },
+      { name: slot.name, path: `/slots/${slot.slug}/` },
+    ])}
+  />
+
+  <nav aria-label="Breadcrumb" class="mb-4 text-[14px] text-ink-400">
+    <a href="/" class="no-underline hover:text-ink-050">Home</a>
+    <span class="mx-1.5">/</span>
+    <a href="/slots/" class="no-underline hover:text-ink-050">Slots</a>
+    <span class="mx-1.5">/</span>
+    <span class="text-ink-300">{slot.name}</span>
+  </nav>
+
+  <h1 class="text-[30px] sm:text-[34px]">{slot.name}</h1>
+  <p class="mt-1.5 text-ink-300">
+    by <a href={`/providers/${slot.provider}/`} class="text-amber-400 no-underline hover:text-amber-300">{providerName}</a>
+  </p>
+
+  <section class="mt-8" aria-labelledby="rtp">
+    <h2 id="rtp" class="text-[21px]">RTP by casino</h2>
+
+    {
+      spread && (
+        <p class="mt-2 max-w-[62ch] text-ink-300">
+          This game runs at {spread.low}% at one casino and {spread.high}% at another — the
+          same title, configured differently. A single headline RTP would be wrong at one
+          of them.
+        </p>
+      )
+    }
+
+    {
+      slot.rtpByCasino.length === 0 ? (
+        <p class="surface mt-3 p-6 text-ink-300">
+          Not yet checked at any casino on this site.
+        </p>
+      ) : (
+        <table class="tabular mt-3 w-full border-collapse text-[15px]">
+          <thead>
+            <tr class="border-b border-ink-600 text-left text-ink-400">
+              <th scope="col" class="py-2 pr-4 font-normal">Casino</th>
+              <th scope="col" class="py-2 pr-4 font-normal">RTP</th>
+              <th scope="col" class="py-2 font-normal">Checked</th>
+            </tr>
+          </thead>
+          <tbody>
+            {slot.rtpByCasino.map((row) => (
+              <tr class="border-b border-ink-700">
+                <td class="py-2 pr-4">
+                  <a href={`/casinos/${row.casino}/`} class="no-underline hover:text-amber-400">
+                    {casinoName.get(row.casino) ?? row.casino}
+                  </a>
+                </td>
+                <td class="py-2 pr-4">
+                  {row.rtp === null ? (
+                    <span class="text-ink-400">not verified</span>
+                  ) : (
+                    `${row.rtp}%`
+                  )}
+                </td>
+                <td class="py-2 text-ink-400">{row.verifiedAt}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )
+    }
+  </section>
+
+  {slot.summary && <p class="mt-8 max-w-[68ch] text-ink-200">{slot.summary}</p>}
+</Base>

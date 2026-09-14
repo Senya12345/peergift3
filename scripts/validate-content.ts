@@ -1,5 +1,13 @@
-import { loadCasinos, loadCurrencies, loadFactors, RESERVED_SLUGS } from '../src/lib/content';
+import {
+  loadCasinos,
+  loadCurrencies,
+  loadFactors,
+  loadProviders,
+  loadSlots,
+  RESERVED_SLUGS,
+} from '../src/lib/content';
 import { getFacets } from '../src/lib/facets';
+import { getProviders } from '../src/lib/providers';
 import { daysSince, lastVerified } from '../src/lib/ratings';
 import { MIN_RATING_SOURCES, STALE_AFTER_DAYS } from '../src/lib/schemas';
 
@@ -10,7 +18,11 @@ const casinos = loadCasinos();
 const factors = loadFactors();
 const currencies = loadCurrencies();
 const facets = getFacets();
+const providers = loadProviders();
+const slots = loadSlots();
+const providerViews = getProviders();
 
+const casinoSlugs = new Set(casinos.map((c) => c.slug));
 const factorSlugs = new Set(factors.map((f) => f.slug));
 const currencyCodes = new Set(currencies.map((c) => c.code));
 const networksByCode = new Map(currencies.map((c) => [c.code, new Set(c.networks.map((n) => n.code))]));
@@ -108,11 +120,55 @@ for (const facet of facets) {
   }
 }
 
+// --- providers and slots ---
+
+const providerSlugs = new Set<string>();
+for (const provider of providers) {
+  if (providerSlugs.has(provider.slug)) {
+    errors.push(`duplicate provider slug "${provider.slug}"`);
+  }
+  providerSlugs.add(provider.slug);
+}
+
+const slotSlugs = new Set<string>();
+for (const slot of slots) {
+  if (slotSlugs.has(slot.slug)) errors.push(`duplicate slot slug "${slot.slug}"`);
+  slotSlugs.add(slot.slug);
+
+  // A slot pointing at a provider that isn't in the registry renders a link to a 404 and
+  // silently drops the game off that provider's page.
+  if (!providerSlugs.has(slot.provider)) {
+    errors.push(`slot "${slot.slug}": unknown provider "${slot.provider}"`);
+  }
+  for (const row of slot.rtpByCasino) {
+    if (!casinoSlugs.has(row.casino)) {
+      errors.push(`slot "${slot.slug}": RTP recorded against unknown casino "${row.casino}"`);
+    }
+  }
+}
+
+// The whole point of the provider work is the games hanging off it. Until a provider has
+// one, its page is noindexed — worth reporting as a running count rather than a surprise.
+const indexableProviders = providerViews.filter((p) => p.indexable).length;
+if (indexableProviders === 0 && providers.length > 0) {
+  warnings.push(
+    `all ${providers.length} provider pages are noindexed — none has a slot listed yet`,
+  );
+}
+
+const reconstructed = providers.filter((p) => p.nameReconstructed).length;
+if (reconstructed > 0) {
+  warnings.push(
+    `${reconstructed} provider name(s) rebuilt from a casino's i18n keys — spelling unconfirmed`,
+  );
+}
+
 const indexable = facets.filter((f) => f.indexable);
 console.log(
   `validate-content: ${casinos.length} casinos, ${factors.length} factors, ` +
     `${currencies.length} currencies, ${facets.length} facets ` +
-    `(${indexable.length} indexable)`,
+    `(${indexable.length} indexable), ${providers.length} providers ` +
+    `(${indexableProviders} indexable), ${slots.length} slots`,
 );
 
 for (const warning of warnings) console.warn(`  warn  ${warning}`);

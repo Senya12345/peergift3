@@ -13,21 +13,40 @@ const CF_BEACON = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
   GA4_ID && (
     <>
       {/*
-        Consent Mode v2 defaults to denied before anything loads. Visitors arrive from
-        the EU and the UK whether or not we target them, and defaulting to granted is
-        the mistake that turns an analytics setup into a liability.
+        Consent Mode v2, scoped by region.
+
+        This was previously denied everywhere with no way to grant it, since the site has
+        no consent banner — which meant GA4 loaded on every page and reported nothing at
+        all, indefinitely. Denying storage where consent is actually required and allowing
+        it elsewhere is the configuration that matches the law rather than one that
+        silently switches analytics off worldwide.
+
+        The EEA, the UK and Switzerland stay denied until a banner exists to ask properly;
+        advertising storage stays denied everywhere, because nothing here runs ads.
       */}
       <script is:inline>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
           dataLayer.push(arguments);
         }
+        var CONSENT_REQUIRED_REGIONS = [
+          'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU',
+          'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES',
+          'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
+        ];
         gtag('consent', 'default', {
           ad_storage: 'denied',
           ad_user_data: 'denied',
           ad_personalization: 'denied',
           analytics_storage: 'denied',
+          region: CONSENT_REQUIRED_REGIONS,
           wait_for_update: 500,
+        });
+        gtag('consent', 'default', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+          analytics_storage: 'granted',
         });
       </script>
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`} />

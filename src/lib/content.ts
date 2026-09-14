@@ -4,9 +4,13 @@ import {
   casinoSchema,
   currencySchema,
   factorSchema,
+  providerSchema,
+  slotSchema,
   type Casino,
   type Currency,
   type Factor,
+  type Provider,
+  type Slot,
 } from './schemas';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'src/content');
@@ -57,6 +61,8 @@ function parseAll<T>(
 let casinoCache: Casino[] | null = null;
 let factorCache: Factor[] | null = null;
 let currencyCache: Currency[] | null = null;
+let providerCache: Provider[] | null = null;
+let slotCache: Slot[] | null = null;
 
 export function loadCasinos(): Casino[] {
   if (!casinoCache) {
@@ -85,10 +91,42 @@ export function loadCurrencies(): Currency[] {
   return currencyCache;
 }
 
+/**
+ * The provider registry is one file rather than a directory of several hundred, because
+ * it is a bulk import: `scripts/import-providers.ts` rewrites the whole thing from the
+ * captures in scripts/seed/, and one array stays reviewable as a single diff where 700
+ * near-identical files would not.
+ */
+export function loadProviders(): Provider[] {
+  if (!providerCache) {
+    const file = path.join(CONTENT_ROOT, 'providers.json');
+    const raw = fs.existsSync(file)
+      ? (JSON.parse(fs.readFileSync(file, 'utf8')) as unknown[])
+      : [];
+    providerCache = raw.map((entry, i) => {
+      const result = providerSchema.safeParse(entry);
+      if (!result.success) {
+        throw new Error(
+          `Invalid provider at index ${i} in providers.json:\n${JSON.stringify(result.error, null, 2)}`,
+        );
+      }
+      return result.data;
+    });
+  }
+  return providerCache;
+}
+
+export function loadSlots(): Slot[] {
+  if (!slotCache) slotCache = parseAll<Slot>('slots', slotSchema);
+  return slotCache;
+}
+
 /** Path segments that a facet slug may never claim. */
 export const RESERVED_SLUGS = new Set([
   'casinos',
   'articles',
+  'providers',
+  'slots',
   'go',
   'about',
   'contact',

@@ -14,7 +14,9 @@
     "verify": "npm run check && npm run validate && npm run slop-lint && npm run build && npm run assert-no-demo",
     "assert-no-demo": "tsx scripts/assert-no-demo.ts",
     "build-caddy-site": "tsx scripts/build-caddy-site.ts",
-    "submit-indexnow": "tsx scripts/submit-indexnow.ts"
+    "submit-indexnow": "tsx scripts/submit-indexnow.ts",
+    "import-providers": "tsx scripts/import-providers.ts",
+    "fetch-provider-logos": "tsx scripts/fetch-provider-logos.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

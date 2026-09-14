@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSlots } from '../../lib/content';
+import { getProviders } from '../../lib/providers';
+import { SITE } from '../../lib/site';
+
+const slots = [...loadSlots()].sort((a, b) => {
+  if (a.releasedAt && b.releasedAt) return b.releasedAt.localeCompare(a.releasedAt);
+  if (a.releasedAt) return -1;
+  if (b.releasedAt) return 1;
+  return a.name.localeCompare(b.name);
+});
+
+const providerName = new Map(getProviders().map((p) => [p.slug, p.name]));
+
+const PAGE_SIZE = 48;
+---
+
+<Base
+  title={slots.length ? `Slots — RTP by Casino | ${SITE.name}` : `Slots | ${SITE.name}`}
+  description="Slots catalogued by hand, each with the RTP the individual casinos actually run it at rather than one headline figure."
+  noindex={slots.length === 0}
+  pageType="slot"
+>
+  <nav aria-label="Breadcrumb" class="mb-4 text-[14px] text-ink-400">
+    <a href="/" class="no-underline hover:text-ink-050">Home</a>
+    <span class="mx-1.5">/</span>
+    <span class="text-ink-300">Slots</span>
+  </nav>
+
+  <h1 class="text-[34px] sm:text-[40px]">Slots</h1>
+
+  {
+    slots.length === 0 ? (
+      <p class="surface mt-6 max-w-[62ch] p-6 text-ink-300">
+        Nothing here yet. The same slot ships in several RTP configurations and each casino
+        picks one, so every game listed here has to be opened at each casino that carries it
+        and read off its own info panel. That is slow, and the page stays empty until the
+        first of it is done rather than filling up with figures copied from elsewhere.
+      </p>
+    ) : (
+      <>
+        <p class="mt-4 max-w-[62ch] text-ink-300">
+          Each game shows the RTP the individual casinos run it at, read from the game's own
+          info panel rather than from a provider datasheet.
+        </p>
+
+        <label class="mt-6 block max-w-[420px]">
+          <span class="sr-only">Search slots by name</span>
+          <input
+            type="search"
+            id="slot-search"
+            placeholder="Search slots"
+            autocomplete="off"
+            class="w-full rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
+          />
+        </label>
+
+        <p class="mt-3 text-[14px] text-ink-400" id="slot-count" aria-live="polite">
+          {slots.length} {slots.length === 1 ? 'slot' : 'slots'}
+        </p>
+
+        <ul id="slot-grid" class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+          {slots.map((slot) => (
+            <li data-slot-tile data-name={`${slot.name} ${providerName.get(slot.provider) ?? ''}`.toLowerCase()}>
+              <a
+                href={`/slots/${slot.slug}/`}
+                class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
+              >
+                <span class="block text-[15px] text-ink-050">{slot.name}</span>
+                <span class="mt-0.5 block text-[13px] text-ink-400">
+                  {providerName.get(slot.provider) ?? slot.provider}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p id="slot-empty" hidden class="surface mt-4 p-6 text-ink-300">
+          No slot matches that name.
+        </p>
+
+        <div class="mt-6 flex justify-center">
+          <button
+            type="button"
+            id="slot-more"
+            class="rounded-[4px] border border-ink-600 bg-ink-800 px-5 py-2.5 text-[15px] text-ink-100 hover:border-ink-400 hover:text-ink-050"
+          >
+            Load more
+          </button>
+        </div>
+      </>
+    )
+  }
+</Base>
+
+<script is:inline define:vars={{ PAGE_SIZE }}>
+  const grid = document.getElementById('slot-grid');
+  if (grid) {
+    const tiles = [...grid.querySelectorAll('[data-slot-tile]')];
+    const search = document.getElementById('slot-search');
+    const count = document.getElementById('slot-count');
+    const empty = document.getElementById('slot-empty');
+    const more = document.getElementById('slot-more');
+    let limit = PAGE_SIZE;
+
+    function render() {
+      const term = search.value.trim().toLowerCase();
+      let matched = 0;
+      for (const tile of tiles) {
+        const hit = !term || tile.dataset.name.includes(term);
+        if (hit) matched++;
+        tile.hidden = !hit || matched > limit;
+      }
+      count.textContent = `${matched}${matched === 1 ? ' slot' : ' slots'}`;
+      empty.hidden = matched > 0;
+      more.hidden = matched <= limit;
+    }
+
+    search.addEventListener('input', () => {
+      limit = PAGE_SIZE;
+      render();
+    });
+    more.addEventListener('click', () => {
+      limit += PAGE_SIZE;
+      render();
+    });
+    render();
+  }
+</script>

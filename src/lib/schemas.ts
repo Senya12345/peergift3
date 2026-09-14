@@ -13,6 +13,18 @@ export const MIN_RATING_SOURCES = 2;
 /** A facet page stays out of the index until it holds at least this many casinos. */
 export const FACET_MIN_CASINOS = 5;
 
+/**
+ * A provider page stays out of the index until it lists at least this many slots.
+ *
+ * The registry holds hundreds of studios, and a provider page with nothing on it but a
+ * logo and a name is a thin page however good the logo is. Publishing several hundred of
+ * those at once is the scaled-content pattern that gets a young domain buried, so the
+ * pages are built (the grid has to link somewhere) but noindexed and kept out of the
+ * sitemap until they carry actual games. Each one promotes itself the moment its first
+ * slot lands, with no code change.
+ */
+export const PROVIDER_MIN_SLOTS = 1;
+
 /** Build warns when a casino's facts were last checked longer ago than this. */
 export const STALE_AFTER_DAYS = 45;
 
@@ -147,6 +159,61 @@ export const casinoSchema = z.object({
   demo: z.boolean().default(false),
 });
 
+/**
+ * A game studio. Deliberately thin: a provider page earns its place through the games
+ * listed on it, not through a paragraph of invented company history — this site has no
+ * first-hand knowledge of these companies and writing filler about 700 of them is exactly
+ * the machine-generated prose the project exists to avoid.
+ */
+export const providerSchema = z.object({
+  slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  name: z.string().min(1),
+  /** Official site, or null where the address could not be confirmed. Never guessed. */
+  website: z.url().nullable().default(null),
+  /**
+   * Source asset id for the logo. scripts/fetch-provider-logos.ts turns this into a local
+   * file; nothing at runtime reads the remote CDN.
+   */
+  logo: z.string().nullable().default(null),
+  /** Position in Stake's own provider ordering, used as the display order. */
+  stakeRank: z.number().int().nullable().default(null),
+  /** Casino slugs whose published provider list this studio appeared in. */
+  casinos: z.array(z.string()).default([]),
+  /** True when the name was rebuilt from an unresolved i18n key rather than read cleanly. */
+  nameReconstructed: z.boolean().default(false),
+});
+
+/**
+ * One slot, and the point of the whole exercise: `rtpByCasino`.
+ *
+ * The same game ships in several RTP configurations and each casino picks one, so a single
+ * headline RTP is wrong about as often as it is right. Recording it per casino — and
+ * leaving it null where it was not actually checked in that casino's client — is the one
+ * thing on this subject nobody else publishes properly.
+ */
+export const slotSchema = z.object({
+  slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  name: z.string().min(1),
+  /** Must resolve to a provider slug. */
+  provider: z.string().min(1),
+  releasedAt: isoDate.nullable().default(null),
+  volatility: z.enum(['low', 'medium', 'high']).nullable().default(null),
+  maxWin: z.number().positive().nullable().default(null),
+  /** Screenshot filenames under src/assets/slots/. */
+  screenshots: z.array(z.string()).default([]),
+  summary: z.string().nullable().default(null),
+  rtpByCasino: z
+    .array(
+      z.object({
+        casino: z.string().min(1),
+        /** Read from the game's own info panel at that casino, or null if not checked. */
+        rtp: z.number().positive().max(100).nullable().default(null),
+        verifiedAt: isoDate,
+      }),
+    )
+    .default([]),
+});
+
 export const factorSchema = z.object({
   slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   /** Label in the filter list and on chips, e.g. "No KYC". */
@@ -201,6 +268,8 @@ export const currencySchema = z.object({
 export type RatingSourceInput = z.input<typeof ratingSourceSchema>;
 export type CurrencySupport = z.output<typeof currencySupportSchema>;
 export type Casino = z.output<typeof casinoSchema>;
+export type Provider = z.output<typeof providerSchema>;
+export type Slot = z.output<typeof slotSchema>;
 export type Factor = z.output<typeof factorSchema>;
 export type Network = z.output<typeof networkSchema>;
 export type Currency = z.output<typeof currencySchema>;

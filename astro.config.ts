@@ -3,20 +3,26 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { getFacets } from './src/lib/facets';
-import { siteIndexable } from './src/lib/content';
+import { getProviders } from './src/lib/providers';
+import { loadSlots, siteIndexable } from './src/lib/content';
 
 const site = process.env.SITE_URL ?? 'https://gambleatlas.example';
 
 /**
- * Facets below the casino threshold are noindexed, and a noindexed URL in a sitemap is
- * a contradictory signal. Compute the exclusion list from the same source the pages use,
- * so the two can never disagree.
+ * Pages that are built but noindexed, and a noindexed URL in a sitemap is a contradictory
+ * signal. Computed from the same sources the pages use, so the two can never disagree:
+ * facets below the casino threshold, provider pages with no games listed yet, and the
+ * slots index while there are none.
  */
-const noindexPaths = new Set(
-  getFacets()
+const noindexPaths = new Set([
+  ...getFacets()
     .filter((f) => !f.indexable)
     .map((f) => `/${f.slug}/`),
-);
+  ...getProviders()
+    .filter((p) => !p.indexable)
+    .map((p) => `/providers/${p.slug}/`),
+  ...(loadSlots().length === 0 ? ['/slots/'] : []),
+]);
 
 export default defineConfig({
   site,

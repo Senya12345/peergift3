@@ -100,6 +100,26 @@ shows exactly what's different. Replace that block in `/etc/caddy/Caddyfile` by 
 with the new `deploy/gambleatlas-site.caddy` contents, then `caddy validate` and
 `systemctl reload caddy` again.
 
+## Fetching the provider logos
+
+The build sandbox cannot reach the CDN these logos come from, so this one step has to run
+where the network can — this box. It downloads each mark once, knocks the flat backdrop out
+to transparency and writes a WebP into `src/assets/providers/`:
+
+```bash
+cd /var/www/gambleatlas
+npm run fetch-provider-logos
+```
+
+Several hundred files, a few minutes. Already-downloaded logos are skipped, so re-running
+after adding providers only fetches the new ones. **Commit the result** — the site serves
+them itself and never touches the remote CDN at runtime, which is the whole point:
+hotlinking bills someone else for our traffic and stops working the day they check the
+referer.
+
+Until this has run, provider tiles fall back to the studio name as text. Nothing breaks;
+the grid just reads as words rather than logos.
+
 ## Pushing new URLs to Bing (IndexNow)
 
 Google has no push protocol — new pages wait for a crawl. Bing, Yandex, Seznam and Naver

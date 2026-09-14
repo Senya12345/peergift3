@@ -1,0 +1,200 @@
+---
+import JsonLd from '../../components/JsonLd.astro';
+import ProviderLogo from '../../components/ProviderLogo.astro';
+import Base from '../../layouts/Base.astro';
+import { breadcrumbs } from '../../lib/schema';
+import { getProviders, type ProviderView } from '../../lib/providers';
+import { absolute } from '../../lib/site';
+
+export function getStaticPaths() {
+  return getProviders().map((provider) => ({
+    params: { slug: provider.slug },
+    props: { provider },
+  }));
+}
+
+interface Props {
+  provider: ProviderView;
+}
+
+const { provider } = Astro.props;
+const { slots } = provider;
+
+const PAGE_SIZE = 48;
+
+const description = slots.length
+  ? `${slots.length} ${slots.length === 1 ? 'game' : 'games'} from ${provider.name}, with the RTP each casino runs them at.`
+  : `${provider.name} on Gamble Atlas — the games we have recorded from this studio.`;
+---
+
+<Base
+  title={`${provider.name} Slots and Casinos`}
+  description={description}
+  noindex={!provider.indexable}
+  pageType="provider"
+>
+  <JsonLd
+    slot="head"
+    data={[
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Providers', path: '/providers/' },
+        { name: provider.name, path: `/providers/${provider.slug}/` },
+      ]),
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        '@id': absolute(`/providers/${provider.slug}/`),
+        name: provider.name,
+        ...(provider.website ? { url: provider.website } : {}),
+      },
+    ]}
+  />
+
+  <nav aria-label="Breadcrumb" class="mb-4 text-[14px] text-ink-400">
+    <a href="/" class="no-underline hover:text-ink-050">Home</a>
+    <span class="mx-1.5">/</span>
+    <a href="/providers/" class="no-underline hover:text-ink-050">Providers</a>
+    <span class="mx-1.5">/</span>
+    <span class="text-ink-300">{provider.name}</span>
+  </nav>
+
+  <div class="flex flex-wrap items-center gap-5">
+    <span
+      class="flex h-[86px] w-[180px] shrink-0 items-center justify-center rounded-[4px] border border-ink-600 bg-ink-800 p-3"
+    >
+      <ProviderLogo slug={provider.slug} name={provider.name} />
+    </span>
+
+    <div class="min-w-0">
+      <h1 class="text-[30px] sm:text-[34px]">{provider.name}</h1>
+      {
+        provider.website && (
+          <a
+            href={provider.website}
+            rel="nofollow noopener"
+            target="_blank"
+            class="mt-1.5 inline-block text-[15px] text-amber-400 hover:text-amber-300"
+          >
+            Official site ↗
+          </a>
+        )
+      }
+      {
+        provider.nameReconstructed && (
+          /*
+            Stake's own directory served this studio as an untranslated key rather than a
+            name, so what is shown was rebuilt from that key. Saying so is cheaper than
+            quietly presenting a guess as fact.
+          */
+          <p class="mt-1.5 text-[13px] text-ink-400">
+            Name reconstructed from the casino's own listing — spelling not confirmed with
+            the studio.
+          </p>
+        )
+      }
+    </div>
+  </div>
+
+  <section class="mt-9" aria-labelledby="games">
+    <h2 id="games" class="text-[21px]">Games</h2>
+
+    {
+      slots.length === 0 ? (
+        <p class="surface mt-3 p-6 text-ink-300">
+          No games from {provider.name} have been catalogued yet. They are added by hand,
+          with the RTP checked separately at each casino that carries them, so this page
+          fills up slowly rather than all at once.
+        </p>
+      ) : (
+        <>
+          <label class="mt-4 block max-w-[420px]">
+            <span class="sr-only">Search {provider.name} games by name</span>
+            <input
+              type="search"
+              id="slot-search"
+              placeholder={`Search ${provider.name} games`}
+              autocomplete="off"
+              class="w-full rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
+            />
+          </label>
+
+          <p class="mt-3 text-[14px] text-ink-400" id="slot-count" aria-live="polite">
+            {slots.length} {slots.length === 1 ? 'game' : 'games'}
+          </p>
+
+          <ul
+            id="slot-grid"
+            class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4"
+          >
+            {slots.map((slot) => (
+              <li data-slot-tile data-name={slot.name.toLowerCase()}>
+                <a
+                  href={`/slots/${slot.slug}/`}
+                  class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
+                >
+                  <span class="block text-[15px] text-ink-050">{slot.name}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <p id="slot-empty" hidden class="surface mt-4 p-6 text-ink-300">
+            No game matches that name.
+          </p>
+
+          <div class="mt-6 flex justify-center">
+            <button
+              type="button"
+              id="slot-more"
+              class="rounded-[4px] border border-ink-600 bg-ink-800 px-5 py-2.5 text-[15px] text-ink-100 hover:border-ink-400 hover:text-ink-050"
+            >
+              Load more
+            </button>
+          </div>
+        </>
+      )
+    }
+  </section>
+
+  <p class="mt-10 text-[14px]">
+    <a href="/providers/" class="text-ink-300 no-underline hover:text-ink-050">
+      ← All providers
+    </a>
+  </p>
+</Base>
+
+<script is:inline define:vars={{ PAGE_SIZE }}>
+  const grid = document.getElementById('slot-grid');
+  if (grid) {
+    const tiles = [...grid.querySelectorAll('[data-slot-tile]')];
+    const search = document.getElementById('slot-search');
+    const count = document.getElementById('slot-count');
+    const empty = document.getElementById('slot-empty');
+    const more = document.getElementById('slot-more');
+    let limit = PAGE_SIZE;
+
+    function render() {
+      const term = search.value.trim().toLowerCase();
+      let matched = 0;
+      for (const tile of tiles) {
+        const hit = !term || tile.dataset.name.includes(term);
+        if (hit) matched++;
+        tile.hidden = !hit || matched > limit;
+      }
+      count.textContent = `${matched}${matched === 1 ? ' game' : ' games'}`;
+      empty.hidden = matched > 0;
+      more.hidden = matched <= limit;
+    }
+
+    search.addEventListener('input', () => {
+      limit = PAGE_SIZE;
+      render();
+    });
+    more.addEventListener('click', () => {
+      limit += PAGE_SIZE;
+      render();
+    });
+    render();
+  }
+</script>
