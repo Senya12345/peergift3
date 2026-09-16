@@ -126,7 +126,7 @@ const PAGE_SIZE = 48;
   </p>
 </Base>
 
-<script is:inline define:vars={{ PAGE_SIZE, restCount, casinoSlug: casino.slug }}>
+<script is:inline define:vars={{ PAGE_SIZE, restCount, totalCount: slots.length, casinoSlug: casino.slug }}>
   const grid = document.getElementById('slot-grid');
   if (grid) {
     const search = document.getElementById('slot-search');
@@ -195,6 +195,7 @@ const PAGE_SIZE = 48;
     function render() {
       const term = search.value.trim().toLowerCase();
       const provider = providerFilter.value;
+      const filtered = term || provider;
       const all = tiles();
       let matched = 0;
       for (const tile of all) {
@@ -204,7 +205,11 @@ const PAGE_SIZE = 48;
         if (hit) matched++;
         tile.hidden = !hit || matched > limit;
       }
-      count.textContent = `${matched}${matched === 1 ? ' slot' : ' slots'}`;
+      // With no filter active, "matched" only counts the tiles physically in the DOM so
+      // far (the first page, until "load more"/a filter pulls in the rest) — not the
+      // casino's real total, which is what a visitor reading this number wants.
+      const shown = filtered ? matched : totalCount;
+      count.textContent = `${shown}${shown === 1 ? ' slot' : ' slots'}`;
       empty.hidden = matched > 0;
       if (more) more.hidden = restRendered && matched <= limit;
     }

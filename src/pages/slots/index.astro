@@ -95,7 +95,7 @@ const PAGE_SIZE = 48;
   }
 </Base>
 
-<script is:inline define:vars={{ PAGE_SIZE, restCount }}>
+<script is:inline define:vars={{ PAGE_SIZE, restCount, totalCount: slots.length }}>
   const grid = document.getElementById('slot-grid');
   if (grid) {
     const search = document.getElementById('slot-search');
@@ -171,7 +171,11 @@ const PAGE_SIZE = 48;
         if (hit) matched++;
         tile.hidden = !hit || matched > limit;
       }
-      count.textContent = `${matched}${matched === 1 ? ' slot' : ' slots'}`;
+      // With no search term, "matched" is only the tiles physically in the DOM so far
+      // (the first page, until "load more"/search pulls in the rest) — not the real
+      // total, which is what a visitor reading this number actually wants to see.
+      const shown = term ? matched : totalCount;
+      count.textContent = `${shown}${shown === 1 ? ' slot' : ' slots'}`;
       empty.hidden = matched > 0;
       if (more) more.hidden = restRendered && matched <= limit;
     }
