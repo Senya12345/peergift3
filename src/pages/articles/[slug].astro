@@ -1,10 +1,12 @@
 ---
 import { getCollection, render } from 'astro:content';
+import CasinoCard from '../../components/CasinoCard.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import Prose from '../../components/Prose.astro';
 import Base from '../../layouts/Base.astro';
 import { authorSchema, getAuthor } from '../../lib/authors';
-import { breadcrumbs, organizationId } from '../../lib/schema';
+import { getFacets } from '../../lib/facets';
+import { breadcrumbs, organizationRef } from '../../lib/schema';
 import { absolute, SITE } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -19,6 +21,11 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 const author = getAuthor(article.data.author);
 const path = `/articles/${article.id}/`;
+
+const relatedFacet = article.data.relatedFactor
+  ? getFacets().find((f) => f.kind === 'factor' && f.key === article.data.relatedFactor)
+  : undefined;
+const relatedCasinos = relatedFacet?.casinos ?? [];
 ---
 
 <Base
@@ -39,7 +46,7 @@ const path = `/articles/${article.id}/`;
         datePublished: article.data.publishedAt,
         dateModified: article.data.updatedAt ?? article.data.publishedAt,
         author: authorSchema(author),
-        publisher: { '@id': organizationId },
+        publisher: organizationRef(),
         mainEntityOfPage: absolute(path),
       },
       breadcrumbs([
@@ -80,4 +87,19 @@ const path = `/articles/${article.id}/`;
     <p><span class="font-display font-bold text-ink-050">{author.name}</span> — {author.role}</p>
     <p class="mt-1.5">{author.bio}</p>
   </aside>
+
+  {
+    relatedCasinos.length > 0 && (
+      <section class="mt-10" aria-labelledby="related-casinos">
+        <h2 id="related-casinos" class="text-[21px]">
+          Casinos with {relatedFacet!.name.toLowerCase()}
+        </h2>
+        <div class="mt-4 flex flex-col gap-2.5">
+          {relatedCasinos.map((casino, i) => (
+            <CasinoCard casino={casino} rank={i + 1} />
+          ))}
+        </div>
+      </section>
+    )
+  }
 </Base>

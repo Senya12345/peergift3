@@ -19,6 +19,13 @@ const articles = defineCollection({
       .string()
       .regex(/^\d{4}-\d{2}-\d{2}$/)
       .optional(),
+    /**
+     * A factor slug (src/content/factors/) whose casinos render as cards at the bottom of
+     * the article — e.g. the no-KYC explainer links out to every no-KYC casino. Explicit
+     * rather than inferred from the article's prose, so the list only ever contains
+     * casinos actually tagged with that factor, not a guess at what the text is about.
+     */
+    relatedFactor: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

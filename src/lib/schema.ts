@@ -30,7 +30,7 @@ export function organization(): Json {
  * no `name` and no `@type`. Repeating `name` and `url` inline costs a few bytes and
  * keeps every page's structured data self-contained.
  */
-function organizationRef(): Json {
+export function organizationRef(): Json {
   return { '@type': 'Organization', '@id': organizationId, name: SITE.name, url: SITE.url };
 }
 

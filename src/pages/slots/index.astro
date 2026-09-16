@@ -37,15 +37,12 @@ const PAGE_SIZE = 48;
   {
     slots.length === 0 ? (
       <p class="surface mt-6 max-w-[62ch] p-6 text-ink-300">
-        Nothing here yet. The catalogue is built by importing each casino's own game list
-        and merging the same title across casinos, so the page stays empty until the first
-        import lands rather than filling up with placeholder rows.
+        Nothing here yet. Games appear here as they're added.
       </p>
     ) : (
       <>
         <p class="mt-4 max-w-[62ch] text-ink-300">
-          {slots.length} games, ordered the way Stake's own lobby ranks them where Stake
-          carries the game — otherwise by how prominent it is at whichever casino does.
+          {slots.length} games across the casinos on this site.
         </p>
 
         <label class="mt-6 block max-w-[420px]">
