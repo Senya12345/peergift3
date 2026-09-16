@@ -112,8 +112,6 @@ const BARE_BRAND_ALIASES: Record<string, string> = {
   '1x2gaming': '1x2 Gaming',
   popiplay: 'Popiplay',
   shadylady: 'Shady Lady',
-  truelab: 'TrueLab Games',
-  truelabs: 'TrueLab Games',
 };
 
 const slugify = (name: string): string =>
@@ -179,6 +177,9 @@ const TOKEN_ALIASES: Record<string, string> = {
   bigdaddygaming: 'Big Daddy Gaming',
   truelab: 'TrueLab Gaming',
   truelabs: 'TrueLab Gaming',
+  truelabgames: 'TrueLab Gaming',
+  truelabgaming: 'TrueLab Gaming',
+  peterandsons: 'Peter & Sons',
 };
 
 /** href-derived provider slugs (dash-joined) not already covered by the 766-entry
