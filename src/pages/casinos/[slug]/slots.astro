@@ -1,0 +1,209 @@
+---
+import Base from '../../../layouts/Base.astro';
+import {
+  CASINO_SLOTS_PAGE_INITIAL_COUNT,
+  getCasinoProviders,
+  getCasinoSlots,
+} from '../../../lib/casino-slots';
+import { loadCasinos } from '../../../lib/content';
+import { SITE } from '../../../lib/site';
+import type { Casino } from '../../../lib/schemas';
+
+/**
+ * The full per-casino slot list the teaser on /casinos/{slug}/ links out to — its own
+ * page because "1win slots" is a real, separate search intent from "1win review", and
+ * cramming several thousand tiles into the review page would make an already-long page
+ * unreadable for exactly the audience (mobile, impulse-driven) this site optimised
+ * PageNav and the back-to-top button for.
+ */
+export function getStaticPaths() {
+  return loadCasinos()
+    .filter((casino) => getCasinoSlots(casino.slug).length > 0)
+    .map((casino) => ({ params: { slug: casino.slug }, props: { casino } }));
+}
+
+interface Props {
+  casino: Casino;
+}
+
+const { casino } = Astro.props;
+const slots = getCasinoSlots(casino.slug);
+const providers = getCasinoProviders(casino.slug);
+
+const initial = slots.slice(0, CASINO_SLOTS_PAGE_INITIAL_COUNT);
+const restCount = slots.length - initial.length;
+
+const PAGE_SIZE = 48;
+---
+
+<Base
+  title={`${casino.name} Slots — ${slots.length.toLocaleString('en-US')} Games | ${SITE.name}`}
+  description={`Every slot ${casino.name} carries, ${slots.length.toLocaleString('en-US')} games from ${providers.length} providers, in ${casino.name}'s own catalogue order.`}
+  pageType="slot"
+>
+  <nav aria-label="Breadcrumb" class="mb-4 text-[14px] text-ink-400">
+    <a href="/" class="no-underline hover:text-ink-050">Home</a>
+    <span class="mx-1.5">/</span>
+    <a href={`/casinos/${casino.slug}/`} class="no-underline hover:text-ink-050">{casino.name}</a>
+    <span class="mx-1.5">/</span>
+    <span class="text-ink-300">Slots</span>
+  </nav>
+
+  <h1 class="text-[30px] sm:text-[34px]">{casino.name} slots</h1>
+  <p class="mt-2 max-w-[62ch] text-ink-300">
+    {slots.length.toLocaleString('en-US')} games from {providers.length} providers, in{' '}
+    {casino.name}'s own catalogue order.
+  </p>
+
+  <div class="mt-6 flex flex-wrap gap-3">
+    <label class="block max-w-[420px] flex-1">
+      <span class="sr-only">Search {casino.name} slots</span>
+      <input
+        type="search"
+        id="slot-search"
+        placeholder={`Search ${casino.name} slots`}
+        autocomplete="off"
+        class="w-full rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050 placeholder:text-ink-400"
+      />
+    </label>
+    <label class="block">
+      <span class="sr-only">Filter by provider</span>
+      <select
+        id="provider-filter"
+        class="rounded-[4px] border border-ink-600 bg-ink-800 px-3 py-2.5 text-ink-050"
+      >
+        <option value="">All providers</option>
+        {providers.map((p) => (
+          <option value={p.slug}>{p.name} ({p.slotCount})</option>
+        ))}
+      </select>
+    </label>
+  </div>
+
+  <p class="mt-3 text-[14px] text-ink-400" id="slot-count" aria-live="polite">
+    {slots.length} {slots.length === 1 ? 'slot' : 'slots'}
+  </p>
+
+  <ul id="slot-grid" class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+    {initial.map(({ slot }) => (
+      <li
+        data-slot-tile
+        data-name={slot.name.toLowerCase()}
+        data-provider={slot.provider}
+      >
+        <a
+          href={`/slots/${slot.slug}/`}
+          class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
+        >
+          <span class="block text-[15px] text-ink-050">{slot.name}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <p id="slot-empty" hidden class="surface mt-4 p-6 text-ink-300">
+    No slot matches that filter.
+  </p>
+
+  {restCount > 0 && (
+    <div class="mt-6 flex justify-center">
+      <button
+        type="button"
+        id="slot-more"
+        class="rounded-[4px] border border-ink-600 bg-ink-800 px-5 py-2.5 text-[15px] text-ink-100 hover:border-ink-400 hover:text-ink-050"
+      >
+        Load more
+      </button>
+    </div>
+  )}
+
+  <p class="mt-10 text-[14px]">
+    <a href={`/casinos/${casino.slug}/`} class="text-ink-300 no-underline hover:text-ink-050">
+      ← Back to the {casino.name} review
+    </a>
+  </p>
+</Base>
+
+<script is:inline define:vars={{ PAGE_SIZE, restCount, casinoSlug: casino.slug }}>
+  const grid = document.getElementById('slot-grid');
+  if (grid) {
+    const search = document.getElementById('slot-search');
+    const providerFilter = document.getElementById('provider-filter');
+    const count = document.getElementById('slot-count');
+    const empty = document.getElementById('slot-empty');
+    const more = document.getElementById('slot-more');
+
+    let restPromise = null;
+    function loadRest() {
+      if (!restPromise) {
+        restPromise = restCount > 0
+          ? fetch(`/casinos/${casinoSlug}/slots.json`).then((r) => r.json()).catch(() => [])
+          : Promise.resolve([]);
+      }
+      return restPromise;
+    }
+
+    let restRendered = false;
+
+    function makeTile(slot) {
+      const li = document.createElement('li');
+      li.dataset.slotTile = '';
+      li.dataset.name = slot.name.toLowerCase();
+      li.dataset.provider = slot.provider;
+      li.innerHTML = `<a href="/slots/${slot.slug}/" class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400">
+        <span class="block text-[15px] text-ink-050"></span>
+      </a>`;
+      li.querySelector('span').textContent = slot.name;
+      return li;
+    }
+
+    async function ensureRestRendered() {
+      if (restRendered) return;
+      restRendered = true;
+      const rest = await loadRest();
+      const frag = document.createDocumentFragment();
+      for (const slot of rest) frag.appendChild(makeTile(slot));
+      grid.appendChild(frag);
+    }
+
+    function tiles() {
+      return [...grid.querySelectorAll('[data-slot-tile]')];
+    }
+
+    let limit = PAGE_SIZE;
+
+    function render() {
+      const term = search.value.trim().toLowerCase();
+      const provider = providerFilter.value;
+      const all = tiles();
+      let matched = 0;
+      for (const tile of all) {
+        const hit =
+          (!term || tile.dataset.name.includes(term)) &&
+          (!provider || tile.dataset.provider === provider);
+        if (hit) matched++;
+        tile.hidden = !hit || matched > limit;
+      }
+      count.textContent = `${matched}${matched === 1 ? ' slot' : ' slots'}`;
+      empty.hidden = matched > 0;
+      if (more) more.hidden = restRendered && matched <= limit;
+    }
+
+    async function onFilterChange() {
+      limit = PAGE_SIZE;
+      if (search.value.trim() || providerFilter.value) await ensureRestRendered();
+      render();
+    }
+
+    search.addEventListener('input', onFilterChange);
+    providerFilter.addEventListener('change', onFilterChange);
+    if (more) {
+      more.addEventListener('click', async () => {
+        limit += PAGE_SIZE;
+        await ensureRestRendered();
+        render();
+      });
+    }
+    render();
+  }
+</script>

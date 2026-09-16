@@ -70,9 +70,9 @@ const PAGE_SIZE = 60;
           <a
             href={`/providers/${p.slug}/`}
             title={p.name}
-            class="flex h-[76px] items-center justify-center rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline transition-colors hover:border-ink-400 hover:bg-ink-700"
+            class="flex h-[92px] items-center justify-center rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline transition-colors hover:border-ink-400 hover:bg-ink-700"
           >
-            <ProviderLogo slug={p.slug} name={p.name} />
+            <ProviderLogo slug={p.slug} name={p.name} slotCount={p.slots.length} />
             <span class="sr-only">{p.name}</span>
           </a>
         </li>

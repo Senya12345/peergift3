@@ -4,9 +4,11 @@ import CoinIcon from '../../components/CoinIcon.astro';
 import CountryCheck from '../../components/CountryCheck.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import PageNav from '../../components/PageNav.astro';
+import ProviderLogo from '../../components/ProviderLogo.astro';
 import RatingTable from '../../components/RatingTable.astro';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbs, casinoReview, faqPage } from '../../lib/schema';
+import { getCasinoProviders, getCasinoSlots } from '../../lib/casino-slots';
 import { loadCasinos } from '../../lib/content';
 import { facetsForCasino } from '../../lib/facets';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
@@ -32,6 +34,18 @@ const verified = lastVerified(casino);
 const facets = facetsForCasino(casino);
 const factorFacets = facets.filter((f) => f.kind === 'factor');
 const currencyFacets = facets.filter((f) => f.kind === 'currency');
+
+// From the casino's own catalogued slots, not the hand-typed Casino.providers list — see
+// src/lib/casino-slots.ts for why that distinction matters.
+const casinoProviders = getCasinoProviders(casino.slug);
+const casinoSlots = getCasinoSlots(casino.slug);
+const PROVIDER_PREVIEW = 24;
+// Stake alone lists over a thousand studios — rendering every one of them as a logo
+// tile inside the expand block took this page from ~90KB to 640KB. Every other casino
+// sits under 130, so this cap only ever bites for Stake, and the overflow still links
+// somewhere real rather than just being dropped.
+const PROVIDER_EXPAND_CAP = 200;
+const SLOT_TEASER = 12;
 
 const bandClass = {
   high: 'text-score-high',
@@ -74,6 +88,11 @@ const sections = [
     id: 'coins',
     label: 'Coins',
     heading: 'Supported coins',
+  },
+  casinoSlots.length > 0 && {
+    id: 'games',
+    label: 'Games',
+    heading: 'Providers and games',
   },
   (factorFacets.length > 0 || currencyFacets.length > 0) && {
     id: 'features',
@@ -280,6 +299,87 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
             </tbody>
           </table>
         </div>
+      </section>
+    )
+  }
+
+  {
+    casinoSlots.length > 0 && (
+      <section class="mt-10">
+        <h2 id="games" class="text-[24px]">{heading('games')}</h2>
+        <p class="mt-2 max-w-[68ch] text-[14px] text-ink-400">
+          {casinoSlots.length.toLocaleString('en-US')} games from {casinoProviders.length}{' '}
+          providers, read off {casino.name}'s own catalogue and ordered the way it lists
+          them.
+        </p>
+
+        <h3 class="mt-6 text-[16px] text-ink-300">Providers</h3>
+        <ul class="mt-3 grid grid-cols-3 gap-2.5 sm:grid-cols-4 md:grid-cols-6">
+          {casinoProviders.slice(0, PROVIDER_PREVIEW).map((p) => (
+            <li>
+              <a
+                href={`/providers/${p.slug}/`}
+                title={p.name}
+                class="flex h-[92px] items-center justify-center rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline transition-colors hover:border-ink-400 hover:bg-ink-700"
+              >
+                <ProviderLogo slug={p.slug} name={p.name} slotCount={p.slotCount} />
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {casinoProviders.length > PROVIDER_PREVIEW && (
+          <details class="group mt-3">
+            <summary class="inline-block cursor-pointer text-[14px] text-amber-400 no-underline hover:text-amber-300 [&::-webkit-details-marker]:hidden">
+              Show all {casinoProviders.length} providers
+            </summary>
+            <ul class="mt-3 grid grid-cols-3 gap-2.5 sm:grid-cols-4 md:grid-cols-6">
+              {casinoProviders.slice(PROVIDER_PREVIEW, PROVIDER_EXPAND_CAP).map((p) => (
+                <li>
+                  <a
+                    href={`/providers/${p.slug}/`}
+                    title={p.name}
+                    class="flex h-[92px] items-center justify-center rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline transition-colors hover:border-ink-400 hover:bg-ink-700"
+                  >
+                    <ProviderLogo slug={p.slug} name={p.name} slotCount={p.slotCount} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {casinoProviders.length > PROVIDER_EXPAND_CAP && (
+              <p class="mt-3 text-[14px] text-ink-400">
+                and {casinoProviders.length - PROVIDER_EXPAND_CAP} more — see the full{' '}
+                <a href="/providers/" class="text-amber-400 no-underline hover:text-amber-300">
+                  provider directory
+                </a>.
+              </p>
+            )}
+          </details>
+        )}
+
+        <h3 class="mt-8 text-[16px] text-ink-300">Games</h3>
+        <ul class="mt-3 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+          {casinoSlots.slice(0, SLOT_TEASER).map(({ slot }) => (
+            <li>
+              <a
+                href={`/slots/${slot.slug}/`}
+                class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
+              >
+                <span class="block text-[15px] text-ink-050">{slot.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        {casinoSlots.length > SLOT_TEASER && (
+          <p class="mt-4">
+            <a
+              href={`/casinos/${casino.slug}/slots/`}
+              class="text-[14px] text-amber-400 no-underline hover:text-amber-300"
+            >
+              See all {casinoSlots.length.toLocaleString('en-US')} games at {casino.name} →
+            </a>
+          </p>
+        )}
       </section>
     )
   }

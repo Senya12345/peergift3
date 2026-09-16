@@ -44,7 +44,14 @@ export default defineConfig({
           sitemap({
             filter: (page) => {
               const { pathname } = new URL(page);
-              return !pathname.startsWith('/go/') && !noindexPaths.has(pathname);
+              // .json endpoints (slots-index.json, casinos/{slug}/slots.json) back the
+              // client-side "load more" pagination — data, not a page anyone should land
+              // on from search.
+              return (
+                !pathname.startsWith('/go/') &&
+                !pathname.endsWith('.json') &&
+                !noindexPaths.has(pathname)
+              );
             },
           }),
         ]
