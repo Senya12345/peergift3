@@ -116,8 +116,27 @@ export function loadProviders(): Provider[] {
   return providerCache;
 }
 
+/**
+ * Same bulk-file pattern as loadProviders(): scripts/import-slots.ts rewrites this whole
+ * file from the seed captures in scripts/seed/slots/, and thousands of near-identical
+ * per-game files would never be a reviewable diff the way one array is.
+ */
 export function loadSlots(): Slot[] {
-  if (!slotCache) slotCache = parseAll<Slot>('slots', slotSchema);
+  if (!slotCache) {
+    const file = path.join(CONTENT_ROOT, 'slots.json');
+    const raw = fs.existsSync(file)
+      ? (JSON.parse(fs.readFileSync(file, 'utf8')) as unknown[])
+      : [];
+    slotCache = raw.map((entry, i) => {
+      const result = slotSchema.safeParse(entry);
+      if (!result.success) {
+        throw new Error(
+          `Invalid slot at index ${i} in slots.json:\n${JSON.stringify(result.error, null, 2)}`,
+        );
+      }
+      return result.data;
+    });
+  }
   return slotCache;
 }
 

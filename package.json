@@ -16,7 +16,9 @@
     "build-caddy-site": "tsx scripts/build-caddy-site.ts",
     "submit-indexnow": "tsx scripts/submit-indexnow.ts",
     "import-providers": "tsx scripts/import-providers.ts",
-    "fetch-provider-logos": "tsx scripts/fetch-provider-logos.ts"
+    "fetch-provider-logos": "tsx scripts/fetch-provider-logos.ts",
+    "import-slots": "tsx scripts/import-slots.ts",
+    "fetch-slot-images": "tsx scripts/fetch-slot-images.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

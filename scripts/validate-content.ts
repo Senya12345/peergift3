@@ -10,7 +10,7 @@ import { getFacets } from '../src/lib/facets';
 import { getProviders } from '../src/lib/providers';
 import { COUNTRY_CODES } from '../src/lib/countries';
 import { daysSince, lastVerified } from '../src/lib/ratings';
-import { MIN_RATING_SOURCES, STALE_AFTER_DAYS } from '../src/lib/schemas';
+import { MIN_RATING_SOURCES, SLOT_MIN_CASINOS, STALE_AFTER_DAYS } from '../src/lib/schemas';
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -172,6 +172,21 @@ for (const slot of slots) {
       errors.push(`slot "${slot.slug}": RTP recorded against unknown casino "${row.casino}"`);
     }
   }
+  const seenAvailability = new Set<string>();
+  for (const row of slot.availability) {
+    if (!casinoSlugs.has(row.casino)) {
+      errors.push(`slot "${slot.slug}": listed at unknown casino "${row.casino}"`);
+    }
+    if (seenAvailability.has(row.casino)) {
+      errors.push(`slot "${slot.slug}": casino "${row.casino}" listed twice in availability`);
+    }
+    seenAvailability.add(row.casino);
+    if (row.position >= row.total) {
+      errors.push(
+        `slot "${slot.slug}": position ${row.position} at "${row.casino}" is not less than that casino's catalogue size ${row.total}`,
+      );
+    }
+  }
 }
 
 // The whole point of the provider work is the games hanging off it. Until a provider has
@@ -186,7 +201,17 @@ if (indexableProviders === 0 && providers.length > 0) {
 const reconstructed = providers.filter((p) => p.nameReconstructed).length;
 if (reconstructed > 0) {
   warnings.push(
-    `${reconstructed} provider name(s) rebuilt from a casino's i18n keys — spelling unconfirmed`,
+    `${reconstructed} provider name(s) best-effort reconstructed (from a casino's i18n keys or an unresolved slot import token) — spelling unconfirmed`,
+  );
+}
+
+// Same thin-content gate as providers, one step further down: a slot found at one or two
+// casinos is a page with nothing to compare, so it stays noindexed until a third casino
+// picks it up. See SLOT_MIN_CASINOS in src/lib/schemas.ts for the reasoning.
+const indexableSlots = slots.filter((s) => s.availability.length >= SLOT_MIN_CASINOS).length;
+if (slots.length > 0) {
+  warnings.push(
+    `${indexableSlots} of ${slots.length} slots are indexable (at ${SLOT_MIN_CASINOS}+ casinos); the rest are noindexed until a ${SLOT_MIN_CASINOS === 3 ? 'third' : `${SLOT_MIN_CASINOS}th`} casino lists them`,
   );
 }
 
@@ -195,7 +220,7 @@ console.log(
   `validate-content: ${casinos.length} casinos, ${factors.length} factors, ` +
     `${currencies.length} currencies, ${facets.length} facets ` +
     `(${indexable.length} indexable), ${providers.length} providers ` +
-    `(${indexableProviders} indexable), ${slots.length} slots`,
+    `(${indexableProviders} indexable), ${slots.length} slots (${indexableSlots} indexable)`,
 );
 
 for (const warning of warnings) console.warn(`  warn  ${warning}`);

@@ -1,24 +1,27 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { loadSlots } from '../../lib/content';
 import { getProviders } from '../../lib/providers';
+import { getSlots, SLOTS_PAGE_INITIAL_COUNT } from '../../lib/slots';
 import { SITE } from '../../lib/site';
 
-const slots = [...loadSlots()].sort((a, b) => {
-  if (a.releasedAt && b.releasedAt) return b.releasedAt.localeCompare(a.releasedAt);
-  if (a.releasedAt) return -1;
-  if (b.releasedAt) return 1;
-  return a.name.localeCompare(b.name);
-});
-
+const slots = getSlots();
 const providerName = new Map(getProviders().map((p) => [p.slug, p.name]));
+
+/**
+ * Only the first page ships as real HTML — see slots-index.json.ts for why. This is
+ * still the site's own default order (Stake's own catalogue position, normalised across
+ * casinos), so the tiles a crawler actually reads are the most prominent games, not an
+ * arbitrary alphabetical slice.
+ */
+const initial = slots.slice(0, SLOTS_PAGE_INITIAL_COUNT);
+const restCount = slots.length - initial.length;
 
 const PAGE_SIZE = 48;
 ---
 
 <Base
-  title={slots.length ? `Slots — RTP by Casino | ${SITE.name}` : `Slots | ${SITE.name}`}
-  description="Slots catalogued by hand, each with the RTP the individual casinos actually run it at rather than one headline figure."
+  title={slots.length ? `Slots — Where to Play Them | ${SITE.name}` : `Slots | ${SITE.name}`}
+  description="Every slot catalogued across the casinos on this site, with which ones actually carry it and the RTP each one runs, where checked."
   noindex={slots.length === 0}
   pageType="slot"
 >
@@ -33,16 +36,15 @@ const PAGE_SIZE = 48;
   {
     slots.length === 0 ? (
       <p class="surface mt-6 max-w-[62ch] p-6 text-ink-300">
-        Nothing here yet. The same slot ships in several RTP configurations and each casino
-        picks one, so every game listed here has to be opened at each casino that carries it
-        and read off its own info panel. That is slow, and the page stays empty until the
-        first of it is done rather than filling up with figures copied from elsewhere.
+        Nothing here yet. The catalogue is built by importing each casino's own game list
+        and merging the same title across casinos, so the page stays empty until the first
+        import lands rather than filling up with placeholder rows.
       </p>
     ) : (
       <>
         <p class="mt-4 max-w-[62ch] text-ink-300">
-          Each game shows the RTP the individual casinos run it at, read from the game's own
-          info panel rather than from a provider datasheet.
+          {slots.length} games, ordered the way Stake's own lobby ranks them where Stake
+          carries the game — otherwise by how prominent it is at whichever casino does.
         </p>
 
         <label class="mt-6 block max-w-[420px]">
@@ -61,7 +63,7 @@ const PAGE_SIZE = 48;
         </p>
 
         <ul id="slot-grid" class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
-          {slots.map((slot) => (
+          {initial.map((slot) => (
             <li data-slot-tile data-name={`${slot.name} ${providerName.get(slot.provider) ?? ''}`.toLowerCase()}>
               <a
                 href={`/slots/${slot.slug}/`}
@@ -80,51 +82,100 @@ const PAGE_SIZE = 48;
           No slot matches that name.
         </p>
 
-        <div class="mt-6 flex justify-center">
-          <button
-            type="button"
-            id="slot-more"
-            class="rounded-[4px] border border-ink-600 bg-ink-800 px-5 py-2.5 text-[15px] text-ink-100 hover:border-ink-400 hover:text-ink-050"
-          >
-            Load more
-          </button>
-        </div>
+        {restCount > 0 && (
+          <div class="mt-6 flex justify-center">
+            <button
+              type="button"
+              id="slot-more"
+              class="rounded-[4px] border border-ink-600 bg-ink-800 px-5 py-2.5 text-[15px] text-ink-100 hover:border-ink-400 hover:text-ink-050"
+            >
+              Load more
+            </button>
+          </div>
+        )}
       </>
     )
   }
 </Base>
 
-<script is:inline define:vars={{ PAGE_SIZE }}>
+<script is:inline define:vars={{ PAGE_SIZE, restCount }}>
   const grid = document.getElementById('slot-grid');
   if (grid) {
-    const tiles = [...grid.querySelectorAll('[data-slot-tile]')];
     const search = document.getElementById('slot-search');
     const count = document.getElementById('slot-count');
     const empty = document.getElementById('slot-empty');
     const more = document.getElementById('slot-more');
+
+    // The rest of the catalogue, fetched once and lazily — only once the visitor asks for
+    // it by searching or clicking "Load more", not on every page load.
+    let restPromise = null;
+    function loadRest() {
+      if (!restPromise) {
+        restPromise = restCount > 0
+          ? fetch('/slots-index.json').then((r) => r.json()).catch(() => [])
+          : Promise.resolve([]);
+      }
+      return restPromise;
+    }
+
+    let restRendered = false;
+
+    function makeTile(slot) {
+      const li = document.createElement('li');
+      li.dataset.slotTile = '';
+      li.dataset.name = `${slot.name} ${slot.provider}`.toLowerCase();
+      li.innerHTML = `<a href="/slots/${slot.slug}/" class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400">
+        <span class="block text-[15px] text-ink-050"></span>
+        <span class="mt-0.5 block text-[13px] text-ink-400"></span>
+      </a>`;
+      li.querySelector('span').textContent = slot.name;
+      li.querySelectorAll('span')[1].textContent = slot.provider;
+      return li;
+    }
+
+    async function ensureRestRendered() {
+      if (restRendered) return;
+      restRendered = true;
+      const rest = await loadRest();
+      const frag = document.createDocumentFragment();
+      for (const slot of rest) frag.appendChild(makeTile(slot));
+      grid.appendChild(frag);
+    }
+
+    function tiles() {
+      return [...grid.querySelectorAll('[data-slot-tile]')];
+    }
+
     let limit = PAGE_SIZE;
 
     function render() {
       const term = search.value.trim().toLowerCase();
+      const all = tiles();
       let matched = 0;
-      for (const tile of tiles) {
+      for (const tile of all) {
         const hit = !term || tile.dataset.name.includes(term);
         if (hit) matched++;
         tile.hidden = !hit || matched > limit;
       }
       count.textContent = `${matched}${matched === 1 ? ' slot' : ' slots'}`;
       empty.hidden = matched > 0;
-      more.hidden = matched <= limit;
+      if (more) more.hidden = restRendered && matched <= limit;
     }
 
-    search.addEventListener('input', () => {
+    search.addEventListener('input', async () => {
       limit = PAGE_SIZE;
+      // A search term might only match something in the not-yet-rendered tail — fetch it
+      // before filtering so the count and results are honest, not just "what's loaded".
+      if (search.value.trim()) await ensureRestRendered();
       render();
     });
-    more.addEventListener('click', () => {
-      limit += PAGE_SIZE;
-      render();
-    });
+    if (more) {
+      more.addEventListener('click', async () => {
+        limit += PAGE_SIZE;
+        await ensureRestRendered();
+        render();
+      });
+    }
     render();
   }
 </script>

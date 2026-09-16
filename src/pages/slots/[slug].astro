@@ -1,23 +1,25 @@
 ---
+import { Image } from 'astro:assets';
 import JsonLd from '../../components/JsonLd.astro';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbs } from '../../lib/schema';
-import { loadCasinos, loadSlots } from '../../lib/content';
+import { loadCasinos } from '../../lib/content';
 import { getProviders } from '../../lib/providers';
-import type { Slot } from '../../lib/schemas';
+import { getSlots, type SlotView } from '../../lib/slots';
+import { slotIcon } from '../../lib/slot-icons';
 
 /**
  * Minimal on purpose. The full slot page — screenshots, mechanics, bonus behaviour — is
- * still to be designed; this exists so the links from provider pages resolve the moment a
- * slot record lands, and so the RTP-per-casino table (the reason for the whole exercise)
- * has somewhere to live from day one.
+ * still to be designed; this exists so the links from provider pages and the casino slot
+ * lists resolve the moment a slot record lands, and so both the "where can I play this"
+ * list and the RTP-per-casino table have somewhere to live from day one.
  */
 export function getStaticPaths() {
-  return loadSlots().map((slot) => ({ params: { slug: slot.slug }, props: { slot } }));
+  return getSlots().map((slot) => ({ params: { slug: slot.slug }, props: { slot } }));
 }
 
 interface Props {
-  slot: Slot;
+  slot: SlotView;
 }
 
 const { slot } = Astro.props;
@@ -32,11 +34,19 @@ const spread =
   rtpValues.length > 1 && Math.min(...rtpValues) !== Math.max(...rtpValues)
     ? { low: Math.min(...rtpValues), high: Math.max(...rtpValues) }
     : null;
+
+// Most-prominent casino first, using the same percentile this page's own ordering runs on.
+const availability = [...slot.availability].sort(
+  (a, b) => a.position / a.total - b.position / b.total,
+);
+
+const icon = slotIcon(slot.slug);
 ---
 
 <Base
-  title={`${slot.name} RTP by Casino — ${providerName}`}
-  description={`Where ${slot.name} by ${providerName} is available, and the RTP each casino runs it at.`}
+  title={`${slot.name} — Where to Play, by ${providerName}`}
+  description={`Which casinos carry ${slot.name} by ${providerName}, and the RTP each one runs it at.`}
+  noindex={!slot.indexable}
   pageType="slot"
 >
   <JsonLd
@@ -56,10 +66,52 @@ const spread =
     <span class="text-ink-300">{slot.name}</span>
   </nav>
 
-  <h1 class="text-[30px] sm:text-[34px]">{slot.name}</h1>
-  <p class="mt-1.5 text-ink-300">
-    by <a href={`/providers/${slot.provider}/`} class="text-amber-400 no-underline hover:text-amber-300">{providerName}</a>
-  </p>
+  <div class="flex items-center gap-4">
+    {
+      icon && (
+        <Image
+          src={icon}
+          alt=""
+          width={72}
+          height={94}
+          loading="eager"
+          class="h-[94px] w-[72px] shrink-0 rounded-[4px] border border-ink-600 object-cover"
+        />
+      )
+    }
+    <div>
+      <h1 class="text-[30px] sm:text-[34px]">{slot.name}</h1>
+      <p class="mt-1.5 text-ink-300">
+        by{' '}
+        <a href={`/providers/${slot.provider}/`} class="text-amber-400 no-underline hover:text-amber-300">
+          {providerName}
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <section class="mt-8" aria-labelledby="where">
+    <h2 id="where" class="text-[21px]">Where to play it</h2>
+    <ul class="tabular mt-3 grid gap-2 sm:grid-cols-2">
+      {
+        availability.map((row) => (
+          <li class="surface flex items-center justify-between p-3">
+            <a href={`/casinos/${row.casino}/`} class="no-underline hover:text-amber-400">
+              {casinoName.get(row.casino) ?? row.casino}
+            </a>
+            <a
+              href={`/go/${row.casino}`}
+              rel="sponsored nofollow noopener"
+              target="_blank"
+              class="text-[13px] text-ink-400 no-underline hover:text-amber-400"
+            >
+              Visit ↗
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 
   <section class="mt-8" aria-labelledby="rtp">
     <h2 id="rtp" class="text-[21px]">RTP by casino</h2>

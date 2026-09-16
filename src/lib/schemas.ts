@@ -25,6 +25,19 @@ export const FACET_MIN_CASINOS = 5;
  */
 export const PROVIDER_MIN_SLOTS = 1;
 
+/**
+ * A slot page stays out of the index until it is listed at at least this many casinos.
+ *
+ * The catalogues overlap roughly 80% ("Gates of Olympus" everywhere), but a slot seen at
+ * exactly one casino is "logo, name, provider, one link" — the same thin-page shape the
+ * provider threshold above exists to stop. A slot at three or more has a real reason to
+ * exist: which casino to play it at is now an actual question with an actual answer. The
+ * page is still built and linked at any count (the grid and the casino's own slot list
+ * need it to exist), just noindexed and out of the sitemap until it clears the bar — and
+ * it promotes itself automatically the moment a third casino picks it up.
+ */
+export const SLOT_MIN_CASINOS = 3;
+
 /** Build warns when a casino's facts were last checked longer ago than this. */
 export const STALE_AFTER_DAYS = 45;
 
@@ -238,6 +251,36 @@ export const slotSchema = z.object({
   /** Screenshot filenames under src/assets/slots/. */
   screenshots: z.array(z.string()).default([]),
   summary: z.string().nullable().default(null),
+  /**
+   * Source asset id for the list/detail thumbnail — same pattern as Provider.logo:
+   * scripts/fetch-slot-images.ts turns this into a local file under src/assets/slots/,
+   * nothing at runtime touches the source CDN. Chosen at import time by priority
+   * (Stake's own art first, then 1win, then whichever casino's copy came in), because
+   * none of these studios' art belongs to any one of these casinos and the only real
+   * question is which capture is cleanest.
+   */
+  icon: z.string().nullable().default(null),
+  /**
+   * Every casino this game was found listed at, in that casino's own catalogue order.
+   * This is the whole basis for SLOT_MIN_CASINOS and for /slots' ordering — a slot
+   * absent from this list simply wasn't found anywhere, which is different from a slot
+   * verified absent (there is no such verification here, only "found" or "not found").
+   */
+  availability: z
+    .array(
+      z.object({
+        casino: z.string().min(1),
+        /** 0-based index in that casino's own listing at import time. */
+        position: z.number().int().nonnegative(),
+        /** Size of that casino's catalogue at import time, for percentile comparisons — a
+         * raw position means something different in an 800-game catalogue than in a
+         * 9,000-game one. */
+        total: z.number().int().positive(),
+        /** Deep link into that casino's own game page, when the source captured one. */
+        url: z.string().nullable().default(null),
+      }),
+    )
+    .min(1),
   rtpByCasino: z
     .array(
       z.object({

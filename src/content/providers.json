@@ -7805,6 +7805,60 @@
     "nameReconstructed": true
   },
   {
+    "slug": "01-games",
+    "name": "01 Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "0a-studios",
+    "name": "0a Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "0t0-studios",
+    "name": "0t0 Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "0x1",
+    "name": "0x1",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "1-spin-interactive",
+    "name": "1 Spin Interactive",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "111-light-productions",
+    "name": "111 Light Productions",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "1win-games",
     "name": "1win Games",
     "website": null,
@@ -7814,6 +7868,33 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "3cups",
+    "name": "3cups",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "3monkeys",
+    "name": "3monkeys",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "404-gaming",
+    "name": "404 Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "7777-gaming",
@@ -7838,6 +7919,78 @@
     "nameReconstructed": false
   },
   {
+    "slug": "888-games",
+    "name": "888 Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "a1-studio",
+    "name": "A1 Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "above-gaming",
+    "name": "Above Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "activ",
+    "name": "Activ",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "adora-gaming",
+    "name": "Adora Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "advantplay",
+    "name": "Advantplay",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "aeroy",
+    "name": "Aeroy",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "afterdark",
+    "name": "Afterdark",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "agt",
     "name": "AGT",
     "website": null,
@@ -7847,6 +8000,78 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "ak-games",
+    "name": "Ak Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "alchagem",
+    "name": "Alchagem",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "alchemy-gaming",
+    "name": "Alchemy Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "alibaba-games",
+    "name": "Alibaba Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "all41",
+    "name": "All41",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "aloha-gaming",
+    "name": "Aloha Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "alpha",
+    "name": "Alpha",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "am-studios",
+    "name": "Am Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "amatic",
@@ -7871,6 +8096,15 @@
     "nameReconstructed": false
   },
   {
+    "slug": "apl-horn",
+    "name": "Apl Horn",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "apollo-play",
     "name": "Apollo Play",
     "website": null,
@@ -7882,6 +8116,132 @@
     "nameReconstructed": false
   },
   {
+    "slug": "apparat",
+    "name": "Apparat",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arc-studios",
+    "name": "Arc Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arcadia-gaming",
+    "name": "Arcadia Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arcane-aces",
+    "name": "Arcane Aces",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arcane-anvil-studios",
+    "name": "Arcane Anvil Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arjsgaming",
+    "name": "Arjsgaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "arma",
+    "name": "Arma",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "art3mis-games",
+    "name": "Art3mis Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "artele-studios",
+    "name": "Artele Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "astir-gaming-studio",
+    "name": "Astir Gaming Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "astrixa-games",
+    "name": "Astrixa Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "atomic-play",
+    "name": "Atomic Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "atsupachi-gaming",
+    "name": "Atsupachi Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "aureum",
+    "name": "Aureum",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
     "slug": "aviatrix",
     "name": "Aviatrix",
     "website": null,
@@ -7890,6 +8250,87 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "axis-gaming",
+    "name": "Axis Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bacon-bits",
+    "name": "Bacon Bits",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bad-decision-gaming",
+    "name": "Bad Decision Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bad-panda-studios",
+    "name": "Bad Panda Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "baddie",
+    "name": "Baddie",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "ballista-gaming",
+    "name": "Ballista Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bandit-studios",
+    "name": "Bandit Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bareknuckle",
+    "name": "Bareknuckle",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "beast",
+    "name": "Beast",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -7937,6 +8378,312 @@
     "nameReconstructed": false
   },
   {
+    "slug": "big-bart-company",
+    "name": "Big Bart Company",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "big-booty-latinas",
+    "name": "Big Booty Latinas",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "big-crab-labs",
+    "name": "Big Crab Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "big-gaming",
+    "name": "Big Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bixbyte",
+    "name": "Bixbyte",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "black-rift",
+    "name": "Black Rift",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "blacklist-labs",
+    "name": "Blacklist Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "blaze-studios",
+    "name": "Blaze Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "blitz",
+    "name": "Blitz",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "bloodlust-studios",
+    "name": "Bloodlust Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "blueberry-games",
+    "name": "Blueberry Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "boldfoxgames",
+    "name": "Boldfoxgames",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bolly-studios",
+    "name": "Bolly Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bone-croo",
+    "name": "Bone Croo",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "boomerang-studios",
+    "name": "Boomerang Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "booongo",
+    "name": "Booongo",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bottle-cap-gaming",
+    "name": "Bottle Cap Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "brain-dead-gaming",
+    "name": "Brain Dead Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "brains-blocker-studio",
+    "name": "Brains Blocker Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bramblevolt-games",
+    "name": "Bramblevolt Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "breaker-game-studios",
+    "name": "Breaker Game Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "breeze-gaming",
+    "name": "Breeze Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bro",
+    "name": "Bro",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "broke-by-design",
+    "name": "Broke By Design",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "btb",
+    "name": "BTB",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "buck-stakes-entertainment",
+    "name": "Buck Stakes Entertainment",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bulbul",
+    "name": "Bulbul",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "bullrun-studios",
+    "name": "Bullrun Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bullshark",
+    "name": "Bullshark",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "bungbu-studios",
+    "name": "Bungbu Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "butter",
+    "name": "Butter",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "butter-slots",
+    "name": "Butter Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "by-playn-go",
+    "name": "By Play'n Go",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "byteclimbers",
+    "name": "Byteclimbers",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "caleta",
     "name": "Caleta",
     "website": null,
@@ -7946,6 +8693,78 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "caleta-gaming",
+    "name": "Caleta Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "caramel-games",
+    "name": "Caramel Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "carlsson-gaming",
+    "name": "Carlsson Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "casinoking",
+    "name": "Casinoking",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "casper-studio",
+    "name": "Casper Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "cat-crack",
+    "name": "Cat Crack",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "chaoskings",
+    "name": "Chaoskings",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "chatty-games",
+    "name": "Chatty Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "choice-gaming",
@@ -7959,6 +8778,114 @@
     "nameReconstructed": false
   },
   {
+    "slug": "chopchop-studios",
+    "name": "Chopchop Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "cipher-games",
+    "name": "Cipher Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "clutch-gaming",
+    "name": "Clutch Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "coffe-gaming",
+    "name": "Coffe Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "coldsight-studio",
+    "name": "Coldsight Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "color-drop",
+    "name": "Color Drop",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "colossus-studios",
+    "name": "Colossus Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "compass-games",
+    "name": "Compass Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "coolkids",
+    "name": "Coolkids",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "cotton-balls",
+    "name": "Cotton Balls",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "couch",
+    "name": "Couch",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "cozy-tv-studio",
+    "name": "Cozy Tv Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "cq9",
     "name": "CQ9",
     "website": null,
@@ -7968,6 +8895,330 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "crabz-labz",
+    "name": "Crabz Labz",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "crashout-studios",
+    "name": "Crashout Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "crazy-games",
+    "name": "Crazy Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "croco-gaming",
+    "name": "Croco Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "crownexa",
+    "name": "Crownexa",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "crownix-studio",
+    "name": "Crownix Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "crownjack-studio",
+    "name": "Crownjack Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "css-gaming",
+    "name": "Css Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "cybercyan-studio",
+    "name": "Cybercyan Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "czutka",
+    "name": "Czutka",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "d-bush-gaming",
+    "name": "D Bush Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dahlia",
+    "name": "Dahlia",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "darkframe",
+    "name": "Darkframe",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dash-by-rogue",
+    "name": "Dash By Rogue",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "deadpoint",
+    "name": "Deadpoint",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "deadset",
+    "name": "Deadset",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "deadspin-studios",
+    "name": "Deadspin Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "degen",
+    "name": "Degen",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "devil-lab",
+    "name": "Devil Lab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "digital-studio",
+    "name": "Digital Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dirty-circus",
+    "name": "Dirty Circus",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dirty-degen",
+    "name": "Dirty Degen",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dodep-club",
+    "name": "Dodep Club",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "donde-studios",
+    "name": "Donde Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "doodles-gaming",
+    "name": "Doodles Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "double-down",
+    "name": "Double Down",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "double-down-gaming",
+    "name": "Double Down Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "double-xp",
+    "name": "Double Xp",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "doubleshift",
+    "name": "Doubleshift",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "down-bad-gaming",
+    "name": "Down Bad Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "drakkar-gaming",
+    "name": "Drakkar Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "drama-studios",
+    "name": "Drama Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "drei-roku",
+    "name": "Drei Roku",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "drift-gaming",
+    "name": "Drift Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "dunble-studios",
+    "name": "Dunble Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "duskforge",
+    "name": "Duskforge",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "dynabitgaming",
@@ -8003,6 +9254,87 @@
     "nameReconstructed": false
   },
   {
+    "slug": "electric-elephant",
+    "name": "Electric Elephant",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "elevation",
+    "name": "Elevation",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "elk-studios",
+    "name": "ELK Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "emporium",
+    "name": "Emporium",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "endophina",
+    "name": "Endophina",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "energy8",
+    "name": "Energy8",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "enter-studio",
+    "name": "Enter Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "escapement-studios",
+    "name": "Escapement Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "eurasian-gaming",
+    "name": "Eurasian Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "evoplay",
     "name": "Evoplay",
     "website": "https://evoplay.games",
@@ -8011,6 +9343,15 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "exco-game-studio",
+    "name": "Exco Game Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8025,6 +9366,15 @@
     "nameReconstructed": false
   },
   {
+    "slug": "ezy-slots",
+    "name": "Ezy Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "f-bastards",
     "name": "F*Bastards",
     "website": null,
@@ -8033,6 +9383,42 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "fachai",
+    "name": "FaChai",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "fat-panda",
+    "name": "Fat Panda",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fatal-game",
+    "name": "Fatal Game",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fatkid",
+    "name": "Fatkid",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8047,6 +9433,69 @@
     "nameReconstructed": false
   },
   {
+    "slug": "feral-games",
+    "name": "Feral Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "feral-gaming",
+    "name": "Feral Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fire-horse-studios",
+    "name": "Fire Horse Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fireduck-play",
+    "name": "Fireduck Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "flashlight-studios",
+    "name": "Flashlight Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fluxon-games",
+    "name": "Fluxon Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fomo-gaming",
+    "name": "Fomo Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "formulaspin",
     "name": "FormulaSpin",
     "website": null,
@@ -8056,6 +9505,123 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "fortune-studios",
+    "name": "Fortune Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fortunecore-games",
+    "name": "Fortunecore Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fortuneworks",
+    "name": "Fortuneworks",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "foundry",
+    "name": "Foundry",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "four-leaf-gaming",
+    "name": "Four Leaf Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "foxhound",
+    "name": "Foxhound",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "foxium",
+    "name": "Foxium",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "fps-studio",
+    "name": "Fps Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fracture",
+    "name": "Fracture",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fracture-labs",
+    "name": "Fracture Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "frenchkiss",
+    "name": "Frenchkiss",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "frone-studio",
+    "name": "Frone Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "frost-gaming",
+    "name": "Frost Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "fugaso",
@@ -8069,6 +9635,24 @@
     "nameReconstructed": false
   },
   {
+    "slug": "fullsend",
+    "name": "Fullsend",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "fungamer",
+    "name": "Fungamer",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "funky-games",
     "name": "Funky Games",
     "website": null,
@@ -8077,6 +9661,15 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "funta-gaming",
+    "name": "Funta Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8091,6 +9684,141 @@
     "nameReconstructed": false
   },
   {
+    "slug": "gameburger",
+    "name": "Gameburger",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "gaming-chair",
+    "name": "Gaming Chair",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "gaming-gate-studio",
+    "name": "Gaming Gate Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "geeze-slots",
+    "name": "Geeze Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "genius-labs",
+    "name": "Genius Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "getstacked",
+    "name": "Getstacked",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ggwp-game",
+    "name": "Ggwp Game",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ggwp-games",
+    "name": "Ggwp Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "glab",
+    "name": "Glab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "glass-cannon",
+    "name": "Glass Cannon",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "gold-labs",
+    "name": "Gold Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "golden-empire",
+    "name": "Golden Empire",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "golden-infinity",
+    "name": "Golden Infinity",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "golden-reels",
+    "name": "Golden Reels",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "goldenplay",
+    "name": "Goldenplay",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "goldenrace",
     "name": "GoldenRace",
     "website": null,
@@ -8099,6 +9827,87 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "goldexa-games",
+    "name": "Goldexa Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "goldie-games",
+    "name": "Goldie Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "golos-games-labs",
+    "name": "Golos Games Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "goodtimes-studios",
+    "name": "Goodtimes Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "greedy-goblins",
+    "name": "Greedy Goblins",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "greenery-gaming",
+    "name": "Greenery Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "grim-relic-gaming",
+    "name": "Grim Relic Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "grimforge",
+    "name": "Grimforge",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "grunge",
+    "name": "Grunge",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8113,6 +9922,267 @@
     "nameReconstructed": false
   },
   {
+    "slug": "hachi-studio",
+    "name": "Hachi Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hainirion",
+    "name": "Hainirion",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hammer-head-gaming",
+    "name": "Hammer Head Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "harpoon-gaming",
+    "name": "Harpoon Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "havoc-gaming",
+    "name": "Havoc Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hawkeye-gamings",
+    "name": "Hawkeye Gamings",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hds",
+    "name": "Hds",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "heroic",
+    "name": "Heroic",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "hexa-gaming",
+    "name": "Hexa Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hexora-games",
+    "name": "Hexora Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "high-heels-games",
+    "name": "High Heels Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hite",
+    "name": "Hite",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "hold-your-hat",
+    "name": "Hold Your Hat",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "horizon-gaming",
+    "name": "Horizon Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "house-of-tales",
+    "name": "House Of Tales",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hustle-labs",
+    "name": "Hustle Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hyperlux-studios",
+    "name": "Hyperlux Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "hypnos-inc",
+    "name": "Hypnos Inc",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "icgindia",
+    "name": "Icgindia",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "iciq",
+    "name": "Iciq",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "imba-lab",
+    "name": "Imba Lab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "impera-gaming",
+    "name": "Impera Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "infinity-labs",
+    "name": "Infinity Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "instawin",
+    "name": "Instawin",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ionfall",
+    "name": "Ionfall",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ironhowl-studios",
+    "name": "Ironhowl Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "irrs",
+    "name": "Irrs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "jackal-gaming",
+    "name": "Jackal Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jackpot-labs",
+    "name": "Jackpot Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "jacktop",
     "name": "Jacktop",
     "website": null,
@@ -8121,6 +10191,285 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "jdb",
+    "name": "Jdb",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "jdb-21693",
+    "name": "Jdb 21693",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21694",
+    "name": "Jdb 21694",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21695",
+    "name": "Jdb 21695",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21697",
+    "name": "Jdb 21697",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21700",
+    "name": "Jdb 21700",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21706",
+    "name": "Jdb 21706",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21720",
+    "name": "Jdb 21720",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21723",
+    "name": "Jdb 21723",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21725",
+    "name": "Jdb 21725",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21726",
+    "name": "Jdb 21726",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21727",
+    "name": "Jdb 21727",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21733",
+    "name": "Jdb 21733",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21734",
+    "name": "Jdb 21734",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21736",
+    "name": "Jdb 21736",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21738",
+    "name": "Jdb 21738",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21739",
+    "name": "Jdb 21739",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21741",
+    "name": "Jdb 21741",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21742",
+    "name": "Jdb 21742",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21744",
+    "name": "Jdb 21744",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21746",
+    "name": "Jdb 21746",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21749",
+    "name": "Jdb 21749",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21750",
+    "name": "Jdb 21750",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-21751",
+    "name": "Jdb 21751",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jdb-28816",
+    "name": "Jdb 28816",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jili",
+    "name": "Jili",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "joyful-ace-studios",
+    "name": "Joyful Ace Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "jp",
+    "name": "JP",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "just-for-the-win",
+    "name": "Just For The Win",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "just-slots",
+    "name": "Just Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "kaamos",
+    "name": "Kaamos",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8135,6 +10484,87 @@
     "nameReconstructed": false
   },
   {
+    "slug": "kanava-interactive",
+    "name": "Kanava Interactive",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kane-games",
+    "name": "Kane Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kelphr-labs",
+    "name": "Kelphr Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "keyturn-gaming",
+    "name": "Keyturn Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kimchi-studios",
+    "name": "Kimchi Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kishta-labs",
+    "name": "Kishta Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kitsune",
+    "name": "Kitsune",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kitsune-gaming-studios",
+    "name": "Kitsune Gaming Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "knockknock-games",
+    "name": "Knockknock Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "koala",
     "name": "Koala",
     "website": null,
@@ -8144,6 +10574,330 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "kontrolleur",
+    "name": "Kontrolleur",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kosame",
+    "name": "Kosame",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "krazy-nerdz",
+    "name": "Krazy Nerdz",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "krazy-nerdz-studio",
+    "name": "Krazy Nerdz Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "kt-gaming",
+    "name": "Kt Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lackluster",
+    "name": "Lackluster",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lambda-gaming",
+    "name": "Lambda Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "last-hit-gaming",
+    "name": "Last Hit Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "layered-labs",
+    "name": "Layered Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lega-game",
+    "name": "Lega Game",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "legend-knight-studios",
+    "name": "Legend Knight Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "legenddrop",
+    "name": "Legenddrop",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "legendia-labs",
+    "name": "Legendia Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lemon-labs",
+    "name": "Lemon Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "levelup-gaming",
+    "name": "Levelup Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lexicon-gaming",
+    "name": "Lexicon Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "llamaplay",
+    "name": "Llamaplay",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lollipops",
+    "name": "Lollipops",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lotors",
+    "name": "Lotors",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "lt-studios",
+    "name": "Lt Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucid-gaming",
+    "name": "Lucid Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "luckwright",
+    "name": "Luckwright",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-bastards-studio",
+    "name": "Lucky Bastards Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-iron-games",
+    "name": "Lucky Iron Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-labs",
+    "name": "Lucky Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-luna",
+    "name": "Lucky Luna",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-monaco",
+    "name": "Lucky Monaco",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-pixel",
+    "name": "Lucky Pixel",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lucky-slots",
+    "name": "Lucky Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "luckypulse",
+    "name": "Luckypulse",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lumo-gaming",
+    "name": "Lumo Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "luna-vault",
+    "name": "Luna Vault",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "luxspin-games",
+    "name": "Luxspin Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "lyubanity",
+    "name": "Lyubanity",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "m-r-s-games",
+    "name": "M.r.s.games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "marvens",
+    "name": "Marvens",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "mascot-gaming",
@@ -8157,6 +10911,231 @@
     "nameReconstructed": false
   },
   {
+    "slug": "mask-on-gaming",
+    "name": "Mask On Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "matchstick-gaming",
+    "name": "Matchstick Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "maximus-gaming",
+    "name": "Maximus Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "maxx",
+    "name": "Maxx",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "microgaming",
+    "name": "Microgaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "midia-gaming",
+    "name": "Midia Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "midnight-gaming",
+    "name": "Midnight Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "mindgames",
+    "name": "Mindgames",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "minimax",
+    "name": "Minimax",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "mischief-gaming",
+    "name": "Mischief Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "molof",
+    "name": "Molof",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "monarch-play",
+    "name": "Monarch Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "moneytrees",
+    "name": "Moneytrees",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "monolith",
+    "name": "Monolith",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "moonforge-studios",
+    "name": "Moonforge Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "morning-wood-gaming",
+    "name": "Morning Wood Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "moshi-studios",
+    "name": "Moshi Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "moth-and-marrow",
+    "name": "Moth And Marrow",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "mutagen-labs",
+    "name": "Mutagen Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "mythicvault",
+    "name": "Mythicvault",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "mythik",
+    "name": "Mythik",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "mythrix-gaming",
+    "name": "Mythrix Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "n2-games",
+    "name": "N2 Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "namz-games",
+    "name": "Namz Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nap-time-studios",
+    "name": "Nap Time Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "nardsclub",
     "name": "NardsClub",
     "website": null,
@@ -8168,6 +11147,51 @@
     "nameReconstructed": false
   },
   {
+    "slug": "nectar-labs",
+    "name": "Nectar Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "neko-gaming",
+    "name": "Neko Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "neon-valley-studios",
+    "name": "Neon Valley Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ner",
+    "name": "Ner",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "nexo-games",
+    "name": "Nexo Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "nextspin",
     "name": "Nextspin",
     "website": null,
@@ -8176,6 +11200,141 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "nexus-studios",
+    "name": "Nexus Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nhstudios",
+    "name": "Nhstudios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "niceshot-studios",
+    "name": "Niceshot Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nitro-gaming",
+    "name": "Nitro Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nobody",
+    "name": "Nobody",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "noclip",
+    "name": "Noclip",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "node-gaming",
+    "name": "Node Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nora-studios",
+    "name": "Nora Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "northern-lights-gaming",
+    "name": "Northern Lights Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "northlight",
+    "name": "Northlight",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "notded",
+    "name": "Notded",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "novak-volt",
+    "name": "Novak Volt",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "novarush-studios",
+    "name": "Novarush Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nox",
+    "name": "Nox",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "nstech",
+    "name": "Nstech",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8190,6 +11349,96 @@
     "nameReconstructed": false
   },
   {
+    "slug": "nullreel",
+    "name": "Nullreel",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "numa-studio-games",
+    "name": "Numa Studio Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "nyan-streams",
+    "name": "Nyan Streams",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "obscure-studio",
+    "name": "Obscure Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "odd-opera",
+    "name": "Odd Opera",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "oddfox",
+    "name": "Oddfox",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "offgrid",
+    "name": "Offgrid",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "old-skool",
+    "name": "Old Skool",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "one-city",
+    "name": "One City",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "openhand",
+    "name": "Openhand",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "oryx-gaming",
     "name": "Oryx Gaming",
     "website": null,
@@ -8201,6 +11450,87 @@
     "nameReconstructed": false
   },
   {
+    "slug": "osoko-studio",
+    "name": "Osoko Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "overdraft",
+    "name": "Overdraft",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "packi-studio",
+    "name": "Packi Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "papa-hunter-studio",
+    "name": "Papa Hunter Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "paper-lantern",
+    "name": "Paper Lantern",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "paper-staple",
+    "name": "Paper Staple",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "paperfold-games",
+    "name": "Paperfold Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "parody-studios",
+    "name": "Parody Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "parowdee",
+    "name": "Parowdee",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "pateplay",
     "name": "Pateplay",
     "website": null,
@@ -8210,6 +11540,96 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "pegasus",
+    "name": "Pegasus",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "pepperoni",
+    "name": "Pepperoni",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "petalarcade-games",
+    "name": "Petalarcade Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "peterandsons",
+    "name": "Peterandsons",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "pforfun",
+    "name": "Pforfun",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "pg-slots",
+    "name": "PG Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "phantom-forge-studios",
+    "name": "Phantom Forge Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "phantom-interactive",
+    "name": "Phantom Interactive",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "pickle-gaming",
+    "name": "Pickle Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "pixel-play",
+    "name": "Pixel Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "playbro",
@@ -8234,6 +11654,60 @@
     "nameReconstructed": false
   },
   {
+    "slug": "playtech",
+    "name": "Playtech",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "playtech-19259",
+    "name": "Playtech 19259",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "playtech-19382",
+    "name": "Playtech 19382",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "playtech-28139",
+    "name": "Playtech 28139",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "playtech-28142",
+    "name": "Playtech 28142",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "playton-production",
+    "name": "Playton Production",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "poggiplay",
     "name": "Poggiplay",
     "website": null,
@@ -8243,6 +11717,15 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "pot-a-toss-games",
+    "name": "Pot A Toss Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "pragmatic-play-live",
@@ -8256,6 +11739,33 @@
     "nameReconstructed": false
   },
   {
+    "slug": "priisme",
+    "name": "Priisme",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "princeps-gaming",
+    "name": "Princeps Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "promotich-games",
+    "name": "Promotich Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "prospect-gaming",
     "name": "Prospect Gaming",
     "website": null,
@@ -8265,6 +11775,204 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "pyramid-studios",
+    "name": "Pyramid Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "quickdraw",
+    "name": "Quickdraw",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "quickstrike",
+    "name": "Quickstrike",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "raging-addicts",
+    "name": "Raging Addicts",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "random-games",
+    "name": "Random Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rare-drop-studios",
+    "name": "Rare Drop Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rat-lab",
+    "name": "Rat Lab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "rati-labs",
+    "name": "Rati Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ravensage",
+    "name": "Ravensage",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "raxivo-games",
+    "name": "Raxivo Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "real-time-gaming",
+    "name": "Real Time Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "red-barrel",
+    "name": "Red Barrel",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "red-rake-gaming",
+    "name": "Red Rake Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "reel-lucky-gaming",
+    "name": "Reel Lucky Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "reelcrest-gaming",
+    "name": "Reelcrest Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "reelplay",
+    "name": "Reelplay",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "reelsmith",
+    "name": "Reelsmith",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "reelx-gaming",
+    "name": "Reelx Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rektnation",
+    "name": "Rektnation",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "relaxpls",
+    "name": "Relaxpls",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "remix-studio",
+    "name": "Remix Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "renkler-studios",
+    "name": "Renkler Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "retro-gaming",
@@ -8278,6 +11986,186 @@
     "nameReconstructed": false
   },
   {
+    "slug": "ridgeline-games",
+    "name": "Ridgeline Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rigged-studios",
+    "name": "Rigged Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rinsed-gaming",
+    "name": "Rinsed Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ripoff-gaming",
+    "name": "Ripoff Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "riser-studios",
+    "name": "Riser Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rituel-gaming",
+    "name": "Rituel Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rm-hornet",
+    "name": "Rm Hornet",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rob-slots",
+    "name": "Rob Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rogue",
+    "name": "Rogue",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "rogue-studios",
+    "name": "Rogue Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rokaz-gaming",
+    "name": "Rokaz Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rooftop-gaming",
+    "name": "Rooftop Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "room-23-gaming",
+    "name": "Room 23 Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "royal-ace-group",
+    "name": "Royal Ace Group",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "royal-cat-gaming",
+    "name": "Royal Cat Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "royal-ember",
+    "name": "Royal Ember",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "royal-gaming",
+    "name": "Royal Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rtp-rebels-studios",
+    "name": "Rtp Rebels Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "rtp-exe",
+    "name": "Rtp.exe",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "rtpstudios",
+    "name": "Rtpstudios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "rubyplay",
     "name": "RubyPlay",
     "website": null,
@@ -8287,6 +12175,24 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "ruckus-studios",
+    "name": "Ruckus Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "ryans-wall",
+    "name": "Ryans Wall",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "sa-gaming",
@@ -8300,6 +12206,186 @@
     "nameReconstructed": false
   },
   {
+    "slug": "sack-of-jam",
+    "name": "Sack Of Jam",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "salamander",
+    "name": "Salamander",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sand-casino",
+    "name": "Sand Casino",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "scar-gaming",
+    "name": "Scar Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "se-studio",
+    "name": "Se Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "shavi",
+    "name": "Shavi",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "shnux-gaming",
+    "name": "Shnux Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "shortcut-gaming",
+    "name": "Shortcut Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sick-gaming",
+    "name": "Sick Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sidechick-studios",
+    "name": "Sidechick Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sideline-studios",
+    "name": "Sideline Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "silver-stars",
+    "name": "Silver Stars",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sin-city",
+    "name": "Sin City",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sixseven",
+    "name": "Sixseven",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "skechi-games",
+    "name": "Skechi Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "skiron",
+    "name": "Skiron",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "skryx",
+    "name": "Skryx",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "slingshot-studios",
+    "name": "Slingshot Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "slop-games",
+    "name": "Slop Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "slotify",
+    "name": "Slotify",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "slotopia",
     "name": "Slotopia",
     "website": null,
@@ -8311,6 +12397,87 @@
     "nameReconstructed": false
   },
   {
+    "slug": "slotrix",
+    "name": "Slotrix",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "smokestack-games",
+    "name": "Smokestack Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "snicker-gaming",
+    "name": "Snicker Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "snowborn-studios",
+    "name": "Snowborn Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "so-technologies",
+    "name": "So Technologies",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "softswiss",
+    "name": "Softswiss",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sojubang",
+    "name": "Sojubang",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "solidicon",
+    "name": "Solidicon",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sombra-gaming",
+    "name": "Sombra Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "spadegaming",
     "name": "Spadegaming",
     "website": null,
@@ -8320,6 +12487,51 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "spark-studios",
+    "name": "Spark Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spinbyspin",
+    "name": "Spinbyspin",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spinforge-play",
+    "name": "Spinforge Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spinify",
+    "name": "Spinify",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spinlab",
+    "name": "Spinlab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "spinmatic",
@@ -8344,6 +12556,204 @@
     "nameReconstructed": false
   },
   {
+    "slug": "spinon",
+    "name": "SpinON",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "spinplay-games",
+    "name": "SpinPlay Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spintech",
+    "name": "Spintech",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spinx-gaming",
+    "name": "Spinx Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "spooky-inc",
+    "name": "Spooky Inc",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stackhaus",
+    "name": "Stackhaus",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stackhaus-games",
+    "name": "Stackhaus Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stacy-s-cookies",
+    "name": "Stacy S Cookies",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stagna-one",
+    "name": "Stagna One",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stake-originals",
+    "name": "Stake Originals",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "standard-lab",
+    "name": "Standard Lab",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stardust",
+    "name": "Stardust",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "steamin-stanley-games",
+    "name": "Steamin Stanley Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "steamrise-games",
+    "name": "Steamrise Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stitch-and-glitch-studio",
+    "name": "Stitch And Glitch Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "stormcraft",
+    "name": "Stormcraft",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "strawberry-lemonade",
+    "name": "Strawberry Lemonade",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "summit-studios",
+    "name": "Summit Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "sun",
+    "name": "Sun",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "super-slots",
+    "name": "Super Slots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "supergaming",
+    "name": "Supergaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "svelta",
+    "name": "Svelta",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
     "slug": "swintt",
     "name": "Swintt",
     "website": "https://www.swintt.com",
@@ -8353,6 +12763,69 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "tada-gaming",
+    "name": "TaDa Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "tagane-games",
+    "name": "Tagane Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "tap-a-roo",
+    "name": "Tap A Roo",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "tasty-games",
+    "name": "Tasty Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "the-darkroot",
+    "name": "The Darkroot",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "the-hood",
+    "name": "The Hood",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "throwaway",
+    "name": "Throwaway",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "tom-horn-gaming",
@@ -8366,6 +12839,78 @@
     "nameReconstructed": false
   },
   {
+    "slug": "toucan",
+    "name": "Toucan",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "tovix-studio",
+    "name": "Tovix Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "travel-studio",
+    "name": "Travel Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "triple-edge",
+    "name": "Triple Edge",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "tripsy-gaming",
+    "name": "Tripsy Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "truelab-games",
+    "name": "TrueLab Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "truelab-gaming",
+    "name": "TrueLab Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "tsuki-games",
+    "name": "Tsuki Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "tvbet",
     "name": "TVBet",
     "website": null,
@@ -8375,6 +12920,51 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "twisting-play",
+    "name": "Twisting Play",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "unchained",
+    "name": "Unchained",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "uncrop-inc",
+    "name": "Uncrop Inc",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "unique-gaming",
+    "name": "Unique Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "v9-studios",
+    "name": "V9 Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "va-gaming",
@@ -8388,6 +12978,141 @@
     "nameReconstructed": false
   },
   {
+    "slug": "vaelstorm",
+    "name": "Vaelstorm",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "vanta-gaming",
+    "name": "Vanta Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "various-gaming",
+    "name": "Various Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "veles-labs",
+    "name": "Veles Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "veloduel",
+    "name": "Veloduel",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "vertex-studios",
+    "name": "Vertex Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "very-rare",
+    "name": "Very Rare",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "vesper-studios",
+    "name": "Vesper Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "veytrix-studios",
+    "name": "Veytrix Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "void-studios",
+    "name": "Void Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "voidmoon",
+    "name": "Voidmoon",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "volatility-labs",
+    "name": "Volatility Labs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "volo-gaming",
+    "name": "Volo Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "voltbite",
+    "name": "Voltbite",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "von-djork",
+    "name": "Von Djork",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "vortex",
     "name": "Vortex",
     "website": null,
@@ -8397,6 +13122,123 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "voyage-entertainment",
+    "name": "Voyage Entertainment",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "vpgaming",
+    "name": "Vpgaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "vst-studios",
+    "name": "Vst Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wade-forge",
+    "name": "Wade Forge",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wali-games",
+    "name": "Wali Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "walk-off-gaming",
+    "name": "Walk Off Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "warhead-games",
+    "name": "Warhead Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wazdan",
+    "name": "Wazdan",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "welix-studios",
+    "name": "Welix Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "whistle-gaming",
+    "name": "Whistle Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "whitepaw-gaming",
+    "name": "Whitepaw Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wild-moose-gaming",
+    "name": "Wild Moose Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wildbyte",
+    "name": "Wildbyte",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "wildcat-gaming",
@@ -8410,6 +13252,33 @@
     "nameReconstructed": false
   },
   {
+    "slug": "wildcore-gaming",
+    "name": "Wildcore Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wildpetal-studios",
+    "name": "Wildpetal Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "windfall-studios",
+    "name": "Windfall Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "winfinity",
     "name": "Winfinity",
     "website": null,
@@ -8418,6 +13287,51 @@
     "casinos": [
       "1win"
     ],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "winspinity",
+    "name": "Winspinity",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "winverse",
+    "name": "Winverse",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "winvora-studio",
+    "name": "Winvora Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "wires-games",
+    "name": "Wires Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "woobs",
+    "name": "Woobs",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
     "nameReconstructed": false
   },
   {
@@ -8432,6 +13346,24 @@
     "nameReconstructed": false
   },
   {
+    "slug": "xgg",
+    "name": "XGG",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": false
+  },
+  {
+    "slug": "xotic-studios",
+    "name": "Xotic Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "xpg",
     "name": "XPG",
     "website": null,
@@ -8441,6 +13373,24 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "xposed-studios",
+    "name": "Xposed Studios",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "yeti-games",
+    "name": "Yeti Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   },
   {
     "slug": "yggdrasil",
@@ -8465,6 +13415,42 @@
     "nameReconstructed": false
   },
   {
+    "slug": "yiggletooganslots",
+    "name": "Yiggletooganslots",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "zero-balance",
+    "name": "Zero Balance",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "zerplaay",
+    "name": "Zerplaay",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "zerplaay-games",
+    "name": "Zerplaay Games",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
     "slug": "zillion",
     "name": "Zillion",
     "website": null,
@@ -8474,5 +13460,23 @@
       "1win"
     ],
     "nameReconstructed": false
+  },
+  {
+    "slug": "zingo-gaming",
+    "name": "Zingo Gaming",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
+  },
+  {
+    "slug": "zoi-studio",
+    "name": "Zoi Studio",
+    "website": null,
+    "logo": null,
+    "stakeRank": null,
+    "casinos": [],
+    "nameReconstructed": true
   }
 ]
