@@ -1,0 +1,147 @@
+---
+import CasinoLogo from './CasinoLogo.astro';
+import CoinIcon from './CoinIcon.astro';
+import { facetsForCasino } from '../lib/facets';
+import { aggregateScore, normaliseSources, scoreBand } from '../lib/ratings';
+import { MIN_RATING_SOURCES, type Casino } from '../lib/schemas';
+
+interface Props {
+  casino: Casino;
+  rtp: number | null;
+  rtpVerifiedAt: string | null;
+}
+
+const { casino, rtp, rtpVerifiedAt } = Astro.props;
+
+const score = aggregateScore(casino);
+const sources = normaliseSources(casino);
+const factorChips = facetsForCasino(casino).filter((f) => f.kind === 'factor');
+const shownCoins = casino.currencies.slice(0, 8);
+const hiddenCoinCount = casino.currencies.length - shownCoins.length;
+
+const bandClass = {
+  high: 'text-score-high',
+  mid: 'text-score-mid',
+  low: 'text-score-low',
+} as const;
+const scoreClass = score === null ? 'text-ink-400' : bandClass[scoreBand(score)];
+---
+
+{/*
+  The same card language as the homepage's CasinoCard, on purpose — a reader who has
+  already learned to read those cards shouldn't have to learn a second layout here. The
+  one addition is the RTP chip: this is the whole reason the page exists, so it sits next
+  to the rating rather than in a separate table most of the way down the page, and the
+  two blocks that used to duplicate the same casino list ("where to play it" / "RTP by
+  casino") are now one.
+*/}
+<article
+  class="surface relative flex flex-col gap-3 p-3 sm:flex-row sm:items-start sm:gap-4 sm:p-4"
+>
+  <div class="flex min-w-0 flex-1 items-start gap-3 sm:gap-4">
+    <CasinoLogo slug={casino.slug} name={casino.name} size={48} />
+
+    <div class="min-w-0 flex-1">
+      <div class="flex items-start gap-3">
+        <h3 class="min-w-0 flex-1 text-[17px] sm:text-[19px]">
+          <a
+            href={`/casinos/${casino.slug}/`}
+            class="no-underline after:absolute after:inset-0 hover:text-amber-400"
+            >{casino.name}</a
+          >
+        </h3>
+        {
+          score === null ? (
+            <span class="shrink-0 text-[12px] text-ink-400 sm:hidden">Not rated</span>
+          ) : (
+            <span
+              class={`tabular shrink-0 font-display text-[22px] font-bold leading-none sm:hidden ${scoreClass}`}
+            >
+              {score.toFixed(1)}
+            </span>
+          )
+        }
+      </div>
+
+      <p class="tabular mt-1.5 text-[14px]">
+        <span class="text-ink-400">RTP:</span>{' '}
+        {rtp === null ? (
+          <span class="text-ink-400">not verified</span>
+        ) : (
+          <span class="font-semibold text-ink-050">{rtp}%</span>
+        )}
+        {rtp !== null && rtpVerifiedAt && (
+          <span class="text-ink-400"> · checked {rtpVerifiedAt}</span>
+        )}
+      </p>
+
+      {
+        sources.length > 0 && (
+          <ul class="tabular mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-[13px] text-ink-300">
+            {sources.map((s) => (
+              <li>
+                <abbr title={s.label} class="no-underline text-ink-400">
+                  {s.abbr}
+                </abbr>{' '}
+                <span class="text-ink-100">{s.raw}</span>
+                <span class="text-ink-400">/{s.scale}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        shownCoins.length > 0 && (
+          <ul class="mt-2 flex flex-wrap items-center gap-1" aria-label="Supported coins">
+            {shownCoins.map((c) => (
+              <li title={c.code}>
+                <CoinIcon code={c.code} size={18} />
+              </li>
+            ))}
+            {hiddenCoinCount > 0 && <li class="text-[12px] text-ink-400">+{hiddenCoinCount}</li>}
+          </ul>
+        )
+      }
+
+      {
+        factorChips.length > 0 && (
+          <ul class="mt-2 flex flex-wrap gap-1 sm:gap-1.5">
+            {factorChips.map((f) => (
+              <li class="rounded-[3px] border border-ink-600 bg-ink-800 px-1.5 py-0.5 text-[12px] text-ink-300 sm:px-2 sm:text-[13px]">
+                {f.name}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </div>
+
+  <div
+    class="flex shrink-0 items-center justify-between gap-3 border-t border-ink-700 pt-2.5 sm:flex-col sm:items-end sm:gap-2 sm:border-0 sm:pl-2 sm:pt-0"
+  >
+    {
+      score === null ? (
+        <span
+          class="hidden text-[13px] text-ink-400 sm:block"
+          title={`Fewer than ${MIN_RATING_SOURCES} sources`}
+        >
+          Not rated
+        </span>
+      ) : (
+        <span class={`tabular hidden font-display text-[28px] font-bold leading-none sm:block ${scoreClass}`}>
+          {score.toFixed(1)}
+        </span>
+      )
+    }
+    <a
+      href={`/go/${casino.slug}`}
+      rel="sponsored nofollow noopener"
+      target="_blank"
+      data-outbound={casino.slug}
+      class="relative z-10 order-2 rounded-[4px] bg-amber-500 px-3.5 py-2 text-[15px] font-semibold text-ink-900 no-underline hover:bg-amber-400"
+      >Visit site</a
+    >
+  </div>
+</article>

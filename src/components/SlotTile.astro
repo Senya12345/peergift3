@@ -1,0 +1,41 @@
+---
+import { slotIconUrl } from '../lib/slot-icons';
+
+interface Props {
+  slug: string;
+  name: string;
+  provider: string;
+}
+
+const { slug, name, provider } = Astro.props;
+const iconUrl = slotIconUrl(slug);
+---
+
+{/*
+  Box-art tile, matching how every casino on this site already presents its own lobby
+  (see the Stake screenshot this was modelled on): the image fills the card, the title
+  sits on a gradient scrim at the bottom. A slot whose icon hasn't been fetched yet falls
+  back to plain text — same degrade-gracefully rule as provider logos, never a hotlink to
+  the source CDN.
+*/}
+<a
+  href={`/slots/${slug}/`}
+  class="block overflow-hidden rounded-[4px] border border-ink-600 bg-ink-800 no-underline hover:border-ink-400"
+>
+  {
+    iconUrl ? (
+      <span class="relative block aspect-[3/4]">
+        <img src={iconUrl} alt="" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+        <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-2 pt-6">
+          <span class="block truncate text-[13px] font-semibold text-white">{name}</span>
+          <span class="block truncate text-[11px] text-white/70">{provider}</span>
+        </span>
+      </span>
+    ) : (
+      <span class="block p-3">
+        <span class="block text-[15px] text-ink-050">{name}</span>
+        <span class="mt-0.5 block text-[13px] text-ink-400">{provider}</span>
+      </span>
+    )
+  }
+</a>

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import SlotTile from '../../components/SlotTile.astro';
 import { getProviders } from '../../lib/providers';
 import { getSlots, SLOTS_PAGE_INITIAL_COUNT } from '../../lib/slots';
 import { SITE } from '../../lib/site';
@@ -65,15 +66,11 @@ const PAGE_SIZE = 48;
         <ul id="slot-grid" class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
           {initial.map((slot) => (
             <li data-slot-tile data-name={`${slot.name} ${providerName.get(slot.provider) ?? ''}`.toLowerCase()}>
-              <a
-                href={`/slots/${slot.slug}/`}
-                class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
-              >
-                <span class="block text-[15px] text-ink-050">{slot.name}</span>
-                <span class="mt-0.5 block text-[13px] text-ink-400">
-                  {providerName.get(slot.provider) ?? slot.provider}
-                </span>
-              </a>
+              <SlotTile
+                slug={slot.slug}
+                name={slot.name}
+                provider={providerName.get(slot.provider) ?? slot.provider}
+              />
             </li>
           ))}
         </ul>
@@ -120,16 +117,33 @@ const PAGE_SIZE = 48;
 
     let restRendered = false;
 
+    // Mirrors SlotTile.astro's markup — the two have to agree, since search/"load more"
+    // renders both server- and client-built tiles into the same grid.
     function makeTile(slot) {
       const li = document.createElement('li');
       li.dataset.slotTile = '';
       li.dataset.name = `${slot.name} ${slot.provider}`.toLowerCase();
-      li.innerHTML = `<a href="/slots/${slot.slug}/" class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400">
-        <span class="block text-[15px] text-ink-050"></span>
-        <span class="mt-0.5 block text-[13px] text-ink-400"></span>
-      </a>`;
-      li.querySelector('span').textContent = slot.name;
-      li.querySelectorAll('span')[1].textContent = slot.provider;
+      const a = document.createElement('a');
+      a.href = `/slots/${slot.slug}/`;
+      a.className = 'block overflow-hidden rounded-[4px] border border-ink-600 bg-ink-800 no-underline hover:border-ink-400';
+      if (slot.icon) {
+        a.innerHTML = `<span class="relative block aspect-[3/4]">
+          <img alt="" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-2 pt-6">
+            <span data-name class="block truncate text-[13px] font-semibold text-white"></span>
+            <span data-provider class="block truncate text-[11px] text-white/70"></span>
+          </span>
+        </span>`;
+        a.querySelector('img').src = slot.icon;
+      } else {
+        a.innerHTML = `<span class="block p-3">
+          <span data-name class="block text-[15px] text-ink-050"></span>
+          <span data-provider class="mt-0.5 block text-[13px] text-ink-400"></span>
+        </span>`;
+      }
+      a.querySelector('[data-name]').textContent = slot.name;
+      a.querySelector('[data-provider]').textContent = slot.provider;
+      li.appendChild(a);
       return li;
     }
 

@@ -3,44 +3,36 @@ import path from 'node:path';
 import sharp from 'sharp';
 
 /**
- * Downloads each slot's chosen box-art icon once and writes it into src/assets/slots/ as
- * WebP, matching the pattern scripts/fetch-provider-logos.ts already uses.
- *
- * Two differences from the provider version:
+ * Downloads each slot's chosen box-art icon once and writes it into public/slot-icons/,
+ * matching the pattern scripts/fetch-provider-logos.ts already uses for the network side
+ * of things, but simpler on the image side:
  *
  * 1. No backdrop to knock out. Slot box art ships as finished artwork already meant to sit
- *    on a lobby tile, unlike the studio marks that arrive on someone else's flat plate —
- *    this script resizes and re-encodes, nothing more.
- * 2. `Slot.icon` in slots.json is never rewritten. It stays the source URL for
- *    provenance and for re-fetching after a cache bust; src/lib/slot-icons.ts resolves the
- *    local file by slug at render time the same way provider-logos.ts does, and a slot
- *    with no local file yet just renders with no image — never a hotlink to the source.
+ *    on a lobby tile, unlike the studio marks that arrive on someone else's flat plate.
+ * 2. No resizing and effectively no recompression. These CDNs already serve a sensibly
+ *    sized card (Stake's own URLs even request an exact size in the query string), so
+ *    resizing down and re-encoding at a mid quality — what this script did at first —
+ *    was compressing twice for no reason, and it showed on anything colourful and
+ *    detailed. A source that's already WebP is written through byte-for-byte; anything
+ *    else is re-encoded at a visually-lossless quality with its original dimensions kept.
+ * 3. Lands in public/slot-icons/, not src/assets/slots/ — see src/lib/slot-icons.ts for
+ *    why (a stable URL the client-side "load more" script can also build, not a hashed
+ *    astro:assets path that only exists inside the build).
  *
  * Run it wherever the network reaches these CDNs — the build sandbox cannot, the VPS can:
  *
  *   npx tsx scripts/fetch-slot-images.ts
  *
- * ~24,000 candidate URLs across eight different CDNs, so two things that don't matter at
- * provider-logo scale (a few hundred fetches from one host) matter a lot here: a single
- * request with no timeout can hang the whole run indefinitely on one dead host, and doing
- * it one at a time is slow enough to look stalled even when it isn't. Both are handled
- * below — a per-request timeout and modest concurrency across hosts. Already-downloaded
- * icons are skipped, so interrupting and re-running (or resuming after a fix) only
- * refetches what's missing; nothing already written is redone.
+ * ~24,000 candidate URLs across eight different CDNs: a per-request timeout and modest
+ * concurrency keep one dead host from hanging the whole run, and already-downloaded icons
+ * are skipped, so interrupting and re-running only fetches what's missing.
  */
 
 const root = process.cwd();
-const outDir = path.join(root, 'src/assets/slots');
+const outDir = path.join(root, 'public/slot-icons');
 const slotsFile = path.join(root, 'src/content/slots.json');
 
-/** Matches the aspect ratio these CDNs already crop to (roughly 3:4 portrait cards). */
-const WIDTH = 180;
-const HEIGHT = 236;
-
-/** A stuck connection to one dead host would otherwise hang the whole run forever. */
 const TIMEOUT_MS = 15_000;
-
-/** Different slots mostly hit different CDN hosts, so this is safe without a per-host cap. */
 const CONCURRENCY = 8;
 
 interface Entry {
@@ -76,11 +68,12 @@ async function fetchOne(slot: Entry): Promise<void> {
       return;
     }
     const buffer = Buffer.from(await response.arrayBuffer());
-    const webp = await sharp(buffer)
-      .resize(WIDTH, HEIGHT, { fit: 'cover' })
-      .webp({ quality: 82 })
-      .toBuffer();
-    fs.writeFileSync(dest, webp);
+    const metadata = await sharp(buffer).metadata();
+    const out =
+      metadata.format === 'webp'
+        ? buffer // already the right format, at the size the source chose — write it as is
+        : await sharp(buffer).webp({ quality: 95, effort: 4 }).toBuffer();
+    fs.writeFileSync(dest, out);
     fetched++;
   } catch (error) {
     const err = error as Error;

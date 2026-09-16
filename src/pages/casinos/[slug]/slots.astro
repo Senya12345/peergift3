@@ -1,11 +1,13 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import SlotTile from '../../../components/SlotTile.astro';
 import {
   CASINO_SLOTS_PAGE_INITIAL_COUNT,
   getCasinoProviders,
   getCasinoSlots,
 } from '../../../lib/casino-slots';
 import { loadCasinos } from '../../../lib/content';
+import { getProviders } from '../../../lib/providers';
 import { SITE } from '../../../lib/site';
 import type { Casino } from '../../../lib/schemas';
 
@@ -32,6 +34,7 @@ const providers = getCasinoProviders(casino.slug);
 
 const initial = slots.slice(0, CASINO_SLOTS_PAGE_INITIAL_COUNT);
 const restCount = slots.length - initial.length;
+const providerName = new Map(getProviders().map((p) => [p.slug, p.name]));
 
 const PAGE_SIZE = 48;
 ---
@@ -91,12 +94,11 @@ const PAGE_SIZE = 48;
         data-name={slot.name.toLowerCase()}
         data-provider={slot.provider}
       >
-        <a
-          href={`/slots/${slot.slug}/`}
-          class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
-        >
-          <span class="block text-[15px] text-ink-050">{slot.name}</span>
-        </a>
+        <SlotTile
+          slug={slot.slug}
+          name={slot.name}
+          provider={providerName.get(slot.provider) ?? slot.provider}
+        />
       </li>
     ))}
   </ul>
@@ -145,15 +147,33 @@ const PAGE_SIZE = 48;
 
     let restRendered = false;
 
+    // Mirrors SlotTile.astro's markup — server- and client-built tiles share this grid.
     function makeTile(slot) {
       const li = document.createElement('li');
       li.dataset.slotTile = '';
       li.dataset.name = slot.name.toLowerCase();
       li.dataset.provider = slot.provider;
-      li.innerHTML = `<a href="/slots/${slot.slug}/" class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400">
-        <span class="block text-[15px] text-ink-050"></span>
-      </a>`;
-      li.querySelector('span').textContent = slot.name;
+      const a = document.createElement('a');
+      a.href = `/slots/${slot.slug}/`;
+      a.className = 'block overflow-hidden rounded-[4px] border border-ink-600 bg-ink-800 no-underline hover:border-ink-400';
+      if (slot.icon) {
+        a.innerHTML = `<span class="relative block aspect-[3/4]">
+          <img alt="" loading="lazy" class="absolute inset-0 h-full w-full object-cover">
+          <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-2 pt-6">
+            <span data-name class="block truncate text-[13px] font-semibold text-white"></span>
+            <span data-provider class="block truncate text-[11px] text-white/70"></span>
+          </span>
+        </span>`;
+        a.querySelector('img').src = slot.icon;
+      } else {
+        a.innerHTML = `<span class="block p-3">
+          <span data-name class="block text-[15px] text-ink-050"></span>
+          <span data-provider class="mt-0.5 block text-[13px] text-ink-400"></span>
+        </span>`;
+      }
+      a.querySelector('[data-name]').textContent = slot.name;
+      a.querySelector('[data-provider]').textContent = slot.providerName;
+      li.appendChild(a);
       return li;
     }
 

@@ -6,11 +6,13 @@ import JsonLd from '../../components/JsonLd.astro';
 import PageNav from '../../components/PageNav.astro';
 import ProviderLogo from '../../components/ProviderLogo.astro';
 import RatingTable from '../../components/RatingTable.astro';
+import SlotTile from '../../components/SlotTile.astro';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbs, casinoReview, faqPage } from '../../lib/schema';
 import { getCasinoProviders, getCasinoSlots } from '../../lib/casino-slots';
 import { loadCasinos } from '../../lib/content';
 import { facetsForCasino } from '../../lib/facets';
+import { getProviders } from '../../lib/providers';
 import { aggregateScore, lastVerified, normaliseSources, scoreBand } from '../../lib/ratings';
 import { MIN_RATING_SOURCES, type Casino } from '../../lib/schemas';
 import { SITE } from '../../lib/site';
@@ -39,6 +41,7 @@ const currencyFacets = facets.filter((f) => f.kind === 'currency');
 // src/lib/casino-slots.ts for why that distinction matters.
 const casinoProviders = getCasinoProviders(casino.slug);
 const casinoSlots = getCasinoSlots(casino.slug);
+const providerName = new Map(getProviders().map((p) => [p.slug, p.name]));
 const PROVIDER_PREVIEW = 24;
 // Stake alone lists over a thousand studios — rendering every one of them as a logo
 // tile inside the expand block took this page from ~90KB to 640KB. Every other casino
@@ -361,12 +364,11 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
         <ul class="mt-3 grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
           {casinoSlots.slice(0, SLOT_TEASER).map(({ slot }) => (
             <li>
-              <a
-                href={`/slots/${slot.slug}/`}
-                class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
-              >
-                <span class="block text-[15px] text-ink-050">{slot.name}</span>
-              </a>
+              <SlotTile
+                slug={slot.slug}
+                name={slot.name}
+                provider={providerName.get(slot.provider) ?? slot.provider}
+              />
             </li>
           ))}
         </ul>

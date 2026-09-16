@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getProviders } from '../lib/providers';
 import { getSlots, SLOTS_PAGE_INITIAL_COUNT } from '../lib/slots';
+import { slotIconUrl } from '../lib/slot-icons';
 
 /**
  * The tail of the slot catalogue that /slots/index.astro does not put in its own HTML.
@@ -19,6 +20,7 @@ export const GET: APIRoute = () => {
       slug: slot.slug,
       name: slot.name,
       provider: providerName.get(slot.provider) ?? slot.provider,
+      icon: slotIconUrl(slot.slug),
     }));
   return new Response(JSON.stringify(rest), {
     headers: { 'Content-Type': 'application/json' },
