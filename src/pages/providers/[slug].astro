@@ -1,6 +1,7 @@
 ---
 import JsonLd from '../../components/JsonLd.astro';
 import ProviderLogo from '../../components/ProviderLogo.astro';
+import SlotTile from '../../components/SlotTile.astro';
 import Base from '../../layouts/Base.astro';
 import { breadcrumbs } from '../../lib/schema';
 import { getProviders, type ProviderView } from '../../lib/providers';
@@ -129,12 +130,7 @@ const description = slots.length
           >
             {slots.map((slot) => (
               <li data-slot-tile data-name={slot.name.toLowerCase()}>
-                <a
-                  href={`/slots/${slot.slug}/`}
-                  class="block rounded-[4px] border border-ink-600 bg-ink-800 p-3 no-underline hover:border-ink-400"
-                >
-                  <span class="block text-[15px] text-ink-050">{slot.name}</span>
-                </a>
+                <SlotTile slug={slot.slug} name={slot.name} provider={provider.name} />
               </li>
             ))}
           </ul>
