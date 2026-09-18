@@ -18,7 +18,8 @@
     "import-providers": "tsx scripts/import-providers.ts",
     "fetch-provider-logos": "tsx scripts/fetch-provider-logos.ts",
     "import-slots": "tsx scripts/import-slots.ts",
-    "fetch-slot-images": "tsx scripts/fetch-slot-images.ts"
+    "fetch-slot-images": "tsx scripts/fetch-slot-images.ts",
+    "build-brand-assets": "tsx scripts/build-brand-assets.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

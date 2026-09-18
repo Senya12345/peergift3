@@ -12,3 +12,7 @@ preview.html
 functions/go/redirect-map.json
 deploy/gambleatlas-site.caddy
 deploy/go-redirects.conf
+
+# Slot box art, filled in on the deploy box by scripts/fetch-slot-images.ts —
+# 24k files the repository has no reason to carry.
+public/slot-icons/

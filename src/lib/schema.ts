@@ -18,6 +18,15 @@ export function organization(): Json {
     url: SITE.url,
     description: SITE.description,
     email: SITE.email,
+    // The social card doubles as the organisation logo. Google wants an ImageObject with
+    // explicit dimensions here, not a bare URL, and this is the only brand image on the
+    // site served from a stable, unhashed path.
+    logo: {
+      '@type': 'ImageObject',
+      url: absolute('/og-image.png'),
+      width: 1200,
+      height: 630,
+    },
   };
 }
 

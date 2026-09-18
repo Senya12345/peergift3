@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BackToTop from '../components/BackToTop.astro';
 import { siteIndexable } from '../lib/content';
-import { SITE } from '../lib/site';
+import { absolute, SITE } from '../lib/site';
 
 interface Props {
   title: string;
@@ -28,6 +28,11 @@ const {
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 
+// One card for the whole site rather than a per-page render. Every page here is a table of
+// other people's numbers; a generated card would either repeat the title already printed
+// next to it in the unfurl, or invent a visual that the page itself never shows.
+const ogImage = absolute('/og-image.png');
+
 // Site-wide off means keep crawlers out entirely. A page-level opt out still wants
 // `follow`, so internal links stay discoverable and the page can promote itself later.
 const robots = !siteIndexable
@@ -48,12 +53,26 @@ const robots = !siteIndexable
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#0E1114" />
 
+    {/* .ico for the browsers and crawlers that request /favicon.ico regardless of what is
+        declared here; the PNG for everything that reads the markup and wants a sharper
+        one. Google's SERP favicon fetcher is in the second group. */}
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${SITE.name} logo`} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
     {dataModified && <meta name="last-verified" content={dataModified} />}
 
     <slot name="head" />
