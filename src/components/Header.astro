@@ -24,18 +24,23 @@ const isCurrent = (href: string) => current === href || current.startsWith(href)
 <header class="border-b border-ink-600 bg-ink-800">
   <div class="mx-auto flex h-16 max-w-[1120px] items-center gap-3 px-4">
     <a href="/" class="group flex items-center gap-2.5 no-underline">
-      {/* Rendered at 2x and scaled down in CSS: the mark is a drawing with hairline
-          rigging and a dotted course, and on a retina phone a 1x raster turns both to
-          fuzz. The explicit width/height are the intrinsic ones so the header never
-          reflows while the image loads. */}
+      {/* width/height are the CSS size, and `densities` emits the 2x and 3x rasters
+          alongside so the browser takes the one its screen needs. The mark is a drawing
+          with hairline rigging and a course made of dots — at 34px those are one or two
+          pixels each, so a 3x phone served a 2x file turns both to mush. The whole
+          density ladder costs about 5 KB more than the 2x file alone, which is not a
+          budget worth defending. Quality is near-lossless for the same reason: the art is
+          two flat colours, where WebP's lossy mode spends its savings on ringing around
+          every edge. */}
       <Image
         src={lockup}
         alt=""
         aria-hidden="true"
-        width={96}
-        height={68}
+        width={48}
+        height={34}
+        densities={[1, 2, 3]}
         format="webp"
-        quality={90}
+        quality={100}
         loading="eager"
         class="h-[34px] w-auto shrink-0"
       />
