@@ -16,6 +16,8 @@ import path from 'node:path';
  *
  * Usage:
  *   GSC_SERVICE_ACCOUNT=/path/to/key.json npx tsx scripts/gsc.ts queries
+ *   GSC_SERVICE_ACCOUNT=... npx tsx scripts/gsc.ts days        # trend, chronological
+ *   GSC_SERVICE_ACCOUNT=... npx tsx scripts/gsc.ts countries
  *   GSC_SERVICE_ACCOUNT=... npx tsx scripts/gsc.ts pages --days 28
  *   GSC_SERVICE_ACCOUNT=... npx tsx scripts/gsc.ts queries --csv out.csv
  */
@@ -161,7 +163,16 @@ const token = await accessToken(sa);
 const property = flag('property') ?? (await resolveProperty(token, domain));
 console.log(`gsc: ${property}, ${iso(start)} to ${iso(end)}\n`);
 
-const dimensions = mode === 'pages' ? ['page'] : mode === 'both' ? ['page', 'query'] : ['query'];
+const dimensions =
+  mode === 'pages'
+    ? ['page']
+    : mode === 'both'
+      ? ['page', 'query']
+      : mode === 'days'
+        ? ['date']
+        : mode === 'countries'
+          ? ['country']
+          : ['query'];
 const rows = await query(token, property, dimensions, iso(start), iso(end));
 
 if (rows.length === 0) {
@@ -178,7 +189,10 @@ console.log(
     `CTR ${((totals.clicks / totals.impressions) * 100).toFixed(2)}%\n`,
 );
 
-const sorted = [...rows].sort((a, b) => b.impressions - a.impressions);
+const sorted =
+  mode === 'days'
+    ? [...rows].sort((a, b) => (a.keys[0] ?? '').localeCompare(b.keys[0] ?? ''))
+    : [...rows].sort((a, b) => b.impressions - a.impressions);
 console.log(
   ['clicks', 'impr', 'ctr%', 'pos', dimensions.join(' / ')]
     .map((h, i) => (i < 4 ? h.padStart(7) : `  ${h}`))

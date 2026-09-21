@@ -59,10 +59,83 @@ const bandClass = {
 } as const;
 const scoreClass = score === null ? 'text-ink-400' : bandClass[scoreBand(score)];
 
-const description =
+/**
+ * Title and description, written against the queries this page actually appears for.
+ *
+ * Search Console has this page surfacing on two clusters at once: `{casino} review` and
+ * `is {casino} legit` / `{casino} scam` / `{casino} rigged`. The page answers both — the
+ * FAQ opens on exactly those questions — and the old title said none of it, advertising
+ * "Ratings, Bonus and Payouts" while every competitor in the results carried a year, a
+ * bonus figure, or the word legit.
+ *
+ * The year comes from the data's own verification date, never from today's clock. Every
+ * rival title says 2026 whether or not anything behind it was looked at this year; ours
+ * can only say it while the figures were actually checked then, and silently ages out
+ * otherwise. Same reason the score leads rather than the bonus: an aggregate drawn from
+ * named platforms is the one claim on this results page nobody else can make, and a
+ * bonus headline in the title would read as one more affiliate landing page.
+ */
+const verifiedYear = verified ? verified.slice(0, 4) : null;
+const reviewLabel = `${casino.name} Review${verifiedYear ? ` ${verifiedYear}` : ''}`;
+
+const title =
   score === null
-    ? `${casino.name}: what we could and could not verify, the bonus terms, and where to read player reviews.`
-    : `${casino.name} scores ${score.toFixed(1)}/10 across ${sources.length} review platforms. Bonus terms, payout behaviour and what players complain about.`;
+    ? `${reviewLabel}: What We Could Verify — ${SITE.name}`
+    : `${reviewLabel}: ${score.toFixed(1)}/10 From ${sources.length} Rating Sites`;
+
+/**
+ * Google shows roughly 155 characters and cuts the rest mid-word, so the description is
+ * assembled against a budget rather than written and hoped for: the score sentence and
+ * the question the page is here to answer are fixed, and the middle is whatever real
+ * detail still fits.
+ *
+ * The bonus is only ever quoted whole. Most of these headlines carry the caveat that
+ * makes them true — "exact cap varies by region", "no traditional deposit bonus, instead
+ * rakeback" — and a bonus figure clipped free of its condition is precisely the
+ * overstatement the editorial rules exist to prevent. Where no short and complete
+ * version exists the licence goes in instead, which is the other thing someone typing
+ * "is it legit" is actually asking about.
+ */
+const DESCRIPTION_BUDGET = 155;
+
+const opener =
+  score === null
+    ? `${casino.name}: what we could and could not verify.`
+    : `${casino.name} scores ${score.toFixed(1)}/10 across ${sources.length} review platforms.`;
+const closer = 'Is it legit, and what players complain about.';
+
+const bonusSentence = ((): string | null => {
+  const headline = casino.signupBonus?.headline;
+  if (!headline) return null;
+  // Split only where the headline offers an alternative route; anything else is a caveat
+  // that has to travel with the figure or not at all.
+  const first = (headline.split(/,\s+(?:or|and)\s+/)[0] ?? '').trim().replace(/[.;,]+$/, '');
+  if (first.length === 0 || first.includes('—') || first.includes('(')) return null;
+  return `${first[0]?.toUpperCase()}${first.slice(1)}.`;
+})();
+
+/**
+ * Only a licence that fits in one sentence goes in. Several of these fields run to a
+ * paragraph because the licence has history — BC.Game's previous Curaçao licence went
+ * down with a bankruptcy over unpaid winnings, 1win's number is reported two different
+ * ways and the operator is under investigation in Kazakhstan. Lifting the opening clause
+ * out of those would turn a warning into a reassurance, which is the exact inversion the
+ * editorial rules exist to stop. A licence needing more than a sentence needs more than
+ * a snippet.
+ */
+const licenceSentence = ((): string | null => {
+  const licence = casino.license?.trim().replace(/[.;,]+$/, '');
+  if (!licence || /\.\s/.test(licence)) return null;
+  // Most of these already say "licence" themselves; prefixing would stutter.
+  const sentence = /licen[cs]e/i.test(licence) ? licence : `Licence: ${licence}`;
+  return `${sentence[0]?.toUpperCase()}${sentence.slice(1)}.`;
+})();
+
+const description = ((): string => {
+  const room = DESCRIPTION_BUDGET - opener.length - closer.length - 2;
+  const middle = [bonusSentence, licenceSentence].find((c) => c !== null && c.length <= room);
+  return [opener, middle, closer].filter(Boolean).join(' ');
+})();
 
 /**
  * The page's own table of contents, and the source of every section's id and heading.
@@ -121,7 +194,7 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
 ---
 
 <Base
-  title={`${casino.name} Review: Ratings, Bonus and Payouts — ${SITE.name}`}
+  title={title}
   description={description}
   dataModified={verified}
   pageType="casino"
