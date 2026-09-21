@@ -403,15 +403,25 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
     casino.faq.length > 0 && (
       <section class="mt-10">
         <h2 id="faq" class="text-[24px]">{heading('faq')}</h2>
-        <p class="mt-2 max-w-[68ch] text-[14px] text-ink-400">
-          Short answers to what people search for about this casino. Each one restates what
-          is documented elsewhere on this page rather than adding anything new.
-        </p>
+        {/*
+          The questions are real headings, not styled summary text. Search Console has this
+          page surfacing on `is {casino} legit`, `{casino} rigged`, `{casino} scam` — the
+          exact wording of the first few entries — and a question that is only phrasing
+          content inside a summary puts nothing in the document outline for those to match
+          against.
+
+          The first one is open on arrival for the same reason. It is the one the most
+          people are asking, its answer is the strongest thing on the page, and leaving it
+          folded away means the first screen of the section is a row of shut boxes.
+        */}
         <div class="mt-5 max-w-[72ch] space-y-4">
-          {casino.faq.map((item) => (
-            <details class="surface group p-4 [&_summary::-webkit-details-marker]:hidden">
-              <summary class="flex cursor-pointer items-start justify-between gap-4 font-display text-[17px] font-bold text-ink-050">
-                {item.q}
+          {casino.faq.map((item, index) => (
+            <details
+              open={index === 0}
+              class="surface group p-4 [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary class="flex cursor-pointer items-start justify-between gap-4">
+                <h3 class="text-[17px] font-bold text-ink-050">{item.q}</h3>
                 <svg
                   width="16"
                   height="16"
