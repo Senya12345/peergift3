@@ -116,6 +116,14 @@
       "a": "It holds Curaçao Gaming Control Board licence OGL/2024/1337/0628 through Natural Nine B.V. But Casino Guru rates its Safety Index 4.8/10 — Low — and Casino Guru's own published guidance at that level is that players should consider alternatives. That is the most negative assessment any casino on this site carries from a major platform, and we are not going to soften it."
     },
     {
+      "q": "What licence does Shuffle hold?",
+      "a": "A Curaçao Gaming Control Board licence, OGL/2024/1337/0628, held through Natural Nine B.V. The licence is current; the caution on Shuffle comes from elsewhere — Casino Guru rates its Safety Index 4.8/10, Low, and a data breach in October 2025 exposed users' identity documents."
+    },
+    {
+      "q": "Does Shuffle charge withdrawal fees?",
+      "a": "Shuffle states it adds no fee of its own on crypto withdrawals; you pay only the blockchain's network fee, which is shown in the wallet before you confirm and varies by coin and congestion — cheaper on Tron and Litecoin than on Ethereum. Withdrawals start at $5."
+    },
+    {
       "q": "Was there a Shuffle data breach?",
       "a": "Yes, confirmed, on 10 October 2025 through third-party provider Fast Track. It exposed user names, addresses, phone numbers and transaction histories, and for many verified users the identity documents submitted during KYC. Anyone who verified an account with Shuffle before that date should treat those documents as compromised."
     },

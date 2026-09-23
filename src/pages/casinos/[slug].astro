@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import CasinoLogo from '../../components/CasinoLogo.astro';
 import CoinIcon from '../../components/CoinIcon.astro';
 import CountryCheck from '../../components/CountryCheck.astro';
@@ -145,6 +146,19 @@ const description = ((): string => {
  * carries. Deriving the jump links and the headings from the same array is what stops a
  * link pointing at a section that was not rendered.
  */
+/**
+ * Articles that link to this casino, found by reading their bodies for the page's own URL
+ * rather than tagged by hand. The link is only ever one-way otherwise — every article points
+ * at the casinos it discusses, and none of those casino pages point back — which leaves the
+ * articles reachable from the article index and nowhere else, and the casino page a dead
+ * end for a reader who wants the longer argument. Derived from the prose, so a mention added
+ * to an article shows up here with no second edit to forget.
+ */
+const casinoPath = `/casinos/${casino.slug}/`;
+const furtherReading = (
+  await getCollection('articles', ({ data, body }) => !data.draft && (body ?? '').includes(casinoPath))
+).sort((a, b) => b.data.publishedAt.localeCompare(a.data.publishedAt));
+
 const sections = [
   sources.length > 0 && {
     id: 'ratings',
@@ -162,6 +176,11 @@ const sections = [
     heading: `${casino.name} games`,
   },
   { id: 'verdict', label: 'Our take', heading: 'Our take' },
+  furtherReading.length > 0 && {
+    id: 'reading',
+    label: 'Reading',
+    heading: 'Further reading',
+  },
   casino.faq.length > 0 && {
     id: 'faq',
     label: 'FAQ',
@@ -398,6 +417,24 @@ const heading = (id: string) => sections.find((s) => s.id === id)!.heading;
       </div>
     </div>
   </section>
+
+  {
+    furtherReading.length > 0 && (
+      <section class="mt-10">
+        <h2 id="reading" class="text-[24px]">{heading('reading')}</h2>
+        <ul class="mt-4 max-w-[72ch] space-y-3">
+          {furtherReading.map((article) => (
+            <li class="surface p-4">
+              <a href={`/articles/${article.id}/`} class="font-display text-[17px] font-bold">
+                {article.data.title}
+              </a>
+              <p class="mt-1 text-[15px] text-ink-300">{article.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 
   {
     casino.faq.length > 0 && (
